@@ -9064,14 +9064,14 @@ a:hover {
   /* line 87, ../sass/style.scss */
   #trow5 .box:before {
     content: "desktop min";
-    color: #ffff00;
+    color: #00CC00;
   }
 }
 @media (min-width: 1200px) {
   /* line 94, ../sass/style.scss */
   #trow5 .box:before {
     content: "desktop big";
-    color: #ffff00;
+    color: #006600;
   }
 }
 

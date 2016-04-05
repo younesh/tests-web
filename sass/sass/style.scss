@@ -86,14 +86,14 @@ p { color: $Color2; }
     @media (min-width: $screen-md-min) {
       &:before {
         content: "desktop min";
-        color: #ffff00;
+        color: #00CC00;
       }
     }
 
     @media (min-width: $screen-lg-min) {
       &:before {
         content: "desktop big";
-        color: #ffff00;
+        color: #006600;
       }
     }
 
