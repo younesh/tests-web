@@ -1,0 +1,120 @@
+@import "compass";
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
+@import "global";
+
+
+/*---------------------- layoutage globale------------------------*/
+#wrapper {
+  min-height: 600px;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: $Gotiere;
+}
+
+.trow {
+  background-color: lighten($Color2, 62%);
+  border: solid 1px $ColorBorder;
+  padding: $Gotiere;
+  margin: $Gotiere 0;
+ @include BordRadius();
+}
+
+/*---------------------- page/bloc spécifique -----------------------*/
+
+.box1 {
+  padding: $Gotiere;
+  background-color: $Color1;
+}
+
+.box2 {
+  padding: $Gotiere;
+  background-color: $Color2;
+}
+
+.box3 {
+  padding: $Gotiere;
+  background-color: $Color3;
+}
+
+/*------------ #trow3 : --------------*/
+
+#trow3 {
+  .bloc_bootsrapale {
+    @include BordRadius(3px);
+    @include bloc_RespoBstp();
+  }
+}
+
+/*------------- #trow4 :LESS ----------*/
+/*tr4.1 : imbrication*/
+@mixin tr4_mix_trc-i () { //
+  border: solid 1px #003333;
+  width: 50%;
+  background-color: lighten($Color2, 50%);
+  padding: 10px;
+h4 { color: #000}
+p { color: $Color2; }
+@include make-lg-column($grid-columns/2)
+}
+
+#trow4 {
+  #trc-1 {
+    @include tr4_mix_trc-i();
+  }
+}
+
+#trow5 {
+  @extend .clearfix;
+  .box {
+    @include border-radius(5px);
+    &:before {
+      content: "Mobile";
+      color: #ffff00;
+    }
+
+    @include make-sm-column($grid-columns/2);
+    @include make-md-column($grid-columns/3);
+    @include make-lg-column($grid-columns/4);
+
+    @media (min-width: $screen-sm-min) {
+      &:before {
+        content: "tablette portrait";
+        color: #ffff00;
+      }
+    }
+
+    @media (min-width: $screen-md-min) {
+      &:before {
+        content: "desktop min";
+        color: #ffff00;
+      }
+    }
+
+    @media (min-width: $screen-lg-min) {
+      &:before {
+        content: "desktop big";
+        color: #ffff00;
+      }
+    }
+
+
+  }
+
+}
+
+@import "spico/*.png";
+@include all-spico-sprites;
+
+#trow6 {
+  .panel-icon {
+    a {
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+    }
+    .face {
+      @include spico-sprite(linkedin-icon);
+    }
+  }
+}
+

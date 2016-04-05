@@ -1,0 +1,78 @@
+/* Globale */
+/*--------------------- inistalisation style ----------------*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+h1,
+.titleH1,
+h2,
+.titleH2,
+h3,
+.titleH3,
+h4,
+.titleH4 {
+  font-family: "Montserrat";
+}
+h1,
+.titleH1 {
+  font-size: 28px;
+  color: #62d3ef;
+}
+h2,
+.titleH2 {
+  font-size: 23px;
+  color: #ff956f;
+}
+h3,
+.titleH3 {
+  font-size: 18px;
+  color: #16afd5;
+}
+h4,
+.titleH4 {
+  font-size: 13px;
+  color: #ff4b09;
+}
+h5,
+.titleH5 {
+  font-size: 11px;
+  font-weight: bold;
+  color: #1189a7;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+*:first-letter {
+  text-transform: capitalize;
+}
+body {
+  background: #ebebeb;
+}
+button {
+  background-color: #1189a7;
+  transition: all 0.3s;
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: #0c6379;
+}
+a {
+  color: #1189a7;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+a:hover {
+  color: #083d4a;
+}

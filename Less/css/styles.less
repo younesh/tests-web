@@ -1,0 +1,75 @@
+@import "bootstrap/bootstrap";
+@import "_globale";
+
+/*---------------------- layoutage globale------------------------*/
+#wrapper {
+  min-height: 600px;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: @Gotiere;
+
+}
+
+.trow {
+  background-color: lighten(@Color2, 62%);
+  border: solid 1px @ColorBorder;
+  padding: @Gotiere;
+  margin: @Gotiere 0;
+  .BordRadius();
+}
+
+/*---------------------- page/bloc spécifique -----------------------*/
+
+.box1 {
+  padding: @Gotiere;
+  background-color: @Color1;
+}
+
+.box2 {
+  padding: @Gotiere;
+  background-color: @Color2;
+}
+
+.box3 {
+  padding: @Gotiere;
+  background-color: @Color3;
+}
+
+/*------------ #trow3 : --------------*/
+
+#trow3 {
+  .bloc_bootsrapale {
+    .BordRadius(3px);
+    .bloc_RespoBstp();
+  }
+}
+
+/*------------- #trow4 :LESS ----------*/
+/*tr4.1 : imbrication*/
+.tr4_mix_trc-i () { //
+  border: solid 1px #003333;
+  width: 50%;
+  background-color: lighten(@Color2, 50%);
+  padding: 10px;
+  h4 { color: #000}
+  p { color: @Color2; }
+  .make-lg-column(@grid-columns/2)
+}
+
+#trow4 {
+  #trc-1 {
+    .tr4_mix_trc-i();
+  }
+}
+
+.test_before:before {
+  content: " ";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background :-webkit-gradient(url )
+}
+
+
+
+
