@@ -8800,7 +8800,12 @@ button.close {
   font-weight: normal;
   font-style: normal;
 }
-/* line 46, ../sass/_global.scss */
+/* line 45, ../sass/_global.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 49, ../sass/_global.scss */
 h1, .titleH1,
 h2, .titleH2,
 h3, .titleH3,
@@ -8808,53 +8813,53 @@ h4, .titleH4 {
   font-family: "Montserrat";
 }
 
-/* line 53, ../sass/_global.scss */
+/* line 56, ../sass/_global.scss */
 h1, .titleH1 {
   font-size: 28px;
   color: #62d3ef;
 }
 
-/* line 58, ../sass/_global.scss */
+/* line 61, ../sass/_global.scss */
 h2, .titleH2 {
   font-size: 23px;
   color: #ff956f;
 }
 
-/* line 63, ../sass/_global.scss */
+/* line 66, ../sass/_global.scss */
 h3, .titleH3 {
   font-size: 18px;
   color: #16afd5;
 }
 
-/* line 68, ../sass/_global.scss */
+/* line 71, ../sass/_global.scss */
 h4, .titleH4 {
   font-size: 13px;
   color: #ff4b09;
 }
 
-/* line 73, ../sass/_global.scss */
+/* line 76, ../sass/_global.scss */
 h5, .titleH5 {
   font-size: 11px;
   font-weight: bold;
   color: #1189a7;
 }
 
-/* line 80, ../sass/_global.scss */
+/* line 83, ../sass/_global.scss */
 * {
   padding: 0;
   margin: 0;
 }
-/* line 83, ../sass/_global.scss */
+/* line 86, ../sass/_global.scss */
 *:first-letter {
   text-transform: capitalize;
 }
 
-/* line 88, ../sass/_global.scss */
+/* line 91, ../sass/_global.scss */
 body {
   background: #ebebeb;
 }
 
-/* line 92, ../sass/_global.scss */
+/* line 95, ../sass/_global.scss */
 button {
   background-color: #1189a7;
   transition: all 0.3s;
@@ -8867,33 +8872,33 @@ button {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 100, ../sass/_global.scss */
+/* line 103, ../sass/_global.scss */
 button:hover {
   background-color: #0c6379;
 }
 
-/* line 105, ../sass/_global.scss */
+/* line 108, ../sass/_global.scss */
 a {
   color: #1189a7;
   transition: all 0.3s;
   cursor: pointer;
 }
-/* line 109, ../sass/_global.scss */
+/* line 112, ../sass/_global.scss */
 a:hover {
   color: #083d4a;
 }
 
-/* line 114, ../sass/_global.scss */
+/* line 117, ../sass/_global.scss */
 .box {
   background-color: #EE4000;
 }
 
-/* line 118, ../sass/_global.scss */
+/* line 121, ../sass/_global.scss */
 .box1 {
   background-color: #1189a7;
 }
 
-/* line 122, ../sass/_global.scss */
+/* line 125, ../sass/_global.scss */
 .box2 {
   background-color: #7A7777;
 }
@@ -9150,4 +9155,30 @@ a:hover {
 /* line 115, ../sass/style.scss */
 #trow6 .panel-icon .face {
   background-position: 0 -318px;
+}
+
+/* line 122, ../sass/style.scss */
+#trow7 {
+  height: 300px;
+}
+/* line 124, ../sass/style.scss */
+#trow7 .tr-ctn {
+  background-color: #ffff00;
+  height: calc(100% - 35px);
+}
+/* line 128, ../sass/style.scss */
+#trow7 .tr-n1 {
+  padding: 10px;
+  background-color: #EE4000;
+  height: 90%;
+}
+/* line 132, ../sass/style.scss */
+#trow7 .tr-n1 .tr-n1-1 {
+  padding: 10px;
+  background-color: #1189a7;
+}
+/* line 135, ../sass/style.scss */
+#trow7 .tr-n1 .tr-n1-1 .tr-n1-1-1 {
+  padding: 10px;
+  background-color: #7A7777;
 }

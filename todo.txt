@@ -1,0 +1,4 @@
+
+1. CSS
+    1.1 : pb des height en pourcentage ( 100% ) >  [ ... en cours 30%]
+    1.2 : pb des centre centrage vertical des dib ( pour des fois ç marche et des fois pas)
