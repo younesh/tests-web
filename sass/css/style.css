@@ -8904,7 +8904,7 @@ a:hover {
 }
 
 /*---------------------- layoutage globale------------------------*/
-/* line 7, ../sass/style.scss */
+/* line 6, ../sass/style.scss */
 #wrapper {
   min-height: 600px;
   background-color: #fff;
@@ -8912,7 +8912,7 @@ a:hover {
   padding: 15px;
 }
 
-/* line 14, ../sass/style.scss */
+/* line 13, ../sass/style.scss */
 .trow {
   background-color: #f6fcfe;
   border: solid 1px #dfdede;
@@ -8925,26 +8925,26 @@ a:hover {
 }
 
 /*---------------------- page/bloc sp├®cifique -----------------------*/
-/* line 24, ../sass/style.scss */
+/* line 23, ../sass/style.scss */
 .box1 {
   padding: 15px;
   background-color: #EE4000;
 }
 
-/* line 29, ../sass/style.scss */
+/* line 28, ../sass/style.scss */
 .box2 {
   padding: 15px;
   background-color: #1189a7;
 }
 
-/* line 34, ../sass/style.scss */
+/* line 33, ../sass/style.scss */
 .box3 {
   padding: 15px;
   background-color: #7A7777;
 }
 
 /*------------ #trow3 : --------------*/
-/* line 42, ../sass/style.scss */
+/* line 41, ../sass/style.scss */
 #trow3 .bloc_bootsrapale {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -8964,21 +8964,21 @@ a:hover {
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  /* line 42, ../sass/style.scss */
+  /* line 41, ../sass/style.scss */
   #trow3 .bloc_bootsrapale {
     float: left;
     width: 33.33333%;
   }
 }
 @media (min-width: 992px) {
-  /* line 42, ../sass/style.scss */
+  /* line 41, ../sass/style.scss */
   #trow3 .bloc_bootsrapale {
     float: left;
     width: 16.66667%;
   }
 }
 @media (min-width: 1200px) {
-  /* line 42, ../sass/style.scss */
+  /* line 41, ../sass/style.scss */
   #trow3 .bloc_bootsrapale {
     float: left;
     width: 8.33333%;
@@ -8987,7 +8987,7 @@ a:hover {
 
 /*------------- #trow4 :LESS ----------*/
 /*tr4.1 : imbrication*/
-/* line 61, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
 #trow4 #trc-1 {
   border: solid 1px #003333;
   width: 50%;
@@ -9002,19 +9002,19 @@ a:hover {
 #trow4 #trc-1 h4 {
   color: #000;
 }
-/* line 56, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 #trow4 #trc-1 p {
   color: #1189a7;
 }
 @media (min-width: 1200px) {
-  /* line 61, ../sass/style.scss */
+  /* line 65, ../sass/style.scss */
   #trow4 #trc-1 {
     float: left;
     width: 50%;
   }
 }
 
-/* line 68, ../sass/style.scss */
+/* line 72, ../sass/style.scss */
 #trow5 .box {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -9032,153 +9032,192 @@ a:hover {
   padding-left: 15px;
   padding-right: 15px;
 }
-/* line 70, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 #trow5 .box:before {
   content: "Mobile";
   color: #ffff00;
 }
 @media (min-width: 768px) {
-  /* line 68, ../sass/style.scss */
+  /* line 72, ../sass/style.scss */
   #trow5 .box {
     float: left;
     width: 50%;
   }
 }
 @media (min-width: 992px) {
-  /* line 68, ../sass/style.scss */
+  /* line 72, ../sass/style.scss */
   #trow5 .box {
     float: left;
     width: 33.33333%;
   }
 }
 @media (min-width: 1200px) {
-  /* line 68, ../sass/style.scss */
+  /* line 72, ../sass/style.scss */
   #trow5 .box {
     float: left;
     width: 25%;
   }
 }
 @media (min-width: 768px) {
-  /* line 80, ../sass/style.scss */
+  /* line 84, ../sass/style.scss */
   #trow5 .box:before {
     content: "tablette portrait";
     color: #ffff00;
   }
 }
 @media (min-width: 992px) {
-  /* line 87, ../sass/style.scss */
+  /* line 91, ../sass/style.scss */
   #trow5 .box:before {
     content: "desktop min";
     color: #00CC00;
   }
 }
 @media (min-width: 1200px) {
-  /* line 94, ../sass/style.scss */
+  /* line 98, ../sass/style.scss */
   #trow5 .box:before {
     content: "desktop big";
     color: #006600;
   }
 }
 
-/* line 136, spico/*.png */
-.spico-sprite, .spico-edit-icon, .spico-facebook-icon, .spico-google-plus-icon, .spico-h2li_bullet_blue, .spico-help_button1, .spico-icone_acceder, .spico-icone_login, .spico-icone_savois_plus, .spico-icone_souscrire, .spico-icone_video, .spico-kb_default, .spico-linkedin-icon, #trow6 .panel-icon .face {
-  background-image: url('/images/spico-s0f5943e3ad.png');
-  background-repeat: no-repeat;
-}
+/*@import "spico*/
+                  /*.png";
+@include all-spico-sprites;
 
-/* line 84, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.spico-edit-icon {
-  background-position: 0 0;
-}
-
-/* line 84, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.spico-facebook-icon {
-  background-position: 0 -48px;
-}
-
-/* line 84, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.spico-google-plus-icon {
-  background-position: 0 -80px;
-}
-
-/* line 84, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.spico-h2li_bullet_blue {
-  background-position: 0 -112px;
-}
-
-/* line 84, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.spico-help_button1 {
-  background-position: 0 -132px;
-}
-
-/* line 84, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.spico-icone_acceder {
-  background-position: 0 -156px;
-}
-
-/* line 84, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.spico-icone_login {
-  background-position: 0 -180px;
-}
-
-/* line 84, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.spico-icone_savois_plus {
-  background-position: 0 -210px;
-}
-
-/* line 84, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.spico-icone_souscrire {
-  background-position: 0 -224px;
-}
-
-/* line 84, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.spico-icone_video {
-  background-position: 0 -249px;
-}
-
-/* line 84, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.spico-kb_default {
-  background-position: 0 -268px;
-}
-
-/* line 84, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.spico-linkedin-icon {
-  background-position: 0 -318px;
-}
-
-/* line 110, ../sass/style.scss */
-#trow6 .panel-icon a {
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-}
-/* line 115, ../sass/style.scss */
-#trow6 .panel-icon .face {
-  background-position: 0 -318px;
-}
-
-/* line 122, ../sass/style.scss */
+#trow6 {
+  .panel-icon {
+    a {
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+    }
+    .face {
+      @include spico-sprite(linkedin-icon);
+    }
+  }
+}*/
+/* line 124, ../sass/style.scss */
 #trow7 {
   height: 300px;
 }
-/* line 124, ../sass/style.scss */
+/* line 127, ../sass/style.scss */
 #trow7 .tr-ctn {
   background-color: #ffff00;
   height: calc(100% - 35px);
 }
-/* line 128, ../sass/style.scss */
+/* line 131, ../sass/style.scss */
 #trow7 .tr-n1 {
   padding: 10px;
-  background-color: #EE4000;
+  background-color: #ccc;
   height: 90%;
 }
-/* line 132, ../sass/style.scss */
+/* line 135, ../sass/style.scss */
 #trow7 .tr-n1 .tr-n1-1 {
   padding: 10px;
   background-color: #1189a7;
 }
-/* line 135, ../sass/style.scss */
+/* line 138, ../sass/style.scss */
 #trow7 .tr-n1 .tr-n1-1 .tr-n1-1-1 {
   padding: 10px;
   background-color: #7A7777;
+}
+
+/* line 147, ../sass/style.scss */
+#trow8 .box {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  position: relative;
+  display: flex;
+  /* contexte sur le parent */
+  flex-direction: column;
+  /* direction d'affichage verticale */
+  justify-content: center;
+  /* alignement vertical */
+}
+/* line 163, ../sass/style.scss */
+#trow8 .box .puce {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  background: #fff;
+}
+/* line 171, ../sass/style.scss */
+#trow8 .box span {
+  display: inline-block;
+  background-color: #00CC00;
+}
+
+/* bloc produit */
+/* line 181, ../sass/style.scss */
+.pdt-box {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 0;
+  border: 1px solid #ccc;
+  margin: 0px 5px 15px;
+}
+@media (min-width: 768px) {
+  /* line 181, ../sass/style.scss */
+  .pdt-box {
+    float: left;
+    width: 31.74603%;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 181, ../sass/style.scss */
+  .pdt-box {
+    float: left;
+    width: 24.09639%;
+  }
+}
+/* line 187, ../sass/style.scss */
+.pdt-box .pdt-img {
+  overflow: hidden;
+  background-color: #7c7c7c;
+  height: 50vw;
+  position: relative;
+}
+@media (min-width: 768px) {
+  /* line 187, ../sass/style.scss */
+  .pdt-box .pdt-img {
+    height: 200px;
+  }
+}
+/* line 196, ../sass/style.scss */
+.pdt-box .pdt-img img {
+  width: 100%;
+  transition: all .3s ease-out;
+}
+/* line 201, ../sass/style.scss */
+.pdt-box .pdt-img:before {
+  content: " ";
+  position: absolute;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  height: 100%;
+  transition: background-color 1s;
+}
+/* line 211, ../sass/style.scss */
+.pdt-box .pdt-img:hover {
+  cursor: pointer;
+}
+/* line 213, ../sass/style.scss */
+.pdt-box .pdt-img:hover img {
+  transform: scale(1.25);
+}
+/* line 216, ../sass/style.scss */
+.pdt-box .pdt-img:hover:before {
+  background-color: rgba(255, 255, 255, 0);
+}
+/* line 222, ../sass/style.scss */
+.pdt-box .pdt-ctn {
+  padding: 15px;
 }

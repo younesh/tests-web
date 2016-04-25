@@ -2,3 +2,6 @@
 1. CSS
     1.1 : pb des height en pourcentage ( 100% ) >  [ ... en cours 30%]
     1.2 : pb des centre centrage vertical des dib ( pour des fois ç marche et des fois pas)
+    1.3 animation css3
+        1.3.1 : les paralallax
+        1.3.2 : les animation ( image zoom + btn link visible > expl : http://themeforest.net/item/worker-small-business-booking-template/full_screen_preview/12001625
