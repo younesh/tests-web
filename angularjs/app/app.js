@@ -4,4 +4,5 @@
 /**
  * Main module of the application.
  */
-angular.module('Main.Common', []);
+angular.module('Main', [])
+

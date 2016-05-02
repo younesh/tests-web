@@ -5,3 +5,9 @@
     1.3 animation css3
         1.3.1 : les paralallax
         1.3.2 : les animation ( image zoom + btn link visible > expl : http://themeforest.net/item/worker-small-business-booking-template/full_screen_preview/12001625
+    1.4 modele de boite FLEX : le flex ds tous ces etats ...
+
+
+
+2.angular
+    2.1 installation et parametrage d'environnement avec nodeJS
