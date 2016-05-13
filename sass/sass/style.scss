@@ -232,5 +232,8 @@
 /* #trow10 : les menu bootstrap multi-level   */
 
 #trow10 {
-
+  .bt-menu {
+    @extend  .nav;
+    @extend  .nav-pills;
+  }
 }
