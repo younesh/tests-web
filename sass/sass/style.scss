@@ -1,5 +1,5 @@
 @import "compass";
-@import "bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "global";
 
 /*---------------------- layoutage globale------------------------*/
@@ -226,5 +226,11 @@
 }
 
 #trow9 { // flex layout test
+
+}
+
+/* #trow10 : les menu bootstrap multi-level   */
+
+#trow10 {
 
 }
