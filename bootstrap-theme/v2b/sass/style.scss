@@ -1,0 +1,70 @@
+@import "compass";
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "global";
+
+/*---------------------- layoutage globale------------------------*/
+
+
+#wrapper {
+  min-height: 600px;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: $Gotiere;
+}
+
+.trow {
+  background-color: lighten($Color2, 62%);
+  border: solid 1px $ColorBorder;
+  padding: $Gotiere;
+  margin: $Gotiere 0;
+  @include BordRadius();
+}
+
+.container p {
+  text-align: justify;
+}
+
+
+/* main menu */
+#mainMenuCtn {
+  @extend .navbar;
+  @extend .navbar-inverse;
+  @extend .navbar-fixed-top;
+
+  .mm-header {
+      @extend .navbar-header;
+  }
+
+  #mainMenu {
+    @extend .collapse;
+    @extend .navbar-collapse;
+     > ul {
+       @extend .nav;
+       @extend .navbar-nav;
+       @extend .navbar-right;
+       margin-right: 0px;
+     }
+  }
+} /* #mainMenuCtn */
+
+
+
+/*---------------------- page/bloc spécifique -----------------------*/
+
+.box1 {
+  padding: $Gotiere;
+  background-color: $Color1;
+}
+
+.box2 {
+  padding: $Gotiere;
+  background-color: $Color2;
+}
+
+.box3 {
+  padding: $Gotiere;
+  background-color: $Color3;
+}
+
+
+
