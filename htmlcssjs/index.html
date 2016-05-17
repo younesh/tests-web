@@ -195,7 +195,7 @@
                     </a>
                 </li>
 
-            <li><a id="" href="http://www.creativejuiz.fr/blog/tutoriels/nth-child-css2-compatible-ie7"> Un Nth-child en CSS 2 compatible depuis IE7 </a></li>
+            <li><a href="http://www.creativejuiz.fr/blog/tutoriels/nth-child-css2-compatible-ie7"> Un Nth-child en CSS 2 compatible depuis IE7 </a></li>
             <li><a href="http://www.marevueweb.com/css-html/liste-nth-child-propriete/"> http://www.marevueweb.com/css-html/liste-nth-child-propriete/  </a></li>
             </ul> 
             </p>
@@ -487,9 +487,11 @@
         <h2> iframe sur google </h2>
         <article>
             <style></style>
-            <iframe src="http://www.google.com" width="80%" style="visibility: visible"> <!-- http://www.google.com  | avito.ma-->
+
+            <!-- http://www.google.com  | avito.ma-->
+<!--            <iframe src="http://www.google.com" width="80%" style="visibility: visible">
                 <p>Your browser does not support iframes.</p>
-            </iframe>
+            </iframe>-->
         </article>
     </section>
 
@@ -499,7 +501,7 @@
         <h2> <a href="http://rocha.la/jQuery-slimScroll" target="_blank"> http://rocha.la/jQuery-slimScroll</a> : test blug jq pour faire un scroll simpa !!! </h2>
         <article>
             <style></style>
-            <script src="../bower_components/slimScroll/jquery.slimscroll.min.js"></script>
+            <script src="../bower_components/slimScroll/jquery.slimscroll.min.js"></script> <!-- @@ deplacer en bas : optimiser le chargement -->
 
             <script>
                 $(function(){
@@ -558,7 +560,39 @@
         </article>
     </section>
 
-    <!-- section#t00017>h2+article>(style+p+.box*3)-->
+    <section id="t00017">
+        <h2> Background-? : { origine - attachement } </h2>
+        <article>
+            <h3> origine </h3>
+            <style>
+                #t00017 .box  {  width: 200px; height: 200px; background-image: url("images/Jellyfish.jpg"); background-repeat: no-repeat;
+                                background-size: 150px auto ; color:#fff; padding: 15px; border: 25px solid #ccc; background-color: #006600;  }
+                #t00017 .box1 { background-origin: border-box; } /* origine */
+                #t00017 .box2 { background-origin: content-box; }
+                #t00017 .box3 { background-origin: padding-box; }
+
+                #t00017 .box4 { background-attachment: fixed; } /* attachement */
+                #t00017 .box5 { background-attachment: local; }
+                #t00017 .box6 { background-attachment: scroll;  }
+
+
+            </style>
+            <p></p>
+
+            <div class="box box1">  background-origin: border-box; </div>
+            <div class="box box2"> background-origin: content-box; </div>
+            <div class="box box3"> background-origin: padding-box;  </div>
+        </article>
+        <article>
+
+            <h3> attachement </h3>
+            <div class="box box4">  background-attachment: fixed;  </div>
+            <div class="box box5"> background-attachment: local; </div>
+            <div class="box box6"> background-origin: padding-box;  </div>
+        </article>
+    </section>
+
+    <!-- section#t00018>h2+article>(style+p+.box*3)-->
 </div>
 
 <a href="#page" class="arrow-target" id="at_up">
@@ -569,6 +603,45 @@
     <i class="fa fa-arrow-down" aria-hidden="true"></i>
 </a>
 
+<script>
+$(function () {
+
+    function juizScrollTo(element){
+        $(element).click(function(){
+            var goscroll = false;
+            var the_hash = $(this).attr("href");
+            var regex = new RegExp("\#(.*)","gi");
+            var the_element = '';
+
+            if(the_hash.match("\#(.+)")) {
+                the_hash = the_hash.replace(regex,"$1");
+
+                if($("#"+the_hash).length>0) {
+                    the_element = "#" + the_hash;
+                    goscroll = true;
+                }
+                else if($("a[name=" + the_hash + "]").length>0) {
+                    the_element = "a[name=" + the_hash + "]";
+                    goscroll = true;
+                }
+
+                if(goscroll) {
+                    $('html, body').animate({
+                        scrollTop:$(the_element).offset().top
+                    }, 'slow');
+                    return false;
+                }
+            }
+        });
+    };
+
+    juizScrollTo('a[href^="#"]');
+})
+</script>
+
 <div id="pageBottom"></div>
+
+
+
 </body>
 </html>
