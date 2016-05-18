@@ -73,3 +73,47 @@ body {
 
 
 /*-- la font ---*/
+
+@font-face {
+    font-family: "generic-fonts";
+
+/*    src:url("fonts/tw_fonts/tests-web.eot?2");
+    src:url("fonts/tw_fonts/tests-web.eot?#iefix?2") format("embedded-opentype"),
+    url('fonts/tw_fonts/tests-web.woff?2') format('woff'),
+    url("fonts/tw_fonts/tests-web.ttf") format("truetype"),
+    url("fonts/tw_fonts/tests-web.svg#icomon?2") format("svg");*/
+
+    src:url("fonts/generic-fonts_plusT1200/icomoon.eot?1");
+    src:url("fonts/generic-fonts_plusT1200/icomoon.eot?#iefix?2") format("embedded-opentype"),
+    url('fonts/generic-fonts_plusT1200/icomoon.woff?2') format('woff'),
+    url("fonts/generic-fonts_plusT1200/icomoon.ttf") format("truetype"),
+    url("fonts/generic-fonts_plusT1200/icomoon.svg?2") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+ i{
+    font-family: "generic-fonts";  /* l'appelle de la font ds les balise et class qui auront des icones ... */
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    display: inline-block;
+    pointer-events: none;
+}
+
+.icon-angry:before {
+    content: "\ec2b";
+}
+
+.icon-angry2:before {
+    content: "\ec2c";
+}
+.icon-coins:before {
+    content: "\e9d4";
+}
