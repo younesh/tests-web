@@ -592,7 +592,95 @@
         </article>
     </section>
 
-    <!-- section#t00018>h2+article>(style+p+.box*3)-->
+
+    <section id="t00018">
+        <h2> https://icomoon.io : creation et gestion des ico-font , icone sous forme de fonts</h2>
+        <article>
+
+
+            <h3> les etape pour crer les ico-font </h3>
+
+            <ol>
+                <li> Enregistrer l’icone en *.EPS  depuis la PSD </li>
+                <li> Importer l’eps en AI puis l’enregistrer en SVG </li>
+                <li> Si l’icône ne s’affiche pas en entier -> utiliser pathfinder </li>
+                <li> Icomon : Créer un nouveau projet </li>
+                <li> Icomoon : importer le SVG dans le nouveau projet </li>
+                <li> Icomoon : générer les font (zip) </li>
+                <li> CSS : déclarer la font </li>
+                <li> CSS : utiliser la font </li>
+            </ol>
+            <style>
+
+                /*  DECLARATION DE LA NOUVELLE FONT ICONE (tw_fonts) */
+
+                @font-face {
+                    font-family: "tw_fonts";
+                    src:url("fonts/tw_fonts/tests-web.eot?2");
+                    src:url("fonts/tw_fonts/tests-web.eot?#iefix?2") format("embedded-opentype"),
+                    url('fonts/tw_fonts/tests-web.woff?2') format('woff'),
+                    url("fonts/tw_fonts/tests-web.ttf") format("truetype"),
+                    url("fonts/tw_fonts/tests-web.svg#icomon?2") format("svg");
+
+                    font-weight: normal;
+                    font-style: normal;
+                }
+
+                i{
+                    font-family: "tw_fonts";  /* l'appelle de la font ds les balise et class qui auront des icones ... */
+                    font-style: normal;
+                    font-weight: normal;
+                    font-variant: normal;
+                    text-transform: none;
+                    speak: none;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    text-align: center;
+                    display: inline-block;
+                    pointer-events: none;
+                }
+
+                .icon-home:before {  /* ce code est recupérer de la platforme icomoon ( au clic du "get code" ) */
+                    content: "\e900";
+                }
+
+                .icon-etoile:before {
+                    content: "\e901";
+                }
+
+                .icon-avion:before {
+                    content: "\e902";
+                }
+
+                
+                .box i {
+                    font-size: 40px;
+                    color: greenyellow;
+                }
+
+                .box2 i {
+
+                    font-size: 100px;
+                    color: orange;
+                }
+
+            </style>
+
+            <div class="box">
+                <i class="icon-home"></i>
+                <i class="icon-etoile"></i>
+                <i class="icon-avion"></i>
+
+            </div>
+            <div class="box box2">
+                <i class="icon-avion"></i>
+            </div>
+            <div class="box"></div>
+        </article>
+    </section>
+    
+    
+    <!-- section#t00019>h2+article>(style+p+.box*3)-->
 </div>
 
 <a href="#page" class="arrow-target" id="at_up">
