@@ -2,6 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <title></title>
     <style>
 
@@ -93,6 +94,56 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus excepturi lab
     </div>
 </div>
 
+<div class="trow" id="trow03">
+    <h3> test js / jq </h3>
+    <style></style>
+    <div class="tr-ctn">
+    <script>
 
+        $(function(){
+
+            $(".btn1").click(function(){
+                $(".jstst1").replaceWith("<div class='jstst2'><div> ...text 2 </div></div>");
+            });
+
+            $(".btn2").click(function(){
+                $(".jstst2").replaceWith("<div class='jstst1'><p> text 1 .... </p></div>");
+            });
+        });
+    </script>
+
+        <button class="btn1">
+            remplace 1
+        </button>
+        <button class="btn2">
+            remplace 2
+        </button>
+
+        <div class='jstst1'><p> text 1 </p></div>
+
+    </div>
+</div>
+
+<div class="trow" id="trow04">
+    <h3> test </h3>
+    <style></style>
+    <div class="tr-ctn">
+        <select id="carManufacturer" name="carManufacturer">
+            <optgroup label="European">
+                <option value="volvo">Volvo</option>
+                <option value="audi">Audi</option>
+            </optgroup>
+            <optgroup label="American">
+                <option value="chrysler">
+                    Chrysler</option>
+                <option value="ford">
+                    Ford</option>
+            </optgroup>
+        </select>
+
+    </div>
+</div>
+
+<!-- .trow#trow$$>h3+style+.tr-ctn -->
 </body>
 </html>
