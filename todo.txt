@@ -12,5 +12,7 @@
 2.angular
     2.1 installation et parametrage d'environnement avec nodeJS
 
+
 --------
+SEREIAL PNBR:
 COdPNBR-deslock-V12553:dakhlass-You!8152-younesharke@
