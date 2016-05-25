@@ -1,0 +1,15 @@
+
+PLAN / TODO
+------------------
+
+
+QUESTION / BLOCAGES :
+--------------------
+-  routing le .otherwise({redirectTo:'partials/p404.html'}); marche pas  ( ds D:\projets\tests-web\angularjs\app\routing.js )
+- routing : peut en faire des inculsion imbriquer sur plsieur niveau, cad j'ai l'index de l'app qui a  un <div ng-view> </div> mais aussi un des partial que j'include a àson tour un ng-view,
+- bonne pratique : est ce j'inclue les js eds controlleurs ds l'index de l'appli global , ou bien ds chaque tpl de partials a part ...  ?
+
+
+qt en relation avec le prj my3dplayer
+--------------------------------------
+- c'est quoi le schemas des services des listing des players, sequences ..... ?

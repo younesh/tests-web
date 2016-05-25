@@ -4,5 +4,5 @@
 /**
  * Main module of the application.
  */
-angular.module('Main', [])
+var app=angular.module('Main', ['ngRoute']);
 
