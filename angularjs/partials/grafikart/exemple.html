@@ -1,0 +1,22 @@
+<script>
+    app.controller('GrafikartCtrl', function($scope){
+        $scope.test ="est deja pas cui encore !!  ";
+    });
+</script>
+
+<h3> Exemple grafikart angular fr  : <a href="https://www.youtube.com/watch?v=aBE0St5yI7U&list=PLjwdMgw5TTLUDlJyx4yIPQjoI-w-7Zs1r"> lien liste video </a></h3>
+
+<div ng-controller="GrafikartCtrl">
+    <div ng-init="users=[{name:'marc', comment:'i m happy'},{name:'jean' , comment:'my name is jean'},{name:'dupon' ,comment:'here i am , i m dupon !!'}]">
+        filrer : <input type="text" class="search" ng-model="query">
+        <ul ng-repeat="user in users | filter:{comment:query} | orderBy : '-name'  "> <!-- les filtre sur collection :  | filter:'n'  , | filter:query ,  | orderBy : '-name' -->
+            <li><a>{{ user.name }} : "{{ user.comment }} " </a></li> <!-- filtre sur un seul item : | uppercase -->
+        </ul>
+        <!--{{ users }}-->
+
+
+        <br> message du scope  :   {{ etat }}
+    </div>
+
+
+</div>

@@ -6,7 +6,6 @@
     <script src="../bower_components/angular/angular.min.js"> </script>
     <script src="../bower_components/angular-route/angular-route.min.js"> </script>
     <script src="app/app.js"> </script>
-    <script src="app/routing.js"> </script>
     <script src="partials/produits/produitIndexCtrl.js"></script>
     <link rel="stylesheet" href="../sass/css/style.css"/>
 </head>
@@ -19,26 +18,17 @@
         <h2>test0</h2>
         <div class="tr-ctn">
             <nav class="navbar">
-                <ul>
+                <ul class="nav nav-pills">
+                    <li><a href="#/grafikart"> grafikart </a></li>
                     <li><a href="#/pdt"> produits </a></li>
                     <li><a href="#/m1">menu 1</a></li>
                     <li><a href="#/m2">menu 2</a></li>
-                    <li><a href="">page 3</a></li>
-                    <li><a href="">page 4</a></li>
-                    <li><a href="">page 5</a></li>
+
                 </ul>
             </nav>
 
             <div ng-view> </div>
 
-<!--            <h3> gestion des produit </h3>
-            <div ng-controller="ProduitIndex">
-                <label > base incrementation </label>  <input ng-model="base"><br />
-                <button ng-model="incrementeur" ng-click="incrementer(base)">
-                    incrementer de 2
-                </button>
-                <input ng-model="compteur" value="0">
-            </div>-->
 
         </div>
     </div>
