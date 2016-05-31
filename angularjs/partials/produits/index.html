@@ -3,7 +3,15 @@
 <div ng-controller="ProduitIndex">
     <label > base incrementation </label>  <input ng-model="base"><br />
     <button ng-model="incrementeur" ng-click="incrementer(base)">
-        incrementer de 2
+        incrementer de {{base}}
     </button>
     <input ng-model="compteur" value="0">
+
+    <div ng-if="compteur>100">
+        BRAVO !!! tu as depasser les 100 !!!
+    </div>
+    <div ng-if="compteur<=100">
+        en progression ...
+    </div>
+
 </div>
