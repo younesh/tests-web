@@ -5,7 +5,8 @@
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <title></title>
     <style>
-
+     .trow { background-color: #eee; border: 1px solid #007de3; padding: 0.5% 1%; margin: 1%;}
+     .trow  article { padding: 1%; margin: 1%; border: 1px solid #ccc }
     </style>
 </head>
 <body>
@@ -156,6 +157,118 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus excepturi lab
     </div>
 </div>
 
-<!-- .trow#trow$$>h3+style+.tr-ctn -->
+<div class="trow" id="trow06">
+    <h3> Mod 06 : css styline </h3>
+    <style>
+
+     /* ::selection */
+    #trow06 .tr-ctn::selection {
+        font-size: 20px;
+        background-color: #ffff00;
+        color: red;
+        font-weight: bold;
+    }
+
+     /* LINK STATUS : visited, hover, focus ... */
+     #trow06 article p a {
+         display: inline-block; padding: 1%; margin: 1%; background-color: #ccc; border: solid 1px #843534;
+     }
+
+     #trow06 article p a:link {
+         background-color: orange;
+     }
+
+     #trow06 article p a:hover {
+         background-color: #ffff00;
+     }
+
+     #trow06 article p a:visited { /* apres le click, en sera ds :visited */
+         background-color: #008000;
+     }
+
+     #trow06 article p a:focus { /* l'element active par la tabulation clavier ou click souris */
+         background-color: plum;
+     }
+
+
+     #trow06 article p a:active { /* tant qu'en press la souris on est ds :active , si en relache en sort du :active*/
+         background-color: #007de3;
+     }
+
+   /* MULTI BACKGROUND */
+     #trow06 .multibg p {
+         width: 50%; padding: 2%;
+         background: url("images/icones/linkedin-icon.png") no-repeat 0px 50px  ,  url("images/icones/help_button1.png") no-repeat 50px 0px ;
+
+     }
+
+     /* GRADIANT */
+     /* linear-gradient( 45deg, blue, red ); */
+     #trow06 .gradiant-linear a:nth-of-type(1) {
+            background: linear-gradient( 0deg, orange, #ffff00 );
+      }
+     #trow06 .gradiant-linear a:nth-of-type(1):hover {
+         background: linear-gradient( 180deg, orange, #ffff00 );
+     }
+
+     #trow06 .gradiant-linear a:nth-of-type(2) {
+         background: linear-gradient( 45deg, #008000, #00FF00 );
+     }
+     #trow06 .gradiant-linear a:nth-of-type(2):hover  { /* pour inverser la direction en ajout 180° */
+         background: linear-gradient( 225deg, #008000, #00FF00 );
+     }
+
+     #trow06 .gradiant-radial a:nth-of-type(1) {
+         background: radial-gradient ( 0deg, orange, #ffff00 );
+     }
+
+    </style>
+    <div class="tr-ctn">
+        <article>
+            <h4> selection </h4>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi blanditiis commodi cupiditate
+                dignissimos, dolorum est id ipsam itaque libero neque officia porro qui rerum sint, suscipit ullam ut,
+                voluptate. </p>
+        </article>
+
+        <article>
+            <h4> link stats : hover ,visited, focus, active ....  </h4>
+            <p>
+                <a href="#link"> link (orange) </a>
+                <a href="#visited"> visited (green) </a>
+                <a href="#focus"> focus (rose / plum)  </a>
+                <a href="#hover"> hover (jaune) </a>
+                <a href="#active"> active (bleu) </a>
+            </p>
+        </article>
+
+        <article class="multibg">
+            <h4></h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ducimus enim nisi non quis rerum vitae? Alias eligendi esse facilis maxime minus mollitia natus necessitatibus, obcaecati quaerat repudiandae velit veritatis!
+            </p>
+        </article>
+
+        <article class="gradiant-linear">
+            <h4> gradiant - linear  </h4>
+            <p>
+                <a href="#"> btn gradiant 1 </a>
+                <a href="#"> btn gradiant 2 </a>
+            </p>
+        </article>
+
+
+        <article class="gradiant-radial">
+            <h4> gradiant - linear  </h4>
+            <p>
+                <a href="#"> btn gradiant 1 </a>
+                <a href="#"> btn gradiant 2 </a>
+            </p>
+        </article>
+    </div>
+</div>
+
+
+<!-- .trow#trow$$>h3+style+.tr-ctn>article*2>h4+p -->
 </body>
 </html>

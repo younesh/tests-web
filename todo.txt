@@ -2,7 +2,7 @@
 1. CSS
     1.1 : pb des height en pourcentage ( 100% ) >  [ ... en cours 30%]
     1.2 : pb des centre centrage vertical des dib ( pour des fois ç marche et des fois pas)
-    1.3 animation css3
+    1.3 : animation css3
         1.3.1 : les paralallax
         1.3.2 : les animation ( image zoom + btn link visible > expl : http://themeforest.net/item/worker-small-business-booking-template/full_screen_preview/12001625
     1.4 modele de boite FLEX : le flex ds tous ces etats ...
@@ -11,6 +11,16 @@
 
 2.angular
     2.1 installation et parametrage d'environnement avec nodeJS
+    2.2 passer de revu les fondamentaux et princibe de base
+    2.3 faire des appli exemble pour un projet reél ( e-book perso )
+        2.1 crud en AnJs
+        2.2 interfacage des data en front
+
+3.les composant web usels : chercher les meilleur et les plus générique multi-cas
+    3.1 les carausels parametrables responsives
+    3.2 les menus multi-levels responsive
+    3.3 les calandriers
+    3.4 galeries d'images
 
 
 --------
