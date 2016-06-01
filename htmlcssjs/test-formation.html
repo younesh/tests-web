@@ -224,6 +224,23 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus excepturi lab
          background-image: radial-gradient(ellipse farthest-corner at 45px 45px , #00FFFF 0%, rgba(0, 0, 255, 0) 50%, #0000FF 95%)
      }
 
+     #trow06 .gradiant-radial a:nth-of-type(2) {
+        /* background: radial-gradient(top right, ellipse, red, blue); */
+         background: radial-gradient(top right, ellipse, red, blue);
+         /*background-image: radial-gradient(ellipse farthest-corner at 45px 45px , #00FFFF 0%, rgba(0, 0, 255, 0) 50%, #0000FF 95%);*/
+     }
+
+
+      /* ROTATE  */
+     #trow06  .rotate a:nth-of-type(1) {
+         width: 100px;
+         text-align: center;
+         transition: all 0.3s;
+     }
+
+     #trow06  .rotate a:nth-of-type(1):hover {
+         transform: rotate(180deg);
+     }
     </style>
     <div class="tr-ctn">
         <article>
@@ -267,10 +284,90 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus excepturi lab
                 <a href="#"> btn gradiant 2 </a>
             </p>
         </article>
+
+        <article class="rotate">
+            <h4> ROTATE </h4>
+            <p>
+                <a href="#"> rotate  </a>
+
+            </p>
+        </article>
+        <article>
+            <h4></h4>
+
+            <p></p>
+        </article> 
+    </div>
+</div>
+
+<div class="trow" id="trow00">
+    <h3> MODULE 07 : javascript object </h3>
+    <style>
+
+    </style>
+
+    <script>
+     var employee = {};
+
+     employee.name="emp0001";
+     employee.age="32";
+     employee.salaire="1200";
+     employee.augmentation=function(tauxAug){
+         this.salaire * ( 1 + (tauxAug / 100))
+     }
+
+     var Account = function (id, name) {
+         this.id = id;
+         this.name = name;
+         this.balance = 0;
+         this.numTransactions = 0;
+     };
+     var acc1 = new Account(1, "John");
+
+      //  alert(acc1.id + " - " + acc1.name);
+
+
+      /*  PROTOTYPE */
+
+        var homme = function (name,age) {
+            this.name = name;
+            this.age = age;
+/*            this.grandire = function (annee){
+                this.age =  this.age*1 + annee*1;
+            };*/
+        }
+
+
+     homme.prototype = {
+         num : 12540,
+         grandire : function (annee){
+             this.age =  this.age*1 + annee*1;
+         }
+     }
+     var homm1 = new homme('hassan',"25");
+     homm1.grandire(100);
+     alert ("Mr " + homm1.name +  ", à " +homm1.age + " an ,  num=" + homm1.num );
+
+    </script>
+    <div class="tr-ctn">
+        <article>
+            <h4></h4>
+            <p>
+
+            </p>
+        </article>
+        <article>
+            <h4></h4>
+            <p>
+
+            </p>
+        </article>
     </div>
 </div>
 
 
 <!-- .trow#trow$$>h3+style+.tr-ctn>article*2>h4+p -->
+<a href="http://www.oriensys.ma/contact.html" target="_blank"> oriensys : lieu de la certif ! </a>
+<!-- http://www.oriensys.ma/contact.html -->
 </body>
 </html>
