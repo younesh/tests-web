@@ -300,7 +300,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus excepturi lab
     </div>
 </div>
 
-<div class="trow" id="trow00">
+<div class="trow" id="trow07">
     <h3> MODULE 07 : javascript object </h3>
     <style>
 
@@ -346,26 +346,128 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus excepturi lab
      }
      var homm1 = new homme('hassan',"25");
      homm1.grandire(100);
-     alert ("Mr " + homm1.name +  ", à " +homm1.age + " an ,  num=" + homm1.num );
 
+
+        $(function(){
+                $("#trow07 button").click(function(){
+                    alert ("Mr " + homm1.name +  ", à " +homm1.age + " an ,  num=" + homm1.num );
+                });
+        });
     </script>
     <div class="tr-ctn">
         <article>
-            <h4></h4>
+            <h4> prototype </h4>
             <p>
-
+                <button> afficher homm1 instance de homme </button>
             </p>
         </article>
         <article>
             <h4></h4>
-            <p>
-
-            </p>
+            <p></p>
         </article>
     </div>
 </div>
 
+<div class="trow" id="trow08">
+    <h3> Module 08 :  Module 8 : Creating Interactive Pages by Using HTML5 APIs </h3>
+    <style>
+        /*FileReader */
+        #statfile01 {
+            border: 1px solid #ccc; padding: 1% ;
+        }
 
+
+        #trow08 #div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+
+    </style>
+    <div class="tr-ctn">
+        <article class="FileReader">
+            <h4> FileReader  </h4>
+            <p>
+
+            <form action="#FileReaderFrm" id="FileReaderFrm">
+             <input type="file" id="file01" name="">
+            <input type="file" id="file01" name="">
+             <button> upload  </button>
+           </form>
+
+
+                <div id="statfile01">
+                   ....
+                </div>
+                <script>
+
+                    $(function(){
+                     //  $("#statfile01").text(" prepared text !");
+/*                        $("#file01").onprogress(function(){
+                            $("#statfile01").text("1 on progress event !! ");
+                        });*/
+
+
+                        
+                        $(".FileReader button").click(function () {
+                            var reader = new FileReader();
+                            var file =  document.getElementById('file01').files[0]; // $("#file01").files[0];
+                            reader.readAsBinaryString(file);
+                            reader.onprogress = updateProgress;
+                            reader.onload = load;
+                            reader.onloadend = loadend;
+                            reader.onerror = errorHandler;
+                            reader.onabort = abort;
+                        })
+
+                        function updateProgress (evt){
+                            $("#statfile01").append("<p> 1 on progress event !! </p> ");
+                        };
+
+                        function load (evt){
+                            $("#statfile01").append("<p> 2 on onload event !!  </p> ");
+                        };
+
+                        function loadend (evt){
+                            $("#statfile01").append("<p> 3 on onloadend  event !!  </p>");
+                        };
+                    });
+                </script>
+            </p>
+        </article>
+        <article>
+            <h4> drag en drop </h4>
+            <script>
+
+                function allowDrop(ev) {
+                    ev.preventDefault();
+                }
+
+                function drag(ev) {
+                    //  alert (" drag event on image (pressing img ) ");
+                    ev.dataTransfer.setData("text", ev.target.id);
+                }
+
+                function drop(ev) {
+                    // alert(" drop event ");
+                    ev.preventDefault();
+                    var data = ev.dataTransfer.getData("text");
+                    ev.target.appendChild(document.getElementById(data));
+                }
+
+               $(function(){
+
+               });
+            </script>
+            <p>
+
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <br>
+            <img id="drag1" src="images/Desert.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+
+            <div id="statfile02">
+                ....
+            </div>
+            </p>
+        </article>
+    </div>
+</div>
 <!-- .trow#trow$$>h3+style+.tr-ctn>article*2>h4+p -->
 <a href="http://www.oriensys.ma/contact.html" target="_blank"> oriensys : lieu de la certif ! </a>
 <!-- http://www.oriensys.ma/contact.html -->
