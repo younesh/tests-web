@@ -1,0 +1,33 @@
+
+1. DESIGN / GRAPHISME / UX
+
+ 1.1 icones :
+    1.1.1 http://www.flaticon.com/ > banque d'icone
+    1.1.2 http://fontawesome.io/ > fonticone
+    1.1.3 https://www.iconfinder.com/iconsets/capsocial-round
+
+ 1.2 banque d'images
+    1.2.1   fr.freepik.com
+    1.2.2 : une methode qui consiste à touver l'image dans une banque payant connu, et enregistrer
+            l'image apperçu, puis la glisser sur le champs de rechereche google pour que ce dernier
+            fasse une recherche par reconnaissance visuelle de l'image et ainsi il va nous donner les
+            image achtées ( cracker) et utiliser par d'autre tiere, les banque image payante
+                - http://www.shutterstock.com/fr
+                - http://www.gettyimages.fr/
+    1.2.3 : http://lorempixel.com/> banque d'image pour faux image en lorem > en passant nos preference ds URL :
+            http://lorempixel.com/[with]/[height]/[Domaine]/ --> http://lorempixel.com/400/200/nature/
+
+ 1.3 mockups, mockuping
+    1.3.2 http://www.axure.com/
+
+
+ 2. INTEGRATION-WEB  / FRONT-END-DEV
+    2.1 Test multi navigateurs / multi-platforme
+        2.1.1 : https://www.browserstack.com/ (ID zlmouatassime@visiativ.com / visiativ2015
+
+
+
+
+
+
+ keyWord gmail : "@tools webdesign"

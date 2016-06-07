@@ -89,7 +89,6 @@ a { cursor: pointer; }
   ));*/
 
   @include filter-gradient(#2ac363, #9c4cc2, horizontal); // IE6-8 fallback en gradient horizontal
-  @include background-image(radial-gradient(center, ellipse cover,
-    #2ac363 0%, #cd8c14 50%, #9c4cc2));
+  @include background-image(radial-gradient(center, ellipse cover, #2ac363 0%, #cd8c14 50%, #9c4cc2));
   @include box-shadow;
 } 
