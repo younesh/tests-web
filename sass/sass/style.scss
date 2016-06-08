@@ -1,5 +1,6 @@
 @import "compass";
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../../bower_components/font-awesome/css/font-awesome.min.css";
 @import "global";
 
 /*---------------------- layoutage globale------------------------*/
@@ -236,4 +237,44 @@
     @extend  .nav;
     @extend  .nav-pills;
   }
+}
+
+#trow11 {
+  .box-pdt {
+
+    height: 300px;
+    background-color: #ccc;
+    overflow: hidden;
+    @include make-sm-column($grid-columns/2);
+    @include make-md-column($grid-columns/3);
+    @include make-lg-column($grid-columns/4);
+
+    &:hover {
+      .bp-panel {
+        margin-top: -50px;
+      }
+    }
+
+    .bp-img {
+     background-color: #ccc;
+      height: 300px;
+   }
+
+    .bp-panel {
+      transition: margin-top  0.5s;
+      margin-top: auto;
+      display: block;
+      background-color: #fff;
+      @extend .clearfix;
+       a{
+         display: inline-block;
+         height: 50px;
+         line-height: 50px;
+         text-align: center;
+         vertical-align: middle;
+         @include make-xs-column($grid-columns/3);
+       }
+    }
+  }
+  @extend .clearfix;
 }

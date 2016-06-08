@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(../../bower_components/font-awesome/css/font-awesome.min.css);
 /* line 9, ../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_normalize.scss */
 html {
   font-family: sans-serif;
@@ -8430,12 +8431,12 @@ button.close {
   }
 }
 /* line 14, ../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
-.clearfix:before, #trow5:before, .clearfix:after, #trow5:after {
+.clearfix:before, #trow5:before, #trow11 .box-pdt .bp-panel:before, #trow11:before, .clearfix:after, #trow5:after, #trow11 .box-pdt .bp-panel:after, #trow11:after {
   content: " ";
   display: table;
 }
 /* line 19, ../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
-.clearfix:after, #trow5:after {
+.clearfix:after, #trow5:after, #trow11 .box-pdt .bp-panel:after, #trow11:after {
   clear: both;
 }
 
@@ -8904,7 +8905,7 @@ a:hover {
 }
 
 /*---------------------- layoutage globale------------------------*/
-/* line 6, ../sass/style.scss */
+/* line 7, ../sass/style.scss */
 #wrapper {
   min-height: 600px;
   background-color: #fff;
@@ -8912,7 +8913,7 @@ a:hover {
   padding: 15px;
 }
 
-/* line 13, ../sass/style.scss */
+/* line 14, ../sass/style.scss */
 .trow {
   background-color: #f6fcfe;
   border: solid 1px #dfdede;
@@ -8925,26 +8926,26 @@ a:hover {
 }
 
 /*---------------------- page/bloc sp├®cifique -----------------------*/
-/* line 23, ../sass/style.scss */
+/* line 24, ../sass/style.scss */
 .box1 {
   padding: 15px;
   background-color: #EE4000;
 }
 
-/* line 28, ../sass/style.scss */
+/* line 29, ../sass/style.scss */
 .box2 {
   padding: 15px;
   background-color: #1189a7;
 }
 
-/* line 33, ../sass/style.scss */
+/* line 34, ../sass/style.scss */
 .box3 {
   padding: 15px;
   background-color: #7A7777;
 }
 
 /*------------ #trow3 : --------------*/
-/* line 41, ../sass/style.scss */
+/* line 42, ../sass/style.scss */
 #trow3 .bloc_bootsrapale {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -8964,21 +8965,21 @@ a:hover {
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  /* line 41, ../sass/style.scss */
+  /* line 42, ../sass/style.scss */
   #trow3 .bloc_bootsrapale {
     float: left;
     width: 33.33333%;
   }
 }
 @media (min-width: 992px) {
-  /* line 41, ../sass/style.scss */
+  /* line 42, ../sass/style.scss */
   #trow3 .bloc_bootsrapale {
     float: left;
     width: 16.66667%;
   }
 }
 @media (min-width: 1200px) {
-  /* line 41, ../sass/style.scss */
+  /* line 42, ../sass/style.scss */
   #trow3 .bloc_bootsrapale {
     float: left;
     width: 8.33333%;
@@ -8987,7 +8988,7 @@ a:hover {
 
 /*------------- #trow4 :LESS ----------*/
 /*tr4.1 : imbrication*/
-/* line 65, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 #trow4 #trc-1 {
   border: solid 1px #003333;
   width: 50%;
@@ -8998,23 +8999,23 @@ a:hover {
   padding-left: 15px;
   padding-right: 15px;
 }
-/* line 55, ../sass/style.scss */
+/* line 56, ../sass/style.scss */
 #trow4 #trc-1 h4 {
   color: #000;
 }
-/* line 58, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 #trow4 #trc-1 p {
   color: #1189a7;
 }
 @media (min-width: 1200px) {
-  /* line 65, ../sass/style.scss */
+  /* line 66, ../sass/style.scss */
   #trow4 #trc-1 {
     float: left;
     width: 50%;
   }
 }
 
-/* line 72, ../sass/style.scss */
+/* line 73, ../sass/style.scss */
 #trow5 .box {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -9032,48 +9033,48 @@ a:hover {
   padding-left: 15px;
   padding-right: 15px;
 }
-/* line 74, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 #trow5 .box:before {
   content: "Mobile";
   color: #ffff00;
 }
 @media (min-width: 768px) {
-  /* line 72, ../sass/style.scss */
+  /* line 73, ../sass/style.scss */
   #trow5 .box {
     float: left;
     width: 50%;
   }
 }
 @media (min-width: 992px) {
-  /* line 72, ../sass/style.scss */
+  /* line 73, ../sass/style.scss */
   #trow5 .box {
     float: left;
     width: 33.33333%;
   }
 }
 @media (min-width: 1200px) {
-  /* line 72, ../sass/style.scss */
+  /* line 73, ../sass/style.scss */
   #trow5 .box {
     float: left;
     width: 25%;
   }
 }
 @media (min-width: 768px) {
-  /* line 84, ../sass/style.scss */
+  /* line 85, ../sass/style.scss */
   #trow5 .box:before {
     content: "tablette portrait";
     color: #ffff00;
   }
 }
 @media (min-width: 992px) {
-  /* line 91, ../sass/style.scss */
+  /* line 92, ../sass/style.scss */
   #trow5 .box:before {
     content: "desktop min";
     color: #00CC00;
   }
 }
 @media (min-width: 1200px) {
-  /* line 98, ../sass/style.scss */
+  /* line 99, ../sass/style.scss */
   #trow5 .box:before {
     content: "desktop big";
     color: #006600;
@@ -9096,33 +9097,33 @@ a:hover {
     }
   }
 }*/
-/* line 124, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 #trow7 {
   height: 300px;
 }
-/* line 127, ../sass/style.scss */
+/* line 128, ../sass/style.scss */
 #trow7 .tr-ctn {
   background-color: #ffff00;
   height: calc(100% - 35px);
 }
-/* line 131, ../sass/style.scss */
+/* line 132, ../sass/style.scss */
 #trow7 .tr-n1 {
   padding: 10px;
   background-color: #ccc;
   height: 90%;
 }
-/* line 135, ../sass/style.scss */
+/* line 136, ../sass/style.scss */
 #trow7 .tr-n1 .tr-n1-1 {
   padding: 10px;
   background-color: #1189a7;
 }
-/* line 138, ../sass/style.scss */
+/* line 139, ../sass/style.scss */
 #trow7 .tr-n1 .tr-n1-1 .tr-n1-1-1 {
   padding: 10px;
   background-color: #7A7777;
 }
 
-/* line 147, ../sass/style.scss */
+/* line 148, ../sass/style.scss */
 #trow8 .box {
   width: 100px;
   height: 100px;
@@ -9135,21 +9136,21 @@ a:hover {
   justify-content: center;
   /* alignement vertical */
 }
-/* line 163, ../sass/style.scss */
+/* line 164, ../sass/style.scss */
 #trow8 .box .puce {
   display: inline-block;
   height: 10px;
   width: 10px;
   background: #fff;
 }
-/* line 171, ../sass/style.scss */
+/* line 172, ../sass/style.scss */
 #trow8 .box span {
   display: inline-block;
   background-color: #00CC00;
 }
 
 /* bloc produit */
-/* line 181, ../sass/style.scss */
+/* line 182, ../sass/style.scss */
 .pdt-box {
   position: relative;
   min-height: 1px;
@@ -9164,20 +9165,20 @@ a:hover {
   margin: 0px 5px 15px;
 }
 @media (min-width: 768px) {
-  /* line 181, ../sass/style.scss */
+  /* line 182, ../sass/style.scss */
   .pdt-box {
     float: left;
     width: 31.74603%;
   }
 }
 @media (min-width: 1200px) {
-  /* line 181, ../sass/style.scss */
+  /* line 182, ../sass/style.scss */
   .pdt-box {
     float: left;
     width: 24.09639%;
   }
 }
-/* line 187, ../sass/style.scss */
+/* line 188, ../sass/style.scss */
 .pdt-box .pdt-img {
   overflow: hidden;
   background-color: #7c7c7c;
@@ -9185,17 +9186,17 @@ a:hover {
   position: relative;
 }
 @media (min-width: 768px) {
-  /* line 187, ../sass/style.scss */
+  /* line 188, ../sass/style.scss */
   .pdt-box .pdt-img {
     height: 200px;
   }
 }
-/* line 196, ../sass/style.scss */
+/* line 197, ../sass/style.scss */
 .pdt-box .pdt-img img {
   width: 100%;
   transition: all .3s ease-out;
 }
-/* line 201, ../sass/style.scss */
+/* line 202, ../sass/style.scss */
 .pdt-box .pdt-img:before {
   content: " ";
   position: absolute;
@@ -9205,21 +9206,90 @@ a:hover {
   height: 100%;
   transition: background-color 1s;
 }
-/* line 211, ../sass/style.scss */
+/* line 212, ../sass/style.scss */
 .pdt-box .pdt-img:hover {
   cursor: pointer;
 }
-/* line 213, ../sass/style.scss */
+/* line 214, ../sass/style.scss */
 .pdt-box .pdt-img:hover img {
   transform: scale(1.25);
 }
-/* line 216, ../sass/style.scss */
+/* line 217, ../sass/style.scss */
 .pdt-box .pdt-img:hover:before {
   background-color: rgba(255, 255, 255, 0);
 }
-/* line 222, ../sass/style.scss */
+/* line 223, ../sass/style.scss */
 .pdt-box .pdt-ctn {
   padding: 15px;
 }
 
 /* #trow10 : les menu bootstrap multi-level   */
+/* line 243, ../sass/style.scss */
+#trow11 .box-pdt {
+  height: 300px;
+  background-color: #ccc;
+  overflow: hidden;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  /* line 243, ../sass/style.scss */
+  #trow11 .box-pdt {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  /* line 243, ../sass/style.scss */
+  #trow11 .box-pdt {
+    float: left;
+    width: 33.33333%;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 243, ../sass/style.scss */
+  #trow11 .box-pdt {
+    float: left;
+    width: 25%;
+  }
+}
+/* line 253, ../sass/style.scss */
+#trow11 .box-pdt:hover .bp-panel {
+  margin-top: -50px;
+}
+/* line 258, ../sass/style.scss */
+#trow11 .box-pdt .bp-img {
+  background-color: #ccc;
+  height: 300px;
+}
+/* line 263, ../sass/style.scss */
+#trow11 .box-pdt .bp-panel {
+  transition: margin-top  0.5s;
+  margin-top: auto;
+  display: block;
+  background-color: #fff;
+}
+/* line 269, ../sass/style.scss */
+#trow11 .box-pdt .bp-panel a {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  float: left;
+  width: 33.33333%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
