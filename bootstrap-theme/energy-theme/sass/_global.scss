@@ -1,0 +1,118 @@
+/* Globale */
+//------------------- variable global ------------------------/
+//--------- COLOR ----------------/
+
+//-- 1ere couleur de l' IV
+$Color1 : #EE4000;
+//-- 2eme couleur de l' IV
+$Color2 : #1189a7;
+//-- couleur neutre pour le fond
+$Color3 : #7A7777;
+$ColorBorder : lighten($Color3, 40%);
+
+//---------- MESURES -------------/
+$Gotiere : 15px;
+$BordRad : 5px;
+$TransitionVistesse : 0.3s;
+
+//------------- surcharge bootsrap -----------------/
+// $grid-columns :6;
+
+//------ MEXINS / FUNCTION ------/
+@mixin BordRadius($B : $BordRad ) {
+  -moz-border-radius: $B;
+  -webkit-border-radius: $B;
+  -o-border-radius: $B;
+  border-radius: $B;
+}
+
+@mixin bloc_RespoBstp() {
+  @include make-sm-column ($grid-columns/3);
+  @include make-md-column ($grid-columns/6);
+  @include make-lg-column ($grid-columns/12);
+}
+
+/*--------------------- inistalisation style ----------------*/
+
+@font-face {
+  font-family: "Montserrat";
+  src:  url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  src : url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  height: 100%;
+}
+
+h1, .titleH1,
+h2, .titleH2,
+h3, .titleH3,
+h4, .titleH4 {
+  font-family: "Montserrat";
+}
+
+h1, .titleH1 {
+  font-size: 28px;
+  color: lighten($Color2, 30%);
+}
+
+h2, .titleH2 {
+  font-size: 23px;
+  color: lighten($Color1, 25%)
+}
+
+h3, .titleH3 {
+  font-size: 18px;
+  color: lighten($Color2, 10%)
+}
+
+h4, .titleH4 {
+  font-size: 13px;
+  color: lighten($Color1, 5%)
+}
+
+h5, .titleH5 {
+  font-size: 11px;
+  font-weight: bold;
+  color: $Color2;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  &:first-letter {
+    text-transform: capitalize;
+  }
+}
+
+body {
+  background: lighten($Color3, 45%);
+}
+
+button {
+  background-color: $Color2;
+  transition: all ($TransitionVistesse);
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: $Gotiere - 5;
+  @include BordRadius();
+  &:hover {
+    background-color: darken($Color2, 10%);
+  }
+}
+
+a {
+  color: $Color2;
+  transition: all $TransitionVistesse;
+  cursor: pointer;
+  &:hover {
+    color: darken($Color2, 20%);
+  }
+}
+
+
+
