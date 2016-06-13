@@ -9224,7 +9224,8 @@ a:hover {
 }
 
 /* #trow10 : les menu bootstrap multi-level   */
-/* line 243, ../sass/style.scss */
+/* effet apparaission */
+/* line 245, ../sass/style.scss */
 #trow11 .box-pdt {
   height: 300px;
   background-color: #ccc;
@@ -9243,43 +9244,43 @@ a:hover {
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  /* line 243, ../sass/style.scss */
+  /* line 245, ../sass/style.scss */
   #trow11 .box-pdt {
     float: left;
     width: 50%;
   }
 }
 @media (min-width: 992px) {
-  /* line 243, ../sass/style.scss */
+  /* line 245, ../sass/style.scss */
   #trow11 .box-pdt {
     float: left;
     width: 33.33333%;
   }
 }
 @media (min-width: 1200px) {
-  /* line 243, ../sass/style.scss */
+  /* line 245, ../sass/style.scss */
   #trow11 .box-pdt {
     float: left;
     width: 25%;
   }
 }
-/* line 253, ../sass/style.scss */
+/* line 255, ../sass/style.scss */
 #trow11 .box-pdt:hover .bp-panel {
   margin-top: -50px;
 }
-/* line 258, ../sass/style.scss */
+/* line 260, ../sass/style.scss */
 #trow11 .box-pdt .bp-img {
   background-color: #ccc;
   height: 300px;
 }
-/* line 263, ../sass/style.scss */
+/* line 265, ../sass/style.scss */
 #trow11 .box-pdt .bp-panel {
   transition: margin-top  0.5s;
-  margin-top: auto;
+  margin-top: 0;
   display: block;
   background-color: #fff;
 }
-/* line 269, ../sass/style.scss */
+/* line 271, ../sass/style.scss */
 #trow11 .box-pdt .bp-panel a {
   display: inline-block;
   height: 50px;

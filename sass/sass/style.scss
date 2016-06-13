@@ -239,6 +239,8 @@
   }
 }
 
+
+/* effet apparaission */
 #trow11 {
   .box-pdt {
 
@@ -262,7 +264,7 @@
 
     .bp-panel {
       transition: margin-top  0.5s;
-      margin-top: auto;
+      margin-top: 0;
       display: block;
       background-color: #fff;
       @extend .clearfix;
