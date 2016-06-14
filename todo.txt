@@ -20,6 +20,7 @@
 3.les composant web usels : chercher les meilleur et les plus générique multi-cas
     3.1 les carausels parametrables responsives
     3.2 les menus multi-levels responsive
+        3.2.1 composant menu pour bootstrap 3 :  http://geedmo.github.io/yamm3/#
     3.3 les calandriers
     3.4 galeries d'images
 
