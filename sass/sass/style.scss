@@ -167,7 +167,6 @@
       height: 10px;
       width: 10px;
       background: #fff;
-
     }
 
     span {
@@ -240,7 +239,6 @@
   }
 }
 
-
 /* effet apparaission */
 #trow11 {
   .box-pdt {
@@ -280,4 +278,38 @@
     }
   }
   @extend .clearfix;
+}
+
+
+@font-face {
+  font-family: 'Knockout28jf';
+  src: url('../fonts/Knockout/ibMMGB2B_Knockout-28JuniorFeathrwt.otf') format('opentype'); // format('opentype')
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SourceSansRegular';
+  src: url('../fonts/Source-Sans/SourceSansPro-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+#trow12 {
+ //   font-family: arial, helvetica;
+  h3{
+    font-size: 38px;
+  }
+
+  h4 {
+    font-size: 30px;
+
+    &.Knockout28jf {
+      font-family: "Knockout28jf";
+    }
+    &.SourceSansRegular {
+      font-family: "SourceSansRegular";
+    }
+  }
 }
