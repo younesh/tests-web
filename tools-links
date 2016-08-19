@@ -25,12 +25,15 @@
  1.4 FONT / police :
     1.4.1 : http://css.mammouthland.net/css3/font-face.php > utiliser @face-font en css correctement
 
+ 1.5 Print industrie  :
+    1.5.1 : http://www.h2impression.fr/index.php/ > un bon site sur la creation ds le print
+
 
  2. INTEGRATION-WEB  / FRONT-END-DEV
     2.1 Test multi navigateurs / multi-platforme
         2.1.1 : https://www.browserstack.com/ (ID Zlmouatassime@visiativ.com / visiativ2015 )
     2.2 news frameworke de templating rapide
-        2.2.1 : http://materializecss.com/ > equivalant de bootstrap en light
+        2.2.1 : http://materializecss.com/ > equivalant de bootstrap en light > nb a tester encore et encore ...
 
 
 3. WEBMARKETING / SEO REFERENCEMENT ...
