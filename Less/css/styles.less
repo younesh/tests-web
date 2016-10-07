@@ -80,14 +80,113 @@
 }
 
 
+@colorTitle : green;
 #trow5 { // test des fonts
-  h3 {
-    font-size: 20px;
+
+  .changeRed (@c) {
+    @colorTitle : @c !important;
   }
 
-  #trc-1 {
-    .tr4_mix_trc-i();
+
+  .caseRed {
+   @colorTitle : red !important;
+    .changeRed (red);
   }
+
+  .caseGreen {
+   // @colorTitle : green;
+  }
+
+  .CaseBleu {
+    // @colorTitle : blue;
+  }
+
+  h3 {
+    font-size: 20px;
+    color: @colorTitle;
+  }
+
 }
 
 
+
+
+///// ****BEGIN *****/////
+
+//////////////////////////////////////////////////////
+// CONSTANTS
+
+@lightColour: #fff;
+@darkColour: #000;
+@lightBg: #fff;
+@darkBg: #000;
+@numberOfThemes: 3; //controls theme loop
+
+//////////////////////////////////////////////////////
+// MIXINS
+
+//Theme Definitions by parametric mixin numbers (1), (2), etc.
+.themeDefs(1) {
+  @lightColour: #f00;
+  @darkColour: #fff;
+  @lightBg: #f00;
+  @darkBg: #fff;
+}
+
+.themeDefs(2) {
+  //inverse of 1
+  @lightColour: #fff;
+  @darkColour: #f00;
+  @lightBg: #fff;
+  @darkBg: #f00;
+}
+
+.themeDefs(3) {
+  @lightColour: #cfc;
+  @darkColour: #363;
+  @lightBg: #cfc;
+  @darkBg: #363;
+}
+
+
+.curvy {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+//////////////////////////////////////////////////////
+// GENERAL STYLING
+
+* {padding: 0;margin: 0;}
+html {text-align: center;}
+h2 {padding: 20px 0;}
+
+.box {
+  .curvy;
+  color: @lightColour;
+  background: @darkBg;
+  display:inline-block; width:10%; padding:20px 5%; margin:0 1% 20px 1%;
+}
+
+//////////////////////////////////////////////////////
+// THEME BUILDING
+
+.buildThemes(@index) when (@index < @numberOfThemes + 1) {
+
+.theme-@{index} {
+  .themeDefs(@index);
+  color: @lightColour;
+  background: @darkBg;
+
+  .box {
+    color: @darkColour;
+    background: @lightBg;
+  }
+}
+  .buildThemes(@index + 1);
+}
+//stop loop
+.buildThemes(@index) {}
+//start theme building loop
+.buildThemes(1);

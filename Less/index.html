@@ -3,7 +3,11 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title> test LESS </title>
-    <link rel="stylesheet" href="css/styles.css"/>
+    <!-- Utilise CSS -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- Utilise LESS -->
+    <link rel="stylesheet/less" type="text/css" href="css/styles.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.min.js"></script>
 </head>
 <body>
 
@@ -72,9 +76,17 @@
 
 
     <div class="trow" id="trow5">
-        <h3> test font exotique Knockout ... </h3>
-        <div class="tr-ctn">
 
+        <div class="caseRed">
+            <h3> ça doit etre rouge </h3>
+        </div>
+
+        <div class="caseGreen">
+            <h3> ça doit etre vert  </h3>
+        </div>
+
+        <div class="CaseBleu">
+            <h3> ça doit etre bleu  </h3>
         </div>
     </div>
     <!-- .trow>h3{test$}+.tr-ctn -->
