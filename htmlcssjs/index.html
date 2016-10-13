@@ -718,7 +718,51 @@
             <a class="box"><a href=""></a></a>
         </article>
     </section>
-    <!-- section#t00021>h2+article>(style+p+.box*3)-->
+
+    <section id="t00021">
+        <h2> CSS3 animation : </h2>
+        <article>
+            <style>
+                #t00021 { }
+                #t00021 .box {
+                }
+
+                #t00021 .box.b1 {
+                    background-color: darkblue;
+                    position: relative;
+                    width: 300px;
+                    height: 300px;
+                }
+
+                #t00021 .box.b2 {
+                    background-color: orange;
+                    position: relative;
+                    top: 45px;
+                    left: 0;
+                    width: 212px;
+                    height: 212px;
+                    transform: rotate(45deg);
+                    animation: animBoxRetat 5s infinite ;
+                }
+                @keyframes animBoxRetat {
+                    0%   {transform: rotate(45deg); }
+                    33%  {transform: rotate(450deg);   width: 50px;  height: 50px;}
+                    66%  {transform: rotate(-90deg);   width: 200px;  height: 200px;}
+                    100% {transform: rotate(45deg); }
+                }
+
+
+            </style>
+            <p></p>
+
+            <div class="box b1">
+                <div class="box b2"></div>
+            </div>
+
+
+        </article>
+    </section>
+    <!-- section#t00022>h2+article>(style+p+.box*3)-->
 </div>
 
 <a href="#page" class="arrow-target" id="at_up">

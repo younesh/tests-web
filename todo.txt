@@ -8,6 +8,7 @@
             1.3.2.1 la proprité animation : ces volets ....
             1.3.2.2 animation des chiffre à l'apparaission commmr : http://www.rawnet.com/case-studies/baxter-storey
     1.4 modele de boite FLEX : le flex ds tous ces etats ...
+    1.5 UX et redisign des controller html5 ( checkbox, radio, combobox
 
 
 2.angular
