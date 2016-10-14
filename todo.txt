@@ -10,7 +10,6 @@
     1.4 modele de boite FLEX : le flex ds tous ces etats ...
     1.5 UX et redisign des controller html5 ( checkbox, radio, combobox
 
-
 2.angular
     2.1 installation et parametrage d'environnement avec nodeJS
     2.2 passer de revu les fondamentaux et princibe de base
@@ -21,12 +20,16 @@
 3.les composant web usels : chercher les meilleur et les plus générique multi-cas
     3.1 les carausels parametrables responsives
     3.2 les menus multi-levels responsive
-        3.2.1 composant menu pour bootstrap 3 :  http://geedmo.github.io/yamm3/#
+        3.2.1 composant menu pour bootstrap 3 :  http://geedmo.github.io/yamm3/# ( Yamm Megamenu )
     3.3 les calandriers
     3.4 galeries d'images
+
+4.UX/design :
+    4.1 lecture doc test : le bon choix des typo (ggl-search :"webdesign comment choisir la bonne font typo ") -->
+        4.1.1 http://www.webdesignertrends.com/2015/03/comment-reconnaitre-une-bonne-police-web/ +
 
 aumarocb_wp-testweb
 
 --------
 SEREIAL PNBR:
-COdPNBR-deslock-V12553:dakhlass-You!8152-younesharke@-FGH5!45-458DSqMLS5-fDF563
+COdPNBR-deslock-V12553:dakhlass-You!8152-younesharke@-FGH5!45-458DS@qMLS5-fDF#563

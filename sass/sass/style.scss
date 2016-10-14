@@ -23,17 +23,17 @@
 /*---------------------- page/bloc spécifique -----------------------*/
 
 .box1 {
-  padding: $Gotiere;
+ // padding: $Gotiere;
   background-color: $Color1;
 }
 
 .box2 {
-  padding: $Gotiere;
+  //padding: $Gotiere;
   background-color: $Color2;
 }
 
 .box3 {
-  padding: $Gotiere;
+ // padding: $Gotiere;
   background-color: $Color3;
 }
 
@@ -177,6 +177,29 @@
 }
 
 // #trow8
+
+// trow8-1
+
+#trow8-1 {
+     .bstrp-tst {
+       position: relative;
+       background-color: #ffff00;
+       height: 250px;
+       @extend .row;
+       .box {
+         height: 100%;
+         @include make-sm-column($grid-columns/2);
+         @include make-md-column($grid-columns/3);
+         @include make-lg-column($grid-columns/4);
+
+         .txt {
+           background-color: #fff;
+           height: 100%;
+
+         }
+       }
+     }
+}
 
 /* bloc produit */
 .pdt-box {
