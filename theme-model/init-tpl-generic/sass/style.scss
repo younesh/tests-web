@@ -8,8 +8,16 @@
   min-height: 600px;
   background-color: #fff;
   margin: 0 auto;
-  padding: $Gotiere;
+ //  padding: $Gotiere;
 }
+
+.header {
+  .user {
+    @include make-lg-column($grid-columns/3);
+    background-color: #ffff00;
+  }
+}
+
 
 /*#mainMenu {
   border-radius: 0px;
