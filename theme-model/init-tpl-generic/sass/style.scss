@@ -4,7 +4,7 @@
 @import "../../../bower_components/Yamm3/yamm/yamm.css"; // mega menu ...
 @import "global";
 /*---------------------- layoutage globale------------------------*/
-#wrapper {
+#wrapper, .page {
   min-height: 600px;
   background-color: #fff;
   margin: 0 auto;
@@ -12,17 +12,21 @@
 }
 
 .header {
+  .logo {
+    float: left;
+  }
   .user {
-    @include make-lg-column($grid-columns/3);
+    @include make-sm-column(5);  /* $grid-columns/2*/
     background-color: #ffff00;
+    float: right !important;
   }
 }
 
 
-/*#mainMenu {
+#mainMenu {
   border-radius: 0px;
   border: none;
-  background-color: #000000;
+  background-color: $primary_color;
   color :  white;
   a {
     color: white;
@@ -30,5 +34,9 @@
       color: white;
     }
   }
-}*/
+
+  .dropdown-menu {
+    background-color:$primary_color;
+  }
+}
 /*--------------------- page/bloc spécifique -----------------------*/

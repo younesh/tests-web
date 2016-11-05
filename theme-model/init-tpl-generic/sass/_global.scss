@@ -3,3 +3,6 @@
 //--------- COLOR ----------------/
 
 $Gotiere : 15px ;
+
+$primary_color : #ff4302;
+$primary_color_light : lighten($primary_color, 10%);
