@@ -26,6 +26,7 @@
 #mainMenu {
   border-radius: 0px;
   border: none;
+  margin: 0;
   background-color: $primary_color;
   color :  white;
   a {
@@ -37,6 +38,49 @@
 
   .dropdown-menu {
     background-color:$primary_color;
+  }
+}
+
+.home-banner{
+   $hb-hight : 456px;
+   margin-bottom: $Gotiere;
+   position: relative;
+   .hb-message {
+     padding: $Gotiere;
+     color: white;
+     background-color: rgba(0,0,0,0.55);
+
+     @media (min-width: $screen-md-min) {
+       position: absolute;
+       right: 0;
+       width: 50%;
+       top: 33%;
+     }
+
+     @media (min-width: $screen-lg-min) {
+     }
+
+   }
+
+   img {
+     @extend .img-responsive;
+   }
+}
+
+.home-widget {
+   @include make-sm-column(4);
+   margin-bottom: $Gotiere;
+  .hw_title {
+    @extend .h1-title;
+    height: 40px; line-height: 40px;
+    text-align: center;
+    background-color: $secondary_color_light ;
+  }
+  .hw_content {
+
+    min-height: 250px;
+    border : 1px solid #ccc;
+    border-top: none;
   }
 }
 /*--------------------- page/bloc spécifique -----------------------*/
