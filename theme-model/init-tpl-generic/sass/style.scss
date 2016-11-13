@@ -1,5 +1,6 @@
 @import "compass";
 @import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+// @import "../../../bower_components/font-awesome/scss/font-awesome";
 @import "../../../bower_components/font-awesome/css/font-awesome.min.css";
 @import "../../../bower_components/Yamm3/yamm/yamm.css"; // mega menu ...
 @import "global";
@@ -41,15 +42,35 @@
   }
 }
 
+/*  ANIMATION  */
+@keyframes left-to-right-appair {
+  0%   { opacity: 0;  left: -500px }
+  100% { opacity: 1;  left: 0px }
+}
+
+@keyframes bottom-to-top-appair {
+  0%   { opacity: 0;  bottom: -500px }
+  100% { opacity: 1;  bottom: 0px }
+}
+
 .home-banner{
    $hb-hight : 456px;
    margin-bottom: $Gotiere;
    position: relative;
+
    .hb-message {
      padding: $Gotiere;
      color: white;
      background-color: rgba(0,0,0,0.55);
+     h1 {
+       position: relative;
+       animation:  left-to-right-appair 1s;
+     }
 
+     p {
+        position: relative;
+       animation:  bottom-to-top-appair 1s;
+     }
      @media (min-width: $screen-md-min) {
        position: absolute;
        right: 0;
@@ -70,11 +91,29 @@
 .home-widget {
    @include make-sm-column(4);
    margin-bottom: $Gotiere;
-  .hw_title {
+  .hw_head {
+
     @extend .h1-title;
     height: 40px; line-height: 40px;
     text-align: center;
     background-color: $secondary_color_light ;
+    text-align: center;
+
+    .hw_ico {
+      display: inline-block;
+      width: 60px; height: 60px; line-height: 50px;
+     
+      margin-top: -8px;
+      border-radius: 50%;
+      background-color: white;
+      border: solid 3px $secondary_color_light;
+      i {
+        color: $secondary_color;
+        vertical-align: middle;
+        display: inline-block;
+        font-size: 25px;
+      }
+    }
   }
   .hw_content {
 
