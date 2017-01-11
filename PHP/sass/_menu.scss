@@ -1,0 +1,49 @@
+
+
+// le menu global
+  #mmenu { position: absolute;   bottom:0px;  left: 0;  z-index: 50;  background:$mm_color_bg ; width: 100%; border-bottom:  $mm_color_bgHover solid 3px; /* darken( $mm_color_bgHover ,15%) solid 20px; */  }
+    .ie8   #mmenu  {    position: absolute;    /*left: 50%; */ z-index: 50; display: block;   }
+#mmenu ul { margin:0; padding:0; list-style:none;     /* font-size:.1em; */ }
+#mmenu .HasSMenu > a { }
+ #mmenu li { display:inline-block; position:relative;  }
+/*#mmenu li ul { position: relative; }*/
+/*#mmenu li ul:before { content: '>>'; color: red; z-index: 150; position: absolute; right: 5px; top : -30px;   }*/
+ #mmenu > ul > li { position:  relative;  }
+ #mmenu > ul > li > a  {  /*border-radius:  8px 8px 0 0 ;*/ margin : 0px 0px ;  font-weight: bold;  border-left: solid 1px $mm_color_bgHover;   }
+  #mmenu > ul > li > a:first-child  {  border-left : none; }
+#mmenu li li { display:block }
+ #mmenu a { display:block; padding: 18px 20px;   /*min-height:40px;*/ font-size:14px; letter-spacing:normal;  color:$mm_color_txt;}
+ #mmenu li ul a { min-width: 150px; border-bottom: dotted 1px $mm_color_bgHover }
+  #mmenu ul ul  { background:$mm_color_bg url("../images/puce.png") no-repeat 95% center; border: dotted 1px #ccc; z-index: 100;     }
+ #mmenu li ul { left:-4000px; position:absolute }
+/* Survol d'un lien racine */
+  #mmenu a:hover, #mmenu a.active, #mmenu li:hover > a { color: $mm_color_bg; background: $mm_color_bgHover; }
+ #mmenu li:hover > ul { left:0;  }
+
+/* Survol d'un lien de sous-menu */
+ #mmenu li  li:hover > ul { left: 50%;  top: 70%;}
+ #mmenu li  ul  li:hover > ul { left: -50%;}  /* pour decaler les ss-menu au sens contraire du ss-menu parent ! */
+ #mmenu li  ul  ul  li:hover > ul { left: 50%;}  /* pour decaler les ss-menu au sens contraire du ss-menu parent ! */
+
+
+/* le menu responsive */
+#mmenu select {  display: none; width: 100%; border:  1px solid #ccc;  height: 50px;  line-height: 50px;  background:$mm_color_bg url("../images/bg_bt_menu_responsive.png") no-repeat  right 24px center  ;  color:$mm_color_txt; font-weight: bold;  }
+
+/***** [ Mobile - petites résol : Ex smartphones ...  ] *****/
+@media handheld, only screen and (max-width:$mm_BrPt), only screen and (max-device-width: $mm_BrPt) {
+
+  #mmenu ul {  display: none;  }
+  #mmenu select {  display: block;  }
+    /*  #btnMenuResp { display: block; background: url("../images/btn_menu_responsive.png") no-repeat;
+        width: 42px; height:35px; bottom:19px; right:20px; position: absolute;    }
+
+      *//* ---------- *//*
+       #mmenu   { width: 80% ; background: $mm_color_bg; top:105%; }
+       #mmenu   ul ul  { margin-left:5%; }
+       #mmenu   ul li a { border-bottom: dotted 1px $mm_color_bgHover }
+       #mmenu   li ul { left:0px !important; position:relative;  }
+       #mmenu   li  { float: none !important; display: block; background: $mm_color_bg;   }
+       #mmenu   a { background: $mm_color_bg; text-align: left;  }
+       #mmenu   ul > li > a {  border-radius: 0px 0px 0px 0px !important ; margin : 0;   }*/
+
+}

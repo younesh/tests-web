@@ -8,7 +8,7 @@
             1.3.2.1 la proprité animation : ces volets ....
             1.3.2.2 animation des chiffre à l'apparaission commmr : http://www.rawnet.com/case-studies/baxter-storey
     1.4 modele de boite FLEX : le flex ds tous ces etats ...
-    1.5 UX et redisign des controller html5 ( checkbox, radio, combobox
+    1.5 UX et redesign des controller html5 ( checkbox, radio, combobox
 
 2.angular
     2.1 installation et parametrage d'environnement avec nodeJS
@@ -23,6 +23,7 @@
         3.2.1 composant menu pour bootstrap 3 :  http://geedmo.github.io/yamm3/# ( Yamm Megamenu )
     3.3 les calandriers
     3.4 galeries d'images
+    3.5 le help popup info : le composant qui explique les composant des interface exemple ici https://apps.wifirst.net/?redirected=true
 
 4.UX/design :
     4.1 lecture doc test : le bon choix des typo (ggl-search :"webdesign comment choisir la bonne font typo ") -->
