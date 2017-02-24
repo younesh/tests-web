@@ -1,0 +1,13 @@
+
+
+# myTODO :
+  - mise en place d'un environnement frontend/inté avec brunch , bootsrap, sass , ....
+  - revoir les composant et partie non vue ds bootstrap
+  - refaire l'exemple de francas avec ce nouveau envir en mois de temps ( rapidté exo )
+
+# A VOIR ds la pipline  :
+    - brunch pour des themes CMS { wp - drupal - .... }
+    -
+
+
+# ignore les lib telecharger par bower et par bower et node
