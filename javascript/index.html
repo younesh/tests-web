@@ -5,48 +5,134 @@
     <meta charset="UTF-8">
     <title> javascript test ...</title>
     <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
 
-<div class="container" id="wrapper">
-    <header>
-        <h1> R&D, tests, revision du javascript </h1>
+    <div class="container" id="wrapper">
+        <header>
+            <h1> R&D, tests, revision du javascript </h1>
+        </header>
+        <div class="trow" id="trow1">
+            <h2>test : porté de vriable ya ssalam  </h2>
+            <script>
+                // "use strict";
+                i=15;
+                function fct() {
+                     i=20;
+                    if (1) {
+                         i=30;
+                        console.log (window.i);
+                    }
+                }
+                fct(i);
+
+                // document.getElementById("result").innerHTML = "hhhhhh" ;
+
+            </script>
+            <p class="result" id="result">
+    .....
+            </p>
+
+        </div>
+        <div class="trow" id="trow13">
+            <h3> AJAX / JS NATIF  </h3>
+
+            <div class="tags"></div>
+            <div class="tr-ctn">
+
+                <ul>
+                    <li><a class="cityLink" id="cl_p">paris</a></li>
+                    <li><a class="cityLink" id="cl_m">marseille</a></li>
+                    <li><a class="cityLink" id="cl_g">gronoble</a></li>
+                </ul>
+                <div id="resultajax">
+    000
+                </div>
+            </div>
+            <script>
+                // etape1 : un script pour creer des instence ajax compatible avec tous les navigateur
+                    if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+                        httpRequest = new XMLHttpRequest();
+                    }
+                    else if (window.ActiveXObject) { // IE
+                        httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+
+                // etape 2 : ouvrir la requette vers le fichier data
+                linkcity = document.getElementsByClassName("cityLink"); // getElementById cl_p | getElementsByClassName cityLink
+
+/*               linkcity.addEventListener("click", function(){
+                    alert (" click link ");
+                });*/
+
+                for (var i = 0; i < linkcity.length; i++) {
+                    // linkcity[i].addEventListener('click', myFunction, false);
+                    linkcity[i].addEventListener("click", function(){
+                        alert (" click link hhhh " + linkcity.innerHTML);
+                    }, false);
+                }
+
+                httpRequest.open('GET', 'ajax.php?city=g', true);
+                httpRequest.send();
+
+                // etape 3: deceider ce vous faite delon l'etat de reponse en cours .onreadystatechange
+                    httpRequest.onreadystatechange = function() {
+                        if (httpRequest.readyState == 4) {
+                           // alert("succes !! ajax " + httpRequest.responseText);
+                            document.getElementById("resultajax").innerHTML  =  httpRequest.responseText;
+                        }
+                    };
 
 
-    </header>
-    <div class="trow" id="trow1">
-        <h2>test : porté de vriable ya ssalam  </h2>
-        <script>
-             i=10;
-            function fct() {
-               var i=20;
-                //alert (window.i);
-                console.log (window.i);
-            }
+            </script>
+        </div>
 
-            fct(i);
+        <div class="trow" id="trow15">
+            <h3> AJAX / jquery </h3>
+            <div class="tags"></div>
+            <div class="tr-ctn">
 
-             document.getElementById("result").innerHTML = "hhhhhh" ;
+                <ul>
+                    <li><a class="cityLink2" id="cl2_p" data-val="p">paris</a></li>
+                    <li><a class="cityLink2" id="cl2_m" data-val="m">marseille</a></li>
+                    <li><a class="cityLink2" id="cl2_g" data-val="g">gronoble</a></li>
+                </ul>
+                <div id="resultajaxJq">
+                    000
+                </div>
+            </div>
 
-        </script>
-        <p class="result" id="result">
-.....
-        </p>
+            <script>
+                $( function () {
+                    var paramCity = "p";
+                    $(".cityLink2").click(function(){
+                       paramCity =  $(this).data("val");
+                        // alert(paramCity);
 
+                        $.post("ajax.php?city=" + paramCity, function( data ) {
+                            $( "#resultajaxJq" ).html( data );
+                        })
+                        .done(function(){
+                                  //alert (" succcess jq ajax !!! ");
+
+                                })
+                        .fail(function(){ $( "#resultajaxJq" ).html( " probleme a achiri " );})
+                        ; // end  $.post(
+                    });
+
+                });
+            </script>
+        </div>
+
+        <!-- .trow#trow13>h3{test$}+.tags+.tr-ctn -->
     </div>
+    <div class="clearfix"></div>
 
 
-
-</div>
-
-
-<!-- .trow#trow13>h3{test$}+.tags+.tr-ctn -->
-<div class="clearfix"></div>
-</div>
-
-<script src="../bower_components/jquery/dist/jquery.min.js"></script>
-<script src="../bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
-<script src="js/script.js"></script>
 
 </body>
 </html>

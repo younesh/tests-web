@@ -236,7 +236,11 @@
     </footer>
     <!-- .trow#trow13>h3{test$}+.tags+.tr-ctn -->
 </div>
-
+<script>
+    $(document).on('click', '.yamm .dropdown-menu', function(e) {
+        e.stopPropagation()
+    })
+</script>
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 <script src="../../bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
 

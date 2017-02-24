@@ -37,10 +37,32 @@
     }
   }
 
-  .dropdown-menu {
-    background-color:$primary_color;
+    .dropdown-menu {
+      background-color:$primary_color;
+    }
+
+    .navbar-nav > .open > a,
+    .navbar-nav > .open > a:hover,
+    .navbar-nav > .open > a:focus {
+      background-color:$primary_color_light;
+    }
   }
+
+/* personalisation yamm menu */
+/*.yamm .yamm-content a,
+.yamm .yamm-content a:hover,
+.yamm .yamm-content a:focus {
+  background: transparent;
+  font-weight: normal;
 }
+.yamm .yamm-content a {
+  color: $secondary_color;
+}
+.yamm .yamm-content a:hover,
+.yamm .yamm-content a:focus {
+  color:$secondary_color_light;
+}*/
+
 
 /*  ANIMATION  */
 @keyframes left-to-right-appair {
