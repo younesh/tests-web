@@ -1,0 +1,374 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+            
+            .error {
+                color :red;
+                margin: 15px 0px;
+                font-weight: bold;
+            }
+            
+            .result img {
+                width: 150px;
+                height: auto;
+            }
+            .result .testItem {
+              border-bottom: 1px solid #f1f1f1; 
+            }
+
+             .result .testItem:hover {
+                 background-color: #eee;
+                 cursor: pointer;
+             }
+            
+            .IsUserTest {
+                color: red;
+                font-weight: bold;
+            }
+
+            #modalLoading .modal-body { text-align: center; }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <title> Version avant optimisation ( in progress) </title>
+    </head>
+    <body>
+
+
+
+
+    <div class="container">
+       
+      <!-- Example row of columns -->
+        <form id="frm_connect" data-token="">
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="text" class="form-control" id="email" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="Num_doss"> Num Dossier <em> ( format : 6 caractères alphanumérique en majuscules ) </em></label>
+            <input type="text" required class="form-control" id="Num_doss" placeholder="Num Dossier"  maxlength="6"> 
+              <!-- maxlength="6" -->
+          </div>
+
+          <button type="button" class="btn btn-default btn-connect">Submit</button>
+            
+            <div class="error"> .....  </div>
+            
+            <div class="result"> 
+            
+            </div>
+        </form>
+      <hr>
+      <footer>
+      </footer>
+    </div> <!-- /container -->        
+        <script src="js/vendor/jquery-3.1.1.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <!-- <script src="js/main.js"></script> -->
+        <!--@ begin script exo02 -->
+        <script>
+            //  global vars
+            var dataTestsDispo; // liste des test dispo
+            var idTestClick;  // le id du test clické en cours
+            var dataDetailUser // le detail du user connecté
+            /*
+            function getAvailableTests()
+            {
+                var dfd = $.Deferred();
+                
+                $.getJSON({
+                    url : 'http://testrh-rec.sv.webnet.fr/api/tests', 
+                    headers : {
+                     'Authorization' : 'Bearer ' + myToken // passer le token courant au service
+                    }
+                }
+                .done(function(data) {
+                    
+                    var tests = [];
+                    for (i in data) {
+                        tests.push({
+                            id: data.id,
+                            fullname: data.firstname + ' ' + data.lastname
+                        });
+                    }
+                    
+                    dfd.resolve();
+                })
+                .fail(function() {
+                    dfd.reject();
+                });
+                          
+                return dfd.promise();
+            }
+                          $.when(getAvailableTests)
+                            .done(function(tests))
+                            .fail(function(error))
+            */
+               /**
+                * Description
+                * 
+                * @var data Description data
+                * @var msg  Description msg
+                * @return Description return
+                */
+               function failerCase ( data, msg ) { // fail du service identification : http://testrh-rec.sv.webnet.fr/api/login_check
+                   console.log(data); 
+                   $(".error").html(msg);  //"(!) : échec de connexion au http://testrh-rec.sv.webnet.fr/api/login_check  " 
+                }
+
+                
+                function loadingOn () {
+                    $('#modalLoading').modal("show");
+                }
+            
+                function loadingOff (data,textStatus) { // function(data,textStatus
+                    //console.log(textStatus);
+                    if(textStatus === "success" || textStatus === "error") {
+                        $('#modalLoading').modal("hide");
+                    }
+                }
+
+                function isEmail(myVar){ // tester si le text myVar est au format mail ou pas 
+                    var regEmail = new RegExp('^[0-9a-z._-]+@{1}[0-9a-z.-]{2,}[.]{1}[a-z]{2,5}$','i');
+                    return regEmail.test(myVar);
+                }
+
+                function isDossier (myVar){ //test si le myvar est au format numero dossier 6 caractère alphanum majuscu
+                    var regDossier = new RegExp('[_A-Z0-9]{6,6}','g');
+                    return regDossier.test(myVar);
+                }
+
+             // getMySessionDetail : afficher dedail session du user connecté 
+             function getMySessionDetail(data) {
+              dataDetailUser = data;
+                 $(".result").append(
+                     $("<h2>").text("Détail utilisateur"),
+                     $("<ul>").append(
+                         $("<li>").append(
+                                $("<strong>").text("nom : "),
+                                $("<span>").text(dataDetailUser.data.applicant.data.lastname)
+                         ),
+                         $("<li>").append(
+                                 $("<strong>").text("Prénom : "),
+                                 $("<span>").text(dataDetailUser.data.applicant.data.firstname)
+                         ),
+                         $("<li>").append(
+                                 $("<strong>").text("Email : "),
+                                 $("<span>").text(dataDetailUser.data.applicant.data.email)
+                         )
+                     )
+                 );
+             }  //  function getMySessionDetail(data)
+
+             // getTestsList : afficher la list dfes test disponible 
+             function getTestsList(data) {
+                dataTestsDispo = data;
+                $(".result").append("<h2> List des tests disponible </h2>");
+                for (i=0; i < dataTestsDispo.data.length ; i++ ) {
+                      IsUserTest = "";  
+                     // marquer les tests que le 'user' à déja fait avec class='IsUserTest'
+                     for (j=0; j < dataDetailUser.data.tests.data.length ; j++) { 
+                         if (dataTestsDispo.data[i].id == dataDetailUser.data.tests.data[j].id) IsUserTest = " class='IsUserTest'";
+                     }
+
+                     $(".result").append(
+                          $("<ul>").data("testid", dataTestsDispo.data[i].id).addClass('testItem').append(
+                              $("<li>").append(
+                                  $("<span class='res_field'>").append("Nom :"),
+                                  $("<span class='res_val'>").append(dataTestsDispo.data[i].name)
+                              ), 
+                              $("<li>").append(
+                                  $("<span class='res_field'>").append("mode :"),
+                                  $("<span class='res_val'>").append(dataTestsDispo.data[i].mode)
+                              ),
+                              $("<li>").append(
+                                  $("<span class='res_field'>").append("technology :"),
+                                  $("<span class='res_val'>").append(
+                                       $("<ul>").append(
+                                         $("<li>").append(
+                                            $("<span class='res_field'>").append("Id :"),
+                                            $("<span class='res_val'>").append(dataTestsDispo.data[i].technology.data.id )
+                                          ),
+                                          $("<li>").append(
+                                            $("<span class='res_field'>").append("nom :"),
+                                            $("<span class='res_val'>").append( dataTestsDispo.data[i].technology.data.name)
+                                          ),
+                                          $("<li>").append(
+                                                $("<span class='res_field'>").append("image :"),
+                                                $("<span class='res_val'>").append(  // .is(dataTestsDispo.data[i].technology.data.image != 'NULL')
+                                                  $("<img>").attr("src", dataTestsDispo.data[i].technology.data.image)
+                                              //  dataTestsDispo.data[i].technology.data.image
+                                            )
+                                          )
+
+                                        )
+                                  )
+                              )
+
+                          )
+                      );  //  $(".result").append
+                }
+             } // function getTestsList(data)
+
+
+
+            // http://testrh-rec.sv.webnet.fr/api/tests/{:ID}
+            /* getTestDetails :  revoie le détail du test cliqué sur une popup
+            */
+            function getTestDetails (data) { 
+                var testDescription = "";
+                var TestName ="";   
+                 for (i=0; i < dataTestsDispo.data.length ; i++ ) {  
+                    if ( dataTestsDispo.data[i].id == idTestClick ) { 
+                        testDescription = dataTestsDispo.data[i].description;
+                        TestName = dataTestsDispo.data[i].name;
+                        nbr_qt = data.data.questions.data.length;
+                        rnd_qt  =Math.floor(Math.random() * nbr_qt); 
+                        libQuestHazard = data.data.questions.data[rnd_qt].label; 
+                    } 
+                  }
+           
+                   $('#myModal .modal-header .modal-title').html(" Test : " + TestName );
+                   $('#myModal .modal-body').html("");
+                   $('#myModal .modal-body').append(
+                          $("<dl>").append(
+                              $("<dt>").append("Description :"), 
+                              $("<dd>").append(testDescription),
+
+                              $("<dt>").append("Exemple de question  :"), 
+                              $("<dd>").append(libQuestHazard)
+                          )
+                   );
+                  $('#myModal').modal("show");
+            } //    function getTestDetails (data)
+
+
+
+            $(function(){
+
+               $(".btn-connect").on("click", function(e){
+                    $(".error").html('');
+                    $(".result").html(''); 
+                   var email = $("#email").val(); 
+                   var NumDossier = $("#Num_doss").val();
+
+                   if (!isEmail(email)) { 
+                       $(".error").html("fomat incorect du mail ");
+                       $("#email").focus();
+                   } else if (!isDossier(NumDossier)) { 
+                       $(".error").html("fomat incorrect du num dossier ");
+                       $("#Num_doss").focus();
+                   } else  {
+                       // autntificaion au service identification : http://testrh-rec.sv.webnet.fr/api/login_check
+                       loadingOn ();
+                        $.post('http://testrh-rec.sv.webnet.fr/api/login_check', 
+                          { _username: NumDossier , // '4EABAA' ||  NumDossier   
+                            _password: email    // 'benjamin@test.com' ||  email
+                         }
+                        ).done(function( data ) {
+                            var myToken = data.token;
+                            //  afficher le get du service "Get my session detail"  :  http://testrh-rec.sv.webnet.fr/api/sessions/my
+                           loadingOn ();
+                            $.getJSON({
+                                url : 'http://testrh-rec.sv.webnet.fr/api/sessions/my', 
+                                headers : {
+                                 'Authorization' : 'Bearer ' + myToken // passer le token courant au service
+                                }
+                            }
+                            ).done(function(data) {
+                                getMySessionDetail(data);
+                                loadingOn ();
+                                $.getJSON({
+                                        url : 'http://testrh-rec.sv.webnet.fr/api/tests', 
+                                        headers : {
+                                         'Authorization' : 'Bearer ' + myToken // passer le token courant au service
+                                        }
+                                    }
+                                ).done(function(data) {
+                                    getTestsList(data);
+                                    // au clic sur un test afficher ses infos ds un popup
+                                   $(".result .testItem").on("click", function(){
+                                       // atteindre le test correspondant dans les testdispo
+                                        idTestClick = $(this).data("testid");
+                                        loadingOn ();
+                                        $.getJSON({
+                                            url : 'http://testrh-rec.sv.webnet.fr/api/tests/' + idTestClick, 
+                                            headers : {
+                                                'Authorization' : 'Bearer ' + myToken // passer le token courant au service
+                                                }
+                                            }
+                                        ).done(getTestDetails)
+                                         .always(loadingOff);
+                                    });
+
+                                }).always(loadingOff)
+                                  .fail(function( data ) {
+                                     failerCase (data, "(!) : échec de connexion au service 'gets tests' http://testrh-rec.sv.webnet.fr/api/tests");
+                                });
+
+                            }).always(loadingOff)
+                              .fail(function( data ) { // fail du service "my session detail"  :  http://testrh-rec.sv.webnet.fr/api/sessions/my
+  
+                                failerCase (data, "(!) : échec de connexion au service http://testrh-rec.sv.webnet.fr/api/sessions/my (get my session detail)");
+                                
+                            });  
+                        }).always(loadingOff)
+                        .fail(function (data){
+                            failerCase (data, "(!)  : échec de connexion au http://testrh-rec.sv.webnet.fr/api/login_check ");
+                        });
+                       
+                   }
+                }); // $(".btn-connect").on("click" ... 
+            }) // document.ready
+        </script>
+         <!--@ END script exo02 -->
+        
+ <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal pour le loading en attente de reponse ajax-->
+    <div class="modal" id="modalLoading" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="img/loading.gif">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>

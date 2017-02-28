@@ -13,7 +13,7 @@
 # ignore les lib telecharger par bower et par bower et node
 
 
-# MISE EN PLACE ENVI BRUNCH
+# MISE EN PLACE ENVIRO BRUNCH
     ## 1 ) creer la structure :
         /app
         /public

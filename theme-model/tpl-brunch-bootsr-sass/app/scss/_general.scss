@@ -14,14 +14,22 @@
 /* LAYOUTAGE : header */
   .col-logo {
      @include make-md-column(3);
-     .logo { background-color: blue; }
+     .logo { background-color: blue;}
   }
 
 
  /* LAYOUTAGE :  main content */
   .col-main-content {
      @include make-md-column(8);
-    .main-content {
-      background-color: $colorPrimary;
-    }
+      .main-content {
+        background-color : $colorPrimary;
+      }
   }
+
+   .col-lateral-content{
+     @include make-md-column(4);
+
+       .lateral-content{
+         background-color : #00AA00;
+       }
+   }

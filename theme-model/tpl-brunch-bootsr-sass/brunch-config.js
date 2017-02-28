@@ -24,6 +24,9 @@ exports.config = {
     plugins: {
         copycat: {
             "fonts": ["node_modules/bootstrap-sass/assets/fonts/bootstrap"] // copy node_modules/bootstrap-sass/assets/fonts/bootstrap/* to priv/static/fonts/
+        },
+        sass: {
+            debug: 'comments'
         }
     },
     watcher: {
