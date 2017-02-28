@@ -68,3 +68,22 @@
          ## 5 ) lancer le build pour : telecharger les dependences, compiler concatener les script , et .....
                 CMD :   brunch build
 
+
+         ## brunch watch --server : peremet de watcher le projet pour compilation instantannéé à chaque modification ds le prj
+
+
+
+
+/*============================================================================*/
+        'js/app.js': /^app\/js/,       // path : /app/js
+        'js/vendor.js': /^app\/vendor/  // path : /app/vendor
+
+
+
+        'js/app.js': /^app\/js/,       // path : /app/js
+        'js/vendor.js': /^app\/ext_lib/  // path : /app/vendor
+
+
+
+        'js/app.js': /^app/,
+        'js/vendor.js': /^(?!app)/

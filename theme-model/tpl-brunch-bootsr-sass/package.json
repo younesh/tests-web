@@ -10,6 +10,7 @@
     "sass-brunch": "^2.6.2"
   },
   "dependencies": {
+    "assetsmanager-brunch": "^1.8.1",
     "static-handlebars-brunch": "^0.1.5"
   }
 }

@@ -1,0 +1,27 @@
+ // vars COLORS
+ $colorPrimary : orange;
+ $colorPrimaryDark : darken( $colorPrimary, 20%);
+ $colorPrimarylight : lighten($colorPrimary, 30%);
+
+
+ // intialisation
+ /* intialisation CSS */
+ body {
+    background-color: #fff ;
+ }
+
+
+/* LAYOUTAGE : header */
+  .col-logo {
+     @include make-md-column(3);
+     .logo { background-color: blue; }
+  }
+
+
+ /* LAYOUTAGE :  main content */
+  .col-main-content {
+     @include make-md-column(8);
+    .main-content {
+      background-color: $colorPrimary;
+    }
+  }

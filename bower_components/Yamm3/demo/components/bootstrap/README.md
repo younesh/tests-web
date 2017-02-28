@@ -46,8 +46,8 @@ bootstrap/
 │   ├── bootstrap-theme.css.map
 │   └── bootstrap-theme.min.css
 ├── js/
-│   ├── bootstrap.js
-│   └── bootstrap.min.js
+│   ├── 02_bootstrap.js
+│   └── 02_bootstrap.min.js
 └── fonts/
     ├── glyphicons-halflings-regular.eot
     ├── glyphicons-halflings-regular.svg

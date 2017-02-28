@@ -70,7 +70,7 @@ Fixed a number of bugs: [Issues closed in v3.2.0.1](https://github.com/twbs/boot
 
 ## 3.2.0.0
 
-- Assets (Sass, JS, fonts) moved from `vendor/assets` to `assets`. `bootstrap.js` now contains concatenated JS.
+- Assets (Sass, JS, fonts) moved from `vendor/assets` to `assets`. `02_bootstrap.js` now contains concatenated JS.
 - Compass generator now copies JS and fonts, and provides a better default `styles.sass`.
 - Compass, Sprockets, and Mincer asset path helpers are now provided in pure Sass: `bootstrap-compass`, `bootstrap-sprockets`, and `bootstrap-mincer`.
 Asset path helpers must be imported before `bootstrap`, more in Readme.
