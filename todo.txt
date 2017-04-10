@@ -3,7 +3,7 @@
     1.1 : pb des height en pourcentage ( 100% ) >  [ ... en cours 30%]
     1.2 : pb des centre centrage vertical des dib ( pour des fois ç marche et des fois pas)
     1.3 : animation css3
-        1.3.1 : les paralallax
+        1.3.1 : les paralallax -> exemple ( http://www.apple.com/apple-watch-series-2/ + googleSearch {"parallax zoom effect scrolling"})
         1.3.2 : les animation ( image zoom + btn link visible > expl : http://themeforest.net/item/worker-small-business-booking-template/full_screen_preview/12001625
             1.3.2.1 la proprité animation : ces volets ....
             1.3.2.2 animation des chiffre à l'apparaission commmr : http://www.rawnet.com/case-studies/baxter-storey

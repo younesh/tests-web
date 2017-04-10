@@ -3,7 +3,7 @@
 # myTODO :
   - mise en place d'un environnement frontend/inté avec brunch , bootsrap, sass , ....
   - revoir les composant et partie non vue ds bootstrap
-  - refaire l'exemple de francas avec ce nouveau envir en mois de temps ( rapidté exo )
+  - refaire l'exemple de francas avec ce nouveau envir en moins de temps ( rapidté exo )
 
 # A VOIR ds la pipline  :
     - brunch pour des themes CMS { wp - drupal - .... }
@@ -63,10 +63,10 @@
                 }
             };
          ## 4 ) (? pas sur que cette etape soit a chaque new prj ? )  installer le brunch sur le prj :
-                 CMD : install -g brunch
+                 CMD : npm install -g brunch
 
-         ## 5 ) lancer le build pour : telecharger les dependences, compiler concatener les script , et .....
-                CMD :
+         ## 5 ) lancer le build et watcher  pour : telecharger les dependences, compiler concatener les script , et .....
+                CMD : brunch watch --server
 
 
 
@@ -88,3 +88,9 @@
 
         'js/app.js': /^app/,
         'js/vendor.js': /^(?!app)/
+
+               <!-- @@DEMO  .....  : begin -->
+               <!--
+                    ... html ...
+               -->
+               <!-- @@DEMO  .... : begin -->
