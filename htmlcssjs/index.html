@@ -888,39 +888,194 @@
                 }
                  #t00026 .box { display: none; }
                  #t00026 .slide {
-                     display: block;
+                    display: block;
                     animation:  animatSlideDown 1s;
                 }
 
-                 @keyframes animatSlideDown {
-                    0%   { opacity: 0; top : -200px;}
-                    50%   { opacity: 1; top : 100px;}
+                  #t00026 .slideUp {
+                   display: none;
+                    animation:  animatSlideUp 1s;
+                }
+
+                @keyframes animatSlideDown {
+                    0%    { opacity: 0; top : -300px;}
+                    50%   { opacity: 0.2; top : 100px;}
                     75%   { opacity: 1; top : -50px;}
                     87%   { opacity: 1; top : 20px;}
-                    100% {opacity: 1; top : 0px;}
+                    100%  { opacity: 1; top : 0px;}
                 }
 
                @keyframes animatSlideUp {
-                   0%     {opacity: 1; top : 0px;}
-
+                   0%     {opacity: 1; top : 0px; display: block;}
+                   50%     {opacity: 0.5; top : -100px;}
                    100%   { opacity: 0; top : -200px;}
                 }
 
 
             </style>
             <button> show </button>
-            <div class="box"></div>
+            <div class="box slideUp"></div>
             <script>
                $(function() {
                     $("#t00026 button").on("click", function(e){
-                       $("#t00026 .box").toggleClass("slide");
+                        $("#t00026 .box").toggleClass("slide");
+                         $("#t00026 .box").toggleClass("slideUp");
+
                    });
                });
             </script>
         </article>
     </section>
-    <!-- section#t00027>h2+article>(style+p+.box*3)-->
+    <section id="t00027">
+        <h2> slide down slide up par css3 transistion  </h2>
+        <article>
+            <style>
+                #t00027  button { }
+                #t00027 .ctn {
+                    display: block;
+                    height:200px;
+                    background-color: darkgrey;
+                    overflow-y: hidden;
+                    padding: 10px;
+                    transition-property: height; /* type de proprité type pour le changement d'etat ( transistion ) */
+                    transition-duration: .4s; /* la vitesse */
+                    transition-timing-function: ease-in-out;  /*   cubic-bezier(0, 1, 0.5, 1); |  ease-in-out; |  la courble d'nimation en vitesse */
+                }
+                #t00027 .ctn.closed { 	height: 0px !important; padding-top: 0; padding-bottom: 0;}
+            </style>
+            <button> show </button>
+            <div class="ctn closed">
+                <div class="item">
+                    <br> test ....
+                    <br> test ....
+                    <br> test ....
+                    <br> test ....
+                    <br> test ....
+                    <br> test ....
+                </div>
+            </div>
+
+              <script>
+               $(function() {
+                  //  alert ( $("#t00027 .ctn .item").height());
+                   var H_item =  $("#t00027 .ctn .item").height();
+                   $("#t00027 .ctn").height(H_item);
+                    $("#t00027 button").on("click", function(e){
+
+                        $("#t00027 .ctn").toggleClass("closed");
+                   });
+               });
+            </script>
+        </article>
+    </section>
+
+
+    <section id="t00028">
+        <h2></h2>
+        <article>
+            <style>
+
+                .slideDown { }
+
+                .slideDown .sd-nav {
+                    background-color: #aaa;
+                    display: block;
+                    padding: 10px;
+                    color: #fff;
+                    cursor: pointer;
+                }
+
+                .slideDown .sd-over-ctn {
+                    display: block;
+                    height:200px;
+                    background-color: #e1e1e1;
+                    overflow-y: hidden;
+                    padding: 10px;
+                    transition-property: height; /* type de proprité type pour le changement d'etat ( transistion ) */
+                    transition-duration: .3s; /* la vitesse */
+                    transition-timing-function:ease-out;  /*   cubic-bezier(0, 1, 0.5, 1); |  ease-in-out; |  ease |  linear |  ease-in |  ease-out | ease-in-out */
+                }
+
+                 .slideDown .sd-over-ctn.closed {
+                     height: 0px !important;
+                     padding-top: 0;
+                     padding-bottom: 0;
+                }
+
+                .slideDown .sd-over-ctn .sdo-ctn {
+
+                }
+            </style>
+
+            <script>
+               $(function() {
+                  //  alert ( $("#t00027 .ctn .item").height());
+                   function SlidDown ( paramSlideOneByOne = false, paramSlideDefaultOpned = 1 ) {
+                   // var paramSlideOneByOne = false; /* = false > si on ouvre un item tous les outre se fereme */
+                                                   /* = true   */
+                   var H_item =  $(".slideDown .sd-over-ctn .sdo-ctn ").height();
+                   $(".slideDown .sd-over-ctn").height(H_item);
+                   if (paramSlideOneByOne) {
+                        $(".slideDown .sd-nav").on("click", function(e) {
+                            $(this).siblings(".sd-over-ctn").toggleClass("closed");
+                        });
+                   } else {
+                        // var paramSlideDefaultOpned = 1; // 0 : pas d'ouvertire par defaut
+                        $(".slideDown .sd-over-ctn").addClass("closed");
+                        if (paramSlideDefaultOpned > 0 ) {
+                           $(".slideDown .sd-item:nth-of-type(" + paramSlideDefaultOpned + ") .sd-over-ctn").removeClass("closed"); // ouvrir le Xeme par defaut
+                        }
+                        $(".slideDown .sd-nav").on("click", function(e) {
+                            $(".slideDown .sd-over-ctn").addClass("closed");
+                            $(this).siblings(".sd-over-ctn").removeClass("closed");
+                        });
+                        }
+                   }
+
+                   SlidDown(false);
+
+               });
+            </script>
+
+            <div class="slideDown">
+               <div class="sd-item">
+                     <a class="sd-nav"> open 1 </a>
+                    <div class="sd-over-ctn">
+                        <div class="sdo-ctn">
+                            <p> 11 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis 111  nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam est.</p>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam est.</p>
+                        </div>
+                    </div>
+               </div>
+
+                 <div class="sd-item">
+                     <a class="sd-nav"> open 2 </a>
+                    <div class="sd-over-ctn">
+                        <div class="sdo-ctn">
+                            <p> 2222 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis 2222 nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam est.</p>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam est.</p>
+                        </div>
+                    </div>
+               </div>
+
+                 <div class="sd-item">
+                     <a class="sd-nav"> open 33 </a>
+                    <div class="sd-over-ctn">
+                        <div class="sdo-ctn">
+                            <p> Lorem ipsum 3333 33333  dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam est.</p>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam est.</p>
+                        </div>
+                    </div>
+               </div>
+            </div>
+
+        </article>
+    </section>
+
+
+    <!-- section#t00029>h2+article>(style+p+.box*3)-->
 </div>
+
 
 <a href="#page" class="arrow-target" id="at_up">
     <i class="fa fa-arrow-up" aria-hidden="true"></i>
