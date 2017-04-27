@@ -976,15 +976,20 @@
             <style>
 
                 .slideDown { }
+                .slideDown .sd-item { }
+                .slideDown .sd-item .sd-nav,  .slideDown .sd-item.closed .sd-nav:hover {
 
-                .slideDown .sd-nav {
-                    background-color: #aaa;
+                    background-color: #ff692e;
                     display: block;
                     padding: 10px;
                     color: #fff;
                     cursor: pointer;
+                    transition: all .5s;
                 }
 
+                .slideDown .sd-item.closed  .sd-nav {
+                    background-color: #aaa;
+                }
                 .slideDown .sd-over-ctn {
                     display: block;
                     height:200px;
@@ -993,14 +998,17 @@
                     padding: 10px;
                     transition-property: height; /* type de proprité type pour le changement d'etat ( transistion ) */
                     transition-duration: .3s; /* la vitesse */
-                    transition-timing-function:ease-out;  /*   cubic-bezier(0, 1, 0.5, 1); |  ease-in-out; |  ease |  linear |  ease-in |  ease-out | ease-in-out */
+                    transition-timing-function:ease-out;  /* cubic-bezier(0, 1, 0.5, 1); |  ease-in-out; |  ease |  linear |  ease-in |  ease-out | ease-in-out */
                 }
 
-                 .slideDown .sd-over-ctn.closed {
+
+                 .slideDown .sd-item.closed .sd-over-ctn { /*@@-@@*/
                      height: 0px !important;
                      padding-top: 0;
                      padding-bottom: 0;
                 }
+
+
 
                 .slideDown .sd-over-ctn .sdo-ctn {
 
@@ -1010,29 +1018,32 @@
             <script>
                $(function() {
                   //  alert ( $("#t00027 .ctn .item").height());
+
+                   /*
+                    function SlidDown : permer de slaydu des element comme du accordeon
+                       - @param > paramSlideOneByOne : true|false , si true il parmer de slider chaque element indépendament des autre si false , a chaque fois qu'ouvre un element les autres se ferme ( plus qu'un seule est ouvre a la fois)
+                       - @param >  paramSlideDefaultOpned : un int > 0 , si >0 c'est le rond de l'.sd-item a ouvr
+                   */
                    function SlidDown ( paramSlideOneByOne = false, paramSlideDefaultOpned = 1 ) {
-                   // var paramSlideOneByOne = false; /* = false > si on ouvre un item tous les outre se fereme */
-                                                   /* = true   */
                    var H_item =  $(".slideDown .sd-over-ctn .sdo-ctn ").height();
                    $(".slideDown .sd-over-ctn").height(H_item);
                    if (paramSlideOneByOne) {
                         $(".slideDown .sd-nav").on("click", function(e) {
-                            $(this).siblings(".sd-over-ctn").toggleClass("closed");
+                            $(this).parents(".sd-item").toggleClass("closed");
                         });
                    } else {
-                        // var paramSlideDefaultOpned = 1; // 0 : pas d'ouvertire par defaut
-                        $(".slideDown .sd-over-ctn").addClass("closed");
+                        $(".slideDown .sd-item").addClass("closed");
                         if (paramSlideDefaultOpned > 0 ) {
-                           $(".slideDown .sd-item:nth-of-type(" + paramSlideDefaultOpned + ") .sd-over-ctn").removeClass("closed"); // ouvrir le Xeme par defaut
+                           $(".slideDown .sd-item:nth-of-type(" + paramSlideDefaultOpned + ")").removeClass("closed");
                         }
                         $(".slideDown .sd-nav").on("click", function(e) {
-                            $(".slideDown .sd-over-ctn").addClass("closed");
-                            $(this).siblings(".sd-over-ctn").removeClass("closed");
+                            $(".slideDown .sd-item").addClass("closed");
+                            $(this).parents(".sd-item").removeClass("closed");
                         });
                         }
                    }
 
-                   SlidDown(false);
+                   SlidDown(0, 6); // appelle
 
                });
             </script>
@@ -1067,7 +1078,27 @@
                         </div>
                     </div>
                </div>
-            </div>
+
+               <div class="sd-item">
+                     <a class="sd-nav"> open 33 </a>
+                    <div class="sd-over-ctn">
+                        <div class="sdo-ctn">
+                            <p> Lorem ipsum 3333 33333  dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam est.</p>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam est.</p>
+                        </div>
+                    </div>
+               </div>
+
+               <div class="sd-item">
+                     <a class="sd-nav"> open 33 </a>
+                    <div class="sd-over-ctn">
+                        <div class="sdo-ctn">
+                            <p> Lorem ipsum 3333 33333  dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam est.</p>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam est.</p>
+                        </div>
+                    </div>
+               </div>
+            </div> <!-- .slideDown -->
 
         </article>
     </section>
