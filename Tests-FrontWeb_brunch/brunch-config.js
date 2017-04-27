@@ -1,6 +1,6 @@
 'use strict';
 
-exports.config = {
+exports.config = {  /* commute n-1 */
     files: {
         javascripts: {
             joinTo: {
