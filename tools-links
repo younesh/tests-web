@@ -18,7 +18,7 @@
     1.2.3 : http://lorempixel.com/> banque d'image pour faux image en lorem > en passant nos preference ds URL :
             http://lorempixel.com/[with]/[height]/[Domaine]/ --> http://lorempixel.com/400/200/nature/
 
- 1.3 mockups, mockuping
+ 1.3 mockups, mockuping, prototypage
     1.3.1 http://www.axure.com/
     1.3.2 balsamiq
 
@@ -36,6 +36,8 @@
  1.5 Print industrie  :
     1.5.1 : http://www.h2impression.fr/index.php/ > un bon site sur la creation ds le print
 
+ 1.5 autres outils de design comme photoshop
+    1.5.1 https://zeplin.io/
 
  2. INTEGRATION-WEB  / FRONT-END-DEV
     2.1 Test multi navigateurs / multi-platforme
