@@ -1,0 +1,299 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*******************************************/
+/* Theme r├®alis├® par : younes C   2015       */
+/* Site web :   xxx  */
+/*******************************************/
+/* google font  */
+@import url(http://fonts.googleapis.com/css?family=Lato|PT+Sans|Muli);
+@import url(http://fonts.googleapis.com/css?family=Prosto+One);
+/* parcial scss */
+/* une partie du code global SASS */
+/* parametrer le main  menu (mm)  */
+/* line 4, ../sass/_menu.scss */
+#mmenu {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  z-index: 50;
+  background: #fff;
+  width: 100%;
+  border-bottom: #A8D539 solid 3px;
+  /* darken( $mm_color_bgHover ,15%) solid 20px; */
+}
+
+/* line 5, ../sass/_menu.scss */
+.ie8 #mmenu {
+  position: absolute;
+  /*left: 50%; */
+  z-index: 50;
+  display: block;
+}
+
+/* line 6, ../sass/_menu.scss */
+#mmenu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* font-size:.1em; */
+}
+
+/* line 8, ../sass/_menu.scss */
+#mmenu li {
+  display: inline-block;
+  position: relative;
+}
+
+/*#mmenu li ul { position: relative; }*/
+/*#mmenu li ul:before { content: '>>'; color: red; z-index: 150; position: absolute; right: 5px; top : -30px;   }*/
+/* line 11, ../sass/_menu.scss */
+#mmenu > ul > li {
+  position: relative;
+}
+
+/* line 12, ../sass/_menu.scss */
+#mmenu > ul > li > a {
+  /*border-radius:  8px 8px 0 0 ;*/
+  margin: 0px 0px;
+  font-weight: bold;
+  border-left: solid 1px #A8D539;
+}
+
+/* line 13, ../sass/_menu.scss */
+#mmenu > ul > li > a:first-child {
+  border-left: none;
+}
+
+/* line 14, ../sass/_menu.scss */
+#mmenu li li {
+  display: block;
+}
+
+/* line 15, ../sass/_menu.scss */
+#mmenu a {
+  display: block;
+  padding: 18px 20px;
+  /*min-height:40px;*/
+  font-size: 14px;
+  letter-spacing: normal;
+  color: #9d1c21;
+}
+
+/* line 16, ../sass/_menu.scss */
+#mmenu li ul a {
+  min-width: 150px;
+  border-bottom: dotted 1px #A8D539;
+}
+
+/* line 17, ../sass/_menu.scss */
+#mmenu ul ul {
+  background: #fff url("../images/puce.png") no-repeat 95% center;
+  border: dotted 1px #ccc;
+  z-index: 100;
+}
+
+/* line 18, ../sass/_menu.scss */
+#mmenu li ul {
+  left: -4000px;
+  position: absolute;
+}
+
+/* Survol d'un lien racine */
+/* line 20, ../sass/_menu.scss */
+#mmenu a:hover, #mmenu a.active, #mmenu li:hover > a {
+  color: #fff;
+  background: #A8D539;
+}
+
+/* line 21, ../sass/_menu.scss */
+#mmenu li:hover > ul {
+  left: 0;
+}
+
+/* Survol d'un lien de sous-menu */
+/* line 24, ../sass/_menu.scss */
+#mmenu li li:hover > ul {
+  left: 50%;
+  top: 70%;
+}
+
+/* line 25, ../sass/_menu.scss */
+#mmenu li ul li:hover > ul {
+  left: -50%;
+}
+
+/* pour decaler les ss-menu au sens contraire du ss-menu parent ! */
+/* line 26, ../sass/_menu.scss */
+#mmenu li ul ul li:hover > ul {
+  left: 50%;
+}
+
+/* pour decaler les ss-menu au sens contraire du ss-menu parent ! */
+/* le menu responsive */
+/* line 30, ../sass/_menu.scss */
+#mmenu select {
+  display: none;
+  width: 100%;
+  border: 1px solid #ccc;
+  height: 50px;
+  line-height: 50px;
+  background: #fff url("../images/bg_bt_menu_responsive.png") no-repeat right 24px center;
+  color: #9d1c21;
+  font-weight: bold;
+}
+
+/***** [ Mobile - petites r├®sol : Ex smartphones ...  ] *****/
+@media handheld, only screen and (max-width: 768px), only screen and (max-device-width: 768px) {
+  /* line 35, ../sass/_menu.scss */
+  #mmenu ul {
+    display: none;
+  }
+
+  /* line 36, ../sass/_menu.scss */
+  #mmenu select {
+    display: block;
+  }
+
+    /*  #btnMenuResp { display: block; background: url("../images/btn_menu_responsive.png") no-repeat;
+        width: 42px; height:35px; bottom:19px; right:20px; position: absolute;    }
+
+      */
+  /* ---------- */
+                 /*
+#mmenu   { width: 80% ; background: $mm_color_bg; top:105%; }
+#mmenu   ul ul  { margin-left:5%; }
+#mmenu   ul li a { border-bottom: dotted 1px $mm_color_bgHover }
+#mmenu   li ul { left:0px !important; position:relative;  }
+#mmenu   li  { float: none !important; display: block; background: $mm_color_bg;   }
+#mmenu   a { background: $mm_color_bg; text-align: left;  }
+#mmenu   ul > li > a {  border-radius: 0px 0px 0px 0px !important ; margin : 0;   }*/
+}
+/****************************/
+/*@@   GLOBAL style      @@*/
+/***************************/
+/* line 28, ../sass/style.scss */
+body {
+  /* font-family:  "Trebuchet MS", Helvetica, sans-serif;*/
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1.5rem;
+}
+
+/* line 35, ../sass/style.scss */
+ul, li {
+  list-style: none;
+}
+
+/* line 37, ../sass/style.scss */
+.pad_nul {
+  padding: 0;
+}
+
+/* line 37, ../sass/style.scss */
+.pad_7 {
+  padding: 0 7px;
+}
+
+/* line 38, ../sass/style.scss */
+.box {
+  border: solid 1px #808080;
+  background: #ccc;
+}
+
+/* line 40, ../sass/style.scss */
+h1, .h1-like {
+  font-size: 2.90rem;
+  color: #FF5900;
+  padding: 2% 2% 2% 5%;
+  margin: 10px 0px;
+  background: url("../images/puce_1.png") no-repeat 1% 28%;
+  font-family: "Prosto One", cursive, "verdana", sans-serif;
+}
+
+/* line 43, ../sass/style.scss */
+h2, .h2-like {
+  font-size: 2.30rem;
+  color: #FF5900;
+  font-family: "Questrial", sans-serif, "verdana", sans-serif;
+}
+
+/* line 44, ../sass/style.scss */
+h3, .h3-like {
+  font-size: 1.75rem;
+  color: #0b559b;
+}
+
+/* line 45, ../sass/style.scss */
+h4, .h4-like {
+  font-size: 1.15rem;
+}
+
+/* line 47, ../sass/style.scss */
+a {
+  cursor: pointer;
+}
+
+/*-----  LAYOUTAFE ------*/
+/* line 54, ../sass/style.scss */
+#page {
+  max-width: 992px;
+}
+
+/* line 56, ../sass/style.scss */
+#header {
+  background: #afd9ee;
+  position: relative;
+  min-height: 100px;
+}
+
+/* #header */
+/* line 65, ../sass/style.scss */
+#main article {
+  border: 1px solid #ccc;
+  margin: 2% auto;
+  width: 99%;
+}
+/* line 69, ../sass/style.scss */
+#main article h2 {
+  padding: 1%;
+}
+/* line 72, ../sass/style.scss */
+#main article div {
+  padding: 1%;
+}
+
+/* line 79, ../sass/style.scss */
+aside#left {
+  background: #ffff00;
+}
+
+/* line 83, ../sass/style.scss */
+#footer {
+  background: #c1e2b3;
+}
+
+/* line 94, ../sass/style.scss */
+.box {
+  width: 154px;
+  line-height: 50px;
+  padding: 1%;
+  border: 1px solid #ccc;
+  color: #fff;
+  /*  @include filter-gradient(#b8e1fc, #bdf3fd, vertical); // IE6-8
+    @include background-image(linear-gradient(top,
+      #b8e1fc  0%, #a9d2f3 10%, #90bae4 25%, #90bcea 37%,
+      #90bff0 50%, #6ba8e5 51%, #a2daf5 83%, #bdf3fd
+    ));*/
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FF2AC363', endColorstr='#FF9C4CC2');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IiIgcj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJhYzM2MyIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjY2Q4YzE0Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjOWM0Y2MyIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -moz-radial-gradient(center, ellipse cover, #2ac363 0%, #cd8c14 50%, #9c4cc2);
+  background-image: -webkit-radial-gradient(center, ellipse cover, #2ac363 0%, #cd8c14 50%, #9c4cc2);
+  background-image: radial-gradient(ellipse cover at center, #2ac363 0%, #cd8c14 50%, #9c4cc2);
+  -moz-box-shadow: 0px 0px 5px #333333;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+}

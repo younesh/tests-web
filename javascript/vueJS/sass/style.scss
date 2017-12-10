@@ -1,0 +1,107 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+/*******************************************/
+/* Theme réalisé par : younes C   2015       */
+/* Site web :   xxx  */
+/*******************************************/
+
+
+@import "compass";
+
+
+/* google font  */
+@import url(http://fonts.googleapis.com/css?family=Lato|PT+Sans|Muli);
+@import url(http://fonts.googleapis.com/css?family=Prosto+One);
+
+/* parcial scss */
+@import "global"; // les fct & variable ... SASS
+@import "menu";
+
+
+/****************************/
+/*@@   GLOBAL style      @@*/
+/***************************/
+
+body {
+  /* font-family:  "Trebuchet MS", Helvetica, sans-serif;*/
+  font-family:  "Helvetica Neue",Helvetica,Arial,sans-serif;
+ // background : url("../images/bg_body.png") no-repeat fixed  top center;
+  font-size: 1.5rem;
+}
+
+ul, li { list-style: none; }
+
+.pad_nul { padding: 0; } .pad_7 { padding: 0 7px; }
+.box { border: solid 1px #808080; background: #ccc;  }
+
+h1, .h1-like { font-size: 2.90rem; color: #FF5900;   padding :2% 2% 2% 5%; margin: 10px 0px;
+  background: url("../images/puce_1.png" )  no-repeat 1% 28%;
+  font-family:  $FontF_exo1 ;   }
+h2, .h2-like { font-size: 2.30rem; color: #FF5900;   font-family:  $FontF_exo2 ;  }
+h3, .h3-like {font-size:  1.75rem;  color: #0b559b;  }
+h4, .h4-like {font-size:  1.15rem;  }
+
+a { cursor: pointer; }
+
+
+.msg_no_js {    }
+
+
+/*-----  LAYOUTAFE ------*/
+#page {  max-width:  992px;   }
+
+  #header {
+    background: #afd9ee; position: relative; min-height: 100px;
+  }/* #header */
+
+  #middle {
+
+  } // #middle
+
+      #main {
+          article {
+              border : 1px solid #ccc;
+              margin: 2% auto;
+              width: 99%;
+              h2 {
+                padding: 1%;
+              }
+              div {
+                padding: 1%;
+              }
+          }
+
+      } // #main
+
+      aside#left {
+      background: #ffff00 ;
+      } // aside#left
+
+  #footer {
+
+    background: #c1e2b3;
+
+  } // #footer
+
+
+
+
+
+
+.box {
+ width:  154px; line-height: 50px; padding: 1%; border: 1px solid #ccc; color : #fff;
+/*  @include filter-gradient(#b8e1fc, #bdf3fd, vertical); // IE6-8
+  @include background-image(linear-gradient(top,
+    #b8e1fc  0%, #a9d2f3 10%, #90bae4 25%, #90bcea 37%,
+    #90bff0 50%, #6ba8e5 51%, #a2daf5 83%, #bdf3fd
+  ));*/
+
+  @include filter-gradient(#2ac363, #9c4cc2, horizontal); // IE6-8 fallback en gradient horizontal
+  @include background-image(radial-gradient(center, ellipse cover, #2ac363 0%, #cd8c14 50%, #9c4cc2));
+  @include box-shadow;
+}
+
+

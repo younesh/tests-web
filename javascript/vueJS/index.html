@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="fr-FR"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="fr-FR"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="fr-FR"> <![endif]-->
+<!--[if gt IE 9]> <!-->
+<html class="no-js" lang="fr-FR">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+    <!-- jquery-1.11.1.min.js -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- specifique à la page -->
+    <title> Site model de démarrage v10 </title>
+
+</head>
+
+<body id="vueApp">
+
+    <!--[if lt IE 8]>
+        <div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; /*height: 75px; */ position: relative;'>
+          <div style='position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;'><a href='#' onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-cornerx.jpg' style='border: none;' alt='Close this notice'/></a></div>
+          <div style='width: 640px; margin: 0 auto; text-align: left; padding: 0; overflow: hidden; color: black;'>
+            <div style='width: 75px; float: left;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-warning.jpg' alt='Warning!'/></div>
+            <div style='width: 275px; float: left; font-family: Arial, sans-serif;'>
+              <div style='font-size: 14px; font-weight: bold; margin-top: 12px;'>Vous utilisez un navigateur dépassé, qui va limiter vos possibilités de navigation correcte sur ce site  </div>
+              <div style='font-size: 12px; margin-top: 6px; line-height: 12px;'>Pour une meilleure expérience web, prenez le temps de mettre votre navigateur à jour.</div>
+            </div>
+            <div style='width: 75px; float: left;'><a href='http://fr.www.mozilla.com/fr/' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-firefox.jpg' style='border: none;' alt='Get Firefox 3.5'/></a></div>
+            <div style='width: 75px; float: left;'><a href='http://windows.microsoft.com/fr-fr/internet-explorer/download-ie' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-ie8.jpg' style='border: none;' alt='Get Internet Explorer 8'/></a></div>
+            <div style='width: 73px; float: left;'><a href='http://www.apple.com/fr/safari/download/' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-safari.jpg' style='border: none;' alt='Get Safari 4'/></a></div>
+            <div style='float: left;'><a href='http://www.google.com/chrome?hl=fr' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-chrome.jpg' style='border: none;' alt='Get Google Chrome'/></a></div>
+          </div>
+        </div>
+    <![endif]-->
+
+
+    <div class="container" id="page">
+        <header id="header" class="row">
+            <nav id="mmenu">
+                <ul id="mmenu2">
+                    <li><a href="index.html" class="active">   home  </a></li>
+                    <li><a href="nous.html">  Qui somme nous </a> </li>
+                    <li><a href="">  Notre parque voiture  </a>
+                        <ul>
+                            <li><a href="">  voiture de lux </a></li>
+                            <li><a href="">  voiture  4x4  </a></li>
+                            <li><a href="">  voiture economique  </a>
+                                <ul>
+                                    <li><a href="">  texte 01  </a></li>
+                                    <li><a href="">   texte 02  </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html"> Contact </a></li>
+                </ul>
+                <script>
+                    /* ajouter les >> au li qui contient des UL  */
+                    $(function() {
+                        $("#mmenu li").has("ul").addClass("HasSMenu");
+                        $(".HasSMenu > a").append("<span> » </span>");
+                    });
+                </script>
+            </nav>
+            <!-- id="mmenu" -->
+        </header>
+        <!-- #header -->
+        <section id="middle" class="row">
+            <div id="main" class="col-sm-8">
+              <!--  article#test-$$>h2+div-->
+                <article id="test-01">
+                    <h2> test 01 : v-if </h2>
+                    <div>
+                         {{ message }}
+                        <a v-bind:href="link + '/sports'" target="_blank"> liens ref YAHOO! sport </a>
+                        <div class="alert alert-success" v-if="success">
+                             OK success message !!!
+                        </div>
+                        <div class="alert alert-warning" v-else>
+                            message erreur KO !
+                        </div>
+
+                        <div>
+                            <ul>
+                                <li v-for="person in persons"> {{ person.nom }} -  {{ person.prenom }} </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+            <!-- #main -->
+            <aside id="left" class="col-sm-4">
+                SideBare..
+            </aside>
+            <!-- #left -->
+        </section>
+        <!-- #middle-->
+        <footer>
+            footer
+        </footer>
+        <!-- #footer -->
+
+        <script type="text/javascript" src="js/selectnav.js"></script>
+        <script>
+            // custom script for iconic one
+            selectnav('mmenu2', {
+                label: 'Menu',
+                nested: true,
+                indent: '-'
+            });
+        </script>
+        <script>
+            $(function() {
+                /* pour la cas de la descativation du JS sur le browser ...*/
+                $(".msg_no_js").css("display", "none");
+            })
+        </script>
+    </div>
+
+    <!-- VUEjs INCLUDED -->
+     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+     <script src="js/vueApp.js"></script>
+
+</body>
+
+</html>
