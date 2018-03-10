@@ -29,6 +29,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <!-- specifique à la page -->
+    <script src="js/lazysizes.min.js"></script>
     <title> Site model de démarrage v10 </title>
 
 </head>
@@ -91,22 +92,30 @@
                     <h2> test 01 : v-if </h2>
                     <div>
                          {{ message }}
-                        <a v-bind:href="link + '/sports'" target="_blank"> liens ref YAHOO! sport </a>
+                        <a v-bind:href="link + '/sports'" target="_blank" v-bind:title="title01"> liens ref YAHOO! sport </a>
                         <div class="alert alert-success" v-if="success">
                              OK success message !!!
                         </div>
                         <div class="alert alert-warning" v-else>
                             message erreur KO !
                         </div>
-
-                        <div>
-                            <ul>
-                                <li v-for="person in persons"> {{ person.nom }} -  {{ person.prenom }} </li>
-                            </ul>
-                        </div>
                     </div>
                 </article>
-
+                <article id="test-02">
+                   <h2> test 02 : for </h2>
+                    <div>
+                        <ul>
+                            <li v-for="person in persons"> {{ person.nom }} - {{ person.prenom }} </li>
+                        </ul>
+                    </div>
+                </article>
+                <article id="test-03">
+                    <h2> test event </h2>
+                    <div>
+                            <a href="" @click="close"> close !</a>
+                    </div>
+                </article>
+                <!--article#test-0$>h2+div-->
             </div>
             <!-- #main -->
             <aside id="left" class="col-sm-4">
