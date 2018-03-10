@@ -76,6 +76,10 @@ a { cursor: pointer; }
 
       } // #main
 
+
+      $var-bg: blue;
+      @import "aside-part-01";
+
       aside#left {
       background: #ffff00 ;
       } // aside#left

@@ -264,17 +264,24 @@ a {
   padding: 1%;
 }
 
-/* line 79, ../sass/style.scss */
+/* line 1, ../sass/_aside-part-01.scss */
+.aside-part-01 {
+  background: blue;
+  width: 150px;
+  height: 200px;
+}
+
+/* line 83, ../sass/style.scss */
 aside#left {
   background: #ffff00;
 }
 
-/* line 83, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 #footer {
   background: #c1e2b3;
 }
 
-/* line 94, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 .box {
   width: 154px;
   line-height: 50px;
