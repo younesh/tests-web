@@ -190,3 +190,84 @@ h2 {padding: 20px 0;}
 .buildThemes(@index) {}
 //start theme building loop
 .buildThemes(1);
+
+
+/////////////////////////////////////////////////////
+//////// visite europe //////////////////////////
+
+/**
+ * LISTING RESULT SEARCH
+ *
+ * @type component
+ */
+
+
+//  @import "base-variables";
+//  @import "specific/theme";
+//  @import "base-mixins";
+
+
+/** ----------------------------------------------------------------
+ *  COMMON - FIRST MOBILE
+ */
+
+/*INTIALISATION*/
+html { text-align: inherit;}
+.wrapper-listing-result {
+
+    .block-result {
+        width: 100%;
+        margin-left:1%;
+        margin-right:1%;
+        display: inline-block;
+
+        .result-header {
+            [class*="col-"]  {
+                padding: 0px;
+            }
+         }
+        .result-header-slider {
+            background-color: red;
+            min-height: 30px;
+
+        }
+        .result-header-maps {
+            background-color: orange;
+            min-height: 30px;
+        }
+
+        .result-content-left {
+            background-color: blue;
+            min-height: 30px;
+        }
+
+        .result-content-right {
+            background-color: green;
+            min-height: 30px;
+        }
+    }
+
+    &.grille-mode { //
+        .block-result {
+             width: 47%;
+            .result-header-slider {
+                width: 100%;
+            }
+            // hiding for grille mode
+            .result-header-maps,
+            .result-content-option {
+                display: none;
+            }
+        }
+    }
+
+}
+ /** ----------------------------------------------------------------
+ * MEDIA QUERY
+ */
+
+ @media (max-width: @screen-sm-max) {
+    .wrapper-listing-result {
+
+    }
+ }
