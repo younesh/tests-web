@@ -1,0 +1,67 @@
+<#include "/${templatePrefix}macro/config.ftl">
+<#include "/${templatePrefix}macro/dom.ftl">
+
+<#assign blocsResults = [
+{
+  "type": "type1",
+  "title": "description 01"
+  },
+  {
+  "type": "type1",
+  "title": "description 01"
+  },
+  {
+  "type": "type1",
+  "title": "description 01"
+  },
+  {
+  "type": "type1",
+  "title": "description 01"
+  },
+  {
+  "type": "type1",
+  "title": "description 01"
+  }
+
+]>
+<article class="wrapper-listing-result">
+    <div class="container">
+        <h1> wrapper-listing-result content .. </h1>
+
+        <#list blocsResults as slide>
+            <div class="block-result">
+                <div class="row result-header">
+                    <div class="col-md-8 result-header-slider">
+                        slider
+                    </div>
+                    <div class="col-md-4 result-header-maps">
+                        maps
+                    </div>
+                </div>
+                <div class="row result-content">
+                    <div class="col-md-8 result-content-left">
+                        <div class="result-content-title">
+                            Autotour Malte - Malte en liberté 3*
+                        </div>
+                        <div class="result-content-option">
+                            <ul>
+                                <li> Hôtel en centre-ville</li>
+                                <li> Croisière sur un yacht</li>
+                                <li> Visite de plus belles îles</li>
+                                <li>Instant traditionnel</li>
+                            </ul>
+                        </div>
+                        <div class="result-content-text">
+                            Ce voyage bénéficie d'une offre "Réservez tôt" ! Profitez d'un autotour de 8 jours et 7 nuits en demi-pension, avec logement dans en hôtel 3* pour découvrir l'île.
+                            <span class="info-penstion">8 jour(s)/7 nuit(s) - Demi-pension</span>
+                            <div class="info-duree">Durée(s) : 7 nuit(s)</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 result-content-right">
+                        right contantent
+                    </div>
+                </div>
+            </div>
+          </#list>
+    </div>
+</article>
