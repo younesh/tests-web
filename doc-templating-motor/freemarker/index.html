@@ -7,24 +7,24 @@
       },
       {
       "type": "type2",
-      "title": "description 022",
+      "biographie" : "ma bio est genial",
       "age" : 15,
-      "note": [ 0, 7 , 11, 16, 20]
+      "descript": "On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur "
       },
       {
-      "type": "type3",
+      "type": "type1",
       "title": "description 0333",
-      "age" : 25,
+      "age" : 20,
       "note": [ 3, 9 , 14, 15, 23]
       },
       {
-      "type": "type4",
+      "type": "type1",
       "title": "description 04444",
       "age" : 35,
       "note": [ 5, 11 , 13, 16, 18]
       },
       {
-      "type": "type5",
+      "type": "type1",
       "title": "description 055555",
       "age" : 45,
       "note": [ 9, 21 , 27, 32, 38]
@@ -43,12 +43,18 @@
     </#macro>
 
 <#list blocsResults as item>
-    <#if item.age lt 50>
+    <#if item.type == 'type1'>
         <div class="box">
             <h2>${item.type}</h2>
             <h4>${item.title}</h4>
             <h4>${item.age}</h4>
             <@formaterTable liste=item.note />
+        </div>
+    <#else>
+            <div class="box2">
+            <h2>${item.type}</h2>
+            <h4>${item.biographie}</h4>
+            <p> ${item.descript}</p>
         </div>
     </#if>
 </#list>
