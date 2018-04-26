@@ -11,6 +11,35 @@ body {
 
 article {
     padding: 1%;
-    border: #eee;
+   border: #eee;
     margin: 0px 10px;
 }
+
+ /* test fex */
+ #test-flex  {
+    .pere {
+        width: 50%; background-color: gray; height: 300px;
+        display: flex; 
+        flex-direction:row;
+        flex-wrap: wrap ;  /* { nowrap , wrap , wrap-reverse .} */ // retour ou pas ala ligne apres la limit du conteneur ..
+        justify-content : space-around  ; /* { flex-start, flex-end, center, space-between, space-around, space-evenly } */ // gerer l'espace entre les elment 
+        align-items: center ;  /* {  flex-start , flex-end , center, baseline , stretch } */  // alignement top ...
+        align-content: flex-start; /* { flex-start , flex-end, center , space-between , space-around , stretch } */
+        .fils {
+            @extend .box;
+            width: 20%; text-align: center;
+            &.f01 {
+              order : 4; // order flex
+            }
+            &.f02 {
+              order : 3;
+            }
+            &.f03 {
+              order : 1;
+            }
+            &.f04 {
+              order : 2;
+            }
+        }
+    }
+ }
