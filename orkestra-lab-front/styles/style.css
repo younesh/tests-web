@@ -1,0 +1,11 @@
+@import url(bootstrap.min.css);
+.box {
+  background-color: #eee;
+  min-height: 50px; }
+
+article {
+  padding: 1%;
+  border: #eee;
+  margin: 0px 10px; }
+
+/*# sourceMappingURL=style.css.map */
