@@ -15,6 +15,7 @@ article {
   height: 300px;
   display: flex;
   flex-direction: row;
+  /* */
   flex-wrap: wrap;
   /* { nowrap , wrap , wrap-reverse .} */
   justify-content: space-around;
@@ -34,5 +35,13 @@ article {
       order: 1; }
     #test-flex .pere .fils.f04 {
       order: 2; }
+
+#test-speed .bloc-avis {
+  border: solid 1px #ccc;
+  width: 50%;
+  padding: 20px; }
+  #test-speed .bloc-avis .ba-head {
+    display: flex;
+    flex-wrap: wrap; }
 
 /*# sourceMappingURL=style.css.map */
