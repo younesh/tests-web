@@ -67,3 +67,16 @@ article {
   }
 
  }
+ 
+#test-03 {
+  .t-ctn {
+    border: 2px solid #eee;
+    background-color: #eee;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    [class*='item'] {
+      background-color: #007bff;
+    }
+  }
+}

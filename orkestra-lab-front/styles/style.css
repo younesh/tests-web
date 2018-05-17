@@ -44,4 +44,13 @@ article {
     display: flex;
     flex-wrap: wrap; }
 
+#test-03 .t-ctn {
+  border: 2px solid #eee;
+  background-color: #eee;
+  height: 300px;
+  display: flex;
+  flex-direction: row; }
+  #test-03 .t-ctn [class*='item'] {
+    background-color: #007bff; }
+
 /*# sourceMappingURL=style.css.map */
