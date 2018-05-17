@@ -49,7 +49,8 @@ article {
   background-color: #eee;
   height: 300px;
   display: flex;
-  flex-direction: row; }
+  flex-direction: column;
+  align-items: center; }
   #test-03 .t-ctn [class*='item'] {
     background-color: #007bff; }
 

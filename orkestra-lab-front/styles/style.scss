@@ -74,7 +74,8 @@ article {
     background-color: #eee;
     height: 300px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     [class*='item'] {
       background-color: #007bff;
     }
