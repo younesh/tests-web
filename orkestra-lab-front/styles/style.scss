@@ -23,7 +23,7 @@ article {
         flex-direction:row;
         flex-wrap: wrap ;  /* { nowrap , wrap , wrap-reverse .} */ // retour ou pas ala ligne apres la limit du conteneur ..
         justify-content : space-around  ; /* { flex-start, flex-end, center, space-between, space-around, space-evenly } */ // gerer l'espace entre les elment 
-        align-items: center ;  /* {  flex-start , flex-end , center, baseline , stretch } */  // alignement top ...
+        align-items: baseline ;  /* {  flex-start , flex-end , center, baseline , stretch } */  // alignement top ...
         align-content: flex-start; /* { flex-start , flex-end, center , space-between , space-around , stretch } */
         .fils {
             @extend .box;

@@ -19,7 +19,7 @@ article {
   /* { nowrap , wrap , wrap-reverse .} */
   justify-content: space-around;
   /* { flex-start, flex-end, center, space-between, space-around, space-evenly } */
-  align-items: center;
+  align-items: baseline;
   /* {  flex-start , flex-end , center, baseline , stretch } */
   align-content: flex-start;
   /* { flex-start , flex-end, center , space-between , space-around , stretch } */ }
