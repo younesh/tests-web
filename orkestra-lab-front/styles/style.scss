@@ -20,7 +20,7 @@ article {
     .pere {
         width: 50%; background-color: gray; height: 300px;
         display: flex; 
-        flex-direction:row;
+        flex-direction:row; /* */
         flex-wrap: wrap ;  /* { nowrap , wrap , wrap-reverse .} */ // retour ou pas ala ligne apres la limit du conteneur ..
         justify-content : space-around  ; /* { flex-start, flex-end, center, space-between, space-around, space-evenly } */ // gerer l'espace entre les elment 
         align-items: baseline ;  /* {  flex-start , flex-end , center, baseline , stretch } */  // alignement top ...
@@ -42,4 +42,28 @@ article {
             }
         }
     }
+ }
+
+ #test-speed {
+  .bloc-avis {
+    border: solid 1px #ccc;
+    width: 50%; padding: 20px;
+    .ba-head  { 
+      display: flex;
+      flex-wrap: wrap;
+      .avatar {
+        
+      }
+      .name {
+
+      }
+      .date {
+
+      }
+    }
+    .ba-ctn {
+
+    }
+  }
+
  }
