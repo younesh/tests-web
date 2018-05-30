@@ -44,40 +44,58 @@ article {
     }
  }
 
- #test-speed {
-  .bloc-avis {
-    border: solid 1px #ccc;
-    width: 50%; padding: 20px;
-    .ba-head  { 
-      display: flex;
-      flex-wrap: wrap;
-      .avatar {
-        
-      }
-      .name {
-
-      }
-      .date {
-
-      }
+#test-speed {
+.bloc-avis {
+  border: solid 1px #ccc;
+  width: 50%; padding: 20px;
+  .ba-head  {
+    display: flex;
+    flex-wrap: wrap;
+    .avatar {
+    
     }
-    .ba-ctn {
+    .name {
+
+    }
+    .date {
 
     }
   }
+  .ba-ctn {
 
- }
+  }
+}
+
+}
  
-#test-03 {
+#test-003 {
   .t-ctn {
     border: 2px solid #eee;
     background-color: #eee;
-    height: 300px;
+    min-height: 300px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    justify-content: space-around;
     [class*='item'] {
       background-color: #007bff;
+      
+      &.item-04 {
+        align-self: flex-end;
+      }
+    }
+  }
+}
+
+#test-004 {
+  .t-ctn {
+    background-color: #eee;
+    min-height: 150px;
+    display: flex;
+    flex-direction: row;
+    > span {
+      margin: auto; /*important : c 'esr qui center ds les 2 axe !! */
+      background-color: #0b8f8c;
     }
   }
 }

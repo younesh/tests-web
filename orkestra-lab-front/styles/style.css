@@ -44,14 +44,27 @@ article {
     display: flex;
     flex-wrap: wrap; }
 
-#test-03 .t-ctn {
+#test-003 .t-ctn {
   border: 2px solid #eee;
   background-color: #eee;
-  height: 300px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
-  align-items: center; }
-  #test-03 .t-ctn [class*='item'] {
+  align-items: stretch;
+  justify-content: space-around; }
+  #test-003 .t-ctn [class*='item'] {
     background-color: #007bff; }
+    #test-003 .t-ctn [class*='item'].item-04 {
+      align-self: flex-end; }
+
+#test-004 .t-ctn {
+  background-color: #eee;
+  min-height: 150px;
+  display: flex;
+  flex-direction: row; }
+  #test-004 .t-ctn > span {
+    margin: auto;
+    /*important : c 'esr qui center ds les 2 axe !! */
+    background-color: #0b8f8c; }
 
 /*# sourceMappingURL=style.css.map */
