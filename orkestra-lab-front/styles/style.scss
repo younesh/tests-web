@@ -51,14 +51,17 @@ article {
     .ba-head  { 
       display: flex;
       flex-wrap: wrap;
+      > * {
+        border : 1px solid #ccc; margin: 0px 5px;
+    }
       .avatar {
-        
+        flex-grow: 1;
       }
       .name {
-
+        flex-grow:2;
       }
       .date {
-
+        flex-grow: 1;
       }
     }
     .ba-ctn {
