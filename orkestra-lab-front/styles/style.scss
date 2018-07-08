@@ -23,7 +23,7 @@ article {
         flex-direction:row; /* */
         flex-wrap: wrap ;  /* { nowrap , wrap , wrap-reverse .} */ // retour ou pas ala ligne apres la limit du conteneur ..
         justify-content : space-around  ; /* { flex-start, flex-end, center, space-between, space-around, space-evenly } */ // gerer l'espace entre les elment 
-        align-items: center ;  /* {  flex-start , flex-end , center, baseline , stretch } */  // alignement top ...
+        align-items: baseline ;  /* {  flex-start , flex-end , center, baseline , stretch } */  // alignement top ...
         align-content: flex-start; /* { flex-start , flex-end, center , space-between , space-around , stretch } */
         .fils {
             @extend .box;
@@ -44,6 +44,7 @@ article {
     }
  }
 
+<<<<<<< HEAD
  #test-speed {
   .bloc-avis {
     border: solid 1px #ccc;
@@ -63,10 +64,60 @@ article {
       .date {
         flex-grow: 1;
       }
+=======
+#test-speed {
+.bloc-avis {
+  border: solid 1px #ccc;
+  width: 50%; padding: 20px;
+  .ba-head  {
+    display: flex;
+    flex-wrap: wrap;
+    .avatar {
+    
     }
-    .ba-ctn {
+    .name {
 
+    }
+    .date {
+
+>>>>>>> b760466edfce5b30f53eddecdf00b180ccb06faf
     }
   }
+  .ba-ctn {
 
- }
+  }
+}
+
+}
+ 
+#test-003 {
+  .t-ctn {
+    border: 2px solid #eee;
+    background-color: #eee;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+    [class*='item'] {
+      background-color: #007bff;
+      
+      &.item-04 {
+        align-self: flex-end;
+      }
+    }
+  }
+}
+
+#test-004 {
+  .t-ctn {
+    background-color: #eee;
+    min-height: 150px;
+    display: flex;
+    flex-direction: row;
+    > span {
+      margin: auto; /*important : c 'esr qui center ds les 2 axe !! */
+      background-color: #0b8f8c;
+    }
+  }
+}
