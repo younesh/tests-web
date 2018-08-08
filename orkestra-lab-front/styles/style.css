@@ -43,6 +43,15 @@ article {
   #test-speed .bloc-avis .ba-head {
     display: flex;
     flex-wrap: wrap; }
+    #test-speed .bloc-avis .ba-head > * {
+      border: 1px solid #ccc;
+      margin: 0px 5px; }
+    #test-speed .bloc-avis .ba-head .avatar {
+      flex-grow: 1; }
+    #test-speed .bloc-avis .ba-head .name {
+      flex-grow: 2; }
+    #test-speed .bloc-avis .ba-head .date {
+      flex-grow: 1; }
 
 #test-003 .t-ctn {
   border: 2px solid #eee;

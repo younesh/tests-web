@@ -66,6 +66,29 @@
               <span> center text</span>
             </div>
           </article>
+
+          <article id="test-005">
+            <h2>chosen test </h2>
+            <!-- lib -->
+            <select id="chosen-select">
+              <option value="A">Valeur A</option>
+              <option value="B">Valeur B</option>
+              <option value="C">Valeur C</option>
+              <option value="D">Valeur D</option>
+              <option value="E">Valeur E</option>
+              <option value="F">Valeur F</option>
+            </select>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+            <style>
+              @import "https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css";
+            </style>
+            <script>
+              $(function(){
+                $("#chosen-select").chosen({ disable_search	: true}); 
+              })
+            </script>
+            <div class="t-ctn"></div>
+          </article>
           <!-- article#test-xxx>h2+div.t-ctn -->
         </div>
     </div>

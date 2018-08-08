@@ -47,11 +47,20 @@
     2.3 javascript
         2.3.1 angularJS
             2.3.1.1 https://johnpapa.net/angular-style-guide/ ( john papa ) -> (recommandé par un ami) !!
+        2.3.2 helper/tools javascript , composant :
+            2.3.2.1 : Plugins calendar , calendrier visuel : https://flatpickr.js.org/examples/
+            2.3.2.2 : lib javascript manipulation des date en JS : https://momentjs.com/ -> ( Expl : permet de tester si une date est une date calendrier valid, 
+            2.3.2.3 : plugin Slider carousel responsive : http://kenwheeler.github.io/slick/
+            2.3.2.4 : plugin range , determine plage entre un max et une min : https://refreshless.com/nouislider/ -> utiliser dans les filter des site d ecommerce pour filter par exemple les prix max et prix min
+
     2.4 les helper/tools css : 
-        2.4.1 générateur de fomes et d'effets ...
+        2.4.1 générateur de formes et d'effets ...
             2.4.1.1 générateur de triangle en full css : https://outils-css.aliasdmc.fr/generateur-de-triangles-css.php  [ triangle css]
         2.4.2 watcheurs ( less, scss, js .... ) 
-            2.4.2.1 http://koala-app.com/ ( sass, scss ) super pratique et facile !!! 
+            2.4.2.1 http://koala-app.com/ ( sass, scss ) super pratique et facile !!!
+        2.4.3 libs preprocesseur SCSS ,SASS
+           2.4.3.1 bourbon, lib scss de mixing  :  https://bourbon.io/  and   https://github.com/thoughtbot/bourbon#installation
+        
 
 
 
