@@ -1,0 +1,40 @@
+
+## Récupération du projet depuis le repos (2 etapes)
+    # Et1 : se positionner sur le bon dossier ou en veut mettre le projet cloné :
+        cd ..p/dossier-du-projet
+    # Et2 :  lancer le clone [clone]:
+        git clone git@gitlab.domaine.xxx.zzz/le-projet-en-repos.git
+        git clone https://github.com/younesh/tests-web.git  /* exemple */
+
+## creer une nouvel branche br-B a partir d'une branche br-A ( 3 etape ) 
+    # et1 : se positionner sur la branche br-A [checkout]
+        git checkout br-A 
+    # et2 : mettre à jour la br-A avec sa remote branche [pull]
+        git pull
+        /* ou */
+        git pull origin  br-A   /* sa remote */
+    # et3 : creer la br-B a partir de la br-A  [checkout -b]:
+        git checkout -b br-B
+
+
+## voir le status du versionning : fichier modifies, fichier ajouté au  git ....
+    git status
+
+## ajouter des modifs au git en tant que modifs en attente de commit
+    # cas1 : ajouter une modif d'un fichier [add]
+        git add ../path/../file
+    # cas2 ajouter tous les modifs avec le point [add . ]
+        git add .
+
+## pour voir les différence entre les modifs non comité et modif le remote [diff]
+    git diff  ../path/../file
+    git diff  /* pour voir tous les diff sur tous les fichier */
+
+## faire un commit [commit -m ]: 
+    git commit -m "le message du commite"
+
+
+## pour pusher les commites au serveur ( remote ) [push -u origin]
+    git push -u origin nom-de-branch-cible
+
+
