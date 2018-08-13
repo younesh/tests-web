@@ -38,3 +38,5 @@
     git push -u origin nom-de-branch-cible
 
 
+
+## (!) Doc a ajouter : { push -- forece with lease /  les cas resolve conflit en merge / .... / }
