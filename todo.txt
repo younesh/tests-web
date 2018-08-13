@@ -10,15 +10,16 @@
     1.4 modele de boite FLEX : le flex ds tous ces etats ...
     1.5 UX et redesign des controller html5 ( checkbox, radio, combobox ...
 
-2.angular
+2. Framwork js : vueJS , react .... 
     2.1 installation et parametrage d'environnement avec nodeJS
     2.2 passer de revu les fondamentaux et princibe de base
     2.3 faire des appli exemble pour un projet reél ( e-book perso )
-        2.1 crud en AnJs
+        2.1 CRUD by webservices .... 
         2.2 interfacage des data en front
 
+
 3.les composant web usels : chercher les meilleur et les plus générique multi-cas
-    3.1 les carausels parametrables responsives
+    3.1 les carausels parametrables responsives --> slick
     3.2 les menus multi-levels responsive
         3.2.1 composant menu pour bootstrap 3 :  http://geedmo.github.io/yamm3/# ( Yamm Megamenu )
     3.3 les calandriers

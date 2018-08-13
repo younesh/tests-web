@@ -906,8 +906,8 @@
                 }
 
                @keyframes animatSlideUp {
-                   0%     {opacity: 1; top : 0px; display: block;}
-                   50%     {opacity: 0.5; top : -100px;}
+                   0%     { opacity: 1; top : 0px; display: block;}
+                   50%    { opacity: 0.5; top : -100px;}
                    100%   { opacity: 0; top : -200px;}
                 }
 
@@ -919,7 +919,7 @@
                $(function() {
                     $("#t00026 button").on("click", function(e){
                         $("#t00026 .box").toggleClass("slide");
-                         $("#t00026 .box").toggleClass("slideUp");
+                        $("#t00026 .box").toggleClass("slideUp");
                    });
                });
             </script>
@@ -1123,8 +1123,53 @@
             <div class="box"></div>
         </article>
     </section>
+     <section id="t00030">
+         <h2> test animation css3 </h2>
+         <article>
+             <style>
+              #t00030 {
 
-    <!-- section#t00030>h2+article>(style+p+.box*3)-->
+              }
+              
+              
+                @keyframes animationBox1 {
+                    0%    { opacity: 0; top : -300px;}
+                    30%   { opacity: 0.1; top : 200px;}
+                    50%   { opacity: 0.2; top : -150px;}
+                    50%   { opacity: 0.5; top : 100px;}
+                    75%   { opacity: 1; top : -50px;}
+                    87%   { opacity: 1; top : 20px;}
+                    100%  { opacity: 1; top : 0px;}
+                }
+
+              .box1 {
+                   position: relative; top: 0;
+                   animation: animationBox1 3s /*alternate*/;  /* infinite */ 
+              }
+            </style>
+             <p></p>
+             <div class="box box1"></div>
+             <div class="box"></div>
+             <div class="box"></div>
+         </article>
+     </section>
+
+     <section id="t00031">
+         <h2> test sticky </h2>
+         <article>
+             <style>
+                 .box1 {
+                     position: sticky;
+                     top : 50px;
+                 }
+            </style>
+             <p></p>
+             <div class="box box1"></div>
+             <div class="box"></div>
+             <div class="box"></div>
+         </article>
+     </section>
+    <!-- section#t00031>h2+article>(style+p+.box*3)-->
 </div>
 
 
