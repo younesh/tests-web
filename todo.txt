@@ -1,13 +1,13 @@
 
 1. CSS
     1.1 : pb des height en pourcentage ( 100% ) >  [ ... en cours 30%]
-    1.2 : pb des centre centrage vertical des dib ( pour des fois ç marche et des fois pas)
+    1.2 : pb des centre centrage vertical des dib ( pour des fois ç marche et des fois pas) --> solution flexbox
     1.3 : animation css3
         1.3.1 : les paralallax -> exemple ( http://www.apple.com/apple-watch-series-2/ + googleSearch {"parallax zoom effect scrolling"})
         1.3.2 : les animation ( image zoom + btn link visible > expl : http://themeforest.net/item/worker-small-business-booking-template/full_screen_preview/12001625
-            1.3.2.1 la proprité animation : ces volets ....
+            1.3.2.1 la proprité animation : test les animations les plus connus... 
             1.3.2.2 animation des chiffre à l'apparaission commmr : http://www.rawnet.com/case-studies/baxter-storey
-    1.4 modele de boite FLEX : le flex ds tous ces etats ...
+    1.4 @OK : modele de boite FLEX : le flex ds tous ces etats https://css-tricks.com/snippets/css/a-guide-to-flexbox/ 
     1.5 UX et redesign des controller html5 ( checkbox, radio, combobox ...
 
 2. Framwork js : vueJS , react .... 
@@ -22,9 +22,10 @@
     3.1 les carausels parametrables responsives --> slick
     3.2 les menus multi-levels responsive
         3.2.1 composant menu pour bootstrap 3 :  http://geedmo.github.io/yamm3/# ( Yamm Megamenu )
-    3.3 les calandriers
-    3.4 galeries d'images
+    3.3 les calandriers ---> https://flatpickr.js.org/examples/
+    3.4 galeries d'images 
     3.5 le help popup info : le composant qui explique les composant des interface exemple ici https://apps.wifirst.net/?redirected=true
+    3.6 le composant rang utiliser dans les affinnage (prix entre x € et y €) : https://refreshless.com/nouislider/
 
 4.UX/design :
     4.1 lecture doc test : le bon choix des typo (ggl-search :"webdesign comment choisir la bonne font typo ") -->
