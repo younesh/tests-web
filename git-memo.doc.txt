@@ -40,3 +40,5 @@
 
 
 ## (!) Doc a ajouter : { push -- forece with lease /  les cas resolve conflit en merge / .... / }
+
+## (!) ajouter l'équivalant du "merge-into" en commandes ( merge-into de la branche destination du merge request ( exple :develop ou master) vers la branch du travail )
