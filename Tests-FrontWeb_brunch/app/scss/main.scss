@@ -1,10 +1,11 @@
+/* Lib installed*/
+@import "bourbon";
+
+/* global inclusion */
 @import "_variables";
 @import "_keyframes";
 @import "_mixins";
 @import "_general";
 
 /* specifique page */
-@import "_page-parallalax";
-
-
-
+@import "_page-parallalax"; 

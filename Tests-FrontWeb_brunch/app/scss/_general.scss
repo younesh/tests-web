@@ -69,4 +69,6 @@ body {
      background-color: #fff;
 }
 
-.container { }
+.container {
+  @include padding(300px null);
+}

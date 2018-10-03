@@ -10,6 +10,7 @@
     "sass-brunch": "^2.6.2"
   },
   "dependencies": {
+    "bourbon": "^5.1.0",
     "static-handlebars-brunch": "^0.1.5"
   }
 }
