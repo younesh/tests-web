@@ -1,0 +1,240 @@
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* line 3, ../scss/_normaliz.scss */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 8, ../scss/_normaliz.scss */
+body {
+  margin: 0;
+}
+
+/* line 12, ../scss/_normaliz.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 17, ../scss/_normaliz.scss */
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+/* line 23, ../scss/_normaliz.scss */
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* line 28, ../scss/_normaliz.scss */
+a {
+  background-color: transparent;
+}
+
+/* line 32, ../scss/_normaliz.scss */
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+/* line 38, ../scss/_normaliz.scss */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/* line 43, ../scss/_normaliz.scss */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* line 50, ../scss/_normaliz.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 54, ../scss/_normaliz.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 62, ../scss/_normaliz.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 66, ../scss/_normaliz.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 70, ../scss/_normaliz.scss */
+img {
+  border-style: none;
+}
+
+/* line 74, ../scss/_normaliz.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* line 85, ../scss/_normaliz.scss */
+button,
+input {
+  overflow: visible;
+}
+
+/* line 90, ../scss/_normaliz.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 95, ../scss/_normaliz.scss */
+[type=button],
+[type=reset],
+[type=submit],
+button {
+  -webkit-appearance: button;
+}
+
+/* line 102, ../scss/_normaliz.scss */
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* line 110, ../scss/_normaliz.scss */
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring,
+button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/* line 117, ../scss/_normaliz.scss */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/* line 121, ../scss/_normaliz.scss */
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+/* line 130, ../scss/_normaliz.scss */
+progress {
+  vertical-align: baseline;
+}
+
+/* line 134, ../scss/_normaliz.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 138, ../scss/_normaliz.scss */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 144, ../scss/_normaliz.scss */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* line 149, ../scss/_normaliz.scss */
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+/* line 154, ../scss/_normaliz.scss */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 158, ../scss/_normaliz.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+/* line 163, ../scss/_normaliz.scss */
+details {
+  display: block;
+}
+
+/* line 167, ../scss/_normaliz.scss */
+summary {
+  display: list-item;
+}
+
+/* line 171, ../scss/_normaliz.scss */
+template {
+  display: none;
+}
+
+/* line 175, ../scss/_normaliz.scss */
+[hidden] {
+  display: none;
+}
+
+/*# sourceMappingURL=normalize.min.css.map */
+/* line 3, ../scss/_general.scss */
+.clearfix::after, .container::after,
+.row::after, .header::after {
+  display: table;
+  content: " ";
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url("../fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 17, ../scss/_general.scss */
+body {
+  font-size: 16px;
+}
+
+/* line 31, ../scss/_general.scss */
+.col {
+  width: 50%;
+  float: left;
+}
+
+/* pages */
+/* line 4, ../scss/_page-home.scss */
+.container {
+  background-color: #eee;
+}
