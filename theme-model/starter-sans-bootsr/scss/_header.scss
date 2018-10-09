@@ -1,3 +1,21 @@
 .header {
-    
+
+    .mini-header {
+        background-color: $color-black-primary;
+        min-height: 25px;
+        color: white;
+        position: relative;
+    }
+
+    .btn-store {
+        display: block;
+        float: left;
+        background-color: $color-brand-primary;
+        line-height: 25px;
+        height: 100%;
+        padding:0 $gutter-half;
+    }
+    .ctn-languge-barre {
+        text-align: right;
+    }
 }

@@ -8,7 +8,7 @@
 
 body {
     font-size: 16px;
-    font-family: $font-familt-content;
+    font-family: $font-family-content;
 }
 
 // LAYOUTAGE 
@@ -26,4 +26,38 @@ body {
     float: left;
 }
 
-.page {}
+// layoutage 
+.page {
+
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @extend .clearfix;
+}
+
+
+// min-md
+@media (min-width: $bp-min-md) {
+    .container {
+        max-width: 720px;
+    }  
+}
+
+// min-lg
+@media (min-width: $bp-min-lg) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+// min-lg
+@media (min-width: $bp-min-xl) {
+    .container {
+        max-width: 1140px;
+    }
+}

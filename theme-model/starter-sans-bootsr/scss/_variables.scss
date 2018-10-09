@@ -16,6 +16,17 @@ $bp-max-md: 991px;
 $bp-min-lg: 992px;
 $bp-max-lg: 1199px;
 $bp-min-xl: 1200px;
+
+// COLORS 
+$color-black-primary : #252525;
+$color-black-secondary : #30333b;
+$color-gray-lighter : #f3f5f9;
+$color-brand-primary : #ec0027;
+
+// gutter
+$gutter : 30px;
+$gutter-half: $gutter/2;
+
 // min-lg
 @media (min-width: 992px) {
 }

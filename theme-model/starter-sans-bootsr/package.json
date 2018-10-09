@@ -1,0 +1,19 @@
+{
+  "name": "starter-sans-bootsr",
+  "version": "1.0.0",
+  "description": "a tple project statrters widout bootstrap grid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css",
+    "start": "npm run build && npm run dev && npm run open"
+  },
+  "author": "younes.C",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
