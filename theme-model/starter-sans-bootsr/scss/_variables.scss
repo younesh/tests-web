@@ -1,0 +1,24 @@
+// FONTS
+/* @font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('../fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900');
+$font-family-titles: 'Montserrat',sans-serif;
+$font-family-content: 'Arial',sans-serif;
+
+// breack-point; 
+$bp-max-sm: 767px;
+$bp-min-md: 768px;
+$bp-max-md: 991px;
+$bp-min-lg: 992px;
+$bp-max-lg: 1199px;
+$bp-min-xl: 1200px;
+// min-lg
+@media (min-width: 992px) {
+}
+
+//  min-xl
+@media (min-width: 1200px) {}

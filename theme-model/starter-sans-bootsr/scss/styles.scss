@@ -5,6 +5,22 @@
 @import "general";
 @import "header";
 @import "footer";
-
 /* pages */
+
 @import "page-home";
+/* todo : @@test /@@clean */  
+
+// min-md
+@media (min-width: $bp-min-md) {
+    
+}
+
+// min-lg
+@media (min-width: $bp-min-lg) {
+
+}
+
+// min-lg
+@media (min-width: $bp-min-xl) {
+
+}

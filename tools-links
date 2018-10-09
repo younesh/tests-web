@@ -60,6 +60,7 @@
             2.4.2.1 http://koala-app.com/ ( sass, scss ) super pratique et facile !!!
         2.4.3 libs preprocesseur SCSS ,SASS
            2.4.3.1 bourbon, lib scss de mixing  :  https://bourbon.io/  and   https://github.com/thoughtbot/bourbon#installation
+        2.4.4 tutorial watch sass : configurer les watch de sass avec npm : https://webdesign.tutsplus.com/fr/tutorials/watch-and-compile-sass-in-five-quick-steps--cms-28275
         
 
 
