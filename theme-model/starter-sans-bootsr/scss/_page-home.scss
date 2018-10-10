@@ -1,1 +1,30 @@
-.page-home {}
+.page-home {
+
+    .home-banner {
+        background-image :url('../images/home-main-banner.jpg');
+        background-size: cover;
+        background-color: #416fa1;
+        background-position: center center;
+        height: 479px;
+
+        .brand-intro {
+            color : white; 
+            font-family: $font-family-titles;
+            font-weight: $fw-title-black;
+            font-size: 70px;
+            text-align: center;
+            width:70%;
+            margin: auto;
+            span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .intro-p1 {
+                font-size: 150px;
+            }
+             .intro-p2 {
+                 width: 200px;
+             }
+        }
+    }
+}

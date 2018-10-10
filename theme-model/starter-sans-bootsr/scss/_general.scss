@@ -12,21 +12,6 @@ body {
 }
 
 // LAYOUTAGE 
-.container,
-.row {
-    @extend .clearfix;
-}
-
-.header {
-    @extend .clearfix;
-}
-
-.col {
-    width: 50%;
-    float: left;
-}
-
-// layoutage 
 .page {
 
 }
@@ -37,6 +22,7 @@ body {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    box-sizing: border-box;
     @extend .clearfix;
 }
 

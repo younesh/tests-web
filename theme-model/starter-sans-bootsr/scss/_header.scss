@@ -18,4 +18,61 @@
     .ctn-languge-barre {
         text-align: right;
     }
+
+    // main-header 
+    .main-header {
+        position: relative;
+        .btn-mobile-menu {
+            display: inline-block; vertical-align: middle;
+            height: 70px;  width: 100px;  text-align: center;
+           i { font-size: 26px;}
+        }
+
+        .site-name {
+            display: inline-block; vertical-align: middle;
+            font-family: $font-family-titles;
+            font-weight: $fw-title-light;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 26px;
+            width: calc(100% - 200px);
+            span {
+                font-weight: $fw-title-black;
+                display: block;
+                font-size: 34px;
+            }
+        }
+
+        .user-menu {
+            display: inline-block; vertical-align: middle;
+            width: 70px; text-align: right;
+            i {
+                font-size: 25px; 
+            }
+
+            .users-space {
+                margin-right: 15px;
+            }
+
+            .basket {
+
+            }
+        }
+
+        .main-menu {
+            text-align: center;
+            font-family: $font-family-titles;
+            font-weight: $fw-title-black;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin-bottom: 35px;
+
+            a  {
+                display: inline-block;
+                margin: 5px 15px;
+                color: $color-black-primary;
+            }
+        }
+
+    }
 }
