@@ -1,0 +1,430 @@
+.content {
+    .colonne-gauche {
+        padding-bottom: 80px;
+        
+        @media screen and (max-width: 991px) {
+            padding-bottom: 0;
+        }
+        .formulaire {
+            background-color: $blanc2;
+            padding: 100px 15px 20px;
+            margin-bottom: 20px;
+            
+            @media screen and (max-width: 991px) {
+                padding-top: 20px;
+            }
+            .form-control {
+                border: none;
+                background-color: transparent;
+                height: auto;
+                padding: 6px 0px;
+                @include border-radius(0);
+                @include box-shadow (0, 0, 0, 0, transparent, false);
+                
+                input {
+                    width: 100%;
+                    border: 1px solid $gris-clair2;
+                    padding: 12px 9px 10px;
+                }
+                .bootstrap-select {
+                    width: 100%;
+                    
+                    button {
+                        color: $bleu-marine;
+                        border: 1px solid $gris-clair2;
+                        padding: 12px 9px 10px;
+                        @include border-radius(0);
+                    }
+                }
+                &.chambre-selection {
+                    .colonne {
+                        width: 33.3333%;
+                        float: left;
+                        
+                        label {
+                            font-family: "Roboto-Medium";
+                            font-size: 13px;
+                            font-weight: normal;
+                            text-align: center;
+                            width: 100%;
+                            color: $bleu-marine;
+                            padding-top: 4px;
+                            text-indent: -3000px;
+                            
+                            &.single {
+                                background: url('../images/picto-chambre-single.png') no-repeat center center;
+                                background-size: 32px;
+                            }
+                            &.twin {
+                                background: url('../images/picto-chambre-twin.png') no-repeat center center;
+                                background-size: 32px;
+                            }
+                            &.double {
+                                background: url('../images/picto-chambre-double.png') no-repeat center center;
+                                background-size: 32px;
+                            }
+                        }
+                        .pad {
+                            background-color: $blanc;
+                            text-align: center;
+                            padding: 5px 0;
+                            border: 1px solid $blanc2;
+
+                            span {
+                                padding: 0 3px;
+                            }
+                            button {
+                                background-color: transparent;
+                                border: none;
+
+                                &.plus {
+                                    font-family: "Roboto-Medium";
+                                    font-size: 13px;
+                                    color: $bleu-marine;
+                                }
+                            }
+                        }
+                    }
+                    &:after {
+                        content: "";
+                        display: block;
+                        clear: left;
+                    }
+                }
+                &.nbr-participants {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 100%;
+
+                    label {
+                        font-family: "Roboto-Medium";
+                        font-size: 13px;
+                        font-weight: normal;
+                        text-align: left;
+                        width: 100%;
+                        color: $bleu-marine;
+                    }
+                    .pad {
+                        background-color: $blanc;
+                        text-align: left;
+                        padding: 5px 15px;
+                        border: 1px solid $blanc2;
+
+                        span {
+                            padding: 0 3px;
+                        }
+                        button {
+                            background-color: transparent;
+                            border: none;
+
+                            &.plus {
+                                font-family: "Roboto-Medium";
+                                font-size: 13px;
+                                color: $bleu-marine;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .contact-applis {
+            background-color: $gris-clair;
+            padding: 20px 15px;
+            
+            @media screen and (max-width: 767px) {
+                margin-left: -15px;
+                margin-right: -15px;
+            }            
+            .wrapper {
+                border-bottom: 1px solid $gris;
+                padding: 20px 0;
+                
+                @media screen and (min-width: 768px) and (max-width: 991px) {
+                    float: left;
+                    width: 32%;
+                    margin-right: 2%;
+                    border-bottom: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+                h3 {
+                    color: $bleu-marine;
+                    font-family: "Roboto-Light";
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    padding: 0px 5px 20px 24px;
+                    
+                    @media screen and (min-width: 992px) and (max-width: 1159px) {
+                        font-size: 18px;
+                        padding: 0px 5px 20px 5px;
+                    }
+                    @media screen and (max-width: 767px) {
+                        width: 270px;
+                        margin: auto;
+                    }
+                    button {
+                        font-size: 10px;
+                        background-color: $bleu-marine;
+                        color: $blanc;
+                        @include border-radius(50%);
+                        padding: 1px 4px;
+                        margin-left: 5px;
+                        cursor: pointer;
+                        border: none;
+                        position: relative;
+                        top: -7px;
+                        
+                        &:hover {
+                            background-color: $bleu-marine-hover;
+                        }
+                    }
+                    .popover {
+                        width: 400px;
+                        padding: 20px 10px;
+                        max-width: initial;
+                        background-color: $bleu-marine;
+                        color: $blanc;
+                        border: none;
+                        @include border-radius(0);
+                        
+                        > .arrow {
+                            display: none;
+                        }
+                        .popover-title {
+                            background-color: $bleu-marine;
+                            color: $blanc;
+                            border-bottom: none;
+                            font-family: "Roboto-Medium";
+                            font-size: 15px;
+                            padding-bottom: 0;
+                            padding-left: 15px;
+                        }
+                        .popover-content {
+                            font-family: "Roboto-Light";
+                            font-size: 12px;
+                            line-height: 14px;
+                        }
+                    }
+                    div {
+                        font-family: "Roboto-Bold";
+                        font-size: 13px;
+                        text-transform: initial;
+                    }
+                }
+                .form-control {
+                    border: none;
+                    background-color: transparent;
+                    height: auto;
+                    padding: 0px 0px 6px;
+                    @include border-radius(0);
+                    @include box-shadow (0, 0, 0, 0, transparent, false);
+                    
+                    @media screen and (max-width: 767px) {
+                        width: 270px;
+                        margin: auto;
+                    }
+                    .email {
+                        width: 183px;
+                        margin-right: 5px;
+                        padding: 2px 6px;
+                        
+                        @media screen and (min-width: 992px) and (max-width: 1159px) {
+                            width: 143px;
+                        }
+                        @media screen and (min-width: 768px) and (max-width: 991px) {
+                            width: 181px;
+                        }
+                        @media screen and (max-width: 767px) {
+                            margin-left: 24px;
+                        }
+                    }
+                    .valider {
+                        background-color: $bleu-marine;
+                        color: $blanc;
+                        border: none;
+                        padding: 4px 6px;
+                        
+                        &:hover {
+                            background-color: $bleu-marine-hover;
+                        }
+                    }
+                }
+                .ligne {
+                    color: $gris-fonce;
+                    font-size: 18px;
+                    font-family: "Roboto-Bold";
+                    padding-bottom: 10px;
+                    padding-left: 24px;
+                    
+                    @media screen and (min-width: 992px) and (max-width: 1159px) {
+                        padding-left: 0;
+                    }
+                    @media screen and (max-width: 767px) {
+                        width: 270px;
+                        margin: auto;
+                    }
+                    div {
+                        font-family: "Roboto-Light";
+                        font-size: 9px;
+                    }
+                    &:before {
+                        content: "";
+                        display: inline-block;
+                        background: url("../images/sprite-pictos-contact.png") no-repeat;
+                        width: 37px;
+                        height: 37px;
+                        float: left;
+                        margin-right: 15px;
+                    }
+                }
+                .numero {
+                    &:before {
+                        background-position: top center;
+                    }
+                }
+                .ecrire {
+                    &:before {
+                        background-position: bottom center;
+                    }
+                }
+                .application {
+                    padding-left: 24px;
+                    
+                    @media screen and (max-width: 767px) {
+                        width: 270px;
+                        margin: auto;
+                    }
+                    .appStore {
+                        display: inline-block;
+                        background: url("../images/sprite-application.png") no-repeat left center;
+                        width: 94px;
+                        height: 30px;
+                    }
+                    .googleStore {
+                        display: inline-block;
+                        background: url("../images/sprite-application.png") no-repeat right center;
+                        width: 82px;
+                        height: 30px;
+                    }
+                }
+                .photo-home {
+                    position: relative;
+                    margin-left: -15px;
+                    margin-right: -15px;
+            
+                    .texte {
+                        position: absolute;
+                        top: 50%;
+                        @include transform-translate(0, -50%);
+                        width: 100%;
+                        padding: 0 20%;
+                        text-align: center;
+                        z-index: 5;
+
+                        p {
+                            font-family: "Roboto-Thin";
+                            font-size: 24px;
+                            line-height: 34px;
+                            color: $blanc;
+                            margin-bottom: 20px;
+                        }
+                        a {
+                            display: inline-block;
+                            font-family: "Roboto-Bold";
+                            font-size: 15px;
+                            color: $blanc;
+                            background-color: $bleu-marine;
+                            padding: 10px 20px;
+                        }
+                    }
+                }
+                &.no-border {
+                    @media screen and (max-width: 767px) {
+                        border-bottom: none;
+                    }
+                }
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+            &:after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+        }
+        .dernieres-reservations {
+            background-color: $blanc2;
+            padding: 20px 15px;
+            
+            h3 {
+                padding: 10px 10px 20px 10px;
+                color: $gris-fonce;
+                font-size: 17px;
+                font-family: "Roboto-Light";
+            }
+            .hotel {
+                display: block;
+                padding-bottom: 20px;
+                color: $gris-fonce;
+                text-decoration: none;
+                
+                @media screen and (min-width: 768px) and (max-width: 991px) {
+                    float: left;
+                    width: 32%;
+                    margin-right: 2%;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+                .photo {
+                    width: 100%;
+                    margin-bottom: 14px;
+                    text-align: center;
+                }
+                .nom {
+                    font-family: "Roboto-Bold";
+                    font-size: 14px;
+                    margin-bottom: 3px;
+                    padding-left: 10px;
+                    padding-right: 15px;
+                }
+                .lieu {
+                    font-family: "Roboto-Light";
+                    font-size: 12px;
+                    padding-left: 10px;
+                    padding-right: 15px;
+                    
+                    .note {
+                        font-family: "Roboto-Bold";
+                        color: $bleu-marine;
+                        float: right;
+                    }
+                }
+                &:hover {
+                    .photo {
+                        position: relative;
+                        
+                        &:before {
+                            content: "";
+                            display: block;
+                            background-color: rgba($gris-fonce, 0.2);
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+            .see-all {
+                text-align: right;
+                
+                a {
+                    color: $gris-fonce;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

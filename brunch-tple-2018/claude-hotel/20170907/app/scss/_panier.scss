@@ -1,0 +1,209 @@
+.content {
+    .mon-panier {
+        @media screen and (max-width: 991px) {
+            padding-top: 80px;
+        }
+        fieldset {
+            border-top: 1px solid $gris;
+            margin-top: 10px;
+            padding-top: 20px;
+            
+            .entete {
+                margin: 10px 35px;
+                
+                > div {
+                    padding: 0;
+                    
+                    div {
+                        font-family: "Roboto-Light";
+                        font-size: 18px;
+                    }
+                }
+            }
+            .wrapper {
+                background-color: $blanc2;
+                padding: 50px;
+                
+                @media screen and (max-width: 767px) {
+                    margin: 0 -15px;
+                    padding: 15px;
+                }
+                .demande {
+                    &:first-child {
+                        > .row {
+                            margin-top: 0;
+                            padding-top: 0;
+                            border-top: 0;
+                        }
+                    }
+                    > .row {
+                        margin-top: 30px;
+                        padding-top: 25px;
+                        border-top: 2px solid $bleu-marine;
+                    }
+                    .titre {
+                        border-bottom: 1px solid $bleu-marine;
+                        
+                        h4, .prix {
+                            color: $bleu-marine;
+                            font-size: 18px;
+                        }
+                    }
+                    .contenu {
+                        margin-top: 20px;
+                        
+                        .boutons {
+                            a {
+                                font-family: "Roboto-Light";
+                                font-size: 12px;
+                                color: $noir;
+                                text-decoration: none;
+                                margin-right: 10px;
+                                
+                                &:before {
+                                    display: inline-block;
+                                    content: "+";
+                                    border: 1px solid $noir;
+                                    @include border-radius(50%);
+                                    width: 15px;
+                                    height: 15px;
+                                    line-height: 13px;
+                                    text-align: center;
+                                    font-size: 15px;
+                                    margin-right: 5px;
+                                }
+                                &.open {
+                                    &:before {
+                                        content: "-";
+                                    }
+                                }
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+                                @media screen and (max-width: 767px) {
+                                    display: block;
+                                    width: 100%;
+                                    margin: 5px 0;
+                                }
+                            }
+                        }
+                       .pad {
+                            display: inline-block;
+                            background-color: $blanc;
+                            text-align: center;
+                            padding: 5px 10px;
+                            border: 1px solid $gris;
+                           margin-right: 5px;
+
+                            span {
+                                padding: 0 3px;
+                            }
+                            button {
+                                background-color: transparent;
+                                border: none;
+
+                                &.plus {
+                                    font-family: "Roboto-Medium";
+                                    font-size: 13px;
+                                    color: $bleu-marine;
+                                }
+                            }
+                           @media screen and (max-width: 991px) {
+                               margin-bottom: 8px;
+                           }
+                        }
+                        .trash {
+                            display: inline-block;
+                            background: url(../images/trash.png) no-repeat;
+                            width: 16px;
+                            height: 18px;
+                            text-indent: -3000px;
+                            
+                           @media screen and (max-width: 991px) {
+                               min-height: 40px;
+                           }
+                        }
+                        .dates {
+                            font-family: "Roboto-Light";
+                        }
+                        .ajout-commentaire, .definir-occupants {
+                            display: none;
+                            margin-top: 10px;
+                            
+                            p {
+                                padding-bottom: 10px;
+                            }
+                            textarea {
+                                width: 100%;
+                                resize: vertical;
+                                height: 80px;
+                                border: 1px solid $gris;
+                            }
+                            .row {
+                                > div {
+                                    margin-bottom: 10px;
+                                    
+                                    .bootstrap-select {
+                                        width: 100%;
+                                        
+                                        button {
+                                            @include border-radius(0);
+                                            border: 1px solid $gris;
+                                        }
+                                        .caret {
+                                            color: $bleu-marine;
+                                        }
+                                    }
+                                    input {
+                                        width: 100%;
+                                        height: 34px;
+                                        padding: 10px;
+                                        border: 1px solid $gris;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .total {
+                    .prix-ht, .sous-total-ttc, .total-ttc {
+                        margin-top: 25px;
+                        padding-top: 25px;
+                        font-size: 16px;
+                    }
+                    .prix-ht, .total-ttc {
+                        border-top: 2px solid $noir;
+                    }
+                    .sous-total-ttc {
+                        border-top: 1px solid $noir;
+                    }
+                    .total-ttc {
+                        padding-top: 40px;
+                        font-size: 25px;
+                    }
+                }
+            }
+            .liste-boutons {
+                margin-top: 20px;
+                font-family: "Roboto-Bold";
+                
+                .btn-continuer, .btn-valider {
+                    font-size: 18px;
+                    color: $blanc;
+                    padding: 10px 20px;
+                    
+                    @media screen and (max-width: 767px) {
+                        display: block;
+                        margin-bottom: 10px;
+                    }
+                }
+                .btn-continuer {
+                    background-color: $gris7;
+                }
+                .btn-valider {
+                    background-color: $bleu-marine;
+                }
+            }
+        }
+    }
+}   

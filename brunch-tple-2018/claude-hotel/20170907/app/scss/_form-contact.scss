@@ -1,0 +1,20 @@
+.content {
+    .mon-profil.form-contact {
+        h2 {
+            margin-bottom: 55px;
+            
+            + p {
+                margin-bottom: 45px;
+                font-family: "Roboto-Thin";
+                font-size: 20px;
+            }
+        }
+        fieldset {
+            border: none;
+            
+            p {
+                margin: 25px 0 35px;
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+## demarrer : 
+ # installer brunch : ds vorte dossier de choix tapez:
+ npm install -g brunch
+
+ # recuperer un projet basic structurer de la list dispo  https://brunch.io/skeletons
+    brunch new proj -s es6

@@ -1,0 +1,1166 @@
+@charset "UTF-8";
+/* COLORS */
+/* #34495e */
+/* form, input */
+/* POLICE FAMILY */
+/* size main cols  */
+/* cas 1 : when asidbar was open */
+/* cas 2 : when asidbar was closed */
+/* FONT */
+/*@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/Roboto-Regular.eot');
+    src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Regular.woff') format('woff'),
+         url('../fonts/Roboto-Regular.ttf') format('truetype'),
+         url('../fonts/Roboto-Regular.svg#PolicePerso') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}*/
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url("../fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url("../fonts/OpenSans/OpenSans-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSans-Semibold';
+  src: url("../fonts/OpenSans/OpenSans-Semibold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+/* OpenSans-Regular */
+/* Balises globales */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+p,
+input,
+select,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  outline: none; }
+
+ul,
+li {
+  list-style: none; }
+
+h2 {
+  font-family: "OpenSans-Light";
+  font-size: 22px; }
+
+strong {
+  /*   font-family: $police-title-2;*/ }
+
+body,
+html {
+  height: 100%; }
+
+body {
+  font-family: "OpenSans-Regular";
+  font-size: 12px;
+  color: #34495e;
+  background-color: #fff; }
+
+.page {
+  background-color: #fff; }
+  .page:after {
+    content: ".";
+    font-size: 0;
+    clear: both; }
+  .page .middle {
+    height: calc(100% - 101px); }
+    .page .middle:after {
+      content: ".";
+      font-size: 0;
+      clear: both; }
+    .page .middle.reduceAsideBar #aside-bar {
+      width: 28px; }
+      .page .middle.reduceAsideBar #aside-bar .hideWhenClosed {
+        position: absolute;
+        width: 236px;
+        left: -300px;
+        /* animation */
+        transition-property: all;
+        transition-duration: .3s;
+        transition-timing-function: ease-out; }
+        .page .middle.reduceAsideBar #aside-bar .hideWhenClosed .bouton-large, .page .middle.reduceAsideBar #aside-bar .hideWhenClosed .bouton-auto-large, .page .middle.reduceAsideBar #aside-bar .hideWhenClosed .btn-al-envoiMail, .page .middle.reduceAsideBar #aside-bar .hideWhenClosed .btn-al-plus, .page .middle.reduceAsideBar #aside-bar .hideWhenClosed .btn-al-modif, .page .middle.reduceAsideBar #aside-bar .hideWhenClosed .btn-al-reglage, .page .middle.reduceAsideBar #aside-bar .hideWhenClosed .btn-al-dupliquer, .page .middle.reduceAsideBar #aside-bar .hideWhenClosed .btn-al-save {
+          height: 40px; }
+      .page .middle.reduceAsideBar #aside-bar #openCloseAsideBar {
+        background-position: -245px -126px; }
+    .page .middle.reduceAsideBar #main-content {
+      width: calc(100% - 28px);
+      /* animation */
+      transition-property: all;
+      transition-duration: .3s;
+      transition-timing-function: ease-out; }
+
+.sprite, .icone-cercle:before, .notifNumber:before, #header #head-panel #hp-left .hpl-item.hpl-agenda .agenda-notif:before, .page-TableauDeBord .mc-content-tableauBord .mc-box-tb .mcbox-head .mcboxh-notif:before, .badge-info:before, .badge-s3:before, #aside-bar .ab-search .icone-info:before, .page-rechercheListeDossiers .rld-zoneFilter .icone-recherche:before, .box-widget .bw-head .bwh-navigat .bwhn-left, .box-widget-2 .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-pieceManqantes .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-qualificat .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-operateur .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-MO .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-event .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-infoImportant .bw-head .bwh-navigat .bwhn-left, .box-widget .bw-head .bwh-navigat .bwhn-right, .box-widget-2 .bw-head .bwh-navigat .bwhn-right, .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-head .bwh-navigat .bwhn-right, .page-ficheDossierAccueil .fda-content .bw-pieceManqantes .bw-head .bwh-navigat .bwhn-right, .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye .bw-head .bwh-navigat .bwhn-right, .page-ficheDossierAccueil .fda-content .bw-qualificat .bw-head .bwh-navigat .bwhn-right, .page-ficheDossierAccueil .fda-content .bw-operateur .bw-head .bwh-navigat .bwhn-right, .page-ficheDossierAccueil .fda-content .bw-MO .bw-head .bwh-navigat .bwhn-right, .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bw-head .bwh-navigat .bwhn-right, .page-ficheDossierAccueil .fda-content .bw-event .bw-head .bwh-navigat .bwhn-right, .page-ficheDossierAccueil .fda-content .bw-infoImportant .bw-head .bwh-navigat .bwhn-right, .box-widget .bw-head .bwh-icone, .box-widget-2 .bw-head .bwh-icone, .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-head .bwh-icone, .page-ficheDossierAccueil .fda-content .bw-pieceManqantes .bw-head .bwh-icone, .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye .bw-head .bwh-icone, .page-ficheDossierAccueil .fda-content .bw-qualificat .bw-head .bwh-icone, .page-ficheDossierAccueil .fda-content .bw-operateur .bw-head .bwh-icone, .page-ficheDossierAccueil .fda-content .bw-MO .bw-head .bwh-icone, .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bw-head .bwh-icone, .page-ficheDossierAccueil .fda-content .bw-event .bw-head .bwh-icone, .page-ficheDossierAccueil .fda-content .bw-infoImportant .bw-head .bwh-icone, .bouton-large .icone, .bouton-auto-large .icone, .btn-al-envoiMail .icone, .btn-al-plus .icone, .btn-al-modif .icone, .btn-al-reglage .icone, .btn-al-dupliquer .icone, .btn-al-save .icone, .bouton-2, .icone-carre, #header #head-panel #hp-left .hpl-item:before, #header #head-panel #hp-right .hpr-item:before, #aside-bar .ab-search:before, #aside-bar .ab-menu .abm-item:before, .page-home .middle .bloc-connexion .bc-head .icone-cadnat, .page-home .middle .bloc-connexion .bc-content .bouton-connexion .icone, .page-TableauDeBord .mc-content-tableauBord .mc-box-tb .mcbox-head .mcboxh-icon, .page-rechercheListeDossiers .rld-zoneFilter.reduceZoneFilter .b2-openClose:before, .page-rechercheListeDossiers .rld-list .tldl-tab thead th .th-icone, .page-ficheDossierAccueil .fda-content .bw-operateur .bw-content .bwc-row .bwor-row .bwor-icone, .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bwcl-row .icone-mail-new,
+.page-ficheDossierAccueil .fda-content .bw-courrierRecu .bwcl-row .icone-pieceJointe,
+.page-ficheDossierAccueil .fda-content .bw-courrierRecu .bwcl-row .icone-mail-vue, .page-ficheDossierAccueil .fda-content .bw-event .bwcl-row .icone-flag {
+  background-image: url("../images/sprite.png");
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  background-position: 0 0;
+  display: inline-block; }
+
+a {
+  cursor: pointer;
+  color: #34495e; }
+
+/* bulle de noatificaion */
+.icone-cercle, .notifNumber, #header #head-panel #hp-left .hpl-item.hpl-agenda .agenda-notif, .page-TableauDeBord .mc-content-tableauBord .mc-box-tb .mcbox-head .mcboxh-notif, .badge-info, .badge-s3, #aside-bar .ab-search .icone-info, .page-rechercheListeDossiers .rld-zoneFilter .icone-recherche {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  line-height: 23px;
+  text-align: center;
+  color: #fff;
+  background-color: #245f87;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%; }
+  .icone-cercle:before, .notifNumber:before, #header #head-panel #hp-left .hpl-item.hpl-agenda .agenda-notif:before, .page-TableauDeBord .mc-content-tableauBord .mc-box-tb .mcbox-head .mcboxh-notif:before, .badge-info:before, .badge-s3:before, #aside-bar .ab-search .icone-info:before, .page-rechercheListeDossiers .rld-zoneFilter .icone-recherche:before {
+    content: ' ';
+    height: 23px;
+    width: 23px;
+    line-height: 23px; }
+
+.notifNumber, #header #head-panel #hp-left .hpl-item.hpl-agenda .agenda-notif, .page-TableauDeBord .mc-content-tableauBord .mc-box-tb .mcbox-head .mcboxh-notif {
+  background-color: #a90d25; }
+  .notifNumber:before, #header #head-panel #hp-left .hpl-item.hpl-agenda .agenda-notif:before, .page-TableauDeBord .mc-content-tableauBord .mc-box-tb .mcbox-head .mcboxh-notif:before {
+    display: none; }
+
+.badge-info:before {
+  background-position: -88px -168px; }
+
+.badge-info.bi-blue {
+  background-color: #2091de; }
+
+.badge-s3:before {
+  background-position: -89px -329px; }
+
+.badge-s3.bi-green {
+  background-color: #48ab55; }
+
+.badge-oeuf {
+  color: #fff;
+  background-color: #999999;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 8px 17px;
+  line-height: 12px;
+  min-width: 52px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -o-border-radius: 30px;
+  border-radius: 30px; }
+  .badge-oeuf.bo-green {
+    background-color: #95b338; }
+  .badge-oeuf.bo-orange {
+    background-color: #ffa800; }
+  .badge-oeuf.bo-marron {
+    background-color: #993333; }
+
+/* les box widget */
+.box-widget, .box-widget-2, .page-ficheDossierAccueil .fda-content .bw-mesTaches, .page-ficheDossierAccueil .fda-content .bw-pieceManqantes, .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye, .page-ficheDossierAccueil .fda-content .bw-qualificat, .page-ficheDossierAccueil .fda-content .bw-operateur, .page-ficheDossierAccueil .fda-content .bw-MO, .page-ficheDossierAccueil .fda-content .bw-courrierRecu, .page-ficheDossierAccueil .fda-content .bw-event, .page-ficheDossierAccueil .fda-content .bw-infoImportant {
+  background-color: #fff;
+  margin-bottom: 15px; }
+  .box-widget .bw-head, .box-widget-2 .bw-head, .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-head, .page-ficheDossierAccueil .fda-content .bw-pieceManqantes .bw-head, .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye .bw-head, .page-ficheDossierAccueil .fda-content .bw-qualificat .bw-head, .page-ficheDossierAccueil .fda-content .bw-operateur .bw-head, .page-ficheDossierAccueil .fda-content .bw-MO .bw-head, .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bw-head, .page-ficheDossierAccueil .fda-content .bw-event .bw-head, .page-ficheDossierAccueil .fda-content .bw-infoImportant .bw-head {
+    padding: 15px;
+    background-color: #95b338;
+    color: #fff;
+    font-family: "OpenSans-Semibold";
+    text-transform: uppercase; }
+    .box-widget .bw-head > *, .box-widget-2 .bw-head > *, .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-head > *, .page-ficheDossierAccueil .fda-content .bw-pieceManqantes .bw-head > *, .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye .bw-head > *, .page-ficheDossierAccueil .fda-content .bw-qualificat .bw-head > *, .page-ficheDossierAccueil .fda-content .bw-operateur .bw-head > *, .page-ficheDossierAccueil .fda-content .bw-MO .bw-head > *, .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bw-head > *, .page-ficheDossierAccueil .fda-content .bw-event .bw-head > *, .page-ficheDossierAccueil .fda-content .bw-infoImportant .bw-head > * {
+      vertical-align: middle; }
+    .box-widget .bw-head .bwh-navigat, .box-widget-2 .bw-head .bwh-navigat, .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-head .bwh-navigat, .page-ficheDossierAccueil .fda-content .bw-pieceManqantes .bw-head .bwh-navigat, .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye .bw-head .bwh-navigat, .page-ficheDossierAccueil .fda-content .bw-qualificat .bw-head .bwh-navigat, .page-ficheDossierAccueil .fda-content .bw-operateur .bw-head .bwh-navigat, .page-ficheDossierAccueil .fda-content .bw-MO .bw-head .bwh-navigat, .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bw-head .bwh-navigat, .page-ficheDossierAccueil .fda-content .bw-event .bw-head .bwh-navigat, .page-ficheDossierAccueil .fda-content .bw-infoImportant .bw-head .bwh-navigat {
+      float: right; }
+      .box-widget .bw-head .bwh-navigat .bwhn-left, .box-widget-2 .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-pieceManqantes .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-qualificat .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-operateur .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-MO .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-event .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-infoImportant .bw-head .bwh-navigat .bwhn-left,
+      .box-widget .bw-head .bwh-navigat .bwhn-right,
+      .box-widget-2 .bw-head .bwh-navigat .bwhn-right,
+      .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-head .bwh-navigat .bwhn-right,
+      .page-ficheDossierAccueil .fda-content .bw-pieceManqantes .bw-head .bwh-navigat .bwhn-right,
+      .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye .bw-head .bwh-navigat .bwhn-right,
+      .page-ficheDossierAccueil .fda-content .bw-qualificat .bw-head .bwh-navigat .bwhn-right,
+      .page-ficheDossierAccueil .fda-content .bw-operateur .bw-head .bwh-navigat .bwhn-right,
+      .page-ficheDossierAccueil .fda-content .bw-MO .bw-head .bwh-navigat .bwhn-right,
+      .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bw-head .bwh-navigat .bwhn-right,
+      .page-ficheDossierAccueil .fda-content .bw-event .bw-head .bwh-navigat .bwhn-right,
+      .page-ficheDossierAccueil .fda-content .bw-infoImportant .bw-head .bwh-navigat .bwhn-right {
+        width: 24px;
+        height: 24px; }
+      .box-widget .bw-head .bwh-navigat .bwhn-left, .box-widget-2 .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-pieceManqantes .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-qualificat .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-operateur .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-MO .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-event .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-infoImportant .bw-head .bwh-navigat .bwhn-left {
+        background-position: -165px -289px; }
+      
+      .box-widget .bw-head .bwh-navigat .bwhn-right,
+      .box-widget-2 .bw-head .bwh-navigat .bwhn-right,
+      .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-head .bwh-navigat .bwhn-right,
+      .page-ficheDossierAccueil .fda-content .bw-pieceManqantes .bw-head .bwh-navigat .bwhn-right,
+      .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye .bw-head .bwh-navigat .bwhn-right,
+      .page-ficheDossierAccueil .fda-content .bw-qualificat .bw-head .bwh-navigat .bwhn-right,
+      .page-ficheDossierAccueil .fda-content .bw-operateur .bw-head .bwh-navigat .bwhn-right,
+      .page-ficheDossierAccueil .fda-content .bw-MO .bw-head .bwh-navigat .bwhn-right,
+      .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bw-head .bwh-navigat .bwhn-right,
+      .page-ficheDossierAccueil .fda-content .bw-event .bw-head .bwh-navigat .bwhn-right,
+      .page-ficheDossierAccueil .fda-content .bw-infoImportant .bw-head .bwh-navigat .bwhn-right {
+        background-position: -203px -289px;
+        margin-left: 20px; }
+    .box-widget .bw-head .bwh-icone, .box-widget-2 .bw-head .bwh-icone, .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-head .bwh-icone, .page-ficheDossierAccueil .fda-content .bw-pieceManqantes .bw-head .bwh-icone, .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye .bw-head .bwh-icone, .page-ficheDossierAccueil .fda-content .bw-qualificat .bw-head .bwh-icone, .page-ficheDossierAccueil .fda-content .bw-operateur .bw-head .bwh-icone, .page-ficheDossierAccueil .fda-content .bw-MO .bw-head .bwh-icone, .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bw-head .bwh-icone, .page-ficheDossierAccueil .fda-content .bw-event .bw-head .bwh-icone, .page-ficheDossierAccueil .fda-content .bw-infoImportant .bw-head .bwh-icone {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      margin-right: 15px; }
+  .box-widget .bw-content p, .box-widget-2 .bw-content p, .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-content p, .page-ficheDossierAccueil .fda-content .bw-pieceManqantes .bw-content p, .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye .bw-content p, .page-ficheDossierAccueil .fda-content .bw-qualificat .bw-content p, .page-ficheDossierAccueil .fda-content .bw-operateur .bw-content p, .page-ficheDossierAccueil .fda-content .bw-MO .bw-content p, .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bw-content p, .page-ficheDossierAccueil .fda-content .bw-event .bw-content p, .page-ficheDossierAccueil .fda-content .bw-infoImportant .bw-content p {
+    margin: 15px 0px; }
+  .box-widget .bw-content .bwc-text, .box-widget-2 .bw-content .bwc-text, .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-content .bwc-text, .page-ficheDossierAccueil .fda-content .bw-pieceManqantes .bw-content .bwc-text, .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye .bw-content .bwc-text, .page-ficheDossierAccueil .fda-content .bw-qualificat .bw-content .bwc-text, .page-ficheDossierAccueil .fda-content .bw-operateur .bw-content .bwc-text, .page-ficheDossierAccueil .fda-content .bw-MO .bw-content .bwc-text, .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bw-content .bwc-text, .page-ficheDossierAccueil .fda-content .bw-event .bw-content .bwc-text, .page-ficheDossierAccueil .fda-content .bw-infoImportant .bw-content .bwc-text {
+    padding: 5px 10px; }
+  .box-widget .bw-content .bwc-list .bwcl-row, .box-widget-2 .bw-content .bwc-list .bwcl-row, .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-content .bwc-list .bwcl-row, .page-ficheDossierAccueil .fda-content .bw-pieceManqantes .bw-content .bwc-list .bwcl-row, .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye .bw-content .bwc-list .bwcl-row, .page-ficheDossierAccueil .fda-content .bw-qualificat .bw-content .bwc-list .bwcl-row, .page-ficheDossierAccueil .fda-content .bw-operateur .bw-content .bwc-list .bwcl-row, .page-ficheDossierAccueil .fda-content .bw-MO .bw-content .bwc-list .bwcl-row, .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bw-content .bwc-list .bwcl-row, .page-ficheDossierAccueil .fda-content .bw-event .bw-content .bwc-list .bwcl-row, .page-ficheDossierAccueil .fda-content .bw-infoImportant .bw-content .bwc-list .bwcl-row {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid #ebebeb; }
+    .box-widget .bw-content .bwc-list .bwcl-row:nth-last-of-type(1), .box-widget-2 .bw-content .bwc-list .bwcl-row:nth-last-of-type(1), .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-content .bwc-list .bwcl-row:nth-last-of-type(1), .page-ficheDossierAccueil .fda-content .bw-pieceManqantes .bw-content .bwc-list .bwcl-row:nth-last-of-type(1), .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye .bw-content .bwc-list .bwcl-row:nth-last-of-type(1), .page-ficheDossierAccueil .fda-content .bw-qualificat .bw-content .bwc-list .bwcl-row:nth-last-of-type(1), .page-ficheDossierAccueil .fda-content .bw-operateur .bw-content .bwc-list .bwcl-row:nth-last-of-type(1), .page-ficheDossierAccueil .fda-content .bw-MO .bw-content .bwc-list .bwcl-row:nth-last-of-type(1), .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bw-content .bwc-list .bwcl-row:nth-last-of-type(1), .page-ficheDossierAccueil .fda-content .bw-event .bw-content .bwc-list .bwcl-row:nth-last-of-type(1), .page-ficheDossierAccueil .fda-content .bw-infoImportant .bw-content .bwc-list .bwcl-row:nth-last-of-type(1) {
+      border-bottom: none; }
+    .box-widget .bw-content .bwc-list .bwcl-row .bwcl-label, .box-widget-2 .bw-content .bwc-list .bwcl-row .bwcl-label, .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-content .bwc-list .bwcl-row .bwcl-label, .page-ficheDossierAccueil .fda-content .bw-pieceManqantes .bw-content .bwc-list .bwcl-row .bwcl-label, .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye .bw-content .bwc-list .bwcl-row .bwcl-label, .page-ficheDossierAccueil .fda-content .bw-qualificat .bw-content .bwc-list .bwcl-row .bwcl-label, .page-ficheDossierAccueil .fda-content .bw-operateur .bw-content .bwc-list .bwcl-row .bwcl-label, .page-ficheDossierAccueil .fda-content .bw-MO .bw-content .bwc-list .bwcl-row .bwcl-label, .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bw-content .bwc-list .bwcl-row .bwcl-label, .page-ficheDossierAccueil .fda-content .bw-event .bw-content .bwc-list .bwcl-row .bwcl-label, .page-ficheDossierAccueil .fda-content .bw-infoImportant .bw-content .bwc-list .bwcl-row .bwcl-label {
+      text-transform: uppercase; }
+    .box-widget .bw-content .bwc-list .bwcl-row:hover, .box-widget-2 .bw-content .bwc-list .bwcl-row:hover, .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-content .bwc-list .bwcl-row:hover, .page-ficheDossierAccueil .fda-content .bw-pieceManqantes .bw-content .bwc-list .bwcl-row:hover, .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye .bw-content .bwc-list .bwcl-row:hover, .page-ficheDossierAccueil .fda-content .bw-qualificat .bw-content .bwc-list .bwcl-row:hover, .page-ficheDossierAccueil .fda-content .bw-operateur .bw-content .bwc-list .bwcl-row:hover, .page-ficheDossierAccueil .fda-content .bw-MO .bw-content .bwc-list .bwcl-row:hover, .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bw-content .bwc-list .bwcl-row:hover, .page-ficheDossierAccueil .fda-content .bw-event .bw-content .bwc-list .bwcl-row:hover, .page-ficheDossierAccueil .fda-content .bw-infoImportant .bw-content .bwc-list .bwcl-row:hover {
+      background-color: #ebebeb;
+      cursor: pointer;
+      text-decoration: none; }
+
+.box-widget-2 .bw-head, .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-head, .page-ficheDossierAccueil .fda-content .bw-pieceManqantes .bw-head, .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye .bw-head, .page-ficheDossierAccueil .fda-content .bw-qualificat .bw-head, .page-ficheDossierAccueil .fda-content .bw-operateur .bw-head, .page-ficheDossierAccueil .fda-content .bw-MO .bw-head, .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bw-head, .page-ficheDossierAccueil .fda-content .bw-event .bw-head {
+  background-color: #e5e6e7;
+  color: #34495e; }
+  .box-widget-2 .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-pieceManqantes .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-qualificat .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-operateur .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-MO .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bw-head .bwh-navigat .bwhn-left, .page-ficheDossierAccueil .fda-content .bw-event .bw-head .bwh-navigat .bwhn-left {
+    background-position: -165px -247px; }
+  .box-widget-2 .bw-head .bwh-navigat .bwhn-right, .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-head .bwh-navigat .bwhn-right, .page-ficheDossierAccueil .fda-content .bw-pieceManqantes .bw-head .bwh-navigat .bwhn-right, .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye .bw-head .bwh-navigat .bwhn-right, .page-ficheDossierAccueil .fda-content .bw-qualificat .bw-head .bwh-navigat .bwhn-right, .page-ficheDossierAccueil .fda-content .bw-operateur .bw-head .bwh-navigat .bwhn-right, .page-ficheDossierAccueil .fda-content .bw-MO .bw-head .bwh-navigat .bwhn-right, .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bw-head .bwh-navigat .bwhn-right, .page-ficheDossierAccueil .fda-content .bw-event .bw-head .bwh-navigat .bwhn-right {
+    background-position: -203px -247px; }
+
+/* FORM, INPUT,  SELECT ....*/
+input,
+select,
+password,
+textarea {
+  border: solid 1px #ebebeb;
+  padding: 3px; }
+
+/* placeholder style : begin  */
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #c2c2c2; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #c2c2c2; }
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #c2c2c2; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #c2c2c2; }
+
+.inputFile {
+  display: inline-block;
+  width: auto;
+  text-align: center; }
+  .inputFile label {
+    cursor: pointer;
+    width: auto !important;
+    padding: 0;
+    display: inline-block;
+    min-width: 77px;
+    text-align: center;
+    margin: 0; }
+  .inputFile input[type='file'] {
+    display: none; }
+
+/* checkkbox style personalisé : begin  */
+.choix {
+  display: inline-block; }
+  .choix input[type="checkbox"] {
+    display: none !important; }
+    .choix input[type="checkbox"]:checked + input + label:after {
+      display: block; }
+    .choix input[type="checkbox"] + input + label {
+      position: relative; }
+      .choix input[type="checkbox"] + input + label:before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        margin-right: 15px;
+        position: relative;
+        top: 2px;
+        border: 1px solid #ebebeb; }
+      .choix input[type="checkbox"] + input + label:after {
+        content: "\f00c";
+        font-family: "FontAwesome";
+        display: none;
+        width: 19px;
+        height: 14px;
+        position: absolute;
+        top: 2px;
+        left: 3px;
+        font-size: 14px;
+        color: blue; }
+  .choix input[type="checkbox"]:checked + label:after {
+    display: block; }
+  .choix input[type="checkbox"] + label {
+    position: relative;
+    width: 35px;
+    margin: 0; }
+    .choix input[type="checkbox"] + label:before {
+      content: "";
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background-color: #fff;
+      margin-right: 15px;
+      position: relative;
+      top: 2px;
+      border: 1px solid #ebebeb; }
+    .choix input[type="checkbox"] + label:after {
+      content: "\f00c";
+      font-family: "FontAwesome";
+      display: none;
+      width: 19px;
+      height: 14px;
+      position: absolute;
+      top: 7px;
+      left: 7px;
+      font-size: 12px;
+      font-weight: normal; }
+
+/* checkkbox style personalisé : end   */
+/* placeholder style : end   */
+form label {
+  text-align: right;
+  margin-right: 15px;
+  font-weight: normal;
+  display: inline-block; }
+
+form .form-row {
+  margin-bottom: 10px; }
+  form .form-row.alignTop label {
+    vertical-align: top;
+    margin-top: 3px; }
+  form .form-row .choix {
+    vertical-align: middle; }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("../images/bg-btn-select.png");
+  background-repeat: no-repeat;
+  background-position: center right; }
+  select[multiple] {
+    background-image: none; }
+
+.bouton, .bouton-large, .bouton-auto-large, .btn-al-envoiMail, .btn-al-plus, .btn-al-modif, .btn-al-reglage, .btn-al-dupliquer, .btn-al-save {
+  border: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #245f87;
+  color: #fff;
+  min-height: 34px;
+  display: inline-block;
+  cursor: pointer; }
+  .bouton > span, .bouton-large > span, .bouton-auto-large > span, .btn-al-envoiMail > span, .btn-al-plus > span, .btn-al-modif > span, .btn-al-reglage > span, .btn-al-dupliquer > span, .btn-al-save > span {
+    display: inline-block;
+    vertical-align: middle; }
+
+.bouton-large, .bouton-auto-large, .btn-al-envoiMail, .btn-al-plus, .btn-al-modif, .btn-al-reglage, .btn-al-dupliquer, .btn-al-save {
+  font-size: 16px;
+  width: 100%;
+  text-align: center; }
+  .bouton-large .icone, .bouton-auto-large .icone, .btn-al-envoiMail .icone, .btn-al-plus .icone, .btn-al-modif .icone, .btn-al-reglage .icone, .btn-al-dupliquer .icone, .btn-al-save .icone {
+    vertical-align: middle;
+    width: 35px; }
+
+.bouton-auto-large, .btn-al-envoiMail, .btn-al-plus, .btn-al-modif, .btn-al-reglage, .btn-al-dupliquer, .btn-al-save {
+  width: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .bouton-auto-large > *, .btn-al-envoiMail > *, .btn-al-plus > *, .btn-al-modif > *, .btn-al-reglage > *, .btn-al-dupliquer > *, .btn-al-save > * {
+    text-align: left; }
+
+.btn-al-envoiMail .icone {
+  background-position: -120px -160px; }
+
+.btn-al-plus .icone {
+  background-position: -240px -120px; }
+
+.btn-al-modif .icone {
+  background-position: -161px -160px; }
+
+.btn-al-reglage .icone {
+  background-position: -200px -160px; }
+
+.btn-al-dupliquer .icone {
+  background-position: -240px -200px; }
+
+.btn-al-save .icone {
+  background-position: -240px -280px; }
+
+.ctn-btn-right {
+  text-align: right; }
+
+.ctn-btn-center {
+  text-align: center; }
+
+/* petit bouton carre */
+.bouton-2, .icone-carre {
+  background-color: #245f87;
+  color: #fff;
+  text-align: center;
+  width: 28px;
+  height: 28px; }
+  .bouton-2.b2-openClose, .b2-openClose.icone-carre {
+    background-position: -6px -45px; }
+  .bouton-2.b2-Plus, .b2-Plus.icone-carre {
+    background-position: -244px -125px; }
+  .bouton-2.b2-agenda, .b2-agenda.icone-carre {
+    background-position: -7px -327px;
+    width: 24px;
+    height: 25px; }
+  .bouton-2.b2-croix, .b2-croix.icone-carre {
+    background-position: -47px -327px;
+    width: 24px;
+    height: 25px; }
+
+.icone-carre {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-top: 5px; }
+  .icone-carre.ic-folder {
+    background-position: -239px -79px; }
+  .icone-carre.ic-list {
+    background-position: 0px -238px;
+    margin-left: 20px; }
+
+/* middle */
+/* main-content */
+#main-content {
+  float: left;
+  width: calc(100% - 236px);
+  background-color: #f2f2f2;
+  min-height: 900px; }
+  #main-content .mc-head h2 {
+    margin: 20px 0 15px; }
+  #main-content .nav-boutons-right {
+    margin-top: 20px;
+    text-align: right; }
+    #main-content .nav-boutons-right > * {
+      margin-left: 20px;
+      text-transform: uppercase; }
+  #main-content .ctn-2cols .bw-col1 {
+    padding-right: 8px; }
+  #main-content .ctn-2cols .bw-col2 {
+    padding-left: 8px; }
+
+/* footer */
+footer {
+  background-color: #f2f2f2;
+  min-height: 60px;
+  padding-top: 10px;
+  margin-bottom: -17px; }
+  footer img {
+    float: right; }
+
+/* header general */
+#header {
+  min-height: 60px;
+  background-color: #fff; }
+  #header:after {
+    content: ".";
+    font-size: 0;
+    clear: both; }
+  #header #ctn-logo {
+    float: left;
+    text-align: center;
+    width: 236px;
+    padding-top: 6px; }
+  #header #head-panel {
+    width: calc(100% - 236px);
+    padding-top: 10px;
+    float: right; }
+    #header #head-panel #hp-left {
+      float: left; }
+      #header #head-panel #hp-left .hpl-item {
+        display: inline-block;
+        margin-right: 10px; }
+        #header #head-panel #hp-left .hpl-item > span {
+          vertical-align: middle;
+          text-transform: uppercase; }
+        #header #head-panel #hp-left .hpl-item:before {
+          content: "";
+          width: 32px;
+          height: 32px;
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 10px; }
+        #header #head-panel #hp-left .hpl-item.hpl-agenda {
+          position: relative; }
+          #header #head-panel #hp-left .hpl-item.hpl-agenda:before {
+            background-position: -85px -4px; }
+          #header #head-panel #hp-left .hpl-item.hpl-agenda .agenda-notif {
+            position: absolute;
+            left: 15px;
+            bottom: -9px; }
+        #header #head-panel #hp-left .hpl-item.hpl-compte:before {
+          background-position: -123px -4px; }
+    #header #head-panel #hp-right {
+      float: right; }
+      #header #head-panel #hp-right .hpr-item {
+        display: inline-block;
+        margin-right: 15px; }
+        #header #head-panel #hp-right .hpr-item > span {
+          vertical-align: middle;
+          text-transform: uppercase; }
+        #header #head-panel #hp-right .hpr-item:before {
+          content: "";
+          width: 32px;
+          height: 32px;
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 10px; }
+        #header #head-panel #hp-right .hpr-item.hpr-bao:before {
+          background-position: -163px -4px; }
+        #header #head-panel #hp-right .hpr-item.hpr-param:before {
+          background-position: -202px -4px; }
+
+/* aside bar , la barre du gauche */
+#aside-bar {
+  float: left;
+  background-color: #fff;
+  height: calc(100vh - 60px);
+  width: 236px;
+  border-top: solid 1px #34495e;
+  /* animation */
+  transition-property: all;
+  transition-duration: .3s;
+  transition-timing-function: ease-out; }
+  #aside-bar h2 {
+    padding: 0px 0px 0px 15px;
+    margin: 5px 0px 10px; }
+  #aside-bar .ab-ctn-btn {
+    text-align: right; }
+  #aside-bar .ab-search {
+    position: relative;
+    padding: 0px 0px 0px 15px; }
+    #aside-bar .ab-search:before {
+      /* icone loope */
+      content: ' ';
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      right: 0;
+      right: 38px;
+      background-position: -127px -43px; }
+    #aside-bar .ab-search input {
+      width: calc(100% - 42px);
+      border: none;
+      border-bottom: solid 1px #34495e;
+      display: inline-block;
+      padding: 5px 2px; }
+    #aside-bar .ab-search .icone-info {
+      vertical-align: middle;
+      margin-left: 7px; }
+      #aside-bar .ab-search .icone-info:before {
+        background-position: -49px -46px; }
+  #aside-bar .ctn-btnNewFolder {
+    position: relative;
+    padding: 25px 10px; }
+    #aside-bar .ctn-btnNewFolder .bouton-large, #aside-bar .ctn-btnNewFolder .bouton-auto-large, #aside-bar .ctn-btnNewFolder .btn-al-envoiMail, #aside-bar .ctn-btnNewFolder .btn-al-plus, #aside-bar .ctn-btnNewFolder .btn-al-modif, #aside-bar .ctn-btnNewFolder .btn-al-reglage, #aside-bar .ctn-btnNewFolder .btn-al-dupliquer, #aside-bar .ctn-btnNewFolder .btn-al-save {
+      height: 40px; }
+      #aside-bar .ctn-btnNewFolder .bouton-large .icone, #aside-bar .ctn-btnNewFolder .bouton-auto-large .icone, #aside-bar .ctn-btnNewFolder .btn-al-envoiMail .icone, #aside-bar .ctn-btnNewFolder .btn-al-plus .icone, #aside-bar .ctn-btnNewFolder .btn-al-modif .icone, #aside-bar .ctn-btnNewFolder .btn-al-reglage .icone, #aside-bar .ctn-btnNewFolder .btn-al-dupliquer .icone, #aside-bar .ctn-btnNewFolder .btn-al-save .icone {
+        background-position: -239px 0px; }
+  #aside-bar .ab-menu .abm-item {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border-top: solid 1px #e4e5e7;
+    text-transform: uppercase;
+    /* */ }
+    #aside-bar .ab-menu .abm-item:before {
+      content: " ";
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      /*   background-position: -160px -42px;*/
+      /* background-color: magenta;*/
+      vertical-align: middle;
+      margin-right: 10px; }
+    #aside-bar .ab-menu .abm-item:hover, #aside-bar .ab-menu .abm-item:focus, #aside-bar .ab-menu .abm-item.active {
+      border-right: 4px solid #cccc66;
+      text-decoration: none; }
+    #aside-bar .ab-menu .abm-item.abm-mesDossier:before {
+      background-position: -160px -42px; }
+    #aside-bar .ab-menu .abm-item.abm-tousDossier:before {
+      background-position: -198px -42px; }
+    #aside-bar .ab-menu .abm-item.abm-aOuvrir:before {
+      background-position: -240px -42px; }
+    #aside-bar .ab-menu .abm-item.abm-piece:before {
+      background-position: -1px -81px; }
+    #aside-bar .ab-menu .abm-item.abm-bat:before {
+      background-position: -40px -81px; }
+    #aside-bar .ab-menu .abm-item.abm-aCarencer:before {
+      background-position: -80px -81px; }
+    #aside-bar .ab-menu .abm-item.abm-aRelancer:before {
+      background-position: -160px -81px; }
+
+/* #aside-bar */
+/* les pages */
+.page-home {
+  background-color: #fff; }
+  .page-home #header-home .header-first {
+    position: relative;
+    height: 100px;
+    background-image: url("../images/bg-header-home.jpg");
+    background-position: top right;
+    background-repeat: no-repeat; }
+    .page-home #header-home .header-first .logo-verifimmo {
+      position: absolute;
+      top: 5px; }
+    .page-home #header-home .header-first .logo-asterisk {
+      display: block;
+      width: 261px;
+      margin: 0 auto;
+      margin-top: 15px; }
+  .page-home #header-home .header-second {
+    height: 45px;
+    background-color: white; }
+  .page-home .middle {
+    min-height: 829px;
+    background-image: url("../images/bg-middle-home.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .page-home .middle .bloc-connexion {
+      background-color: #fff;
+      width: 420px;
+      min-height: 334px;
+      margin: 76px auto 0px; }
+      .page-home .middle .bloc-connexion form label {
+        text-align: left;
+        font-weight: bold; }
+      .page-home .middle .bloc-connexion .bc-head {
+        padding: 20px;
+        border-bottom: solid 2px #95b338; }
+        .page-home .middle .bloc-connexion .bc-head > span {
+          vertical-align: middle; }
+        .page-home .middle .bloc-connexion .bc-head .icone-cadnat {
+          width: 30px;
+          height: 30px;
+          background-position: -4px -3px; }
+        .page-home .middle .bloc-connexion .bc-head .bch-txt {
+          color: #95b338;
+          font-size: 24px;
+          font-family: "OpenSans-Light"; }
+      .page-home .middle .bloc-connexion .bc-content {
+        padding: 35px 20px; }
+        .page-home .middle .bloc-connexion .bc-content .bcc-row {
+          margin-bottom: 25px; }
+          .page-home .middle .bloc-connexion .bc-content .bcc-row label {
+            display: block; }
+          .page-home .middle .bloc-connexion .bc-content .bcc-row input {
+            width: 100%;
+            padding: 8px; }
+        .page-home .middle .bloc-connexion .bc-content .bouton-connexion {
+          font-size: 16px;
+          width: 100%; }
+          .page-home .middle .bloc-connexion .bc-content .bouton-connexion .icone {
+            background-position: -40px 0px; }
+  .page-home footer {
+    line-height: 59px; }
+
+.page-TableauDeBord .mc-head .mch-select {
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%; }
+  .page-TableauDeBord .mc-head .mch-select select {
+    width: 100%; }
+
+.page-TableauDeBord .mc-content-tableauBord {
+  margin-top: 20px; }
+  .page-TableauDeBord .mc-content-tableauBord .mc-box-tb {
+    background-color: #fff;
+    min-height: 236px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 28px;
+    /* -86px -125px; */ }
+    .page-TableauDeBord .mc-content-tableauBord .mc-box-tb .mcbox-head {
+      display: block;
+      padding: 10px;
+      color: #fff;
+      text-transform: uppercase;
+      background-color: #95b338;
+      /* $police-title-2 */ }
+      .page-TableauDeBord .mc-content-tableauBord .mc-box-tb .mcbox-head:hover {
+        text-decoration: none; }
+      .page-TableauDeBord .mc-content-tableauBord .mc-box-tb .mcbox-head .mcboxh-icon {
+        display: inline-block;
+        vertical-align: middle;
+        width: 30px;
+        height: 30px;
+        margin-right: 10px; }
+      .page-TableauDeBord .mc-content-tableauBord .mc-box-tb .mcbox-head .mcboxh-text {
+        font-family: "OpenSans-Semibold";
+        font-size: 14px; }
+      .page-TableauDeBord .mc-content-tableauBord .mc-box-tb .mcbox-head .mcboxh-notif {
+        float: right;
+        margin-top: 3px; }
+    .page-TableauDeBord .mc-content-tableauBord .mc-box-tb .mcbox-ctn .mcboxc-row {
+      padding: 10px;
+      cursor: pointer;
+      display: block; }
+      .page-TableauDeBord .mc-content-tableauBord .mc-box-tb .mcbox-ctn .mcboxc-row:hover {
+        background-color: #ebebeb;
+        text-decoration: none; }
+    .page-TableauDeBord .mc-content-tableauBord .mc-box-tb .b2-Plus {
+      position: absolute;
+      right: 0;
+      bottom: 0; }
+    .page-TableauDeBord .mc-content-tableauBord .mc-box-tb.mcboxtb-RDV .mcbox-head .mcboxh-icon {
+      background-position: -203px -85px; }
+    .page-TableauDeBord .mc-content-tableauBord .mc-box-tb.mcboxtb-aOuvrir .mcbox-head .mcboxh-icon {
+      background-position: -244px -85px; }
+    .page-TableauDeBord .mc-content-tableauBord .mc-box-tb.mcboxtb-piece .mcbox-head .mcboxh-icon {
+      background-position: -5px -125px; }
+    .page-TableauDeBord .mc-content-tableauBord .mc-box-tb.mcboxtb-bat .mcbox-head .mcboxh-icon {
+      background-position: -45px -125px; }
+    .page-TableauDeBord .mc-content-tableauBord .mc-box-tb.mcboxtb-bat .mcbox-head .mcboxh-icon {
+      background-position: -45px -125px; }
+    .page-TableauDeBord .mc-content-tableauBord .mc-box-tb.mcboxtb-mesTaches .mcbox-head .mcboxh-icon {
+      background-position: -203px -125px; }
+    .page-TableauDeBord .mc-content-tableauBord .mc-box-tb.mcboxtb-aRelancer .mcbox-head .mcboxh-icon {
+      background-position: -164px -125px; }
+    .page-TableauDeBord .mc-content-tableauBord .mc-box-tb.mcboxtb-aCarencer .mcbox-head .mcboxh-icon {
+      background-position: -125px -125px; }
+    .page-TableauDeBord .mc-content-tableauBord .mc-box-tb.mcboxtb-aPasser .mcbox-head .mcboxh-icon {
+      background-position: -86px -125px; }
+
+.page-rechercheListeDossiers .rld-zoneFilter {
+  background-color: #fff;
+  border-top: solid 1px #34495e;
+  margin-top: 15px; }
+  .page-rechercheListeDossiers .rld-zoneFilter > form {
+    padding: 15px;
+    overflow: hidden;
+    height: 283px; }
+  .page-rechercheListeDossiers .rld-zoneFilter .zf-btn {
+    text-align: right; }
+    .page-rechercheListeDossiers .rld-zoneFilter .zf-btn .b2-openClose span {
+      display: none; }
+  .page-rechercheListeDossiers .rld-zoneFilter .form-row label {
+    width: 151px;
+    text-transform: uppercase; }
+  .page-rechercheListeDossiers .rld-zoneFilter .form-row input,
+  .page-rechercheListeDossiers .rld-zoneFilter .form-row select {
+    width: calc(100% - 171px); }
+  .page-rechercheListeDossiers .rld-zoneFilter .icone-recherche {
+    width: 68px;
+    height: 68px;
+    margin: 50px auto 0px;
+    display: block; }
+    .page-rechercheListeDossiers .rld-zoneFilter .icone-recherche:before {
+      background-position: -4px -166px;
+      height: 30px;
+      width: 30px;
+      margin-top: 19px; }
+  .page-rechercheListeDossiers .rld-zoneFilter.reduceZoneFilter {
+    border: none;
+    background-color: transparent; }
+    .page-rechercheListeDossiers .rld-zoneFilter.reduceZoneFilter > form {
+      height: 0px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      background-color: transparent; }
+    .page-rechercheListeDossiers .rld-zoneFilter.reduceZoneFilter .b2-openClose {
+      background-image: none;
+      width: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+      height: 40px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -o-border-radius: 10px;
+      border-radius: 10px; }
+      .page-rechercheListeDossiers .rld-zoneFilter.reduceZoneFilter .b2-openClose:before {
+        background-position: -4px -161px;
+        content: " ";
+        width: 31px;
+        height: 40px;
+        display: inline-block;
+        float: right; }
+      .page-rechercheListeDossiers .rld-zoneFilter.reduceZoneFilter .b2-openClose span {
+        display: inline-block;
+        width: 150px;
+        margin-top: 7px;
+        font-size: 16px; }
+      .page-rechercheListeDossiers .rld-zoneFilter.reduceZoneFilter .b2-openClose:hover {
+        color: #fff; }
+
+.page-rechercheListeDossiers .rld-list h2 {
+  margin: 25px 0px 15px; }
+
+.page-rechercheListeDossiers .rld-list .tldl-tab {
+  background-color: #fff; }
+  .page-rechercheListeDossiers .rld-list .tldl-tab thead {
+    background-color: #95b338;
+    color: #fff; }
+    .page-rechercheListeDossiers .rld-list .tldl-tab thead th {
+      font-weight: normal;
+      text-transform: uppercase;
+      padding: 15px;
+      text-align: center;
+      border-bottom: none;
+      position: relative; }
+      .page-rechercheListeDossiers .rld-list .tldl-tab thead th .th-icone {
+        background-position: -49px -170px;
+        width: 20px;
+        height: 20px;
+        display: block;
+        margin: 5px auto 0px; }
+      .page-rechercheListeDossiers .rld-list .tldl-tab thead th:nth-last-of-type(1) .badge-info {
+        position: relative;
+        top: -13px; }
+      .page-rechercheListeDossiers .rld-list .tldl-tab thead th:nth-last-of-type(2) .badge-info {
+        float: right; }
+  .page-rechercheListeDossiers .rld-list .tldl-tab tbody td {
+    text-align: center; }
+  .page-rechercheListeDossiers .rld-list .tldl-tab tbody tr {
+    cursor: pointer; }
+    .page-rechercheListeDossiers .rld-list .tldl-tab tbody tr:hover {
+      background-color: #ebebeb; }
+
+.page-rechercheListeDossiers .rld-list .tldl-pagination {
+  text-align: center;
+  margin-top: 30px; }
+  .page-rechercheListeDossiers .rld-list .tldl-pagination a {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 28px;
+    margin: 0 5px; }
+    .page-rechercheListeDossiers .rld-list .tldl-pagination a:hover {
+      background-color: #245f87;
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid #34495e;
+      line-height: 26px; }
+
+.page-ficheDossierAccueil .fda-header {
+  background-color: #fff;
+  margin-top: 15px;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0; }
+  .page-ficheDossierAccueil .fda-header .badge-oeuf {
+    margin-top: 20px; }
+  .page-ficheDossierAccueil .fda-header .fdah-detail {
+    padding: 15px 25px 0px; }
+    .page-ficheDossierAccueil .fda-header .fdah-detail .fdah-row label {
+      width: 35%; }
+    .page-ficheDossierAccueil .fda-header .fdah-detail .fdah-row span {
+      width: 65%; }
+  .page-ficheDossierAccueil .fda-header .fdah-menu {
+    position: relative;
+    margin-top: 15px; }
+    .page-ficheDossierAccueil .fda-header .fdah-menu a {
+      padding: 15px 0px;
+      text-align: center;
+      display: block;
+      float: left;
+      background-color: #f2f2f2;
+      width: calc(10% - 0.1px);
+      font-family: "OpenSans-Light";
+      font-size: 14px;
+      text-transform: uppercase;
+      border: 1px solid #c2c2c2;
+      border-bottom: 1px solid #95b338;
+      -webkit-border-radius: 10px 10px 0 0;
+      -moz-border-radius: 10px 10px 0 0;
+      -o-border-radius: 10px 10px 0 0;
+      border-radius: 10px 10px 0 0; }
+      .page-ficheDossierAccueil .fda-header .fdah-menu a:hover, .page-ficheDossierAccueil .fda-header .fdah-menu a:focus, .page-ficheDossierAccueil .fda-header .fdah-menu a.active {
+        color: #fff;
+        background-color: #95b338;
+        font-family: "OpenSans-Semibold";
+        text-decoration: none;
+        border-bottom: none;
+        padding-top: 23px;
+        padding-bottom: 16px;
+        margin-top: -8px;
+        background-image: url("../images/triangle-gris.png");
+        background-repeat: no-repeat;
+        background-position: center 48px; }
+    .page-ficheDossierAccueil .fda-header .fdah-menu:after {
+      content: ".";
+      font-size: 0;
+      clear: both; }
+
+.page-ficheDossierAccueil .fda-content {
+  margin-top: 15px;
+  /* les box widget */
+  /*  @@ bw-col1 > la 1eme colonne : begin */
+  /*  @@ bw-col1 > la 1eme colonne : end */
+  /*  @@ bw-col2 > la 2eme colonne : begin */
+  /* @@  bw-col2 >  la 2eme colonne : end  */ }
+  .page-ficheDossierAccueil .fda-content .nav-boutons-right .btn-al-reglage .icone {
+    margin-right: 10px;
+    margin-left: 10px; }
+  .page-ficheDossierAccueil .fda-content .boxs-widgets {
+    margin-top: 20px; }
+  .page-ficheDossierAccueil .fda-content .bw-infoImportant .bw-head .bwh-icone {
+    background-position: -245px -167px; }
+  .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-head .bwh-icone {
+    background-position: -46px -206px;
+    width: 26px;
+    height: 26px; }
+  .page-ficheDossierAccueil .fda-content .bw-mesTaches .bw-content .b2-Plus {
+    margin-right: 10px;
+    margin-bottom: 10px; }
+  .page-ficheDossierAccueil .fda-content .bw-pieceManqantes .bw-head .bwh-icone {
+    background-position: -126px -206px;
+    width: 26px;
+    height: 26px; }
+  .page-ficheDossierAccueil .fda-content .bw-courrierEnvoye .bw-head .bwh-icone {
+    background-position: -165px -206px;
+    width: 26px;
+    height: 26px; }
+  .page-ficheDossierAccueil .fda-content .bw-qualificat .bw-head .bwh-icone {
+    background-position: -246px -247px; }
+  .page-ficheDossierAccueil .fda-content .bw-operateur .bw-head .bwh-icone {
+    background-position: -4px -206px;
+    width: 30px; }
+  .page-ficheDossierAccueil .fda-content .bw-operateur .bw-content .bwc-text {
+    padding: 0; }
+  .page-ficheDossierAccueil .fda-content .bw-operateur .bw-content .bwc-row {
+    padding: 5px 10px;
+    border-bottom: solid 1px #ebebeb; }
+    .page-ficheDossierAccueil .fda-content .bw-operateur .bw-content .bwc-row .bwor-row {
+      margin-bottom: 5px; }
+      .page-ficheDossierAccueil .fda-content .bw-operateur .bw-content .bwc-row .bwor-row > * {
+        vertical-align: middle; }
+      .page-ficheDossierAccueil .fda-content .bw-operateur .bw-content .bwc-row .bwor-row .bwor-icone {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        display: inline-block; }
+        .page-ficheDossierAccueil .fda-content .bw-operateur .bw-content .bwc-row .bwor-row .bwor-icone.icone-home {
+          background-position: -46px -246px; }
+        .page-ficheDossierAccueil .fda-content .bw-operateur .bw-content .bwc-row .bwor-row .bwor-icone.icone-parapluie {
+          background-position: -87px -246px; }
+        .page-ficheDossierAccueil .fda-content .bw-operateur .bw-content .bwc-row .bwor-row .bwor-icone.icone-home-barree {
+          background-position: -126px -247px; }
+        .page-ficheDossierAccueil .fda-content .bw-operateur .bw-content .bwc-row .bwor-row .bwor-icone.icone-parapluie-barree {
+          background-position: -126px -247px; }
+        .page-ficheDossierAccueil .fda-content .bw-operateur .bw-content .bwc-row .bwor-row .bwor-icone.icone-redDisk {
+          background-color: #993333;
+          background-image: none;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -o-border-radius: 50%;
+          border-radius: 50%;
+          width: 15px;
+          height: 15px;
+          margin-left: 5px; }
+  .page-ficheDossierAccueil .fda-content .bw-MO .bw-head .bwh-icone {
+    background-position: -86px -206px; }
+  .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bw-head .bwh-icone {
+    background-position: -165px -206px;
+    width: 26px;
+    height: 26px; }
+  .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bwcl-row > * {
+    vertical-align: middle; }
+  .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bwcl-row .icone-mail-new,
+  .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bwcl-row .icone-pieceJointe,
+  .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bwcl-row .icone-mail-vue {
+    width: 24px;
+    height: 24px; }
+  .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bwcl-row .icone-mail-new {
+    background-position: -7px -287px; }
+  .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bwcl-row .icone-pieceJointe {
+    background-position: -88px -287px;
+    margin-left: 5px; }
+  .page-ficheDossierAccueil .fda-content .bw-courrierRecu .bwcl-row .icone-mail-vue {
+    background-position: -47px -287px; }
+  .page-ficheDossierAccueil .fda-content .bw-event .bw-head .bwh-icone {
+    background-position: -200px -208px; }
+  .page-ficheDossierAccueil .fda-content .bw-event .bwcl-row > * {
+    vertical-align: middle; }
+  .page-ficheDossierAccueil .fda-content .bw-event .bwcl-row .icone-flag {
+    background-position: -128px -288px;
+    margin-right: 10px;
+    width: 24px;
+    height: 24px; }
+
+.page-editionOperateur .ctn-btn-center {
+  padding: 15px 0; }
+  .page-editionOperateur .ctn-btn-center button {
+    text-transform: uppercase; }
+
+.page-editionOperateur .eo-content {
+  margin-top: 15px; }
+
+.page-editionOperateur .b2-champs {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -3px;
+  margin-top: -1px; }
+
+.page-editionOperateur .frCheckbox > * {
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 10px; }
+
+.page-editionOperateur .frCheckbox .choix input[type="checkbox"] + label:after {
+  left: 0px; }
+
+.page-editionOperateur .form-row {
+  padding: 0px 8px 0px;
+  margin-bottom: 5px; }
+  .page-editionOperateur .form-row label {
+    width: 151px; }
+  .page-editionOperateur .form-row input,
+  .page-editionOperateur .form-row select {
+    width: calc(100% - 171px); }
+  .page-editionOperateur .form-row .fr-link-right {
+    float: right;
+    margin-top: 5px;
+    text-decoration: underline; }
+  .page-editionOperateur .form-row.frAdress .adCodePostal {
+    width: 71px;
+    margin-right: 5px; }
+  .page-editionOperateur .form-row.frAdress .adVille {
+    width: calc(100% - 251px); }
+  .page-editionOperateur .form-row.frAdress .adNum {
+    width: 51px;
+    margin-right: 5px; }
+  .page-editionOperateur .form-row.frAdress .adRue {
+    width: calc(100% - 232px); }
+  .page-editionOperateur .form-row.frTextArea input[type='checkbox'] {
+    width: auto;
+    vertical-align: middle; }
+    .page-editionOperateur .form-row.frTextArea input[type='checkbox'] + span {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10px; }
+  .page-editionOperateur .form-row.frTextArea label {
+    text-align: left; }
+  .page-editionOperateur .form-row.frTextArea textarea {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    overflow-y: scroll;
+    height: 200px; }
+  .page-editionOperateur .form-row.nbr-archi select {
+    width: 30%; }
+  .page-editionOperateur .form-row.nbr-archi label {
+    text-align: left; }
+  .page-editionOperateur .form-row.frAgenda input {
+    width: auto;
+    vertical-align: middle;
+    display: inline-block; }
+  .page-editionOperateur .form-row.frAgenda .jusqua {
+    margin-right: 15px; }
+  .page-editionOperateur .form-row.frNbrGerent select {
+    width: 30%; }
+  .page-editionOperateur .form-row.frNbrGerent label {
+    text-align: left; }
+  .page-editionOperateur .form-row.frSearchNom input {
+    background-image: url("../images/icone-searche-champs.png");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 5px) center;
+    width: calc(100% - 104px); }
+  .page-editionOperateur .form-row.frSearchNom .b2-Plus {
+    background-position: -246px -127px;
+    width: 24px;
+    height: 24px;
+    margin-left: 3px; }
+  .page-editionOperateur .form-row.frSearchNom .snSelectedName {
+    padding-left: 74px;
+    padding-top: 5px; }
+    .page-editionOperateur .form-row.frSearchNom .snSelectedName .snItem {
+      text-decoration: underline; }
+    .page-editionOperateur .form-row.frSearchNom .snSelectedName .b2-croix {
+      margin-left: 5px; }
+  .page-editionOperateur .form-row.frParcourir input {
+    width: calc(100% - 251px); }
+  .page-editionOperateur .form-row.frParcourir .b2-champs {
+    width: auto;
+    background-image: none;
+    padding: 2px 2px 0px;
+    height: 24px; }
+    .page-editionOperateur .form-row.frParcourir .b2-champs:hover {
+      color: #fff;
+      text-decoration: none; }
+    .page-editionOperateur .form-row.frParcourir .b2-champs span {
+      vertical-align: middle; }
+
+.page-editionOperateur .bw-form {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+.page-editionOperateur .bw-gerant .form-row label {
+  width: 54px; }
+
+.page-editionOperateur .bw-gerant .form-row select {
+  width: calc(100% - 73px); }
+
+.page-editionOperateur .bw-santeOperateur .frBtn {
+  text-align: center;
+  padding-top: 10px; }
+  .page-editionOperateur .bw-santeOperateur .frBtn button {
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto 5px;
+    text-transform: uppercase;
+    font-size: 12px; }
+    .page-editionOperateur .bw-santeOperateur .frBtn button .frBadge {
+      margin-right: 7px; }
+
+.page-editionOperateur .bw-frequence .bwcl-row {
+  padding: 15px 0px; }
+  .page-editionOperateur .bw-frequence .bwcl-row > span {
+    margin-top: 10px;
+    display: inline-block;
+    vertical-align: middle; }
+  .page-editionOperateur .bw-frequence .bwcl-row .pull-right {
+    margin-top: -11px; }
+
+/*  page-editionOperateur  */
+
+
+/*# sourceMappingURL=app.css.map*/

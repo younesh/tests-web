@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<head>
+	{{> head}}
+</head>
+<body>
+	{{> header}}
+	<div class="content recherche">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6 col-md-5 col-lg-4">
+                    <div class="colonne-gauche">
+                        <form>
+                            <div class="destination">
+                                <input type="text" class="" placeholder="Destination / Nom de l'établissement" />
+                            </div>
+                            <div class="date">
+                                <input type="date" class="arrivee" placeholder="Arrivée" />
+                                <input type="date" class="depart" placeholder="Départ" />
+                            </div>
+                            <div class="chambres clearfix">
+                                <div class="chambre-hotel">
+                                    <select class="selectpicker" title="Chambre d'hôtel">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+                                <div class="chambre-selection clearfix">
+                                    <div class="colonne">
+                                        <label class="single">Single</label>
+                                        <div class="pad">
+                                            <button>-</button>
+                                            <span>1</span>
+                                            <button class="plus">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="colonne">
+                                        <label class="twin">Twin</label>
+                                        <div class="pad">
+                                            <button>-</button>
+                                            <span>0</span>
+                                            <button class="plus">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="colonne">
+                                        <label class="double">Double</label>
+                                        <div class="pad">
+                                            <button>-</button>
+                                            <span>0</span>
+                                            <button class="plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prix clearfix">
+                                <label>Prix</label>
+                                <div class="slider-price">
+                                    <span class="min-price"></span>
+                                    <div id="slider-range"></div>
+                                    <span class="max-price"></span>
+                                </div>
+                            </div>
+                            <div class="bottom clearfix">
+                                <a href="#" class="plus-filtres">Plus de filtres</a>
+                                <button class="btn btn-primary btn-recherche">Rechercher</button>
+                            </div>
+                            <div class="filtres">
+                                <div class="etoiles">
+                                    <label>Nombre d'étoiles</label>
+                                    <select class="selectpicker">
+                                        <option>1 étoile</option>
+                                        <option>2 étoiles</option>
+                                        <option>3 étoiles</option>
+                                        <option>4 étoiles</option>
+                                    </select>
+                                </div>
+                                <div class="metro">
+                                    <label>Métro le plus proche</label>
+                                    <select class="selectpicker">
+                                        <option>Voltaire</option>
+                                        <option>Voltaire</option>
+                                        <option>Voltaire</option>
+                                        <option>Voltaire</option>
+                                    </select>
+                                </div>
+                                <div class="equipements">
+                                    <label>Equipements</label>
+                                    <div class="liste-choix clearfix">
+                                        <span class="choix">
+                                            <input type="checkbox" id="air_conditionne" />
+                                            <label for="air_conditionne">Air conditionné</label>
+                                        </span>
+                                        <span class="choix">
+                                            <input type="checkbox" id="parking" />
+                                            <label for="parking">Parking</label>
+                                        </span>
+                                        <span class="choix">
+                                            <input type="checkbox" id="chambre_non_fumeur" />
+                                            <label for="chambre_non_fumeur">Chambre non-fumeur</label>
+                                        </span>
+                                        <span class="choix">
+                                            <input type="checkbox" id="restaurant_sur_place" />
+                                            <label for="restaurant_sur_place">Restaurant sur place</label>
+                                        </span>
+                                        <span class="choix">
+                                            <input type="checkbox" id="wifi_gratuit" />
+                                            <label for="wifi_gratuit">Wifi gratuit</label>
+                                        </span>
+                                        <span class="choix">
+                                            <input type="checkbox" id="fumoir" />
+                                            <label for="fumoir">Fumoir</label>
+                                        </span>
+                                        <span class="choix">
+                                            <input type="checkbox" id="petit_dejeuner_offert" />
+                                            <label for="petit_dejeuner_offert">Petit-déjeuner offert</label>
+                                        </span>
+                                        <span class="choix">
+                                            <input type="checkbox" id="salle_de_reunion" />
+                                            <label for="salle_de_reunion">Salle de réunion</label>
+                                        </span>
+                                        <span class="choix">
+                                            <input type="checkbox" id="reception_24" />
+                                            <label for="reception_24">Réception 24H 7/7</label>
+                                        </span>
+                                        <span class="choix">
+                                            <input type="checkbox" id="bagagerie" />
+                                            <label for="bagagerie">Bagagerie</label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="btn-container">
+                                    <button class="btn btn-annuler">Annuler</button>
+                                    <button class="btn btn-filtrer">Appliquer les filtres</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="resultats">
+                            <p>63 résultats</p>
+                            <div class="tri">
+                                <label>Trier par</label>
+                                <select class="selectpicker">
+                                    <option>Prix croissant</option>
+                                    <option>Prix décroissant</option>
+                                </select>
+                            </div>
+                            <!--<div class="map">
+                                <img src="images/map.jpg" alt="carte" />
+                                <div class="btn-container">
+                                    <button class="btn btn-primary btn-recherche">Afficher la carte</button>
+                                </div>
+                            </div>-->
+                            <div class="liste-hotel">
+                                <a href="hotel.html" class="hotel clearfix">
+                                    <div class="photo">
+                                        <img src="images/photo4.jpg" alt="" />
+                                    </div>
+                                    <div class="description">
+                                        <p class="nom">Hôtel****</p>
+                                        <p class="nom">Elysée Gare de Lyon</p>
+                                        <p class="lieu">Gare de Lyon</p>
+                                        <p class="note-avis">9/10 (586 avis)</p>
+                                        <div class="bas">
+                                            <span class="favori"></span>
+                                            <p class="prix">89€</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="hotel.html" class="hotel clearfix">
+                                    <div class="photo">
+                                        <img src="images/photo4.jpg" alt="" />
+                                    </div>
+                                    <div class="description">
+                                        <p class="nom">Hôtel****</p>
+                                        <p class="nom">Elysée Gare de Lyon</p>
+                                        <p class="lieu">Gare de Lyon</p>
+                                        <p class="note-avis">9/10 (586 avis)</p>
+                                        <div class="bas">
+                                            <span class="favori"></span>
+                                            <p class="prix">89€</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="hotel.html" class="hotel clearfix">
+                                    <div class="photo">
+                                        <img src="images/photo4.jpg" alt="" />
+                                    </div>
+                                    <div class="description">
+                                        <p class="nom">Hôtel****</p>
+                                        <p class="nom">Elysée Gare de Lyon</p>
+                                        <p class="lieu">Gare de Lyon</p>
+                                        <p class="note-avis">9/10 (586 avis)</p>
+                                        <div class="bas">
+                                            <span class="favori"></span>
+                                            <p class="prix">89€</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="hotel.html" class="hotel clearfix">
+                                    <div class="photo">
+                                        <img src="images/photo4.jpg" alt="" />
+                                    </div>
+                                    <div class="description">
+                                        <p class="nom">Hôtel****</p>
+                                        <p class="nom">Elysée Gare de Lyon</p>
+                                        <p class="lieu">Gare de Lyon</p>
+                                        <p class="note-avis">9/10 (586 avis)</p>
+                                        <div class="bas">
+                                            <span class="favori"></span>
+                                            <p class="prix">89€</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-7 col-lg-8">
+                    <div class="colonne-principale">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5662239.764891082!2d-2.277869850397838!3d46.13550063337387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd54a02933785731%3A0x6bfd3f96c747d9f7!2sFrance!5e0!3m2!1sfr!2sfr!4v1469176989063" width="100%" frameborder="0" style="border:0; height: 100%;" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	{{> menu-mobile}}
+	{{> footer}}
+	{{> foot}}
+</body>
+</html>

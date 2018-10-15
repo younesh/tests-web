@@ -1,0 +1,146 @@
+.btn-2 {
+    background-color: $pr-bleu;
+    color: #fff;
+    border-radius: none;
+    font-family: Roboto-Bold;
+    font-size: 15px;
+    display: inline-block;
+    border-radius: 0; 
+    width: 100%;
+    padding: 5px 0px;
+    border: none;
+
+    &:hover {
+         background-color: $pr-bleu-hover;
+    }
+}
+
+.pourquoi-rejoindre {
+    font-family:'Roboto-Light' ;
+    select {
+        appearance : none; 
+        -moz-appearance : none;
+        -webkit-appearance : none;
+        
+       background-image: url("../images/select-btn.png");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 10px) center;
+    }
+    
+    p {
+        font-size: 13px;
+    }
+    
+    
+    .pr-nav {
+        .prn-box {
+            text-align: center;
+            min-height: 270px;
+            .prnb-title {
+                color: $pr-bleu;
+                text-transform: uppercase;
+                font-weight: bold;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                font-weight: 16px
+            }
+        }
+    }
+    
+    .pr-btn-action {
+        margin-bottom: 70px;
+    }
+    
+    
+    .how-join-ob {
+        .hjob-ctn-gray {
+           margin-bottom: 15px;
+            @media (max-width: 991px) {
+               background-color: $blanc2;
+            }
+            
+            .hjob-cg-head {
+                padding: 0px;
+                @media (max-width: 991px) {
+                padding: 15px;
+                }
+            }
+        }
+        h2 {
+            margin-bottom: 40px;
+        }
+        
+        .hjob-options {
+             background-color: $blanc2;
+             padding-top: 22px;
+             padding-bottom: 22px;
+             margin-top: 15px;
+        }
+        
+        .hjob-opt {
+            
+            text-align: center;
+            @media (max-width: 767px) {
+                text-align: left;
+                padding-left: 30%;
+            }
+            
+            > span {
+                vertical-align: middle;
+            }
+            .choix {
+                text-align: left;
+                position: relative;
+                top: 4px;
+
+                label { font-size: 0; }
+            }
+            
+            .hjob-icone {
+                 width: 27px;
+                height: 27px;
+                display: inline-block;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }  
+            
+            .hjob-txt {
+                font-family: Roboto-Light;
+                font-size: 18px;
+                padding-left: 10px;
+            }
+            
+            &.acommodation { // hebergement 
+                .hjob-icone {
+                     background-image: url("../images/acommodation.png");
+                }   
+            }   
+            
+            &.coworking {
+                .hjob-icone {
+                  background-image: url("../images/coworking.png");
+                } 
+            }
+            
+            &.meeting-seminar-room {
+                .hjob-icone {
+                 background-image: url("../images/meeting-seminar-room.png");
+                }
+            }
+        }
+    
+        
+    }
+    fieldset {
+        .form {
+       /* padding-top:30px;*/
+            .form-head {
+               margin-bottom:30px;
+            }        
+        .btn {
+            margin-top: 30px;
+        } 
+        } 
+    }
+
+}

@@ -1,0 +1,131 @@
+.page-TableauDeBord {
+    .mc-head {
+        .mch-select {
+            background-color: #fff;
+            padding: 10px;
+            margin-top: 10px;
+            width: 100%;
+            select {
+                width: 100%;
+            }
+        }
+    }
+    .mc-content-tableauBord {
+        margin-top: 20px;
+        .mc-box-tb {
+            background-color: #fff;
+            min-height: 236px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 28px;
+            .mcbox-head {
+                display: block;
+                padding: 10px;
+                color: #fff;
+                text-transform: uppercase;
+                background-color: $color-primary-meduim;
+                &:hover {
+                    text-decoration: none;
+                }
+                .mcboxh-icon {
+                    @extend .sprite;
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 10px;
+                }
+                .mcboxh-text {
+                    font-family: $police-title-2;
+                    font-size: 14px;
+                }
+                .mcboxh-notif {
+                    @extend .notifNumber;
+                    float: right;
+                    margin-top: 3px;
+                }
+                /* $police-title-2 */
+            }
+            .mcbox-ctn {
+                .mcboxc-row {
+                    padding: 10px;
+                    cursor: pointer;
+                    display: block;
+                    &:hover {
+                        background-color: $gray-light-1;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .b2-Plus {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+            &.mcboxtb-RDV {
+                .mcbox-head {
+                    .mcboxh-icon {
+                        background-position: -203px -85px;
+                    }
+                }
+            }
+            &.mcboxtb-aOuvrir {
+                .mcbox-head {
+                    .mcboxh-icon {
+                        background-position: -244px -85px;
+                    }
+                }
+            }
+            &.mcboxtb-piece {
+                .mcbox-head {
+                    .mcboxh-icon {
+                        background-position: -5px -125px;
+                    }
+                }
+            }
+            &.mcboxtb-bat {
+                .mcbox-head {
+                    .mcboxh-icon {
+                        background-position: -45px -125px;
+                    }
+                }
+            }
+            &.mcboxtb-bat {
+                .mcbox-head {
+                    .mcboxh-icon {
+                        background-position: -45px -125px;
+                    }
+                }
+            }
+            &.mcboxtb-mesTaches {
+                .mcbox-head {
+                    .mcboxh-icon {
+                        background-position: -203px -125px;
+                    }
+                }
+            }
+            &.mcboxtb-aRelancer {
+                .mcbox-head {
+                    .mcboxh-icon {
+                        background-position: -164px -125px;
+                    }
+                }
+            }
+            &.mcboxtb-aCarencer {
+                .mcbox-head {
+                    .mcboxh-icon {
+                        background-position: -125px -125px;
+                    }
+                }
+            }
+            &.mcboxtb-aPasser {
+                .mcbox-head {
+                    .mcboxh-icon {
+                        background-position: -86px -125px;
+                    }
+                }
+            }
+            /* -86px -125px; */
+        }
+    }
+}

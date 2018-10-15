@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<head>
+    {{> head}}
+</head>
+
+<body>
+
+    <div class="page">
+        {{> header }}
+        <div class="middle">
+            {{> aside-bar}}
+            <div id="main-content" class="page-rechercheListeDossiers">
+                <div class="container-fluid">
+                    <div class="rld-zoneFilter">
+                        <div class="zf-btn">
+                            <a class="bouton-2 b2-openClose" id="openCloseZoneFilter">
+                                <span> recherche avancee </span>
+                            </a>
+                        </div>
+                        <form action="">
+                            <div class="row">
+                                <div class="col-sm-5 zf-col1">
+                                    <div class="form-row">
+                                        <label for="numDossier"> N° dossier : </label>
+                                        <input type="text" id="numDossier" placeholder="XXX XXX">
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="numDossier">MO : </label>
+                                        <input type="text" id="MO" placeholder="NOM Prénom">
+                                    </div>
+
+                                    <div class="form-row">
+                                        <label for="numDossier">  </label>
+                                        <input type="text" id="MO" placeholder="Téléphone">
+                                    </div>
+
+                                    <div class="form-row">
+                                        <label for="numDossier">   </label>
+                                        <input type="text" id="MO" placeholder="E-mail">
+                                    </div>
+
+                                    <div class="form-row">
+                                        <label for="numDossier">Operateur : </label>
+                                        <input type="text" id="RS" placeholder="Raison sociale">
+                                    </div>
+
+                                    <div class="form-row">
+                                        <label for="numDossier"></label>
+                                        <input type="text" id="SIREN" placeholder="SIREN">
+                                    </div>
+
+                                    <div class="form-row">
+                                        <label for="numDossier"> Titulaire : </label>
+                                        <select>
+                                        <option value="option1">- Sélectionner - </option>
+                                    </select>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-5 zf-col2">
+                                    <div class="form-row">
+                                        <label for="banque">Banque : </label>
+                                        <select id="banque">
+                                            <option value="option1">- Sélectionner - </option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <label for="centreBanque">centre-Banque : </label>
+                                        <select id="centreBanque">
+                                            <option value="option1">- Sélectionner - </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="interlocBQ"> Inerlocuteur banque :  </label>
+                                        <input type="text" name="" id="interlocBQ" placeholder="NOM Prénom">
+                                    </div>
+
+                                    <div class="form-row">
+                                        <label for="CPconstract"> CP construction : </label>
+                                        <input type="text" name="" id="CPconstract" placeholder="Code postal">
+                                    </div>
+
+                                    <div class="form-row alignTop">
+                                        <label for="CPconstract"> Etat :  </label>
+                                        <select multiple size="4">    
+                                        <option value="Réceptionné"> Réceptionné </option>
+                                          <option value="Réceptionné"> Réceptionné </option>
+                                            <option value="Réceptionné"> Réceptionné </option>
+                                              <option value="Réceptionné"> Réceptionné </option>
+                                    </select>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-2 zf-col3">
+                                    <a class="icone-recherche"></a>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="rld-list">
+                        <h2> XX Dossier(s) </h2>
+                        <table class="tldl-tab table">
+                            <thead>
+                                <tr>
+                                    <th><span class="th-txt"> N° dossier </span>
+                                        <a class="th-icone"></a>
+                                    </th>
+                                    <th><span class="th-txt"> Centre-banque  </span>
+                                        <a class="th-icone"></a>
+                                    </th>
+                                    <th><span class="th-txt"> MO  </span>
+                                        <a class="th-icone"></a>
+                                    </th>
+                                    <th><span class="th-txt">  OpErateur </span>
+                                        <a class="th-icone"></a>
+                                    </th>
+                                    <th><span class="th-txt"> Qualification  </span>
+                                        <a class="th-icone"></a>
+                                    </th>
+                                    <th><span class="th-txt">  Etat </span>
+                                        <a class="th-icone"></a>
+                                    </th>
+                                    <th><span class="th-txt"> Titulaire  </span>
+                                        <a class="th-icone"></a>
+                                    </th>
+                                    <th><span class="th-txt">  REception </span>
+                                        <a class="th-icone"></a>
+                                    </th>
+                                    <th><span class="th-txt"> EchEance</span>
+                                        <a class="badge-info"></a>
+                                        <a class="th-icone"></a>
+                                    </th>
+                                    <th><span class="th-txt"> </span>
+                                        <a class="badge-info"></a>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td> <span class="icone-alert"> </span> <span class="td-txt"> 111 222  </span> </td>
+                                    <td> <span class="td-txt"> SG PSC Rennes  </span> </td>
+                                    <td> <span class="td-txt"> NOM Prénom </span> </td>
+                                    <td> <span class="td-txt">  Raison sociale </span> </td>
+                                    <td> <span class="td-txt">  CCMI Avec  </span> </td>
+                                    <td> <span class="td-txt"> A carencer  </span> </td>
+                                    <td> <span class="td-txt"> BDO </span> </td>
+                                    <td> <span class="td-txt"> 15/01/2017  </span> </td>
+                                    <td> <span class="td-txt"> 15/02/2017  </span> </td>
+                                    <td> <span class="badge-oeuf bo-green "> 1j </span> </td>
+                                </tr>
+                                <tr>
+                                    <td> <span class="icone-alert"> </span> <span class="td-txt"> 111 222  </span> </td>
+                                    <td> <span class="td-txt"> SG PSC Rennes  </span> </td>
+                                    <td> <span class="td-txt"> NOM Prénom </span> </td>
+                                    <td> <span class="td-txt">  Raison sociale </span> </td>
+                                    <td> <span class="td-txt">  CCMI Avec  </span> </td>
+                                    <td> <span class="td-txt"> A carencer  </span> </td>
+                                    <td> <span class="td-txt"> BDO </span> </td>
+                                    <td> <span class="td-txt"> 15/01/2017  </span> </td>
+                                    <td> <span class="td-txt"> 15/02/2017  </span> </td>
+                                    <td> <span class="badge-oeuf bo-orange"> 2j </span> </td>
+                                </tr>
+                                <tr>
+                                    <td> <span class="icone-alert"> </span> <span class="td-txt"> 111 222  </span> </td>
+                                    <td> <span class="td-txt"> SG PSC Rennes  </span> </td>
+                                    <td> <span class="td-txt"> NOM Prénom </span> </td>
+                                    <td> <span class="td-txt">  Raison sociale </span> </td>
+                                    <td> <span class="td-txt">  CCMI Avec  </span> </td>
+                                    <td> <span class="td-txt"> A carencer  </span> </td>
+                                    <td> <span class="td-txt"> BDO </span> </td>
+                                    <td> <span class="td-txt"> 15/01/2017  </span> </td>
+                                    <td> <span class="td-txt"> 15/02/2017  </span> </td>
+                                    <td> <span class="badge-oeuf bo-marron"> +2j </span> </td>
+                                </tr>
+                                <tr>
+                                    <td> <span class="icone-alert"> </span> <span class="td-txt"> 111 222  </span> </td>
+                                    <td> <span class="td-txt"> SG PSC Rennes  </span> </td>
+                                    <td> <span class="td-txt"> NOM Prénom </span> </td>
+                                    <td> <span class="td-txt">  Raison sociale </span> </td>
+                                    <td> <span class="td-txt">  CCMI Avec  </span> </td>
+                                    <td> <span class="td-txt"> A carencer  </span> </td>
+                                    <td> <span class="td-txt"> BDO </span> </td>
+                                    <td> <span class="td-txt"> 15/01/2017  </span> </td>
+                                    <td> <span class="td-txt"> 15/02/2017  </span> </td>
+                                    <td> <span class="badge-oeuf"> 22j </span> </td>
+                                </tr>
+                                <tr>
+                                    <td> <span class="icone-alert"> </span> <span class="td-txt"> 111 222  </span> </td>
+                                    <td> <span class="td-txt"> SG PSC Rennes  </span> </td>
+                                    <td> <span class="td-txt"> NOM Prénom </span> </td>
+                                    <td> <span class="td-txt">  Raison sociale </span> </td>
+                                    <td> <span class="td-txt">  CCMI Avec  </span> </td>
+                                    <td> <span class="td-txt"> A carencer  </span> </td>
+                                    <td> <span class="td-txt"> BDO </span> </td>
+                                    <td> <span class="td-txt"> 15/01/2017  </span> </td>
+                                    <td> <span class="td-txt"> 15/02/2017  </span> </td>
+                                    <td> <span class="badge-oeuf bo-green "> 1j </span> </td>
+                                </tr>
+                                <tr>
+                                    <td> <span class="icone-alert"> </span> <span class="td-txt"> 111 222  </span> </td>
+                                    <td> <span class="td-txt"> SG PSC Rennes  </span> </td>
+                                    <td> <span class="td-txt"> NOM Prénom </span> </td>
+                                    <td> <span class="td-txt">  Raison sociale </span> </td>
+                                    <td> <span class="td-txt">  CCMI Avec  </span> </td>
+                                    <td> <span class="td-txt"> A carencer  </span> </td>
+                                    <td> <span class="td-txt"> BDO </span> </td>
+                                    <td> <span class="td-txt"> 15/01/2017  </span> </td>
+                                    <td> <span class="td-txt"> 15/02/2017  </span> </td>
+                                    <td> <span class="badge-oeuf bo-orange"> 2j </span> </td>
+                                </tr>
+                                <tr>
+                                    <td> <span class="icone-alert"> </span> <span class="td-txt"> 111 222  </span> </td>
+                                    <td> <span class="td-txt"> SG PSC Rennes  </span> </td>
+                                    <td> <span class="td-txt"> NOM Prénom </span> </td>
+                                    <td> <span class="td-txt">  Raison sociale </span> </td>
+                                    <td> <span class="td-txt">  CCMI Avec  </span> </td>
+                                    <td> <span class="td-txt"> A carencer  </span> </td>
+                                    <td> <span class="td-txt"> BDO </span> </td>
+                                    <td> <span class="td-txt"> 15/01/2017  </span> </td>
+                                    <td> <span class="td-txt"> 15/02/2017  </span> </td>
+                                    <td> <span class="badge-oeuf bo-marron"> +2j </span> </td>
+                                </tr>
+                                <tr>
+                                    <td> <span class="icone-alert"> </span> <span class="td-txt"> 111 222  </span> </td>
+                                    <td> <span class="td-txt"> SG PSC Rennes  </span> </td>
+                                    <td> <span class="td-txt"> NOM Prénom </span> </td>
+                                    <td> <span class="td-txt">  Raison sociale </span> </td>
+                                    <td> <span class="td-txt">  CCMI Avec  </span> </td>
+                                    <td> <span class="td-txt"> A carencer  </span> </td>
+                                    <td> <span class="td-txt"> BDO </span> </td>
+                                    <td> <span class="td-txt"> 15/01/2017  </span> </td>
+                                    <td> <span class="td-txt"> 15/02/2017  </span> </td>
+                                    <td> <span class="badge-oeuf"> 22j </span> </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                        
+                        <div class="tldl-pagination">
+                            <a href="">1</a>
+                             <a href="">2</a>
+                              <a href="">3</a>
+                               <a href="">4</a>
+                                <a href="">5</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {{> footer }}
+    </div>
+    {{> foot }}
+
+</body>
+
+</html>

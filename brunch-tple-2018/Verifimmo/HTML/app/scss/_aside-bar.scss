@@ -1,0 +1,126 @@
+/* aside bar , la barre du gauche */
+
+$padding-aside-child: 0px 0px 0px 15px;
+#aside-bar {
+    float: left;
+    background-color: #fff;
+    height: calc(100vh - 60px);
+    width: $width-left-aside;
+    border-top: solid 1px $color-border-dark;
+    @include animOpenCloseAsideBar();
+    h2 {
+        padding: $padding-aside-child;
+        margin: 5px 0px 10px;
+    }
+    .ab-ctn-btn {
+        text-align: right;
+    }
+    .ab-search {
+        position: relative;
+        padding: $padding-aside-child;
+        &:before {
+            /* icone loope */
+            content: ' ';
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            right: 0;
+            @extend .sprite;
+            right: 38px;
+            background-position: -127px -43px;
+        }
+        input {
+            width: calc(100% - 42px);
+            border: none;
+            border-bottom: solid 1px $color-border-dark;
+            display: inline-block;
+            padding: 5px 2px;
+        }
+        .icone-info {
+            vertical-align: middle;
+            margin-left: 7px;
+            @extend .icone-cercle;
+            &:before {
+                background-position: -49px -46px;
+            }
+        }
+    }
+    .ctn-btnNewFolder {
+        position: relative;
+        padding: 25px 10px;
+        .bouton-large {
+            height: 40px; // pour l'effet animation 
+            .icone {
+                background-position: -239px 0px;
+            }
+        }
+    }
+    .ab-menu {
+        .abm-item {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            border-top: solid 1px $border-color-2;
+            text-transform: uppercase;
+            &:before {
+                content: " ";
+                display: inline-block;
+                width: 36px;
+                height: 36px;
+                @extend .sprite;
+                /*   background-position: -160px -42px;*/
+                /* background-color: magenta;*/
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+            &:hover,
+            &:focus,
+            &.active {
+                border-right: 4px solid $color-primary-light;
+                text-decoration: none;
+            }
+            /* */
+            &.abm-mesDossier {
+                &:before {
+                    background-position: -160px -42px;
+                }
+            }
+            &.abm-tousDossier {
+                &:before {
+                    background-position: -198px -42px;
+                }
+            }
+            &.abm-aOuvrir {
+                &:before {
+                    background-position: -240px -42px;
+                }
+            }
+            &.abm-piece {
+                &:before {
+                    background-position: -1px -81px;
+                }
+            }
+            &.abm-bat {
+                &:before {
+                    background-position: -40px -81px;
+                }
+            }
+            &.abm-aCarencer {
+                &:before {
+                    background-position: -80px -81px;
+                }
+            }
+            &.abm-aRelancer {
+                &:before {
+                    background-position: -160px -81px;
+                }
+            }
+        }
+    }
+}
+
+
+/* #aside-bar */

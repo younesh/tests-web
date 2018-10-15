@@ -1,0 +1,85 @@
+/* header general */
+
+#header {
+    min-height: 60px;
+    background-color: #fff;
+    @include clearAfter();
+    #ctn-logo {
+        float: left;
+        text-align: center;
+        width: $width-left-aside;
+        padding-top: 6px;
+    }
+    #head-panel {
+        width: $width-right-content;
+        padding-top: 10px;
+        float: right;
+        #hp-left {
+            float: left;
+            .hpl-item {
+                display: inline-block;
+                margin-right: 10px;
+                >span {
+                    vertical-align: middle;
+                    text-transform: uppercase;
+                }
+                &:before {
+                    content: "";
+                    width: 32px;
+                    height: 32px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                    @extend .sprite;
+                }
+                &.hpl-agenda {
+                    position: relative;
+                    &:before {
+                        background-position: -85px -4px;
+                    }
+                    .agenda-notif {
+                        position: absolute;
+                        left: 15px;
+                        bottom: -9px;
+                        @extend .notifNumber;
+                    }
+                }
+                &.hpl-compte {
+                    &:before {
+                        background-position: -123px -4px;
+                    }
+                }
+            }
+        }
+        #hp-right {
+            float: right;
+            .hpr-item {
+                display: inline-block;
+                margin-right: 15px;
+                >span {
+                    vertical-align: middle;
+                    text-transform: uppercase;
+                }
+                &:before {
+                    content: "";
+                    width: 32px;
+                    height: 32px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                    @extend .sprite;
+                }
+                &.hpr-bao {
+                    &:before {
+                        background-position: -163px -4px;
+                    }
+                }
+                &.hpr-param {
+                    &:before {
+                        background-position: -202px -4px;
+                    }
+                }
+            }
+        }
+    }
+}

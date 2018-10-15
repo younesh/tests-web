@@ -1,0 +1,298 @@
+.content {
+    .mon-profil {
+        @media screen and (max-width: 991px) {
+            padding-top: 80px;
+        }
+        fieldset {
+            border-top: 1px solid $gris;
+            margin-top: 10px;
+            padding-top: 20px;
+            
+            &.no-border {
+                border-top: none;
+                margin-top: 0px;
+                padding-top: 0px;
+            
+            }
+            h3 {
+                font-size: 20px;
+            }
+            p {
+                margin-bottom: 20px;
+            }
+            .bootstrap-select, input[type="text"], input[type="number"], input[type="email"], input[type="password"], select, textarea {
+                width: 100% !important;
+                margin-bottom: 10px;
+                border: 1px solid $gris;
+            }
+            .btn {
+                width: 100%;
+                border: none;
+                @include border-radius(0);
+                padding: 13px 10px;
+                
+                &.btn-valider {
+                    background-color: $bleu-marine;
+                    color: $blanc;
+                    font-family: "Roboto-Bold";
+                    font-size: 18px;
+                    
+                    &:hover {
+                        background-color: $bleu-marine2;
+                    }
+                }
+            }
+            .bootstrap-select {
+                .caret {
+                    color: $bleu-marine;
+                }
+            }
+            input[type="text"], input[type="number"], input[type="email"], input[type="password"], select, textarea {
+                padding: 15px 12px;
+            }
+            textarea {
+                min-height: 150px;
+                resize: vertical;
+            }
+            label {
+                font-weight: initial;
+                font-size: 13px;
+                
+                a {
+                    color: $noir;
+                    text-decoration: underline;
+                }
+            }
+            #offres {
+                margin-top: 20px;
+            }
+            
+        }
+        .mode-contact {
+            padding: 15px 35px;
+            background-color: $blanc2;
+            
+            .row {
+                > div {  
+                    position: relative;
+                    height: 63px;
+                    padding: 0;
+                    
+                    &:before {
+                        content: "";
+                        display: inline-block;
+                        float: left;
+                        background: url('../images/pictos-page-contact.png') no-repeat;
+                        width: 63px;
+                        height: 63px;
+                    }
+                    &.mail {
+                        &:before {
+                            background-position: -10px 0;
+                        }
+                    }
+                    &.telephone {
+                        &:before {
+                            background-position: -92px 0;
+                        }
+                    }
+                    &.courrier {
+                        &:before {
+                            background-position: -176px 0;
+                        }
+                    }
+                    p {
+                        position: absolute;
+                        top: 50%;
+                        @include transform-translate(0,-50%);
+                        padding-left: 73px;
+                        color: $bleu-marine;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .etapes {
+            position: relative;
+            
+            .numeros {
+                margin: 55px 0 20px;
+                text-align: center;
+                position: relative;
+                
+                &:before {
+                    content: "";
+                    display: block;
+                    border-top: 1px solid $bleu-marine;
+                    position: absolute;
+                    top: 38px;
+                    width: 100%;
+                    z-index: -1;
+                }
+                span {
+                    display: inline-block;
+                    font-family: "Roboto-Bold";
+                    font-size: 48px;
+                    color: $bleu-marine;
+                    background-color: $blanc;
+                    border: 3px solid $bleu-marine;
+                    @include border-radius(50%);
+                    height: 76px;
+                    width: 76px;
+                }
+            }
+            .col-md-4 {
+                > .numeros {
+                    @media screen and (min-width: 992px) {
+                        display: none;
+                    }
+                }
+            }
+            h3 {
+                font-family: "Roboto-Medium";
+                font-size: 24px;
+                text-align: center;
+                color: $bleu-marine;
+                margin-bottom: 35px;
+                height: 52px;
+            }
+            ul {
+                list-style: none;
+                
+                li {
+                    font-family: "Roboto-Light";
+                    font-size: 13px;
+                    padding-bottom: 20px;
+                    
+                    &:before {
+                        content: "";
+                        display: inline-block;
+                        border: 5px solid transparent;
+                        border-left: 10px solid $bleu-marine;
+                        border-right: none;
+                        padding-right: 5px;
+                    }
+                    .titre {
+                        font-family: "Roboto-Bold";
+                        color: $bleu-marine;
+                    }
+                }
+            }
+        }
+        .pourquoi {
+            margin: 70px 0 20px;
+            text-align: center;
+            
+            .picto {
+                width: 125px;
+                height: 125px;
+                background: url("../images/pictos-pourquoi.png") no-repeat;
+                margin: 0 auto 30px;
+                
+                &.devices {
+                    background-position: 0 0;
+                }
+                &.affaire {
+                    background-position: -133px 0;
+                }
+                &.hotel {
+                    background-position: -265px 0;
+                }
+                &.remise {
+                    background-position: -397px 0;
+                }
+                &.calculette {
+                    background-position: -527px 0;
+                }
+                &.sav {
+                    background-position: -658px 0;
+                }
+            }
+            h3 {
+                font-family: "Roboto-Bold";
+                font-size: 16px;
+                text-transform: uppercase;
+                color: $bleu-marine;
+                margin-bottom: 30px;
+                
+                & + p {
+                    margin-top: -30px;
+                }
+            }
+            p {
+                font-family: "Roboto-Light";
+                font-size: 13px;
+                line-height: 16px;
+                margin-bottom: 30px;
+            }
+        }
+        .liste-reservations-historique {
+            .hotel {
+                background-color: $blanc2;
+                height: 164px;
+                margin-bottom: 20px;
+                overflow: hidden;
+                
+                @media screen and (max-width: 767px) {
+                    height: auto;
+                }
+                .description {
+                    padding-top: 25px;
+                    
+                    @media screen and (max-width: 767px) {
+                        padding: 15px;
+                    }
+                    .nom {
+                        font-family: "Roboto-Bold";
+                        font-size: 17px;
+                    }
+                    .adresse {
+                        font-size: 14px;
+                    }
+                    .note-avis {
+                        font-family: "Roboto-Bold";
+                        color: $bleu-marine;
+                    }
+                    .prix {
+                        font-family: "Roboto-Bold";
+                        font-size: 32px;
+                    }
+                }
+                .border-left {
+                    border-left: 1px solid $gris;
+                    height: 164px;
+                    padding-top: 25px;
+                    padding-left: 10px;
+                    padding-right: 25px;
+                    text-align: center;
+                    
+                    @media screen and (max-width: 767px) {
+                        padding-top: 0px;
+                        padding-left: 25px;
+                        padding-bottom: 15px;
+                        height: auto;
+                    }
+                    p {
+                        margin-bottom: 10px;
+                    }
+                    .btn-primary {
+                        width: 100%;
+                        background-color: $bleu-marine;
+                        border: none;
+                        padding: 10px 10px;
+                        font-family: 'Roboto-Bold';
+                        font-size: 18px;
+                        text-decoration: none;
+
+                        &:active:focus, &:active:hover {
+                            background-color: darken($bleu-marine, 0.5);
+                        }
+                        &:hover {
+                            background-color: $bleu-marine-hover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

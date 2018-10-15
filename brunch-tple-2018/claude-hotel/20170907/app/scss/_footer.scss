@@ -1,0 +1,101 @@
+footer {
+	background-color: $bleu-marine;
+    padding: 0 0 50px;
+    
+    
+    .top {
+        background-color: $bleu-marine4;
+        padding: 20px 0 10px;
+        
+         ul {
+            list-style: none;
+             text-align: center;
+
+            li {
+                display: inline-block;
+                font-family: "Roboto-Light";
+                font-size: 13px;
+                line-height: 21px;
+                color: $blanc;
+
+                a {
+                    display: inline-block;
+                    color: $blanc;
+                    text-decoration: none;
+                    padding-right: 23px;
+                    padding-bottom: 10px;
+
+                    &:hover {
+                        color: lighten($bleu-marine, 40%);
+                    }
+                }
+                &:last-child {
+                    a {
+                        padding-right: 0;
+                    }
+                }
+             }
+        }
+    }
+    .sitemap {
+        padding-top: 40px;
+        
+        h4 {
+            font-family: "Roboto-Bold";
+            font-size: 15px;
+            text-transform: uppercase;
+            color: $blanc;
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style: none;
+            margin-bottom: 20px;
+
+            li {
+                font-family: "Roboto-Light";
+                font-size: 13px;
+                line-height: 21px;
+                color: $blanc;
+
+                a {
+                    color: $blanc;
+
+                    &:hover {
+                        text-decoration: none;
+                        color: $bleu-marine2;
+                    }
+                }
+                &:before {
+                    content: "-";
+                    display: inline-block;
+                    padding-right: 2px;
+                }
+            }
+        }
+    }
+    .bottom {
+        float: right;
+        
+        .links {
+            margin-bottom: 25px;
+            
+            a {
+                display: inline-block;
+                background: url('../images/pictos-footer.png') no-repeat;
+                height: 39px;
+                width: 40px;
+                margin-left: 10px;
+                
+                &.facebook {
+                    background-position: 0 0;
+                }
+                &.instagram {
+                    background-position: -54px 0;
+                }
+                &.twitter {
+                    background-position: -108px 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,926 @@
+/*********************/
+/*     PAGE HOME     */
+/*********************/
+
+.content {
+    .diaporama {
+        margin-bottom: 40px;
+        
+        #carousel-accueil {
+            .carousel-inner {
+                height: 480px;
+                
+                @media screen and (max-width: 767px) {
+                    display: none;
+                }
+                >.item {
+                    height: 100%;
+                    background-size: cover;
+                    
+                    >img {
+                        width: 100%;
+                        margin: auto;
+                        
+                        @media screen and (max-width: 1299px) {
+                            width: auto;
+                            max-width: initial;
+                        }
+                    }
+                    .wrapper {
+                        position: absolute;
+                        top: 105px;
+                        text-align: center;
+                        width: 100%;
+
+                        &.left {
+                            h2, p {
+                                margin-left: 0;
+                                text-align: left;
+                            }
+                        }
+                        &.right {
+                            h2, p {
+                                margin-right: 0;
+                                text-align: right;
+                            }
+                        }
+                        h2 {
+                            font-family: "Roboto-Light";
+                            font-size: 55px;
+                            line-height: 55px;
+                            color: $blanc;
+                            text-transform: uppercase;
+                            margin: auto;
+                            margin-bottom: 10px;
+                            
+                            strong {
+                                font-family: "Roboto-Bold";
+                            }
+                        }
+                        p {
+                            font-family: "Roboto-Bold";
+                            font-size: 19px;
+                            color: $blanc;
+                            width: 50%;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+        .reservation {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: url('../images/background-diaporama.png') repeat-x;
+            height: 118px;
+            padding: 10px 0;
+            
+            @media screen and (max-width: 767px) {
+                position: relative;
+                top: 62px;
+                background-image: none;
+                height: auto;
+                background-color: $blanc2;
+            }
+            .nav-tabs {
+                position: absolute;
+                top: -80px;
+                left: 50%;
+                @include transform-translate(-50%, 0);
+                width: 220px;
+                height: 90px;
+                background-color: $bleu-marine3;
+                text-align: center;
+                border-bottom: none;
+                padding: 8px 15px;
+                @include border-radius(10px 10px 0 0);
+                @include box-shadow(5px, 0px, 10px, 0, rgba($noir, 0.4));
+                z-index: 1;
+                
+                @media screen and (max-width: 767px) {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    @include transform-translate(0, 0);
+                    @include box-shadow(0, 0, 0, 0, rgba($noir, 0));
+                    width: 100%;
+                }
+                > li {
+                    display: inline-block;
+                    float: none;
+                    margin-left: -4px;
+                    margin-right: 10px;
+                    
+                    &:before {
+                        content: "";
+                        display: block;
+                        width: 49px;
+                        height: 49px;
+                        background-color: rgba($blanc, 0.7);
+                        position: absolute;
+                        top: 20px;
+                        @include border-radius(50%);
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    a {
+                        border: none;
+                        color: rgba($blanc, 0.7);
+                        text-transform: uppercase;
+                        padding: 0;
+                        margin-right: 0;
+                        width: 50px;
+                        height: 60px;
+                        font-size: 11px;
+                        background: url(../images/icones-reservation.png) no-repeat;
+                        
+                        &.hotel {
+                            background-position: 11px 31px;
+                        }
+                        &.reunion {
+                            background-position: -49px 31px;
+                        }
+                        &.travail {
+                            background-position: -110px 31px;
+                        }
+                    }
+                    &.active, &:hover {
+                        &:before {
+                            background-color: $blanc;
+                        }
+                        a {
+                            color: $blanc;
+                            border: none;
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+            .tab-content {
+                position: relative;
+                z-index: 5;
+                
+                @media screen and (min-width: 768px) and (max-width: 1159px) {
+                    left: 15px;
+                }
+                .icone {
+                    height: 96px;
+                    background-color: $bleu-marine3;
+                    color: $blanc;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    
+                    div {
+                        position: relative;
+                        padding-top: 74px;
+                        background: url(../images/icones-reservation.png) no-repeat;
+                        z-index: 2;
+                    }
+                    &.hotel {
+                        div {
+                            background-position: 18px 28px;  
+                            
+                            @media screen and (max-width: 1159px) {
+                                background-position: 12px 28px;
+                            }
+                        }
+                    }
+                    &.reunion {
+                        div {
+                            background-position: -42px 28px;
+                            
+                            @media screen and (max-width: 1159px) {
+                                background-position: -48px 28px;
+                            }
+                        }
+                    }
+                    &.travail {
+                        div {
+                            background-position: -103px 28px;
+                            
+                            @media screen and (max-width: 1159px) {
+                                background-position: -109px 28px;
+                            }
+                        }
+                    }
+                    &:before {
+                        content: "";
+                        display: block;
+                        width: 60px;
+                        height: 60px;
+                        background-color: $blanc;
+                        position: absolute;
+                        top: 10px;
+                        left: 50%;
+                        z-index: 1;
+                        @include transform-translate(-50%, 0);
+                        @include border-radius(50%);
+                    }
+                }
+                .bloc {
+                    margin-bottom: 4px;
+
+                    @media screen and (max-width: 767px) {
+                        margin-bottom: 0;
+                    }
+                    .destination {
+                        display: inline-block;
+                        float: left;
+                        border-right: 1px solid $gris3;
+                        vertical-align: top;
+                        height: 46px;
+                        width: 50%;
+
+                        @media screen and (max-width: 767px) {
+                            width: 100%;
+                            border-right: none;
+                            margin-bottom: 6px;
+                        }
+                        &.large {
+                            width: 100%;
+                            border-right: none;
+                        }
+                        input {
+                            width: 100%;
+                            height: 100%;
+                            line-height: 100%;
+                            border: none;
+                            padding: 12px 9px 10px;
+                        }
+                    }
+                    .date {
+                        display: inline-block;
+                        float: left;
+                        vertical-align: top;
+                        width: 50%;
+                        height: 46px;
+
+                        @media screen and (max-width: 767px) {
+                            width: 100%;
+                            height: auto;
+                        }
+                        input {
+                            display: block;
+                            float: left;
+                            border: none;
+                            padding: 12px 9px 10px;
+                            width: 50%;
+                            height: 100%;
+                            line-height: 100%;
+
+                            &.arrivee {
+                                background: url('../images/fleche-pleine.png') no-repeat right center $blanc;
+
+                                @media screen and (max-width: 767px) {
+                                    background-image: none;
+                                }
+                            }
+                            &.arrivee, &.depart {                        
+                                &:before {
+                                    content: attr(placeholder);
+                                    width: 100%;
+                                    background-color: $blanc;
+                                }
+                                &:hover, &:focus, &:active, &.actif {
+                                    &:before {
+                                        display: none;
+                                    }
+                                }
+                                @media screen and (max-width: 767px) {
+                                    width: 100%;
+                                    margin-bottom: 6px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .bloc2 {
+                    .chambre-selection {
+                        display: inline-block;
+                        vertical-align: top;
+                        height: 46px;
+                        width: 100%;
+
+                        @media screen and (max-width: 767px) {
+                            width: 100%;
+                            margin-bottom: 18px;
+                            height: auto;
+                        }
+                    }
+                    .nbr-participants {
+                        display: inline-block;
+                        vertical-align: top;
+                        height: 46px;
+                        width: 100%;
+
+                        @media screen and (max-width: 767px) {
+                            width: 100%;
+                            height: auto;
+                            margin-bottom: 18px;
+                        }
+                    }
+                    .date {
+                        input {
+                            display: block;
+                            float: left;
+                            border: none;
+                            padding: 12px 9px 10px;
+                            line-height: 100%;
+                            width: 100%;
+
+                            &.arrivee {                        
+                                &:before {
+                                    content: attr(placeholder);
+                                    width: 100%;
+                                    background-color: $blanc;
+                                }
+                                &:hover, &:focus, &:active, &.actif {
+                                    &:before {
+                                        display: none;
+                                    }
+                                }
+                                @media screen and (max-width: 767px) {
+                                    width: 100%;
+                                    margin-bottom: 6px;
+                                }
+                            }
+                        }
+                    }
+                    .colonne {
+                        display: inline-block;
+                        float: left;
+                        vertical-align: top;
+                        height: 100%;
+                        height: 46px;
+                        background-color: $blanc;
+                        border-right: 1px solid $blanc2;
+                        border-left: none;
+                        
+                        &.col-1-3 {
+                            width: 33.3333%;
+                        }
+                        &.col-3-7 {
+                            width: 42.8571%;
+                            
+                            @media screen and (max-width: 767px) {
+                                width: 100%;
+                            }
+                        }
+                        &.col-4-7 {
+                            width: 57.1429%;
+                            
+                            @media screen and (max-width: 767px) {
+                                width: 100%;
+                            }
+                        }
+                        @media screen and (max-width: 767px) {
+                            background-color: transparent;
+                            border-right: none;
+                            padding: 5px 0;
+                            height: auto;
+                        }
+                        label {
+                            font-family: "Roboto-Medium";
+                            font-size: 13px;
+                            font-weight: normal;
+                            color: $bleu-marine;
+                            height: 100%;
+                            width: 100px;
+                            line-height: 100%;
+                            margin-bottom: 0;
+                            padding: 16px 0 12px;
+                            text-indent: -3000px;
+                            
+                            &.single {
+                                background: url('../images/picto-chambre-single.png') no-repeat center center;
+                                background-size: 60px;
+                            }
+                            &.twin {
+                                background: url('../images/picto-chambre-twin.png') no-repeat center center;
+                                background-size: 60px;
+                            }
+                            &.double {
+                                background: url('../images/picto-chambre-double.png') no-repeat center center;
+                                background-size: 60px;
+                            }
+                            &.numberofparticipants {
+                                width: 66%;
+                                padding: 16px 10px 12px;
+                                text-indent: initial;
+                            }
+                            @media screen and (min-width: 768px) and (max-width: 991px) {
+                                padding-right: 25px;
+                            }
+                            @media screen and (max-width: 767px) {
+                                width: 100%;
+                                padding-right: 0;
+                                text-align: center;
+                            }
+                        }
+                        .pad {
+                            display: inline-block;
+                            background-color: $blanc;
+                            text-align: center;
+                            line-height: 100%;
+
+                            @media screen and (max-width: 767px) {
+                                width: 100%;
+                                text-align: center;
+                                padding: 10px 0;
+                                border-top: 1px solid $blanc2;
+                                border-left: 1px solid $blanc2;
+                                border-bottom: 1px solid $blanc2;
+                            }
+                            span {
+                                padding: 0 3px;
+                            }
+                            button {
+                                background-color: transparent;
+                                border: none;
+
+                                &.plus {
+                                    font-family: "Roboto-Medium";
+                                    font-size: 13px;
+                                    color: $bleu-marine;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .btn-recherche {
+                height: 96px;
+                @include border-radius(0);
+                margin: 0 -15px;
+
+                @media screen and (max-width: 767px) {
+                    height: auto;
+                    margin: 0;
+                }
+            }
+        }
+        .carousel-indicators {
+            position: absolute;
+            top: 75px;
+            right: 0;
+            bottom: auto;
+            
+            @media screen and (max-width: 767px) {
+                display: none;
+            }
+        }
+    }
+    .colonne-principale-1 {
+        padding-bottom: 40px;
+        
+         @media screen and (max-width: 767px) {
+            padding: 30px 0 0;
+         }   
+        
+        .selection-hotel {
+            padding-top: 20px;
+            padding-bottom: 30px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid $gris-fonce;
+            
+            &:last-child {
+                border-bottom: none;
+                margin-bottom: 0px;
+                padding-bottom: 20px;
+            }
+            .titre-accueil {
+                position: relative;
+                margin-bottom: 25px;
+                
+                @media screen and (max-width: 767px) {
+                    margin-bottom: 20px;
+                }
+
+                h2 {
+                    display: inline-block;
+                    font-family: "Roboto-Thin";
+                    color: $gris-fonce;
+                    padding-right: 17px;
+                    background-color: $blanc;
+                    position: relative;
+                    z-index: 10;
+                    
+                    @media screen and (max-width: 767px) {
+                        font-size: 20px;
+                    }
+                }
+                a {
+                    font-family: "Roboto-Medium";
+                    font-size: 14px;
+                    color: $gris-fonce;
+                    padding-left: 7px;
+                    float: right;
+                    background-color: $blanc;
+                    position: relative;
+                    top: 12px;
+                    z-index: 10;
+                    text-decoration: underline;
+                    
+                    @media screen and (max-width: 767px) {
+                        float: none;
+                        text-align: center;
+                        display: inline-block;
+                        width: 100%;
+                        top: initial;
+                    }
+                }
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 1px;
+                    border-top: 1px dashed $gris-fonce;
+                    position: absolute;
+                    top: 23px;
+                    
+                    @media screen and (max-width: 767px) {
+                        display: none;
+                    }
+                }
+            }
+            .hotel {
+                display: block;
+                color: $gris-fonce;
+                text-decoration: none;
+                margin: 0 -15px;
+                padding: 15px;
+                
+                &:hover {
+                    background-color: $gris-clair;
+                }
+                .photo {
+                    margin-bottom: 15px;
+                }
+                .description {
+                    margin-bottom: 10px;
+                    padding-bottom: 5px;
+                    border-bottom: 1px dashed $gris-fonce;
+                    
+                    p {
+                        font-family: "Roboto-Light";
+                        font-size: 12px;
+
+                        &.nom {
+                            font-family: "Roboto-Bold";
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .pied {
+                    font-family: "Roboto-Bold";
+                    font-size: 12px;
+                    position: relative;
+                    height: 30px;
+
+                    @media screen and (max-width: 767px) {
+                        margin-bottom: 20px;
+                    }
+
+                    .avis {
+                        position: relative;
+                        bottom: 0;
+                        float: left;
+                        width: 50%;
+                        color: $bleu-marine;
+                        line-height: 25px;
+                    }
+                    .prix {
+                        position: relative;
+                        bottom: 0;
+                        float: left;
+                        width: 50%;
+                        text-align: right;
+                        line-height: 25px;
+
+                        span {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        .photo-home {
+            position: relative;
+            
+            .texte {
+                position: absolute;
+                top: 25%;
+                width: 100%;
+                padding: 0 20%;
+                text-align: center;
+                z-index: 5;
+                
+                p {
+                    font-family: "Roboto-Thin";
+                    font-size: 46px;
+                    line-height: 56px;
+                    color: $blanc;
+                    margin-bottom: 20px;
+                }
+                a {
+                    display: inline-block;
+                    font-family: "Roboto-Bold";
+                    font-size: 18px;
+                    color: $blanc;
+                    background-color: $bleu-marine;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                    
+                    &:hover {
+                        background-color: $bleu-marine-hover;
+                    }
+                }
+            }
+        }
+    }
+        .photo-home2 {
+            position: relative;
+            background-image: url("../images/photo-home2.jpg");
+            background-size: cover;
+            background-position: center center;
+            min-height: 419px;
+              @media (max-width : 767px) { 
+                   padding-bottom: 25px;
+                }
+
+            .ph-col {
+                color: #fff;
+                 padding: 20px 0px 20px 30px;
+                text-transform: uppercase;
+                p {
+                font-family: "Roboto-light";
+                font-size: 41px;
+                line-height: 41px;
+                margin-bottom: 20px;
+                }
+                .oui {
+                    display: block;
+                    font-size: 71px;
+                    font-weight: bold;
+                    font-family: "Roboto-bold";
+                    line-height: 60px;
+                }
+             }
+            
+            .ph-ctn-btn {
+                text-align: center;
+                 margin-top: 65px;
+                @media (max-width : 767px) { 
+                     margin-top: 25px;
+                }
+                a {
+                    display: inline-block;
+                    font-family: "Roboto-Bold";
+                    font-size: 18px;
+                    color: $blanc;
+                    background-color: $bleu-marine;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                    
+                    &:hover {
+                        background-color: $bleu-marine-hover;
+                    }
+                }
+            }
+        }
+  
+        
+    .nos-engagements {
+        h2 {
+            font-size: 50px;
+            font-family: "Roboto-Thin";
+            color: $gris-fonce;
+            margin-bottom: 70px;
+        }
+    }
+    .concept.mon-profil {
+        background-color: $blanc2;
+        padding: 70px 0 125px;
+        
+        .accroche {
+            font-family: "Roboto-Thin";
+            font-size: 31px;
+            text-align: center;
+            color: $bleu-marine6;
+        }
+        .etapes {
+            .numeros {
+                &:before {
+                    z-index: 0;
+
+                    @media (max-width: 991px) {
+                        display: none !important;
+                    }
+                }
+                .num-box {
+                    $border-num-box : solid 1px $bleu-marine;     
+                    min-height: 193px;
+
+                    @media  (max-width: 991px) and (min-width: 768px) {
+                        padding-top: 20px;  
+                        &:nth-of-type(1) {
+                            border-right : $border-num-box; 
+                            border-bottom: $border-num-box;
+                        }
+                        &:nth-of-type(3) { 
+                           border-right : $border-num-box; 
+                        }
+                        &:nth-of-type(2) { 
+                            border-bottom: $border-num-box;
+                        }
+                    }
+
+                    @media (max-width: 767px) {
+                        border-bottom: $border-num-box;
+                        margin-bottom: 20px;
+                    }
+                }
+                p {
+                    margin-top: 25px;
+                }
+            }
+            // row 
+            .solution-pour-vous {
+                ul ,li {
+                    list-style: none;
+                }
+
+                text-align: center;
+                h2 {
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+
+                .spv-box {
+                    @media (min-width : 768px) and (max-width: 991px) {
+                          min-height: 270px;
+                          margin-bottom: 30px;
+                    }
+                    .spv-title {  
+                        font-size: 16px;
+                        font-family: 'Roboto-Bold';
+                        text-transform: uppercase;
+                        margin-top: 30px;
+                        @media (max-width: 767px) {
+                            margin: 15px auto 30px;
+                            width: 66%;
+                        }
+                    }
+
+                    .spv-txt {
+                        text-align: left;
+                        @media (max-width: 767px) {
+                            display: none;
+                        }
+
+                        li {
+                            margin-top: 20px;
+                        }
+                        .puce {
+                            color : $pr-bleu; 
+                        }
+                    }
+
+                }  
+            }
+        }
+    }
+    .tchat {        
+        position: relative;
+        
+        .tchat-content {
+            position: fixed;
+            bottom: 0;
+            right: 20px;
+            z-index: 1000;
+            display: inline-block;
+            width: 190px;
+
+            &.bottom {
+                position: absolute;
+            }
+            .btn-open {
+                display: inline-block;
+                width: 100%;
+                padding: 13px 15px 13px 60px;
+                background: url('../images/tchat.png') no-repeat left 20px center $bleu-marine;
+                text-decoration: none;
+                @include box-shadow(0px, -15px, 10px, -10px, rgba($noir, 0.3), true);
+
+                p {
+                    font-family: "Roboto-Light";
+                    font-size: 11px;
+                    line-height: 13px;
+                    text-transform: uppercase;
+                    color: $blanc;
+
+                    &.hors-ligne {
+                        font-family: "Roboto-Bold";
+                    }
+                }
+            }
+            .wrapper {
+                display: none;
+            }
+            &.open {
+                background-image: none;
+                background-color: $gris-clair;
+                width: 296px;
+                height: 330px;
+                overflow: hidden;
+
+                .btn-open {
+                    display: none;
+                }
+                .wrapper {
+                    display: block;
+
+                    .btn-close {
+                        display: inline-block;
+                        width: 100%;
+                        padding: 17px 20px 15px;
+                        background: url('../images/reduire.jpg') no-repeat center right 20px $bleu-marine;
+                        text-decoration: none;
+
+                        p {
+                            font-family: "Roboto-Bold";
+                            font-size: 13px;
+                            text-transform: uppercase;
+                            color: $blanc;
+                        }
+                    }
+                    .dialogue {
+                        padding: 10px;
+                        overflow-y: auto;
+                        height: 203px;
+                        width: calc(100% + 18px);
+
+                        .date {
+                            text-align: center;
+                            font-size: 12px;
+                            color: $bleu-marine;
+                        }
+                        .nom {
+                            color: $gris4;
+                        }
+                        .reponse {
+                            .photo {
+                                width: 43px;
+                                height: 43px;
+                                float: left;
+
+                                & + .texte {
+                                    float: none;
+                                    background-color: $blanc;
+                                    margin-left: 53px;
+                                }
+                            }
+                            .texte {
+                                float: right;
+                                width: 170px;
+                                padding: 8px 10px;
+                                background-color: $bleu-marine;
+                                border: 1px solid $gris5;
+                                margin-bottom: 7px;
+                            }
+                            &:after {
+                                content: "";
+                                display: block;
+                                clear: both;
+                            }
+                        }
+                    }
+                    .bottom {
+                        input {
+                            width: 100%;
+                            padding: 11px 16px 8px;
+                            border: none;
+                            border-bottom: 1px solid $gris;
+                            background-color: $blanc3;
+
+                        }
+                        .options {
+                            text-align: right;
+                            color: $bleu-marine;
+                            padding: 8px 12px 7px;
+                            background-color: $blanc3;
+
+                            a {
+                                color: $bleu-marine;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+/***********************/
+/*     PAGE PRESSE     */
+/***********************/
+
+.content {
+    .colonne-principale-2.presse {
+        .row {
+            text-align: center;
+            [class*="col-"] {
+                @media (min-width: 765px) {
+                    display: inline-block;
+                    float: none;
+                    margin-left: -4px;
+                }
+
+                .vignette {
+                    display: block;
+                    position: relative;
+                    border: 1px solid #E0E0E0;
+                    text-align: center;
+                    height: 200px;
+
+                    @media (max-width: 767px) {
+                        margin-top: 30px;
+                    }
+                    .ep-img {
+                        position: relative;
+                        top: 50%;
+                        @include transform-translate(0, -50%);
+                    }
+                    .ep-mask {
+                        display: none;
+                        position: absolute;
+                        top: 0;
+                        height: 100%;
+                        width: 100%;
+                        background-color: rgba($noir, 0.75);
+
+                        .ep-txt {
+                            position: relative;
+                            top: 50%;
+                            @include transform-translate(0, -50%);
+                            color: $blanc;
+                            text-transform: uppercase;
+                        }
+                    }            
+                    &:hover {
+                        .ep-mask {
+                            display: block;
+                        }
+                    }
+                }
+                @media (max-width: 767px) {
+                    &:first-child {
+                        .vignette {
+                            margin-top: 0px;
+                        }
+                    }
+                }
+                @media (min-width: 768px) {
+                    &:nth-child(n+7) {
+                        .vignette {
+                            margin-top: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

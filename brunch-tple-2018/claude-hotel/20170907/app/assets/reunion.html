@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>OuiBusiness</title>
+<link rel="stylesheet" type="text/css" href="jquery/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap-select/bootstrap-select.min.css">
+<link rel="stylesheet" type="text/css" href="bxslider/jquery.bxslider.css">
+<link rel="stylesheet" type="text/css" href="font-awesome/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+</head>
+<body>
+	<header>
+	<!-- Contenu du header -->
+	<div class="container-fluid">
+		<nav class="navbar navbar-custom">
+			<div class="navbar-header">
+				<div class="logo-container">
+		    		<a class="navbar-logo" href="index.html">
+		    			<div>
+		    				<img src="images/logo.png" alt="Logo OuiBusiness" title="Retour à l'accueil">
+		    			</div>
+		    			<h1>OuiBusiness.</h1>
+		    		</a>
+				</div>
+		    </div>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="navbar-collapse">
+				<ul class="nav navbar-nav navbar-right hidden-xs">
+                    <li>
+						<a href="#" class="pourquoi-oui-business">Pourquoi Oui Business ?</a>
+					</li>
+                    <li>
+						<a href="#" class="mode-emploi">Mode d'emploi</a>
+					</li>
+					<li>
+						<a href="inscription.html" class="inscription">S'inscrire</a>
+					</li>
+					<li>
+						<a href="#" class="boutique"><span>3</span></a>
+					</li>
+					<li class="dropdown">
+				        <a href="#" class="dropdown-toggle mon-compte" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bonjour Claude</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Mes réservations</a></li>
+                            <li><a href="#" class="lvl2">Mes factures</a></li>
+                            <li><a href="#">Mes listes</a></li>
+                            <li><a href="profil.html">Mon profil</a></li>
+                            <li><a href="#">Se déconnecter</a></li>
+                        </ul>
+					</li>
+					<li>
+						<a href="connexion.html" class="connexion">Se connecter</a>
+					</li>
+					<li>
+						<a href="messagerie.html" class="messagerie"></a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle langue fr" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="langue fr"></a></li>
+                            <li><a href="#" class="langue en"></a></li>
+                        </ul>
+					</li>
+					<li>
+						<a href="#" class="affichez-etablissement">Affichez votre établissement</a>
+					</li>
+				</ul>
+                <div class="hidden-sm hidden-md hidden-lg">
+                    <button type="button" class="navbar-toggle collapsed btnMenu" data-toggle="collapse" data-target="#" aria-expanded="false">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+		    </div><!-- /.navbar-collapse -->
+		</nav>
+	</div>
+</header>
+	<div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-md-push-3">
+                    <div class="colonne-principale-2 reunion">
+                        <h2>Salle de réunion 9 personnes proche Bastille</h2>
+                        <p class="adresse">125 rue de l'Adresse - 75001 Paris</p>
+                        <div id="carousel-hotel" class="carousel slide" data-ride="carousel">
+                            <div class="infos-generales">
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img src="images/photo4.jpg"/>
+                                        <p>Photo 1</p>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/photo4.jpg"/>
+                                        <p>Photo 2</p>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/photo4.jpg"/>
+                                        <p>Photo 3</p>
+                                    </div>
+                                </div>
+                                <div class="colonne-droite">
+                                    <div class="note">8/10</div>
+                                    <div class="avis">235 avis</div>
+                                    <ul>
+                                        <li>Proche de la gare</li>
+                                        <li>Parking sur place</li>
+                                        <li>Internet haut débit</li>
+                                    </ul>
+                                    <a href="#" class="reservation">Réserver</a>
+                                    <a href="#" class="favori"></a>
+                                </div>
+                            </div>
+                            <ol class="carousel-indicators liste-vignettes hidden-xs">
+                                <li data-target="#carousel-hotel" data-slide-to="0" class="vignette active">
+                                    <img src="images/photo1.jpg" />
+                                </li>
+                                <li data-target="#carousel-hotel" data-slide-to="1" class="vignette">
+                                    <img src="images/photo2.jpg" />
+                                </li>
+                                <li data-target="#carousel-hotel" data-slide-to="2" class="vignette">
+                                    <img src="images/photo3.jpg" />
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="infos-complementaires">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="liste-salle">
+                                        <div class="u">9 pers.</div>
+                                        <div class="rectangulaire">12 pers.</div>
+                                        <div class="classe">15 pers.</div>
+                                        <div class="vide">30 pers.</div>
+                                        <div class="theatre">12 pers.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 row">
+                                    <div class="col-xs-6 col-sm-4 prix">
+                                        <p><span>200 €</span>1/2 jour (4h)</p>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-4 prix">
+                                        <p><span>400 €</span> jour (8h)</p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 surface">
+                                        <p>60 m²</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="descriptif">
+                            <h3>Descriptif</h3>
+                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+                            <p><strong>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</strong><br/>Mauris in erat justo. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam.</p>
+                        </div>
+                        <div class="carte">
+                            <h3>Voir sur la carte</h3>
+                            <div class="map">
+                                <img src="images/map.jpg" alt="carte" />
+                                <div class="btn-container">
+                                    <button class="btn btn-primary btn-recherche" data-toggle="modal" data-target=".affichage-carte">Afficher la carte</button>
+                                </div>
+                            </div>
+                            <div class="modal fade affichage-carte" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5662239.764891082!2d-2.277869850397838!3d46.13550063337387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd54a02933785731%3A0x6bfd3f96c747d9f7!2sFrance!5e0!3m2!1sfr!2sfr!4v1469176989063" width="100%" frameborder="0" style="border:0; height: 100%;" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reservation">
+                            <h3>Réservation</h3>   
+                            <form>
+                                <div class="date">
+                                    <input type="date" class="depart" placeholder="Date" />
+                                </div>
+                                <div class="nbr-participants">
+                                    <label class="nbr">Nombre de personnes</label>
+                                    <div class="pad">
+                                        <button>-</button>
+                                        <span>0</span>
+                                        <button class="plus">+</button>
+                                    </div>
+                                </div>
+                                <div class="btn-container">
+                                    <button class="btn btn-primary btn-recherche">Rechercher</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="recherche">
+                            <h4>Lieu atypique</h4>
+                            <div class="details">
+                                <div class="row">
+                                    <div class="col-sm-2 col-md-2 duree">
+                                        <p><strong>Journée entière</strong><br/>9h - 12h</p>
+                                    </div>
+                                    <div class="col-sm-5 col-md-4 liste-salle clearfix">
+                                        <a href="#" class="u">En U</a>
+                                        <a href="#" class="rectangulaire">Rectangulaire</a>
+                                        <a href="#" class="classe">Salle de classe</a>
+                                        <a href="#" class="vide">Vide pour cocktail</a>
+                                        <a href="#" class="theatre">Théâtre</a>
+                                    </div>
+                                    <div class="col-sm-3 col-md-2 options">
+                                        <p><strong>Annulation gratuite (avant le 15 juillet 2016)</strong></p>
+                                    </div>
+                                    <div class="col-sm-2 prix">
+                                        <p><span>100 €</span></p>
+                                    </div>
+                                    <div class="col-sm-12 col-md-2 bouton">
+                                        <div class="btn-container">
+                                            <button class="btn btn-primary btn-recherche">Réserver</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resume">
+                                <div class="row">
+                                    <div class="col-sm-3 duree">
+                                        <p><span>3h</span><br/>9h - 12h</p>
+                                    </div>
+                                    <div class="col-sm-4 options">
+                                        <p>
+                                            <span>Lieu atypique</span>
+                                            <strong>Annulation gratuite (avant le 15 juillet 2016)</strong>
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-2 prix">
+                                        <p><span>100 €</span></p>
+                                    </div>
+                                    <div class="col-sm-3 bouton">
+                                        <div class="btn-container">
+                                            <button class="btn btn-primary btn-recherche">Réserver</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chambre">
+                                <div class="titre">Chambre Double ou Lits Jumeaux Standard</div>
+                                <div class="offre">
+                                    <div class="photo">
+                                        <img src="images/photo4.jpg" alt="" />
+                                    </div>
+                                    <div class="descriptif">
+                                        <p class="lit">2 lits jumeaux</p>
+                                        <p>Salle de bain privative<br/>
+                                        Superficie 29 m²<br/>
+                                        Climatisation</p>
+                                    </div>
+                                    <div class="options">
+                                        <p class="plus">Annulation gratuite (avant le 15 juillet 2016)</p>
+                                        <p class="plus">Petit-déjeuner compris</p>
+                                    </div>
+                                    <div class="prix clearfix">
+                                        <div class="avant">79 €</div>
+                                        <div class="remise">-25 %</div>
+                                        <div class="apres">55 €</div>
+                                    </div>
+                                    <div class="btn-container">
+                                        <select class="selectpicker">
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                        <button class="btn btn-primary btn-recherche">Réserver</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chambre">
+                                <div class="titre">Chambre Double</div>
+                                <div class="offre">
+                                    <div class="photo">
+                                        <img src="images/photo4.jpg" alt="" />
+                                    </div>
+                                    <div class="descriptif">
+                                        <p class="lit">1 lit double</p>
+                                        <p>Salle de bain privative<br/>
+                                        Superficie 32 m²<br/>
+                                        Climatisation</p>
+                                    </div>
+                                    <div class="options">
+                                        <p>Non remboursable</p>
+                                        <p>Petit-déjeuner en supplément 12 €</p>
+                                    </div>
+                                    <div class="prix clearfix">
+                                        <div class="avant">85 €</div>
+                                        <div class="remise">-25 %</div>
+                                        <div class="apres">69 €</div>
+                                    </div>
+                                    <div class="btn-container">
+                                        <select class="selectpicker">
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                        <button class="btn btn-primary btn-recherche">Réserver</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chambre">
+                                <div class="titre">Chambre Double</div>
+                                <div class="offre">
+                                    <div class="photo">
+                                        <img src="images/photo4.jpg" alt="" />
+                                    </div>
+                                    <div class="descriptif">
+                                        <p class="lit">1 lit double</p>
+                                        <p>Salle de bain privative<br/>
+                                        Superficie 15 m²<br/>
+                                        Climatisation</p>
+                                    </div>
+                                    <div class="options">
+                                        <p class="plus">Annulation gratuite (avant le 15 juillet 2016)</p>
+                                        <p>Petit-déjeuner en supplément 12 €</p>
+                                    </div>
+                                    <div class="prix clearfix">
+                                        <div class="avant">65 €</div>
+                                        <div class="remise">-25 %</div>
+                                        <div class="apres">50 €</div>
+                                    </div>
+                                    <div class="btn-container">
+                                        <select class="selectpicker">
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                        <button class="btn btn-primary btn-recherche">Réserver</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="equipements-services">
+                            <h3>Equipements et services</h3>   
+                            <div class="row liste">
+                                <div class="col-md-4"><span class="actif">Air conditionné</span></div>
+                                <div class="col-md-4"><span>Petit-déjeuner offert</span></div>
+                                <div class="col-md-4 actif"><span class="actif">Coffre-fort</span></div>
+                                <div class="col-md-4"><span>Chambre non-fumeur</span></div>
+                                <div class="col-md-4"><span>Réception 24H 7J/7</span></div>
+                                <div class="col-md-4"><span>Spa / Hammam</span></div>
+                                <div class="col-md-4"><span>Wifi Gratuit</span></div>
+                                <div class="col-md-4"><span>Parking</span></div>
+                                <div class="col-md-4"><span>Business Corner</span></div>
+                                <div class="col-md-4"><span class="actif">Cafetière / bouilloire en chambre</span></div>
+                                <div class="col-md-4"><span class="actif">Restaurant sur place</span></div>
+                                <div class="col-md-4"><span>Fumoir</span></div>
+                                <div class="col-md-4"><span class="actif">Chaînes TV Sport</span></div>
+                                <div class="col-md-4"><span>Bar</span></div>
+                                <div class="col-md-4"><span>Salle de réunion</span></div>
+                                <div class="col-md-4"><span>Minibar</span></div>
+                                <div class="col-md-4"><span>Piscine</span></div>
+                                <div class="col-md-4"><span>Room-service</span></div>
+                                <div class="col-md-4"><span>Prise USB en chambre pour recharge</span></div>
+                                <div class="col-md-4"><span>Fitness</span></div>
+                                <div class="col-md-4"><span>Bagagerie</span></div>
+                            </div>
+                        </div>
+                        <div class="infos-pratiques">
+                            <h3>Infos pratiques</h3>   
+                            <p>Ouvert 7j/7, réception 24h/24<br/>
+                            Les chambres sont disponibles à partir de 14h00<br/>
+                            Les chambres doivent être libérées avant 12h00</p>
+                        </div>
+                        <div class="y-aller">
+                            <h3>Comment s'y rendre</h3>   
+                            <h4>En transport</h4>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <span class="m">M</span>
+                                        <span class="m2">2</span>
+                                        <span class="m3">3</span>
+                                    </td>
+                                    <td>Villiers</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="m">M</span>
+                                        <span class="m3">3</span>
+                                        <span class="m12">12</span>
+                                        <span class="m13">13</span>
+                                        <span class="m14">14</span>
+                                    </td>
+                                    <td>Saint-Lazare</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="r">RER</span>
+                                        <span class="re">E</span>
+                                    </td>
+                                    <td>Haussman - Saint-Lazare</td>
+                                </tr>
+                            </table>
+                            <h4>En voiture</h4>
+                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+                        </div>
+                        <div class="avis-clients">
+                            <h3>Avis des clients</h3>
+                            <img src="images/avis.jpg" alt="avis" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-md-pull-9">
+                    <div class="colonne-gauche">
+                        <div class="formulaire">
+                            <form>
+                                <div class="form-control">
+                                    <input type="text" class="" placeholder="Destination / Nom de l'établissement" />
+                                </div>
+                                <div class="form-control">
+                                    <input type="date" class="arrivee" placeholder="Date de location" />
+                                </div>
+                                <div class="form-control type-salle">
+                                    <select class="selectpicker" title="Type de salle">
+                                        <option>Salle de réunion</option>
+                                        <option>Salle de travail</option>
+                                    </select>
+                                </div>
+                                <div class="form-control nbr-participants">
+                                    <label class="nbr">Nombre de personnes</label>
+                                    <div class="pad">
+                                        <button>-</button>
+                                        <span>0</span>
+                                        <button class="plus">+</button>
+                                    </div>
+                                </div>
+                                <div class="form-control btn-container">
+                                    <button class="btn btn-primary btn-recherche">Rechercher</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="contact-applis">
+                            <div class="wrapper">
+                                <h3>S'inscrire<button href="#" role="button" data-toggle="popover" data-trigger="focus" data-placement="right" title="Lorem ipsum" data-content="This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor.">?</button></h3>
+                                <div class="form-control">
+                                    <input type="email" class="email" placeholder="Votre email" />
+                                    <input type="submit" class="valider" value="OK" />
+                                </div>
+                            </div>
+                            <div class="wrapper no-border">
+                                <h3>Contactez-nous !</h3>
+                                <div class="ligne numero">
+                                    01 23 45 67 89
+                                    <div>Prix d'un appel local</div>
+                                </div>
+                                <div class="ligne ecrire">
+                                    Nous écrire
+                                </div>
+                            </div>
+                            <div class="wrapper hidden-sm hidden-md hidden-lg no-border">
+                                <div class="photo-home">
+                                    <img src="images/photo-home.jpg" alt="photo" />
+                                    <div class="texte">
+                                        <p>Lorem ipsum dolor sit amet</p>
+                                        <a href="#" class="btn-offres">Voir toutes les offres</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrapper">
+                                <h3><div>Télécharger</div>notre application</h3>
+                                <div class="application">
+                                    <a href="#" class="appStore"></a>
+                                    <a href="#" class="googleStore"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dernieres-reservations hidden-xs">
+                            <h3>Dernières réservations</h3>
+                            <div class="liste-hotel">
+                                <a href="hotel.html" class="hotel">
+                                    <div class="photo">
+                                        <img src="images/photo1.jpg" alt="Hôtel 1"/>
+                                    </div>
+                                    <p class="nom">Nom de l'hôtel****</p>
+                                    <p class="lieu">Montparnasse<span class="note">8/10</span></p>
+                                </a>
+                                <a href="hotel.html" class="hotel">
+                                    <div class="photo">
+                                        <img src="images/photo2.jpg" alt="Hôtel 2"/>
+                                    </div>
+                                    <p class="nom">Nom de l'hôtel****</p>
+                                    <p class="lieu">Montparnasse<span class="note">8/10</span></p>
+                                </a>
+                                <a href="hotel.html" class="hotel">
+                                    <div class="photo">
+                                        <img src="images/photo3.jpg" alt="Hôtel 3"/>
+                                    </div>
+                                    <p class="nom">Nom de l'hôtel****</p>
+                                    <p class="lieu">Montparnasse<span class="note">8/10</span></p>
+                                </a>
+                            </div>
+                            <p class="see-all">
+                                <a href="#">Tout voir ></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nos-engagements fond">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="images/engagements.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	<div class="menu-mobile hidden-sm hidden-md hidden-lg">
+	<div class="col-xs-10 col-xs-offset-2">
+        <div class="wrapper">
+            <nav class="menu-content">
+                <ul>
+                    <li>
+						<a href="#" class="pourquoi-oui-business">Pourquoi Oui Business ?</a>
+					</li>
+                    <li>
+						<a href="#" class="mode-emploi">Mode d'emploi</a>
+					</li>
+					<li>
+						<a href="inscription.html" class="inscription">S'inscrire</a>
+					</li>
+					<li>
+						<a href="#" class="boutique"><span>3</span>Mon panier</a>
+					</li>
+					<li>
+				        <a href="#" class="mon-compte">Bonjour Claude</a>
+					</li>
+					<li>
+						<a href="connexion.html" class="connexion">Se connecter</a>
+					</li>
+					<li>
+						<a href="messagerie.html" class="messagerie">Contact</a>
+					</li>
+					<li>
+						<a href="#" class="langue fr">Français</a>
+					</li>
+					<li>
+						<a href="#" class="affichez-etablissement">Affichez votre établissement</a>
+					</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+	<footer class="hidden-xs">
+    <div class="top">
+        <div class="container">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Pourquoi Oui Business</a></li>
+                <li><a href="#">Mode d'emploi</a></li>
+                <li><a href="#">Afficher les hôtels</a></li>
+                <li><a href="#">Afficher les salles de réunion</a></li>
+                <li><a href="#">Afficher les salles de travail</a></li>
+                <li><a href="#">CGV</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Nous contacter</a></li>
+            </ul>
+        </div>
+    </div>
+	<div class="container">
+        <div class="row sitemap">
+            <div class="col-sm-6 col-md-3">
+                <h4>Lorem ipsum dolor</h4>
+                <ul>
+                    <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                    <li><a href="#">Proin gravida nibhv vel auctor</a></li>
+                    <li><a href="#">Proin gravida nibhv velit auctor</a></li>
+                    <li><a href="#">Proin velit</a></li>
+                    <li><a href="#">Proin gravida nibhv vel velit</a></li>
+                    <li><a href="#">Proin gravida vel velit</a></li>
+                    <li><a href="#">Proin gravida vel auctor</a></li>
+                    <li><a href="#">Proin nibhv vel velit auctor</a></li>
+                    <li><a href="#">Proin gravida</a></li>
+                    <li><a href="#">Proin vel velit auctor</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <h4>Lorem ipsum dolor</h4>
+                <ul>
+                    <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                    <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                    <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                    <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                    <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                </ul>
+                <h4>Lorem ipsum dolor</h4>
+                <ul>
+                    <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                    <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                    <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                    <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <h4>Lorem ipsum dolor</h4>
+                <ul>
+                    <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                    <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                    <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                    <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                    <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                    <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                    <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                    <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-md-3">
+            <h4>Lorem ipsum dolor</h4>
+            <ul>
+                <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+                <li><a href="#">Proin gravida nibhv vel velit auctor</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="bottom">
+            <div class="links">
+                <a href="#" class="facebook"></a>
+                <a href="#" class="instagram"></a>
+                <a href="#" class="twitter"></a>
+            </div>
+            <div class="logo">
+                <a href="#">
+                    <img src="images/logo-footer.png" />
+                </a>
+            </div>
+        </div>
+	</div>
+</footer>
+	
+<script src="jquery/jquery.js"></script>
+<script src="jquery/jquery-ui.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="bootstrap-select/bootstrap-select.min.js"></script>
+<script src="bxslider/jquery.bxslider.min.js"></script>
+<script src="js/vendor.js"></script>
+<script src="js/app.js"></script>
+<script>require('js/script')</script>
+
+
+
+
+                                    <script>
+                                    $(document).ready(function(){
+
+                                    });
+                                    </script>
+</body>
+</html>

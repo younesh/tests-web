@@ -1,0 +1,194 @@
+.page-editionOperateur {
+    .ctn-btn-center {
+        padding: 15px 0;
+        button {
+            text-transform: uppercase;
+        }
+    }
+    .eo-content {
+        margin-top: 15px;
+    }
+    .b2-champs {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: -3px;
+        margin-top: -1px;
+    }
+    .frCheckbox {
+        >* {
+            vertical-align: middle;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        .choix input[type="checkbox"]+label:after {
+            left: 0px;
+        }
+    }
+    .form-row {
+        padding: 0px 8px 0px;
+        margin-bottom: 5px;
+        label {
+            width: 151px;
+        }
+        input,
+        select {
+            width: calc(100% - 171px);
+        }
+        .fr-link-right {
+            float: right;
+            margin-top: 5px;
+            text-decoration: underline;
+        }
+        &.frAdress {
+            .adCodePostal {
+                width: 71px;
+                margin-right: 5px;
+            }
+            .adVille {
+                width: calc(100% - 251px);
+            }
+            .adNum {
+                width: 51px;
+                margin-right: 5px;
+            }
+            .adRue {
+                width: calc(100% - 232px);
+            }
+        }
+        &.frTextArea {
+            input[type='checkbox'] {
+                width: auto;
+                vertical-align: middle;
+                +span {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left: 10px;
+                }
+            }
+            label {
+                text-align: left;
+            }
+            textarea {
+                margin-top: 10px;
+                display: block;
+                width: 100%;
+                overflow-y: scroll;
+                height: 200px;
+            }
+        }
+        &.nbr-archi {
+            select {
+                width: 30%;
+            }
+            label {
+                text-align: left;
+            }
+        }
+        &.frAgenda {
+            input {
+                width: auto;
+                vertical-align: middle;
+                display: inline-block;
+            }
+            .jusqua {
+                margin-right: 15px;
+            }
+            .b2-agenda {}
+        }
+        &.frNbrGerent {
+            select {
+                width: 30%;
+            }
+            label {
+                text-align: left;
+            }
+        }
+        &.frSearchNom {
+            input {
+                background-image: url("../images/icone-searche-champs.png");
+                background-repeat: no-repeat;
+                background-position: calc(100% - 5px) center;
+                width: calc(100% - 104px);
+            }
+            .b2-Plus {
+                background-position: -246px -127px;
+                width: 24px;
+                height: 24px;
+                margin-left: 3px;
+            }
+            .snSelectedName {
+                padding-left: 74px;
+                padding-top: 5px;
+                .snItem {
+                    text-decoration: underline;
+                }
+                .b2-croix {
+                    margin-left: 5px;
+                }
+            }
+        }
+        &.frParcourir {
+            input {
+                width: calc(100% - 251px)
+            }
+            .b2-champs {
+                width: auto;
+                background-image: none;
+                padding: 2px 2px 0px;
+                height: 24px;
+                &:hover {
+                    color: #fff;
+                    text-decoration: none;
+                }
+                span {
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+    .bw-form {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .bw-reclamation {}
+    .bw-gerant {
+        .form-row {
+            label {
+                width: 54px;
+            }
+            select {
+                width: calc(100% - 73px);
+            }
+        }
+    }
+    .bw-santeOperateur {
+        .frBtn {
+            text-align: center;
+            padding-top: 10px;
+            button {
+                width: auto;  // calc(50% - 40px) || 185px ;
+                padding-left: 10px;
+                padding-right: 10px;
+                margin: auto 5px;
+                text-transform: uppercase;
+                font-size: 12px;
+                .frBadge {
+                    margin-right: 7px;
+                }
+            }
+        }
+    }
+    .bw-frequence {
+        .bwcl-row {
+            padding: 15px 0px;
+            >span {
+                margin-top: 10px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .pull-right {
+                margin-top: -11px;
+            }
+        }
+    }
+}

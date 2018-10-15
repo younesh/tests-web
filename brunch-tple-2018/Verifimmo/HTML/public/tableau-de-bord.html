@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title> Verifimmo </title>
+<link rel="stylesheet" type="text/css" href="css/vendor.css">
+<link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+
+<body>
+
+    <div class="page">
+        <header id="header">
+    <div id="ctn-logo">
+        <img src="images/logo-asterisk.png" alt="">
+    </div>
+
+    <div id="head-panel">
+        <div id="hp-left">
+            <a class="hpl-item hpl-agenda"><span>Agenda<span class="agenda-notif">2</span></span></a>
+            <a class="hpl-item hpl-compte"><span>Mon compte</span></a>
+        </div>
+
+        <div id="hp-right">
+            <a class="hpr-item hpr-bao"><span>BoIte A outils</span></a>
+            <a class="hpr-item hpr-param"><span>Parametrages</span></a>
+        </div>
+    </div>
+
+</header>
+        <div class="middle">
+            <div id="aside-bar">
+    <div class="ab-ctn-btn">
+        <a class="bouton-2 b2-openClose" id="openCloseAsideBar"></a>
+    </div>
+
+    <div class="hideWhenClosed">
+        <h2> Dossiers </h2>
+
+        <div class="ab-search">
+            <form action="">
+                <input type="text" placeholder="Rechercher un dossier" />
+                <span class="icone-info"></span>
+            </form>
+        </div>
+
+        <div class="ctn-btnNewFolder">
+            <button class="bouton-large"> 
+               <span class="icone"></span>
+               <span> Nouveau Dossier</span>
+           </button>
+        </div>
+
+        <div class="ab-menu">
+            <a class="abm-item abm-mesDossier">
+                <span> Mes dossiers </span>
+            </a>
+            <a class="abm-item abm-tousDossier">
+                <span>Tous les dossiers</span>
+            </a>
+            <a class="abm-item abm-aOuvrir">
+                <span> A ouvrir </span>
+            </a>
+
+            <a class="abm-item abm-piece">
+                <span> Pieces a traiter </span>
+            </a>
+
+            <a class="abm-item abm-bat">
+                <span> Bat </span>
+            </a>
+
+            <a class="abm-item abm-aCarencer">
+                <span> a carencer </span>
+            </a>
+
+            <a class="abm-item abm-aRelancer">
+                <span> A relancer </span>
+            </a>
+        </div>
+    </div>
+</div>
+            <div id="main-content" class="page-TableauDeBord">
+                <div class="container-fluid">
+                    <div class="row mc-head">
+                        <div class="col-sm-3">
+                            <h2> Tableau de bord </h2>
+                        </div>
+                        <div class="col-sm-3 col-sm-offset-6">
+                            <div class="mch-select">
+                                <select>
+                                <option value="option1"> Tableau de bord </option>
+                                <option value="option2"></option>
+                                <option value="option3"></option>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mc-content-tableauBord">
+
+                     <div class="col-sm-3">
+                        <div class="mc-box-tb mcboxtb-RDV">
+                            <a class="mcbox-head">
+                                <span class="mcboxh-icon"></span>
+                                <span class="mcboxh-text">  Rendez-vous </span>
+                                <span class="mcboxh-notif"> 2 </span>
+                            </a>
+                            <div class="mcbox-ctn">
+                                <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                                
+                                <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                                
+                               <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                     <div class="col-sm-3">
+                        <div class="mc-box-tb mcboxtb-aOuvrir">
+                            <a class="mcbox-head">
+                                <span class="mcboxh-icon"></span>
+                                <span class="mcboxh-text"> A ouvrir </span>
+                                <span class="mcboxh-notif"> 2 </span>
+                            </a>
+                            
+                            <div class="mcbox-ctn">
+                                <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                                
+                                <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                                
+                               <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+               
+                    <div class="col-sm-3">
+                        <div class="mc-box-tb mcboxtb-piece">
+                            <a class="mcbox-head">
+                                <span class="mcboxh-icon"></span>
+                                <span class="mcboxh-text"> Pieces A traiter  </span>
+                                <span class="mcboxh-notif"> 2 </span>
+                            </a>
+                            
+                            <div class="mcbox-ctn">
+                                <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                                
+                                <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                                
+                               <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                            </div>  
+                        </div>
+                    </div>
+                    
+                     <div class="col-sm-3">
+                        <div class="mc-box-tb mcboxtb-bat">
+                            <a class="mcbox-head">
+                                <span class="mcboxh-icon"></span>
+                                <span class="mcboxh-text"> BAT </span>
+                                <span class="mcboxh-notif"> 2 </span>
+                            </a>
+                            
+                            <div class="mcbox-ctn">
+                                <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                                
+                                <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                                
+                               <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+               
+                    <div class="col-sm-3">
+                        <div class="mc-box-tb mcboxtb-mesTaches">
+                            <a class="mcbox-head">
+                                <span class="mcboxh-icon"></span>
+                                <span class="mcboxh-text">  Mes taches  </span>
+                                <span class="mcboxh-notif"> 2 </span>
+                            </a>
+                            
+                            <div class="mcbox-ctn">
+                                <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                                
+                                <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                                
+                               <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                                
+                            </div>
+                             <a href="" class="bouton-2 b2-champs b2-Plus"></a>
+                        </div>
+                    </div>
+                    
+                     <div class="col-sm-3">
+                        <div class="mc-box-tb mcboxtb-aRelancer">
+                            <a class="mcbox-head">
+                                <span class="mcboxh-icon"></span>
+                                <span class="mcboxh-text">  A relancer </span>
+                                <span class="mcboxh-notif"> 2 </span>
+                            </a>
+                            <div class="mcbox-ctn">
+                                <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                                
+                                <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                                
+                               <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+               
+                    
+                    <div class="col-sm-3">
+                        <div class="mc-box-tb mcboxtb-aCarencer">
+                            <a class="mcbox-head">
+                                <span class="mcboxh-icon"></span>
+                                <span class="mcboxh-text">  A carencer  </span>
+                                <span class="mcboxh-notif"> 2 </span>
+                            </a>
+                            <div class="mcbox-ctn">
+                                <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                                
+                                <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                                
+                               <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                            </div>
+                             
+                        </div>
+                    </div>
+                    
+                     <div class="col-sm-3">
+                        <div class="mc-box-tb mcboxtb-aPasser">
+                            <a class="mcbox-head">
+                                <span class="mcboxh-icon"></span>
+                                <span class="mcboxh-text">  Rendez-vous </span>
+                                <span class="mcboxh-notif"> 2 </span>
+                            </a>
+                           
+                            <div class="mcbox-ctn">
+                                <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                                
+                                <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                                
+                               <a class="mcboxc-row">
+                                    <span> 
+                                        13/02/17 | BNP
+                                    </span> 
+                                    <span class="pull-right"> 
+                                        160 562
+                                    </span>
+                                </a>
+                            </div>
+                             
+                        </div>
+                    </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+<footer>
+    <div class="footer-content">
+        <p class="text-center"> Copyright 2017 © Vérifimmo v1.0 - Tous droits réservés </p>
+
+        <img class="logo-footer" src="images/logo-verifimmo-footer.png" alt="">
+    </div>
+</footer>
+    </div>
+    <!-- foot.hbs -->
+<script src="js/vendor.js"></script>
+<script src="js/app.js"></script>
+<script>
+    require('js/script')
+</script>
+
+</body>
+
+</html>

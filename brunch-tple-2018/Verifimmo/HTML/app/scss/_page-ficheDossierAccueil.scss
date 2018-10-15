@@ -1,0 +1,240 @@
+.page-ficheDossierAccueil {
+    .nav-boutons-right {}
+    .fda-header {
+        .badge-oeuf {
+            margin-top: 20px;
+        }
+        background-color: #fff;
+        margin-top: 15px;
+        @include border-radius(10px 10px 0 0);
+        .fdah-detail {
+            padding: 15px 25px 0px;
+            .fdah-row {
+                label {
+                    width: 35%;
+                }
+                span {
+                    width: 65%
+                }
+            }
+        }
+        .fdah-menu {
+            position: relative;
+            margin-top: 15px;
+            a {
+                padding: 15px 0px;
+                text-align: center;
+                display: block;
+                float: left;
+                background-color: $gray-light-0;
+                width: calc(10% - 0.1px);
+                font-family: $police-title;
+                font-size: 14px;
+                text-transform: uppercase;
+                border: 1px solid $gray-meduim-0;
+                border-bottom: 1px solid $color-primary-meduim;
+                @include border-radius(10px 10px 0 0);
+                &:hover,
+                &:focus,
+                &.active {
+                    color: #fff;
+                    background-color: $color-primary-meduim;
+                    font-family: $police-title-2;
+                    text-decoration: none;
+                    border-bottom: none;
+                    padding-top: 23px;
+                    padding-bottom: 16px;
+                    margin-top: -8px;
+                    background-image: url("../images/triangle-gris.png");
+                    background-repeat: no-repeat;
+                    background-position: center 48px;
+                }
+            }
+            @include clearAfter();
+        }
+    }
+    .fda-content {
+        margin-top: 15px;
+        .nav-boutons-right {
+            .btn-al-reglage {
+                .icone {
+                    margin-right: 10px;
+                    margin-left: 10px;
+                }
+            }
+        }
+        /* les box widget */
+        .boxs-widgets {
+            margin-top: 20px;
+        }
+        /*  @@ bw-col1 > la 1eme colonne : begin */
+        .bw-infoImportant {
+            @extend .box-widget;
+            .bw-head {
+                .bwh-icone {
+                    background-position: -245px -167px;
+                }
+            }
+        }
+        .bw-mesTaches {
+            @extend .box-widget-2;
+            .bw-head {
+                .bwh-icone {
+                    background-position: -46px -206px;
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+            .bw-content {
+                .b2-Plus {
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .bw-pieceManqantes {
+            @extend .box-widget-2;
+            .bw-head {
+                .bwh-icone {
+                    background-position: -126px -206px;
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+        }
+        .bw-courrierEnvoye {
+            @extend .box-widget-2;
+            .bw-head {
+                .bwh-icone {
+                    background-position: -165px -206px;
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+        }
+        /*  @@ bw-col1 > la 1eme colonne : end */
+        /*  @@ bw-col2 > la 2eme colonne : begin */
+        .bw-qualificat {
+            @extend .box-widget-2;
+            .bw-head {
+                .bwh-icone {
+                    background-position: -246px -247px;
+                }
+            }
+        }
+        .bw-operateur {
+            @extend .box-widget-2;
+            .bw-head {
+                .bwh-icone {
+                    background-position: -4px -206px;
+                    width: 30px;
+                }
+            }
+            .bw-content {
+                .bwc-text {
+                    padding: 0;
+                }
+                .bwc-row {
+                    padding: 5px 10px;
+                    border-bottom: solid 1px $gray-light-1;
+                    .bwor-row {
+                        margin-bottom: 5px;
+                        >* {
+                            vertical-align: middle;
+                        }
+                        .bwor-icone {
+                            width: 24px;
+                            height: 24px;
+                            margin-right: 10px;
+                            display: inline-block;
+                            @extend .sprite;
+                            &.icone-home {
+                                background-position: -46px -246px;
+                            }
+                            &.icone-parapluie {
+                                background-position: -87px -246px;
+                            }
+                            &.icone-home-barree {
+                                background-position: -126px -247px;
+                            }
+                            &.icone-parapluie-barree {
+                                background-position: -126px -247px;
+                            }
+                            &.icone-redDisk {
+                                background-color: $maron-1;
+                                background-image: none;
+                                @include border-radius(50%);
+                                width: 15px;
+                                height: 15px;
+                                margin-left: 5px;
+                            }
+                        }
+                        .bwor-text {}
+                    }
+                }
+            }
+        }
+        .bw-MO {
+            @extend .box-widget-2;
+            .bw-head {
+                .bwh-icone {
+                    background-position: -86px -206px
+                }
+            }
+        }
+        .bw-courrierRecu {
+            @extend .box-widget-2;
+            .bw-head {
+                .bwh-icone {
+                    background-position: -165px -206px;
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+            .bwcl-row {
+                >* {
+                    vertical-align: middle;
+                }
+                .icone-mail-new,
+                .icone-pieceJointe,
+                .icone-mail-vue {
+                    @extend .sprite;
+                    width: 24px;
+                    height: 24px;
+                }
+                .icone-mail-new {
+                    background-position: -7px -287px;
+                }
+                .icone-pieceJointe {
+                    background-position: -88px -287px;
+                    margin-left: 5px;
+                }
+                .icone-mail-vue {
+                    background-position: -47px -287px;
+                }
+            }
+        }
+        .bw-event {
+            @extend .box-widget-2;
+            .bw-head {
+                .bwh-icone {
+                    background-position: -200px -208px;
+                }
+            }
+            
+            .bwcl-row {
+               > * {
+                    vertical-align: middle;
+               }
+                .icone-flag {
+                    @extend .sprite;
+                     background-position: -128px -288px;
+                    margin-right: 10px;
+                    width: 24px;
+                    height: 24px;
+                }
+            } 
+        }
+        /* @@  bw-col2 >  la 2eme colonne : end  */
+    }
+}

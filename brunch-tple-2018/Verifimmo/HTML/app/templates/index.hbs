@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<head>
+    {{> head}}
+</head>
+
+<body>
+
+    <div class="page page-home">
+        {{> header-home }}
+        <div class="middle">
+            <div class="container-fluid">
+                <div class="bloc-connexion">
+                    <div class="bc-head">
+                        <span class="icone-cadnat"> 
+                          </span>
+                        <span class="bch-txt">
+                              Connexion 
+                          </span>
+
+                    </div>
+                    <div class="bc-content">
+                        <form action="">
+                            <div class="bcc-row">
+                                <label for="identifiant"> IDENTIFIANT : </label>
+                                <input type="text" placeholder="Saisissez votre identifiant..." id="identifiant">
+                            </div>
+
+                            <div class="bcc-row">
+                                <label for="identifiant">  MOT DE PASSE : </label>
+                                <input type="text" placeholder="Saisissez votre mot de passe..." id="identifiant">
+                            </div>
+
+                            <button class="bouton bouton-connexion text-center">
+                                <span class="icone"> </span>
+                                <span class="txt"> Entrez   </span>
+                            </button>
+                        </form>
+
+                    </div>
+                    <!-- bc-content -->
+                </div>
+            </div>
+        </div>
+        {{> footer-home }}
+    </div>
+    {{> foot }}
+
+</body>
+
+</html>
