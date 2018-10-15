@@ -169,12 +169,12 @@ p {
   vertical-align: middle;
   display: inline-block; }
 
-.pointer, a, .btn-site, .descover-pdt .pdt-slider .nav-slider,
+.pointer, a, .btn-site, .bloc-location .btn-location, .descover-pdt .pdt-slider .nav-slider,
 .descover-pdt .pdt-slider .slick-arrow {
   cursor: pointer;
   transition: all .5s ease;
   opacity: 1; }
-  .pointer:hover, a:hover, .btn-site:hover, .descover-pdt .pdt-slider .nav-slider:hover,
+  .pointer:hover, a:hover, .btn-site:hover, .bloc-location .btn-location:hover, .descover-pdt .pdt-slider .nav-slider:hover,
   .descover-pdt .pdt-slider .slick-arrow:hover {
     opacity: .7; }
 
@@ -203,7 +203,7 @@ figure {
   figure img {
     width: 100%; }
 
-.btn-site {
+.btn-site, .bloc-location .btn-location {
   display: inline-block;
   padding: 15px;
   color: white;
@@ -515,14 +515,23 @@ figure {
 .bloc-location {
   width: 100%;
   float: left;
-  background-color: #f3f5f9; }
-  @media (min-width: 768px) {
-    .bloc-location {
-      width: calc(33% - 80px);
-      margin: 0px 40px; } }
+  background-color: #f3f5f9;
+  margin: 50px 0px; }
+  .bloc-location .btn-location {
+    width: calc(100% - 30px); }
   @media (min-width: 992px) {
     .bloc-location {
       width: calc(33% - 140px);
       margin: 0px 70px; } }
+
+@media (min-width: 768px) {
+  .bloc-location {
+    width: calc(33% - 80px);
+    margin: 0px 40px; } }
+
+@media (min-width: 992px) {
+  .bloc-location {
+    width: calc(33% - 140px);
+    margin: 0px 70px; } }
 
 /* todo : @@test /@@clean */

@@ -1,15 +1,36 @@
-    // locations offres :
-    $gutter-location: 140px;
-    .bloc-location {
-        width: 100%;
-        float: left;
-        background-color: $color-gray-lighter;
+        // locations offres :
+        $gutter-location: 140px;
+        .bloc-location {
+            width: 100%;
+            float: left;
+            background-color: $color-gray-lighter;
+            margin: 50px 0px;
+            .btn-location {
+                width: calc(100% - 30px);
+                @extend .btn-site;
+            }
+            @media (min-width: $bp-min-lg) {
+                width: calc(33% - #{$gutter-location});
+                margin: 0px $gutter-location/2;
+            }
+        }
+        
         @media (min-width: $bp-min-md) {
-            width: calc(33% - 80px);
-            margin: 0px 40px;
+            .bloc-location {
+                width: calc(33% - 80px);
+                margin: 0px 40px;
+                .btn-location {
+                }
+            }
         }
+        
         @media (min-width: $bp-min-lg) {
-            width: calc(33% - #{$gutter-location});
-            margin: 0px $gutter-location/2;
+            .bloc-location {
+                width: calc(33% - #{$gutter-location});
+                margin: 0px $gutter-location/2;
+                .btn-location {
+                }
+            }
         }
-    }
+        
+        @media (min-width: $bp-min-xl) {}
