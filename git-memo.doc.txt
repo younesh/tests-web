@@ -37,7 +37,12 @@
 ## pour pusher les commites au serveur ( remote ) [push -u origin]
     git push -u origin nom-de-branch-cible
 
-
+## pour revert vers la version du remote [checkout -- [...]]  ou [ revert -- [....]]
+    # cas revert tous les modif
+        git checkout -- nom-file
+    # revenir a l'etat du remot actuelle , annuller tous les modif en cours ( attention les modif non pushé sont perdu)
+        git reset --hard
+    # 
 
 ## (!) Doc a ajouter : { push -- forece with lease /  les cas resolve conflit en merge / .... / }
 
