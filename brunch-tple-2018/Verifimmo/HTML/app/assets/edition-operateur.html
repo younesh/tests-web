@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title> Verifimmo </title>
+<link rel="stylesheet" type="text/css" href="css/vendor.css">
+<link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+
+<body>
+
+    <div class="page">
+        <header id="header">
+    <div id="ctn-logo">
+        <img src="images/logo-asterisk.png" alt="">
+    </div>
+
+    <div id="head-panel">
+        <div id="hp-left">
+            <a class="hpl-item hpl-agenda"><span>Agenda<span class="agenda-notif">2</span></span></a>
+            <a class="hpl-item hpl-compte"><span>Mon compte</span></a>
+        </div>
+
+        <div id="hp-right">
+            <a class="hpr-item hpr-bao"><span>BoIte A outils</span></a>
+            <a class="hpr-item hpr-param"><span>Parametrages</span></a>
+        </div>
+    </div>
+
+</header>
+        <div class="middle">
+            <div id="aside-bar">
+    <div class="ab-ctn-btn">
+        <a class="bouton-2 b2-openClose" id="openCloseAsideBar"></a>
+    </div>
+
+    <div class="hideWhenClosed">
+        <h2> Dossiers </h2>
+
+        <div class="ab-search">
+            <form action="">
+                <input type="text" placeholder="Rechercher un dossier" />
+                <span class="icone-info"></span>
+            </form>
+        </div>
+
+        <div class="ctn-btnNewFolder">
+            <button class="bouton-large"> 
+               <span class="icone"></span>
+               <span> Nouveau Dossier</span>
+           </button>
+        </div>
+
+        <div class="ab-menu">
+            <a class="abm-item abm-mesDossier">
+                <span> Mes dossiers </span>
+            </a>
+            <a class="abm-item abm-tousDossier">
+                <span>Tous les dossiers</span>
+            </a>
+            <a class="abm-item abm-aOuvrir">
+                <span> A ouvrir </span>
+            </a>
+
+            <a class="abm-item abm-piece">
+                <span> Pieces a traiter </span>
+            </a>
+
+            <a class="abm-item abm-bat">
+                <span> Bat </span>
+            </a>
+
+            <a class="abm-item abm-aCarencer">
+                <span> a carencer </span>
+            </a>
+
+            <a class="abm-item abm-aRelancer">
+                <span> A relancer </span>
+            </a>
+        </div>
+    </div>
+</div>
+            <div id="main-content" class="page-editionOperateur">
+                <div class="container-fluid">
+
+                    <div class="row mc-head">
+                        <div class="col-sm-3">
+                            <h2> Opérateur </h2>
+                            <p>
+                                Crée le 15/05/2015 par BDO <br> Dernière modification le 15/01/2017 par LED
+                            </p>
+                        </div>
+                        <div class="col-sm-8 col-sm-offset-1">
+                            <div class="nav-boutons-right">
+                                <button class="btn-al-save"> 
+                                                   <span class="icone"></span>
+                                                   <span> enregistrer </span> 
+                                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="clearfix"></div>
+                    <div class="eo-content">
+                        <div class="row boxs-widgets ctn-2cols">
+                            <form action="">
+                                <!-- @@bw-col1 > begin -->
+                                <div class="col-sm-6 bw-col1">
+
+
+                                    <div class="box-widget bw-form">
+                                        <div class="bw-content">
+                                            <div class="bwc-text">
+
+                                                <div class="form-row">
+                                                    <label for=""> *Type d’opérateur : </label>
+                                                    <select name="" id="">
+                                                   <option value=""> - Sélectionner -  </option>
+                                               </select>
+                                                </div>
+                                                <div class="form-row">
+                                                    <label for=""> *Raison sociale : </label>
+                                                    <input type="text" id="" placeholder="">
+                                                </div>
+                                                <div class="form-row">
+                                                    <label for=""> Nom commercial : </label>
+                                                    <input type="text" id="" placeholder="">
+                                                </div>
+                                                <div class="form-row">
+                                                    <label for=""> N° SIREN :  </label>
+                                                    <input type="text" id="" placeholder="">
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <label for=""> Code NAF :  </label>
+                                                    <select name="" id="">
+                                                   <option value=""> - Sélectionner -  </option>
+                                               </select>
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <label for=""> *Adresse : </label>
+                                                    <select name="" id="">
+                                                   <option value="">France  </option>
+                                               </select>
+                                                </div>
+
+                                                <div class="form-row frAdress">
+                                                    <label for="">  </label>
+                                                    <input class="adCodePostal" type="text" id="" placeholder="Code postal">
+                                                    <input class="adVille" type="text" id="" placeholder="Ville">
+                                                </div>
+
+                                                <div class="form-row frAdress">
+                                                    <label for="">  </label>
+                                                    <input class="adNum" type="text" id="" placeholder="n°">
+                                                    <input class="adRue" type="text" id="" placeholder="Rue">
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <label for="">  </label>
+                                                    <input type="text" id="" placeholder="Complément de rue">
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <label for=""> Standard : </label>
+                                                    <input type="text" id="" placeholder="">
+                                                </div>
+
+
+                                                <div class="form-row">
+                                                    <label for=""> Mobile : </label>
+                                                    <input type="text" id="" placeholder="">
+                                                </div>
+
+
+                                                <div class="form-row">
+                                                    <label for=""> Fax  </label>
+                                                    <input type="text" id="" placeholder="">
+                                                </div>
+
+
+                                                <div class="form-row">
+                                                    <label for=""> Général :  </label>
+                                                    <input type="text" id="" placeholder="E-mail">
+                                                </div>
+
+
+                                                <div class="form-row">
+                                                    <label for="">  Secrétariat : </label>
+                                                    <input type="text" id="" placeholder="E-mail">
+                                                </div>
+
+
+                                                <div class="form-row">
+                                                    <label for="">  Gestionnaire commercial : </label>
+                                                    <input type="text" id="" placeholder="E-mail">
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <label for=""> Site web  : </label>
+                                                    <input type="text" id="" placeholder="">
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <label for=""> Autre site web : </label>
+                                                    <input type="text" id="" placeholder="">
+                                                </div>
+
+                                                <div class="form-row frTextArea">
+                                                    <span class="choix">
+                                                        <input type="checkbox" id="check_vigilance">
+                                                        <label for="check_vigilance"></label>
+                                                    </span>
+
+                                                    <span> Vigilance </span>
+                                                    <textarea placeholder="Saisie d’un commentaire"> </textarea>
+
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="box-widget bw-santeOperateur">
+                                        <div class="bw-head">
+                                            <span class="bwh-txt"> SantE de l'opErateur   </span>
+                                        </div>
+                                        <div class="bw-content bw-form">
+                                            <div class="bwc-text">
+                                                <div class="form-row">
+                                                    <label for=""> Situation juridique :  </label>
+                                                    <select name="" id="">
+                                           <option value=""> - Sélectionner -  </option>
+                                                </select>
+                                                </div>
+
+
+
+                                                <div class="form-row frAgenda">
+                                                    <label for=""> Date de l’état :  </label>
+                                                    <input type="text" id="" placeholder="jj/mm/aaaa">
+                                                    <a href="" class="bouton-2 b2-champs b2-agenda"></a>
+                                                </div>
+                                                <div class="form-row frBtn">
+
+                                                    <button class="btn-al-save"> 
+                                                   <span class="frBadge badge-s3 bi-green"></span>
+                                                   <span> Voir sur Score 3  </span>
+                                              </button>
+
+                                                    <button class="btn-al-save"> 
+                                                  <span class="frBadge badge-info bi-blue"></span>
+                                                   <span> Voir sur sociEtE.com </span>
+                                              </button>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="box-widget bw-dossier">
+                                        <div class="bw-head">
+                                            <span class="bwh-txt"> Dossiers  </span>
+                                        </div>
+                                        <div class="bw-content">
+                                            <div class="bwc-list">
+                                                <a class="bwcl-row">  15/02/2017 - 562 566 - CCMI Avec - Sans suite </a>
+                                                <a class="bwcl-row">  15/02/2017 - 562 566 - CCMI Avec - Sans suite </a>
+                                                <a class="bwcl-row">  15/02/2017 - 562 566 - CCMI Avec - Sans suite </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="box-widget bw-frequence">
+                                        <div class="bw-head">
+                                            <span class="bwh-txt"> Dossiers  </span>
+                                        </div>
+                                        <div class="bw-content">
+                                            <div class="bwc-list">
+                                                <span class="bwcl-row"> 
+                                                <span>   Nom de l’opérateur 1</span>
+
+                                                <div class="pull-right">
+                                                    <a class="icone-carre ic-folder">
+                                                    </a>
+                                                    <a class="icone-carre ic-list">
+                                                    </a>
+                                                </div>
+                                                <span class="clearfix"></span>
+                                                </span>
+
+                                                <span class="bwcl-row">  
+                                                 <span>   Nom de l’opérateur 1  </span>
+
+                                                <div class="pull-right">
+                                                    <a class="icone-carre ic-folder">
+                                                    </a>
+                                                    <a class="icone-carre ic-list">
+                                                    </a>
+                                                </div>
+                                                <span class="clearfix"></span>
+                                                </span>
+
+                                                <span class="bwcl-row">
+                                                 <span>  Nom de l’opérateur 1  </span>
+
+                                                <div class="pull-right">
+                                                    <a class="icone-carre ic-folder">
+                                                    </a>
+                                                    <a class="icone-carre ic-list">
+                                                    </a>
+                                                </div>
+                                                <span class="clearfix"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="box-widget bw-reclamation">
+                                        <div class="bw-head">
+                                            <span class="bwh-txt"> Reclamation  </span>
+                                        </div>
+                                        <div class="bw-content">
+                                            <div class="bwc-list">
+                                                <a class="bwcl-row"> 15/02/2017 - Lorem ipsum dolor sit amet, consectetur  </a>
+                                                <a class="bwcl-row"> 15/02/2017 - Lorem ipsum dolor sit amet, consectetur </a>
+                                            </div>
+                                            <div class="ctn-btn-center">
+                                                <button class="btn-al-plus"> 
+                                               <span class="icone"></span>
+                                               <span> nouvelle rEclamation </span> 
+                                           </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- @@bw-col1  > end -->
+
+
+                                <!-- @@bw-col2 > begin -->
+                                <div class="col-sm-6 bw-col2">
+                                    <div class="box-widget bw-form">
+
+                                        <div class="bw-content">
+                                            <div class="bwc-text">
+                                                <div class="form-row frTextArea">
+                                                    <label for=""> Personne à contacter : </label>
+                                                    <textarea> </textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="box-widget bw-form">
+
+                                        <div class="bw-content">
+                                            <div class="bwc-text">
+                                                <div class="form-row nbr-archi">
+                                                    <label for=""> Nombre d’architectes : </label>
+                                                    <select name="" id="">
+                                                  <option value="1">1</option>
+                                              </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="box-widget">
+                                        <div class="bw-head">
+                                            <span class="bwh-txt"> Architecte n°1   </span>
+                                        </div>
+                                        <div class="bw-content bw-form">
+                                            <div class="bwc-text">
+                                                <div class="form-row">
+                                                    <label for="">  Nom   </label>
+                                                    <input type="text" id="" placeholder="">
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <label for="">N° d’ordre :  </label>
+                                                    <input type="text" id="" placeholder="N° d’inscription à l’ordre des architectes">
+                                                </div>
+
+                                                <div class="form-row frAgenda">
+                                                    <label for=""> Date de vérification :  </label>
+                                                    <input type="text" id="" placeholder="jj/mm/aaaa">
+                                                    <a href="" class="bouton-2 b2-champs b2-agenda"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="box-widget bw-form">
+
+                                        <div class="bw-content">
+                                            <div class="bwc-text">
+                                                <div class="form-row frNbrGerent">
+                                                    <label for=""> Nombre de gérants : </label>
+                                                    <select name="" id="">
+                                                  <option value="1">1</option>
+                                              </select>
+                                                    <a href="" class="fr-link-right"> Historique des gérants </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="box-widget bw-gerant">
+                                        <div class="bw-head">
+                                            <span class="bwh-txt"> GErant n°1 </span>
+                                        </div>
+                                        <div class="bw-content bw-form">
+                                            <div class="bwc-text">
+
+
+                                                <div class="form-row frSearchNom">
+                                                    <label for=""> Nom </label>
+                                                    <input type="text" id="" placeholder="NOM Prénom">
+                                                    <a href="" class="bouton-2 b2-champs b2-Plus"></a>
+
+                                                    <div class="snSelectedName">
+                                                        <span class="snItem">
+                                                 <span> <a href=""> M. DUPONT Henri </a> </span>
+                                                        <a class="bouton-2 b2-champs b2-croix"> </a>
+                                                        </span>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-row frAgenda">
+                                                    <label for=""> Type : </label>
+                                                    <select name="" id="">
+                                                   <option value=""> - Sélectionner -  </option>
+                                                </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="box-widget bw-form">
+
+                                        <div class="bw-content">
+                                            <div class="bwc-text">
+                                                <div class="form-row frNbrGerent">
+                                                    <label for=""> Nombre de gérants : </label>
+                                                    <select name="" id="">
+                                                  <option value="1">1</option>
+                                              </select>
+                                                    <a href="" class="fr-link-right"> Historique des gérants </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <!-- garant num 1 -->
+                                    <div class="box-widget">
+                                        <div class="bw-head">
+                                            <span class="bwh-txt"> Garant n°1   </span>
+                                        </div>
+                                        <div class="bw-content bw-form">
+                                            <div class="bwc-text">
+                                                <div class="form-row">
+                                                    <label for="">  Nom   </label>
+                                                    <select name="" id="">
+                                                   <option value=""> - Sélectionner -  </option>
+                                                </select>
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <label for=""> N° de police :   </label>
+                                                    <input type="text" id="" placeholder="N° d’inscription à l’ordre des architectes">
+                                                </div>
+
+                                                <div class="form-row frAgenda">
+                                                    <label for=""> Validité  :    </label>
+                                                    <span class="jusqua"> jusqu’au  </span>
+                                                    <input type="text" id="" placeholder="jj/mm/aaaa">
+                                                    <a href="" class="bouton-2 b2-champs b2-agenda"></a>
+                                                </div>
+
+                                                <div class="form-row frParcourir">
+                                                    <label for=""> Attestation :   </label>
+                                                    <input type="text" id="" placeholder="">
+
+
+                                                    <a class="inputFile bouton-2 b2-champs">
+                                                        <label for="uploadAttestation">Parcourir...</label>
+                                                        <input type="file" name="photo" id="uploadAttestation" />
+                                                    </a>
+
+
+
+
+                                                </div>
+
+                                                <div class="form-row frAgenda">
+                                                    <label for=""> Dernier listing :     </label>
+                                                    <input type="text" id="" placeholder="jj/mm/aaaa">
+                                                    <a href="" class="bouton-2 b2-champs b2-agenda"></a>
+                                                    <span class="frCheckbox">
+                                        <!--        <input type="checkbox" name="" id="">-->
+                                                    <span class="choix">
+                                                        <input type="checkbox" id="check_airCondition">
+                                                        <label for="check_airCondition"></label>
+                                                         <span> GL dénoncée</span>
+                                                    </span>
+
+
+                                                    </span>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="box-widget bw-form">
+                                        <div class="bw-content">
+                                            <div class="bwc-text">
+                                                <div class="form-row frNbrGerent">
+                                                    <label for=""> Nombre de garants : </label>
+                                                    <select name="" id="">
+                                                  <option value="1">1</option>
+                                              </select>
+                                                    <a href="" class="fr-link-right"> Historique des garants </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <!-- Assureur N°1 -->
+                                    <div class="box-widget">
+                                        <div class="bw-head">
+                                            <span class="bwh-txt">Assureur N°1   </span>
+                                        </div>
+                                        <div class="bw-content bw-form">
+                                            <div class="bwc-text">
+                                                <div class="form-row">
+                                                    <label for="">  Nom   </label>
+                                                    <select name="" id="">
+                                                   <option value=""> - Sélectionner -  </option>
+                                                </select>
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <label for=""> N° de police :   </label>
+                                                    <input type="text" id="" placeholder="N° d’inscription à l’ordre des architectes">
+                                                </div>
+
+                                                <div class="form-row frAgenda">
+                                                    <label for=""> Validité  :    </label>
+                                                    <span class="jusqua"> jusqu’au  </span>
+                                                    <input type="text" id="" placeholder="jj/mm/aaaa">
+                                                    <a href="" class="bouton-2 b2-champs b2-agenda"></a>
+                                                </div>
+
+                                                <div class="form-row frParcourir">
+                                                    <label for=""> Attestation  :   </label>
+                                                    <input type="text" id="" placeholder="">
+
+                                                    <a class="inputFile bouton-2 b2-champs">
+                                                        <label for="uploadAttestation">Parcourir...</label>
+                                                        <input type="file" name="photo" id="uploadAttestation" />
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="box-widget bw-evenements">
+                                        <div class="bw-head">
+                                            <span class="bwh-txt"> evenements  </span>
+
+                                            <span class="bwh-navigat">
+                                        <a class="bwhn-left"></a>
+                                        <a class="bwhn-right"></a>
+                                    </span>
+                                        </div>
+                                        <div class="bw-content">
+                                            <div class="bwc-list">
+                                                <a class="bwcl-row"> 15/02/2017 - Lorem ipsum dolor sit amete sic </a>
+                                                <a class="bwcl-row"> 15/02/2017 - Lorem ipsum dolor sit amete sic </a>
+                                                <a class="bwcl-row"> 15/02/2017 - Lorem ipsum dolor sit amete sic </a>
+                                                <a class="bwcl-row"> 15/02/2017 - Lorem ipsum dolor sit amete sic </a>
+                                                <a class="bwcl-row"> 15/02/2017 - Lorem ipsum dolor sit amete sic </a>
+                                                <a class="bwcl-row"> 15/02/2017 - Lorem ipsum dolor sit amete sic </a>
+                                                <a class="bwcl-row"> 15/02/2017 - Lorem ipsum dolor sit amete sic </a>
+                                                <a class="bwcl-row"> 15/02/2017 - Lorem ipsum dolor sit amete sic </a>
+                                            </div>
+                                            <div class="ctn-btn-center">
+                                                <button class="btn-al-plus"> 
+                                               <span class="icone"></span>
+                                               <span> Nouvel événement  </span> 
+                                           </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- @@bw-col2 > end -->
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+<footer>
+    <div class="footer-content">
+        <p class="text-center"> Copyright 2017 © Vérifimmo v1.0 - Tous droits réservés </p>
+
+        <img class="logo-footer" src="images/logo-verifimmo-footer.png" alt="">
+    </div>
+</footer>
+    </div>
+    <!-- foot.hbs -->
+<script src="js/vendor.js"></script>
+<script src="js/app.js"></script>
+<script>
+    require('js/script')
+</script>
+
+</body>
+
+</html>
