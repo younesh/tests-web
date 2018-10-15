@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<head>
+	{{> head}}
+</head>
+<body>
+	{{> header}}
+	<div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-md-push-3">
+                    <div class="colonne-principale-2 mon-profil">
+                        <h2>Mon profil</h2>
+                        <fieldset>
+                            <h3>Modifier vos informations personnelles</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pretium ante vel nisi varius sagittis. Donec non sapien eu risus rhoncus fringilla id blandit augue. Suspendisse in augue ullamcorper, sollicitudin nulla sed, elementum metus. Nunc placerat eu nunc at hendrerit. Donec gravida efficitur neque sed mattis. Donec sit amet lacinia tellus. Sed commodo tincidunt pretium. Sed ligula augue, auctor at risus eu, iaculis imperdiet sem. Quisque dictum nunc vel molestie scelerisque. Nam maximus leo est, nec molestie lacus posuere eget.</p>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <select class="selectpicker">
+                                        <option>Civilité*</option>
+                                        <option>Mr</option>
+                                        <option>Mme</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6"><input type="text" placeholder="Nom*" /></div>
+                                <div class="col-sm-6"><input type="text" placeholder="Société*" /></div>
+                                <div class="col-sm-6"><input type="text" placeholder="Prénom*" /></div>
+                                <div class="col-sm-6"><input type="text" placeholder="Code Postal*" /></div>
+                                <div class="col-sm-6"><input type="number" placeholder="Téléphone*" /></div>
+                                <div class="col-sm-6"><input type="text" placeholder="Ville*" /></div>
+                                <div class="col-sm-6"><input type="email" placeholder="Email*" /></div>
+                                <div class="col-sm-6">
+                                    <select class="selectpicker">
+                                        <option>Pays*</option>
+                                        <option>France</option>
+                                        <option>Belgique</option>
+                                        <option>Suisse</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <span>
+                                        <input type="checkbox" id="offres" />
+                                        <label for="offres">Oui, j'accepte de recevoir par e-mail les offres de OuiBusiness</label>
+                                    </span>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="btn-container">
+                                        <button class="btn btn-valider">Valider</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <h3>Modifier votre mot de passe</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pretium ante vel nisi varius sagittis. Donec non sapien eu risus rhoncus fringilla id blandit augue.</p>
+                            <div class="row">
+                                <div class="col-sm-6"><input type="password" placeholder="Ancien mot de passe" /></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6"><input type="password" placeholder="Nouveau mot de passe" /></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6"><input type="password" placeholder="Confirmer le mot de passe" /></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="btn-container">
+                                        <button class="btn btn-valider">Valider</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="col-md-3 col-md-pull-9">
+                    <div class="colonne-gauche">
+                        <div class="formulaire">
+                            <form>
+                                <div class="form-control">
+                                    <input type="text" class="" placeholder="Destination / Nom de l'établissement" />
+                                </div>
+                                <div class="form-control">
+                                    <input type="date" class="" placeholder="Arrivée" />
+                                </div>
+                                <div class="form-control">
+                                    <input type="date" class="" placeholder="Départ" />
+                                </div>
+                                <div class="form-control">
+                                    <select class="selectpicker" title="Chambre d'hôtel">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+                                <div class="form-control chambre-selection">
+                                    <div class="colonne">
+                                        <label class="single">Single</label>
+                                        <div class="pad">
+                                            <button>-</button>
+                                            <span>1</span>
+                                            <button class="plus">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="colonne">
+                                        <label class="single">Twin</label>
+                                        <div class="pad">
+                                            <button>-</button>
+                                            <span>0</span>
+                                            <button class="plus">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="colonne">
+                                        <label class="single">Double</label>
+                                        <div class="pad">
+                                            <button>-</button>
+                                            <span>0</span>
+                                            <button class="plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-control btn-container">
+                                    <button class="btn btn-primary btn-recherche">Rechercher</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="contact-applis">
+                            <div class="wrapper">
+                                <h3>S'inscrire<button href="#" role="button" data-toggle="popover" data-trigger="focus" data-placement="right" title="Lorem ipsum" data-content="This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor.">?</button></h3>
+                                <div class="form-control">
+                                    <input type="email" class="email" placeholder="Votre email" />
+                                    <input type="submit" class="valider" value="OK" />
+                                </div>
+                            </div>
+                            <div class="wrapper no-border">
+                                <h3>Contactez-nous !</h3>
+                                <div class="ligne numero">
+                                    01 23 45 67 89
+                                    <div>Prix d'un appel local</div>
+                                </div>
+                                <div class="ligne ecrire">
+                                    Nous écrire
+                                </div>
+                            </div>
+                            <div class="wrapper hidden-sm hidden-md hidden-lg no-border">
+                                <div class="photo-home">
+                                    <img src="images/photo-home.jpg" alt="photo" />
+                                    <div class="texte">
+                                        <p>Lorem ipsum dolor sit amet</p>
+                                        <a href="#" class="btn-offres">Voir toutes les offres</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrapper">
+                                <h3><div>Télécharger</div>notre application</h3>
+                                <div class="application">
+                                    <a href="#" class="appStore"></a>
+                                    <a href="#" class="googleStore"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dernieres-reservations hidden-xs">
+                            <h3>Dernières réservations</h3>
+                            <div class="liste-hotel">
+                                <a href="hotel.html" class="hotel">
+                                    <div class="photo">
+                                        <img src="images/photo1.jpg" alt="Hôtel 1"/>
+                                    </div>
+                                    <p class="nom">Nom de l'hôtel****</p>
+                                    <p class="lieu">Montparnasse<span class="note">8/10</span></p>
+                                </a>
+                                <a href="hotel.html" class="hotel">
+                                    <div class="photo">
+                                        <img src="images/photo2.jpg" alt="Hôtel 2"/>
+                                    </div>
+                                    <p class="nom">Nom de l'hôtel****</p>
+                                    <p class="lieu">Montparnasse<span class="note">8/10</span></p>
+                                </a>
+                                <a href="hotel.html" class="hotel">
+                                    <div class="photo">
+                                        <img src="images/photo3.jpg" alt="Hôtel 3"/>
+                                    </div>
+                                    <p class="nom">Nom de l'hôtel****</p>
+                                    <p class="lieu">Montparnasse<span class="note">8/10</span></p>
+                                </a>
+                            </div>
+                            <p class="see-all">
+                                <a href="#">Tout voir ></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nos-engagements hidden-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="images/engagements.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	{{> menu-mobile}}
+	{{> footer}}
+	{{> foot}}
+</body>
+</html>

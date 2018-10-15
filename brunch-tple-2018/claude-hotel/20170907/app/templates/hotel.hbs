@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<head>
+	{{> head}}
+</head>
+<body>
+	{{> header}}
+	<div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-md-push-3">
+                    <div class="colonne-principale-2 hotel">
+                        <h2>Nom de l'hôtel****</h2>
+                        <p class="adresse">125 rue de l'Adresse - 75001 Paris</p>
+                        <div id="carousel-hotel" class="carousel slide" data-ride="carousel">
+                            <div class="infos-generales">
+                                <div class="carousel-inner" role="listbox">
+                                    <a class="left carousel-control" href="#carousel-hotel" role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="right carousel-control" href="#carousel-hotel" role="button" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                    <div class="item active">
+                                        <img src="images/photo4.jpg"/>
+                                        <p>Photo 1</p>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/photo4.jpg"/>
+                                        <p>Photo 2</p>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/photo4.jpg"/>
+                                        <p>Photo 3</p>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/photo4.jpg"/>
+                                        <p>Photo 4</p>
+                                    </div>
+                                </div>
+                                <div class="colonne-droite">
+                                    <div class="note">8/10</div>
+                                    <div class="avis">235 avis</div>
+                                    <ul>
+                                        <li>Proche de la gare</li>
+                                        <li>Parking sur place</li>
+                                        <li>Internet haut débit</li>
+                                    </ul>
+                                    <a href="#" class="reservation">Réserver</a>
+                                    <a href="#" class="favori"></a>
+                                </div>
+                            </div>
+                            <ol class="carousel-indicators liste-vignettes hidden-xs">
+                                <li data-target="#carousel-hotel" data-slide-to="0" class="vignette active">
+                                    <img src="images/photo1.jpg" />
+                                </li>
+                                <li data-target="#carousel-hotel" data-slide-to="1" class="vignette">
+                                    <img src="images/photo2.jpg" />
+                                </li>
+                                <li data-target="#carousel-hotel" data-slide-to="2" class="vignette">
+                                    <img src="images/photo3.jpg" />
+                                </li>
+                                <li data-target="#carousel-hotel" data-slide-to="3" class="vignette">
+                                    <img src="images/photo1.jpg" />
+                                </li>
+                                <li data-target="#carousel-hotel" data-slide-to="4" class="vignette">
+                                    <img src="images/photo2.jpg" />
+                                </li>
+                                <li data-target="#carousel-hotel" data-slide-to="5" class="vignette">
+                                    <img src="images/photo3.jpg" />
+                                </li>
+                                <li data-target="#carousel-hotel" data-slide-to="6" class="vignette">
+                                    <img src="images/photo1.jpg" />
+                                </li>
+                                <li data-target="#carousel-hotel" data-slide-to="7" class="vignette">
+                                    <img src="images/photo2.jpg" />
+                                </li>
+                                <li data-target="#carousel-hotel" data-slide-to="8" class="vignette">
+                                    <img src="images/photo3.jpg" />
+                                </li>
+                                <li data-target="#carousel-hotel" data-slide-to="9" class="vignette">
+                                    <img src="images/photo1.jpg" />
+                                </li>
+                                <li data-target="#carousel-hotel" data-slide-to="10" class="vignette">
+                                    <img src="images/photo2.jpg" />
+                                </li>
+                                <li data-target="#carousel-hotel" data-slide-to="11" class="vignette">
+                                    <img src="images/photo3.jpg" />
+                                </li>
+                                <li data-target="#carousel-hotel" data-slide-to="12" class="vignette">
+                                    <img src="images/photo1.jpg" />
+                                </li>
+                                <li data-target="#carousel-hotel" data-slide-to="13" class="vignette">
+                                    <img src="images/photo2.jpg" />
+                                </li>
+                                <li data-target="#carousel-hotel" data-slide-to="14" class="vignette">
+                                    <img src="images/photo3.jpg" />
+                                </li>
+                                <li data-target="#carousel-hotel" data-slide-to="15" class="vignette">
+                                    <img src="images/photo1.jpg" />
+                                </li>
+                                <li data-target="#carousel-hotel" data-slide-to="16" class="vignette">
+                                    <img src="images/photo2.jpg" />
+                                </li>
+                                <li data-target="#carousel-hotel" data-slide-to="17" class="vignette">
+                                    <img src="images/photo3.jpg" />
+                                </li>
+                                <li data-target="#carousel-hotel" data-slide-to="18" class="vignette">
+                                    <img src="images/photo1.jpg" />
+                                </li>
+                                <li data-target="#carousel-hotel" data-slide-to="19" class="vignette">
+                                    <img src="images/photo2.jpg" />
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="descriptif">
+                            <h3>Descriptif</h3>
+                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+                            <p><strong>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</strong><br/>Mauris in erat justo. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam.</p>
+                        </div>
+                        <div class="carte">
+                            <h3>Voir sur la carte</h3>
+                            <div class="map">
+                                <img src="images/map.jpg" alt="carte" />
+                                <div class="btn-container">
+                                    <button class="btn btn-primary btn-recherche" data-toggle="modal" data-target=".affichage-carte">Afficher la carte</button>
+                                </div>
+                            </div>
+                            <div class="modal fade affichage-carte" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5662239.764891082!2d-2.277869850397838!3d46.13550063337387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd54a02933785731%3A0x6bfd3f96c747d9f7!2sFrance!5e0!3m2!1sfr!2sfr!4v1469176989063" width="100%" frameborder="0" style="border:0; height: 100%;" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reservation">
+                            <h3>Réservation</h3>   
+                            <form>
+                                <div class="date">
+                                    <input type="date" class="arrivee" placeholder="Arrivée" />
+                                    <input type="date" class="depart" placeholder="Départ" />
+                                </div>
+                                <div class="chambre-selection">
+                                    <div class="colonne">
+                                        <label class="single">Single</label>
+                                        <div class="pad">
+                                            <button>-</button>
+                                            <span>1</span>
+                                            <button class="plus">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="colonne">
+                                        <label class="twin">Twin</label>
+                                        <div class="pad">
+                                            <button>-</button>
+                                            <span>0</span>
+                                            <button class="plus">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="colonne">
+                                        <label class="double">Double</label>
+                                        <div class="pad">
+                                            <button>-</button>
+                                            <span>0</span>
+                                            <button class="plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn-container">
+                                    <button class="btn btn-primary btn-recherche">Rechercher</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="recherche">
+                            <div id="hotelRooms" class="search">
+                                <div class="fond">
+                                    <div class="chargement">
+                                        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                </div>
+                                <div class="chambre">
+                                    <div class="titre">Chambre Double ou Lits Jumeaux Standard</div>
+                                    <div class="offre">
+                                        <div class="photo">
+                                            <img src="images/photo4.jpg" alt="" />
+                                        </div>
+                                        <div class="descriptif">
+                                            <p class="lit">2 lits jumeaux</p>
+                                            <p>Salle de bain privative<br/>
+                                            Superficie 29 m²<br/>
+                                            Climatisation</p>
+                                        </div>
+                                        <div class="options">
+                                            <p class="plus">Annulation gratuite (avant le 15 juillet 2016)</p>
+                                            <p class="plus">Petit-déjeuner compris</p>
+                                        </div>
+                                        <div class="prix clearfix">
+                                            <div class="avant">79 €</div>
+                                            <div class="remise">-25 %</div>
+                                            <div class="apres">55 €</div>
+                                        </div>
+                                        <div class="btn-container">
+                                            <select class="selectpicker">
+                                                <option>0</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select>
+                                            <button class="btn btn-primary btn-recherche">Réserver</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chambre">
+                                    <div class="titre">Chambre Double</div>
+                                    <div class="offre">
+                                        <div class="photo">
+                                            <img src="images/photo4.jpg" alt="" />
+                                        </div>
+                                        <div class="descriptif">
+                                            <p class="lit">1 lit double</p>
+                                            <p>Salle de bain privative<br/>
+                                            Superficie 32 m²<br/>
+                                            Climatisation</p>
+                                        </div>
+                                        <div class="options">
+                                            <p>Non remboursable</p>
+                                            <p>Petit-déjeuner en supplément 12 €</p>
+                                        </div>
+                                        <div class="prix clearfix">
+                                            <div class="avant">85 €</div>
+                                            <div class="remise">-25 %</div>
+                                            <div class="apres">69 €</div>
+                                        </div>
+                                        <div class="btn-container">
+                                            <select class="selectpicker">
+                                                <option>0</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select>
+                                            <button class="btn btn-primary btn-recherche">Réserver</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chambre">
+                                <div class="titre">Chambre Double</div>
+                                <div class="offre">
+                                    <div class="photo">
+                                        <img src="images/photo4.jpg" alt="" />
+                                    </div>
+                                    <div class="descriptif">
+                                        <p class="lit">1 lit double</p>
+                                        <p>Salle de bain privative<br/>
+                                        Superficie 15 m²<br/>
+                                        Climatisation</p>
+                                    </div>
+                                    <div class="options">
+                                        <p class="plus">Annulation gratuite (avant le 15 juillet 2016)</p>
+                                        <p>Petit-déjeuner en supplément 12 €</p>
+                                    </div>
+                                    <div class="prix clearfix">
+                                        <div class="avant">65 €</div>
+                                        <div class="remise">-25 %</div>
+                                        <div class="apres">50 €</div>
+                                    </div>
+                                    <div class="btn-container">
+                                        <select class="selectpicker">
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                        <button class="btn btn-primary btn-recherche">Réserver</button>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="options">
+                                <h4>Ajouter des options à votre réservation</h4>
+                                <table>
+                                    <tr>
+                                        <td class="picto parking"></td>
+                                        <td class="titre">
+                                            <p>Parking exterieur non surveillé</p>
+                                        </td>
+                                        <td class="prix">3€</td>
+                                        <td class="nbr">
+                                            <select class="selectpicker">
+                                                <option>0</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="picto parking"></td>
+                                        <td class="titre">
+                                            <p>Parking couvert surveillé</p>
+                                        </td>
+                                        <td class="prix">5€</td>
+                                        <td class="nbr">
+                                            <select class="selectpicker">
+                                                <option>0</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="picto boisson"></td>
+                                        <td class="titre">
+                                            <p>Forfait boisson</p>
+                                        </td>
+                                        <td class="prix">13€</td>
+                                        <td class="nbr">
+                                            <select class="selectpicker">
+                                                <option>0</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="picto diner"></td>
+                                        <td class="titre">
+                                            <p>Dîner au restaurant de l'hôtel</p>
+                                        </td>
+                                        <td class="prix">35€</td>
+                                        <td class="nbr">
+                                            <select class="selectpicker">
+                                                <option>0</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="panier">
+                                    <h4>Votre panier</h4>
+                                    <div class="fond">
+                                        <div class="row">
+                                            <div class="col-sm-8 col-md-6">
+                                                <p><strong>Best Western Premier Le Swann****</strong><br/>
+                                                3 x Chambre Double ou Lits Jumeaux Standard<span class="hidden-sm hidden-md hidden-lg"> (217 €)</span><br/>
+                                                1 x Chambre Double Supérieur<span class="hidden-sm hidden-md hidden-lg"> (98 €)</span><br/>
+                                                7 x Place de Parking couvert surveillé<span class="hidden-sm hidden-md hidden-lg"> (35 €)</span></p>
+                                                <p><strong>Hôtel Rochester Champs Elysées***</strong><br/>
+                                                2 x Chambre Double ou Lits Jumeaux Standard<span class="hidden-sm hidden-md hidden-lg"> (234 €)</span></p>
+                                            </div>
+                                            <div class="hidden-xs col-sm-4 col-md-3">
+                                                <p>Séjour 3 nuits<br/>
+                                                <strong>217 €</strong><br/>
+                                                <strong>98 €</strong><br/>
+                                                <strong>35 €</strong></p>
+                                                <p>Séjour 3 nuits<br/>
+                                                <strong>234 €</strong></p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p class="prix">598 €</p>
+                                                <a href="#" class="btn btn-primary">Réserver</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sticky-panier">
+                                        <div class="fond">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-9 col-md-offset-3">
+                                                        <div class="row mini-panier">
+                                                            <div class="col-md-6">
+                                                                <p><strong>Best Western Premier Le Swann****</strong></p>
+                                                                <p><strong>Hôtel Rochester Champs Elysées***</strong></p>
+                                                            </div>
+                                                            <div class="col-md-2">                             
+                                                                <p><strong>217 €</strong></p>
+                                                                <p><strong>234 €</strong></p>
+                                                            </div>
+                                                            <div class="col-md-2 cell">
+                                                                <p class="prix">598 €</p>
+                                                            </div>
+                                                            <div class="col-md-2 cell">
+                                                                <a href="#" class="btn btn-primary">Réserver</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="equipements-services">
+                            <h3>Equipements et services</h3>   
+                            <div class="row liste">
+                                <div class="col-md-4"><span class="actif">Air conditionné</span></div>
+                                <div class="col-md-4"><span>Petit-déjeuner offert</span></div>
+                                <div class="col-md-4 actif"><span class="actif">Coffre-fort</span></div>
+                                <div class="col-md-4"><span>Chambre non-fumeur</span></div>
+                                <div class="col-md-4"><span>Réception 24H 7J/7</span></div>
+                                <div class="col-md-4"><span>Spa / Hammam</span></div>
+                                <div class="col-md-4"><span>Wifi Gratuit</span></div>
+                                <div class="col-md-4"><span>Parking</span></div>
+                                <div class="col-md-4"><span>Business Corner</span></div>
+                                <div class="col-md-4"><span class="actif">Cafetière / bouilloire en chambre</span></div>
+                                <div class="col-md-4"><span class="actif">Restaurant sur place</span></div>
+                                <div class="col-md-4"><span>Fumoir</span></div>
+                                <div class="col-md-4"><span class="actif">Chaînes TV Sport</span></div>
+                                <div class="col-md-4"><span>Bar</span></div>
+                                <div class="col-md-4"><span>Salle de réunion</span></div>
+                                <div class="col-md-4"><span>Minibar</span></div>
+                                <div class="col-md-4"><span>Piscine</span></div>
+                                <div class="col-md-4"><span>Room-service</span></div>
+                                <div class="col-md-4"><span>Prise USB en chambre pour recharge</span></div>
+                                <div class="col-md-4"><span>Fitness</span></div>
+                                <div class="col-md-4"><span>Bagagerie</span></div>
+                            </div>
+                        </div>
+                        <div class="infos-pratiques">
+                            <h3>Infos pratiques</h3>   
+                            <p>Ouvert 7j/7, réception 24h/24<br/>
+                            Les chambres sont disponibles à partir de 14h00<br/>
+                            Les chambres doivent être libérées avant 12h00</p>
+                        </div>
+                        <div class="y-aller">
+                            <h3>Comment s'y rendre</h3>   
+                            <h4>En transport</h4>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <span class="m">M</span>
+                                        <span class="m2">2</span>
+                                        <span class="m3">3</span>
+                                    </td>
+                                    <td>Villiers</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="m">M</span>
+                                        <span class="m3">3</span>
+                                        <span class="m12">12</span>
+                                        <span class="m13">13</span>
+                                        <span class="m14">14</span>
+                                    </td>
+                                    <td>Saint-Lazare</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="r">RER</span>
+                                        <span class="re">E</span>
+                                    </td>
+                                    <td>Haussman - Saint-Lazare</td>
+                                </tr>
+                            </table>
+                            <h4>En voiture</h4>
+                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+                        </div>
+                        <div class="avis-clients">
+                            <h3>Avis des clients</h3>
+                            <img src="images/avis.jpg" alt="avis" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-md-pull-9">
+                    <div class="colonne-gauche">
+                        <div class="formulaire">
+                            <form>
+                                <div class="form-control">
+                                    <input type="text" class="" placeholder="Destination / Nom de l'établissement" />
+                                </div>
+                                <div class="form-control">
+                                    <input type="date" class="" placeholder="Arrivée" />
+                                </div>
+                                <div class="form-control">
+                                    <input type="date" class="" placeholder="Départ" />
+                                </div>
+                                <div class="form-control">
+                                    <select class="selectpicker" title="Chambre d'hôtel">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+                                <div class="form-control chambre-selection">
+                                    <div class="colonne">
+                                        <label class="single">Single</label>
+                                        <div class="pad">
+                                            <button>-</button>
+                                            <span>1</span>
+                                            <button class="plus">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="colonne">
+                                        <label class="twin">Twin</label>
+                                        <div class="pad">
+                                            <button>-</button>
+                                            <span>0</span>
+                                            <button class="plus">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="colonne">
+                                        <label class="double">Double</label>
+                                        <div class="pad">
+                                            <button>-</button>
+                                            <span>0</span>
+                                            <button class="plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-control btn-container">
+                                    <button class="btn btn-primary btn-recherche">Rechercher</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="contact-applis">
+                            <div class="wrapper">
+                                <h3>S'inscrire<button href="#" role="button" data-toggle="popover" data-trigger="focus" data-placement="right" title="Lorem ipsum" data-content="This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor.">?</button></h3>
+                                <div class="form-control">
+                                    <input type="email" class="email" placeholder="Votre email" />
+                                    <input type="submit" class="valider" value="OK" />
+                                </div>
+                            </div>
+                            <div class="wrapper no-border">
+                                <h3>Contactez-nous !</h3>
+                                <div class="ligne numero">
+                                    01 23 45 67 89
+                                    <div>Prix d'un appel local</div>
+                                </div>
+                                <div class="ligne ecrire">
+                                    Nous écrire
+                                </div>
+                            </div>
+                            <div class="wrapper hidden-sm hidden-md hidden-lg no-border">
+                                <div class="photo-home">
+                                    <img src="images/photo-home.jpg" alt="photo" />
+                                    <div class="texte">
+                                        <p>Lorem ipsum dolor sit amet</p>
+                                        <a href="#" class="btn-offres">Voir toutes les offres</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrapper">
+                                <h3><div>Télécharger</div>notre application</h3>
+                                <div class="application">
+                                    <a href="#" class="appStore"></a>
+                                    <a href="#" class="googleStore"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dernieres-reservations hidden-xs">
+                            <h3>Dernières réservations</h3>
+                            <div class="liste-hotel">
+                                <a href="hotel.html" class="hotel">
+                                    <div class="photo">
+                                        <img src="images/photo1.jpg" alt="Hôtel 1"/>
+                                    </div>
+                                    <p class="nom">Nom de l'hôtel****</p>
+                                    <p class="lieu">Montparnasse<span class="note">8/10</span></p>
+                                </a>
+                                <a href="hotel.html" class="hotel">
+                                    <div class="photo">
+                                        <img src="images/photo2.jpg" alt="Hôtel 2"/>
+                                    </div>
+                                    <p class="nom">Nom de l'hôtel****</p>
+                                    <p class="lieu">Montparnasse<span class="note">8/10</span></p>
+                                </a>
+                                <a href="hotel.html" class="hotel">
+                                    <div class="photo">
+                                        <img src="images/photo3.jpg" alt="Hôtel 3"/>
+                                    </div>
+                                    <p class="nom">Nom de l'hôtel****</p>
+                                    <p class="lieu">Montparnasse<span class="note">8/10</span></p>
+                                </a>
+                            </div>
+                            <p class="see-all">
+                                <a href="#">Tout voir ></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nos-engagements fond">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="images/engagements.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	{{> menu-mobile}}
+	{{> footer}}
+	{{> foot}}
+</body>
+</html>

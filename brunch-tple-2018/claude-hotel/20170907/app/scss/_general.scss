@@ -1,0 +1,252 @@
+/* Fichier Style CSS */
+
+/* Font-face */
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/FontAwesome.eot');
+    src: url('../fonts/FontAwesome.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/FontAwesome.ttf') format('truetype'),
+         url('../fonts/FontAwesome.svg#PolicePerso') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/Roboto-Regular.eot');
+    src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Regular.woff') format('woff'),
+         url('../fonts/Roboto-Regular.ttf') format('truetype'),
+         url('../fonts/Roboto-Regular.svg#PolicePerso') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../fonts/Roboto-Bold.eot');
+    src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Bold.woff') format('woff'),
+         url('../fonts/Roboto-Bold.ttf') format('truetype'),
+         url('../fonts/Roboto-Bold.svg#PolicePerso') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('../fonts/Roboto-Light.eot');
+    src: url('../fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Light.woff') format('woff'),
+         url('../fonts/Roboto-Light.ttf') format('truetype'),
+         url('../fonts/Roboto-Light.svg#PolicePerso') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('../fonts/Roboto-Medium.eot');
+    src: url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Medium.woff') format('woff'),
+         url('../fonts/Roboto-Medium.ttf') format('truetype'),
+         url('../fonts/Roboto-Medium.svg#PolicePerso') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Thin';
+    src: url('../fonts/Roboto-Thin.eot');
+    src: url('../fonts/Roboto-Thin.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Thin.woff') format('woff'),
+         url('../fonts/Roboto-Thin.ttf') format('truetype'),
+         url('../fonts/Roboto-Thin.svg#PolicePerso') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Balises globales */
+body, h1, h2, h3, h4, h5, ul, p, input, select, textarea, button {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+    outline: none;
+}
+
+body {
+    background-color: $blanc;
+    font-family: 'Roboto-Regular';
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+strong, b {
+    font-family: 'Roboto-Bold';
+    font-weight: initial;
+}
+.marginb20 {
+    margin-bottom: 20px;
+}
+.marginb30 {
+    margin-bottom: 30px;
+}
+
+span.error {
+    color: $rouge;
+}
+.btn-container {
+    .btn-primary {
+        outline: none !important;
+    }
+    .btn-recherche {
+        width: 100%;
+        background-color: $bleu-marine;
+        border: none;
+        padding: 23px 10px;
+        font-family: 'Roboto-Bold';
+        font-size: 18px;
+        text-decoration: none;
+        
+        &:active:focus, &:active:hover {
+            background-color: darken($bleu-marine, 0.5);
+        }
+        &:hover {
+            background-color: $bleu-marine-hover;
+        }
+    }
+}
+#ui-datepicker-div {
+    background-color: $blanc3;
+    z-index: 10 !important;
+    
+    .ui-datepicker-header {
+        background-color: $bleu-marine3;
+        color: $blanc;
+        
+        .ui-datepicker-prev {
+            background: url('../images/arrow-datepicker.png') no-repeat 12px center;
+            background-size: 100%;
+            left: 2px;
+            top: 2px;
+        }
+        .ui-datepicker-next {
+            background: url('../images/arrow-datepicker.png') no-repeat -12px center;
+            background-size: 100%;
+            right: 2px;
+            top: 2px;
+        }
+    }
+    .ui-datepicker-calendar {
+        thead {
+            tr {
+                border-bottom: 1px solid $gris;
+            }
+        }
+        td {
+            text-align: center;
+            
+            a, span {
+                display: inline-block;
+            }
+            &.ui-datepicker-current-day {
+                a {
+                    background-color: $bleu-marine3;
+                    color: $blanc;
+                    @include border-radius(50%);
+                    padding: 4px 5px;
+                }
+            }
+        }
+    }
+}
+span {
+    input[type="checkbox"] {
+        display: none;
+
+        &:checked + input + label {
+            &:after {
+                display: block;
+            }
+        }
+        + input + label {
+            position: relative;
+
+            &:before {
+                content: "";
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background-color: $blanc;
+                margin-right: 15px;
+                position: relative;
+                top: 2px;
+                border: 1px solid $gris2;
+            }
+            &:after {
+                content: "\f00c";
+                font-family: "FontAwesome";
+                display: none;
+                width: 19px;
+                height: 14px;
+                position: absolute;
+                top: 2px;
+                left: 3px;
+                font-size: 14px;
+                color: $bleu-marine;
+            }
+        }
+    }
+    &.choix {
+        input[type="checkbox"] {
+            &:checked + label {
+                &:after {
+                    display: block;
+                }
+            }
+            + label {
+                position: relative;
+
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    background-color: $blanc;
+                    margin-right: 15px;
+                    position: relative;
+                    top: 2px;
+                    border: 1px solid $gris2;
+                }
+                &:after {
+                    content: "\f00c";
+                    font-family: "FontAwesome";
+                    display: none;
+                    width: 19px;
+                    height: 14px;
+                    position: absolute;
+                    top: 2px;
+                    left: 3px;
+                    font-size: 14px;
+                    color: $bleu-marine;
+                }
+            }
+        }
+    }
+}
+
+
+.ul-style1 {
+    list-style: none;
+    li {
+        font-family: "Roboto-Light";
+        font-size: 13px;
+        padding-bottom: 20px;
+        &:before {
+            content: "";
+            display: inline-block;
+            border: 5px solid transparent;
+            border-left: 10px solid #109cab;
+            border-right: none;
+            padding-right: 5px;
+        }
+    }
+}

@@ -1,0 +1,186 @@
+body {
+    &.mask {
+        overflow: hidden;
+
+        .fond {
+            position: fixed;
+            top: 0;
+            z-index: 400;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($noir, 0.5);
+        }
+    }
+    .menu-mobile {
+        background-color: rgba($noir, 0);
+        height: 100%;
+        width: 100%;
+        z-index: 2000;
+        position: fixed;
+        top: 0;
+        visibility: hidden;
+        overflow: hidden;
+
+        > div {
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-perspective: 1000px;
+            perspective: 1000px;
+            transform: translate3d(100%, 0, 0);
+        }
+    }
+    &.animating {
+        .menu-mobile {
+            transition: background .3s ease-in-out;
+
+            > div {
+                transition: transform .3s ease-in-out;
+            }
+        }
+        &.left {
+            .menu-mobile {
+                background-color: rgba($noir, 0.5);
+
+                > div {
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+        }
+        &.right {
+            .menu-mobile {
+                background-color: rgba($noir, 0);
+
+                > div {
+                    transform: translate3d(100%, 0, 0);
+                }
+            }
+        }
+    }
+    &.menu-visible {
+        .menu-mobile {
+            background-color: rgba($noir, 0.5);
+
+            > div {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+    &.animating, &.menu-visible {
+        overflow: hidden;
+
+        .menu-mobile {
+            visibility: visible;
+            // transform: translate3d(0, 0, 0);
+
+            > div {
+                padding-right: 0;
+                height: 100%;
+                overflow-y: auto;
+
+                .wrapper {
+                    background-color: $gris-fonce;
+                    @include box-shadow(-5px, 0, 10px, -5px, $noir);
+                    height: 100%;
+
+                    nav {
+                        > ul {
+                            list-style: none;
+
+                            > li {
+                                > a {
+                                    position: relative;
+                                    display: inline-block;
+                                    width: 100%;
+                                    font-family: "Roboto-Bold";
+                                    font-size: 18px;
+                                    line-height: 30px;
+                                    background-color: $gris-fonce;
+                                    color: $blanc;
+                                    border-left: 3px solid $gris-fonce;
+                                    text-transform: uppercase;
+                                    text-decoration: none;
+                                    padding: 20px;
+
+                                    &:hover, &.active {
+                                        background-color: lighten($gris-fonce, 10%);
+                                        border-left: 3px solid $bleu-marine;
+                                    }
+                                    &.boutique {
+                                        position: relative;
+                                        
+                                        &:before {
+                                            content: "";
+                                            display: inline-block;
+                                            background: url(../images/boutique.png) center center no-repeat;
+                                            width: 31px;
+                                            height: 30px;
+                                            float: left;
+                                            margin-right: 10px;
+                                        }
+                                        span {
+                                            background-color: $rouge;
+                                            @include border-radius(50%);
+                                            display: inline-block;
+                                            width: 18px;
+                                            height: 18px;
+                                            font-size: 11px;
+                                            line-height: 18px;
+                                            text-align: center;
+                                            position: absolute;
+                                            top: 55%;
+                                            left: 40px;
+                                        }
+                                    }
+                                    &.messagerie {
+                                        &:before {
+                                            content: "";
+                                            display: inline-block;
+                                            background: url(../images/messagerie.png) center center no-repeat;
+                                            width: 30px;
+                                            height: 30px;
+                                            float: left;
+                                            margin-right: 10px;
+                                        }
+                                    }
+                                    &.langue.fr {
+                                        &:before {
+                                            content: "";
+                                            display: inline-block;
+                                            background: url(../images/drapeau-fr.png) center center no-repeat;
+                                            width: 30px;
+                                            height: 30px;
+                                            float: left;
+                                            margin-right: 10px;
+                                        }
+                                    }
+									&.langue.en {
+                                        &:before {
+                                            content: "";
+                                            display: inline-block;
+                                            background: url(../images/drapeau-en.png) center center no-repeat;
+                                            width: 30px;
+                                            height: 30px;
+                                            float: left;
+                                            margin-right: 10px;
+                                        }
+                                    }
+                                    &.mon-compte {
+                                        &:before {
+                                            content: "";
+                                            display: inline-block;
+                                            background: url(../images/picto-mon-compte.png) center center no-repeat;
+                                            width: 30px;
+                                            height: 30px;
+                                            float: left;
+                                            margin-right: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

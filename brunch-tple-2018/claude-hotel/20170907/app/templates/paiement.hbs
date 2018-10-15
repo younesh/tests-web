@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+	{{> head}}
+</head>
+<body>
+	{{> header}}
+	<div class="content">
+        <div class="form-paiement">
+            <div class="container">
+                <h2>Paiement</h2>
+                <fieldset>
+                    <h4>Choisissez un moyen de paiement</h4>
+                    <p>Vous pouvez choisir d'ajouter la facturation de cette réservation à votre société ou bien de payer directement en ligne</p>
+                    <form>
+                        <ul>
+                            <li>
+                                <input type="radio" name="paiement" id="paiement_cheque" />
+                                <label for="paiement_cheque">
+                                    <h4>Paiement par chèque sur facture</h4>
+                                    <p>Cette réservation sera facturée auprès de votre société</p>
+                                    <p><strong>Nécessite une validation par un utilisateur agréé avant le jeudi 29 octobre à 16h00</strong></p>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" name="paiement" id="paiement_ligne_facture" />
+                                <label for="paiement_ligne_facture">
+                                    <h4>Paiement en ligne avec facture à la société</h4>
+                                    <p>Cette réservation sera facturée auprès de votre société</p>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" name="paiement" id="paiement_ligne" />
+                                <label for="paiement_ligne">
+                                    <h4>Paiement en ligne</h4>
+                                    <p>Cette réservation ne sera pas facturée auprès de votre société</p>
+                                </label>
+                            </li>
+                        </ul>
+                        <p class="info">Votre réservation est annulable jusqu'au 2 novembre 2016</p>
+                    </form>
+                </fieldset>
+            </div>
+        </div>
+        <div class="coordonnees-paiement">
+            <div class="container">
+                <h2>Vos coordonnées</h2>
+                <fieldset>
+                    <h4>Renseignez vos informations personnelles</h4>
+                    <p>Les informations renseignées ci-dessous seront transmises à l'hôtel</p>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4 class="titre-form">Coordonnées de facturation</h4>
+                            <div><input type="text" placeholder="Nom*" /></div>
+                            <div><input type="text" placeholder="Société*" /></div>
+                            <div><input type="text" placeholder="Prénom*" /></div>
+                            <div><input type="text" placeholder="Code Postal*" /></div>
+                            <div><input type="number" placeholder="Téléphone*" /></div>
+                            <div><input type="text" placeholder="Ville*" /></div>
+                            <div><input type="email" placeholder="Email*" /></div>
+                            <div>
+                                <select class="selectpicker">
+                                    <option>Pays*</option>
+                                    <option>France</option>
+                                    <option>Belgique</option>
+                                    <option>Suisse</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <h4 class="titre-form">Coordonnées de livraison</h4>
+                            <div><input type="text" placeholder="Nom*" /></div>
+                            <div><input type="text" placeholder="Société*" /></div>
+                            <div><input type="text" placeholder="Prénom*" /></div>
+                            <div><input type="text" placeholder="Code Postal*" /></div>
+                            <div><input type="number" placeholder="Téléphone*" /></div>
+                            <div><input type="text" placeholder="Ville*" /></div>
+                            <div><input type="email" placeholder="Email*" /></div>
+                            <div>
+                                <select class="selectpicker">
+                                    <option>Pays*</option>
+                                    <option>France</option>
+                                    <option>Belgique</option>
+                                    <option>Suisse</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="cgv">
+                        <input type="checkbox" value="" />
+                        <label>J'ai pris connaissance et accepte les <a href="#">conditions générales de vente</a></label>
+                    </p>
+                    <input type="submit" class="btn btn-recherche" value="Valider ma réservation" />
+                </fieldset>
+            </div>
+        </div>
+        <div class="nos-engagements hidden-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Vous allez dire ...</h2>
+                        <img src="images/engagements-2.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	{{> menu-mobile}}
+	{{> footer}}
+	{{> foot}}
+</body>
+</html>

@@ -1,0 +1,97 @@
+.form-paiement {
+    background-color: $gris-clair;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    
+    fieldset {
+        border-top: 1px solid $gris;
+        margin-top: 10px;
+        padding-top: 20px;
+
+        h4 {
+            font-family: "Roboto-Light";
+        }
+        p {
+            font-family: "Roboto-Regular";
+            font-size: 13px;
+        }
+        form {
+            margin-top: 20px;
+
+            ul {
+                list-style: none;
+
+                li {
+                    margin-bottom: 20px;
+
+                    input[type="radio"] {
+                        display: inline-block;
+                        vertical-align: top;
+                        outline: none;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .info {
+                font-weight: bold;
+                font-size: 16px;
+                color: $bleu-marine;
+            }
+        }
+    }
+}
+.coordonnees-paiement {
+    padding-top: 60px;
+    padding-bottom: 80px;
+    
+    fieldset {
+        border-top: 1px solid $gris;
+        margin-top: 10px;
+        padding-top: 20px;
+        
+        h4.titre-form {
+            margin: 20px 0;
+        }
+        .bootstrap-select, input[type="text"], input[type="number"], input[type="email"], input[type="password"], select, textarea {
+            width: 100% !important;
+            margin-bottom: 10px;
+            border: 1px solid $gris;
+            left: 0;
+        }
+        .btn {
+            width: 100%;
+            border: none;
+            @include border-radius(0);
+            padding: 13px 10px;
+        }
+        input[type="text"], input[type="number"], input[type="email"], input[type="password"], select, textarea {
+            padding: 15px 12px;
+        }
+        .cgv {
+            margin: 30px 0;
+
+            input[type="checkbox"] {
+                outline: none;
+                margin-right: 10px;
+            }
+            label {
+                font-weight: normal;
+
+                a {
+                    color: inherit;
+                    text-decoration: underline;
+                }
+            }
+        }
+        input[type="submit"] {
+            font-family: "Roboto-Regular";
+            font-size: 16px;
+            background-color: #109cab;
+            border: none;
+            @include border-radius(0);
+            color: $blanc;
+            padding: 10px 20px;
+            width: auto;
+        }
+    }
+}

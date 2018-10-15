@@ -1,0 +1,114 @@
+.apropos {
+    padding-bottom: 0px !important;
+    h4 {
+        color: $bleu-marine; 
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+    
+    .super-h {
+        color: $bleu-marine; 
+        margin-top: 8px;
+    }
+    ul {
+        @extend .ul-style1; 
+        li {
+            padding-bottom: 5px;
+        }
+    }
+    
+    .bloc-intro { /* 1er bloc */
+        margin-top: 40px;
+        [class^='col-']  {
+            @media (max-width : 767px) {
+               margin-bottom: 60px;   
+            }
+        }
+        .col2 {
+            text-align: center;
+            .tx1 {
+                font-size: 18px;
+                font-family: "Roboto-light";
+            }
+            .tx2 {
+                font-size: 18px;
+                font-family: "Roboto-bold";
+            }
+        }
+    }
+    
+    .photo-group-personne {
+      text-align: center;
+    }
+    
+    
+    &.apropos-part2 {
+        padding-top: 60px;
+    
+        h2 { margin-bottom: 60px; }
+        
+        .qui-et-qui {
+            [class^='col-']  {
+                text-align: center;
+                min-height: 350px;
+                margin-bottom: 50px;
+                
+                .qeq-nom {
+                    margin-top: 30px;
+                   font-family: 'Roboto-bold';
+                    text-transform: uppercase;
+                    font-size: 18px;
+                }
+                
+                .qeq-fonction {
+                    
+                }
+                
+                .qeq-qualite {
+                     font-family: 'Roboto-bold';
+                }
+            }
+        }
+        
+    }
+}
+
+.ctn-larg-apropos {
+    background-color:  $bleu-marine;
+    color: #fff;
+    padding: 60px 0;
+    h2 { text-align: center;}
+    
+    .bloc-engagement {
+        [class^='col-']  {
+            margin: 60px auto;
+            text-align: center;
+          
+            span {
+                display: block;
+                margin-top: 15px;
+                font-family: 'Roboto-Thin';
+                font-size: 16px;
+                text-transform: uppercase;
+            }
+            
+            @media (max-width : 991px) {
+                /*   background-color: gray;*/
+            }
+            
+        }
+    }
+}
+
+/*  $bleu-marine  */
+/* des box pour test */
+.boxRed {
+    background-color: red;
+}
+
+.boxGreen {
+    background-color: green;
+}
+.BoxYellow {
+     background-color: yellow;
+}

@@ -1,0 +1,44 @@
+.popups {
+    
+    .modal-content {
+        @include border-radius(0);
+        border-bottom: solid 26px $bleu-marine7;
+        box-shadow: none;
+    }
+    
+/* popupa pour la comfirmation d'inscription des partenaer */
+    
+    &#popup-comfirmation-partener{
+        top: 15vh;
+        .modal-content {
+            padding: 10px;
+            .pop-header {
+                text-align: center;
+                width: 80%;
+                margin: 0 auto;
+                border-bottom: solid 1px #ccc;
+                padding: 20px;
+            }
+            
+            .pop-body {
+                text-align: center;
+                
+                .pp-title {
+                margin: 35px auto;
+                }
+                
+                .merci {
+                    color:$bleu-marine7;
+                }
+                
+                p {
+                    margin-bottom: 20px;
+                    font-size: 15px;
+                }
+            }
+        }
+        
+    }
+    
+    
+}

@@ -1,0 +1,689 @@
+/**************************/
+/*     PAGE RECHERCHE     */
+/**************************/
+
+.content.recherche {
+    .colonne-gauche {
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-bottom: 0;
+        overflow-y: auto;
+        background-color: $blanc2;
+        
+        @media screen and (max-width: 767px) {
+            overflow-y: initial;
+            height: auto !important;
+        }        
+        > form {
+            padding: 80px 15px 20px;
+            
+            .destination {
+                display: inline-block;
+                vertical-align: top;
+                height: 46px;
+                width: 100%;
+                margin-bottom: 20px;
+                
+                @media screen and (max-width: 767px) {
+                    margin-bottom: 10px;
+                }
+                input {
+                    width: 100%;
+                    height: 100%;
+                    line-height: 100%;
+                    padding: 12px 9px 10px;
+                    background-color: $blanc;
+                    border: none;
+                }
+            }
+            .date {
+                display: inline-block;
+                vertical-align: top;
+                height: 46px;
+                width: 100%;
+                margin-bottom: 20px;
+                
+                @media screen and (max-width: 767px) {
+                    height: auto;
+                    margin-bottom: 0;
+                }
+                input {
+                    display: block;
+                    float: left;
+                    border: none;
+                    padding: 12px 9px 10px;
+                    width: 50%;
+                    height: 100%;
+                    line-height: 100%;
+
+                    &.arrivee {
+                        background: url('../images/fleche-pleine.png') no-repeat right center $blanc;
+
+                        @media screen and (max-width: 767px) {
+                            background-image: none;
+                        }
+                    }
+                    &.arrivee, &.depart {                        
+                        &:before {
+                            content: attr(placeholder);
+                            width: 100%;
+                            background-color: $blanc;
+                        }
+                        &:hover, &:focus, &:active, &.actif {
+                            &:before {
+                                display: none;
+                            }
+                        }
+                        @media screen and (max-width: 767px) {
+                            width: 100%;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+            .date2 {
+                display: inline-block;
+                vertical-align: top;
+                height: 46px;
+                width: 100%;
+                margin-bottom: 20px;
+                
+                @media screen and (max-width: 767px) {
+                    height: auto;
+                    margin-bottom: 0;
+                }
+                input {
+                    display: block;
+                    float: left;
+                    border: none;
+                    padding: 12px 9px 10px;
+                    width: 100%;
+                    height: 100%;
+                    line-height: 100%;
+
+                    &.arrivee {                        
+                        &:before {
+                            content: attr(placeholder);
+                            width: 100%;
+                            background-color: $blanc;
+                        }
+                        &:hover, &:focus, &:active, &.actif {
+                            &:before {
+                                display: none;
+                            }
+                        }
+                        @media screen and (max-width: 767px) {
+                            width: 100%;
+                            margin-bottom: 10px;
+                            float: none;
+                        }
+                    }
+                }
+            }
+            .chambres {
+                margin-bottom: 20px;
+                
+                .chambre-hotel {
+                    display: inline-block;
+                    float: left;
+                    vertical-align: top;
+                    height: 61px;
+                    width: 33.3333%;
+                    padding-top: 27px;
+                    padding-right: 4px;
+                    
+                    @media screen and (max-width: 767px) {
+                        width: 100%;
+                        height: 46px;
+                        padding-right: 0;
+                        margin-bottom: 10px;
+                        padding-top: 0;
+                    }
+                    .bootstrap-select {
+                        width: 100%;
+                        height: 100%;
+
+                        button {
+                            width: 100%;
+                            height: 100%;
+                            border: none;
+                            @include border-radius(0);
+                        }
+                    }
+
+                }
+                .chambre-selection {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 66.6666%;
+                    
+                    @media screen and (max-width: 767px) {
+                        width: 100%;
+                    }
+                    .colonne {
+                        display: inline-block;
+                        float: left;
+                        vertical-align: top;
+                        width: 33.3333%;
+                        height: 100%;
+                        border-right: 1px solid $blanc2;
+                        border-left: none;
+
+                        label {
+                            font-family: "Roboto-Medium";
+                            font-size: 13px;
+                            font-weight: normal;
+                            color: $bleu-marine;
+                            width: 100%;
+                            text-align: center;
+                            padding-top: 4px;
+                            text-indent: -3000px;
+                            
+                            &.single {
+                                background: url('../images/picto-chambre-single.png') no-repeat center center;
+                                background-size: 32px;
+                            }
+                            &.twin {
+                                background: url('../images/picto-chambre-twin.png') no-repeat center center;
+                                background-size: 32px;
+                            }
+                            &.double {
+                                background: url('../images/picto-chambre-double.png') no-repeat center center;
+                                background-size: 32px;
+                            }
+                        }
+                        .pad {
+                            display: inline-block;
+                            background-color: $blanc;
+                            text-align: center;
+                            width: 100%;
+                            height: 100%;
+                            line-height: 100%;
+                            padding: 12px 12px 8px;
+
+                            span {
+                                padding: 0 3px;
+                            }
+                            button {
+                                background-color: transparent;
+                                border: none;
+
+                                &.plus {
+                                    font-family: "Roboto-Medium";
+                                    font-size: 13px;
+                                    color: $bleu-marine;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .salles {                
+                .type-salle {
+                    height: 43px;
+                    width: 100%;
+                    
+                    .bootstrap-select {
+                        width: 100%;
+                        height: 100%;
+
+                        button {
+                            width: 100%;
+                            height: 100%;
+                            border: none;
+                            @include border-radius(0);
+                            font-size: 13px;
+                            font-family: "Roboto-Medium";
+                            color: $bleu-marine;
+                        }
+                    }
+
+                }
+            }
+            .nbr-personne {
+                margin-bottom: 20px;
+                
+                label {
+                    line-height: 43px;
+                    margin-bottom: 0;
+                }
+                .colonne {
+                    display: inline-block;
+                    float: left;
+                    vertical-align: top;
+                    width: 100%;
+                    height: 100%;
+                    border-right: 1px solid $blanc2;
+                    border-left: none;
+
+                    label {
+                        font-family: "Roboto-Medium";
+                        font-size: 13px;
+                        font-weight: normal;
+                        color: $bleu-marine;
+                        width: 100%;
+                        text-align: center;
+
+                    }
+                    .pad {
+                        display: inline-block;
+                        background-color: $blanc;
+                        text-align: center;
+                        width: 100%;
+                        height: 100%;
+                        line-height: 100%;
+                        padding: 12px 12px 8px;
+
+                        span {
+                            padding: 0 3px;
+                        }
+                        button {
+                            background-color: transparent;
+                            border: none;
+
+                            &.plus {
+                                font-family: "Roboto-Medium";
+                                font-size: 13px;
+                                color: $bleu-marine;
+                            }
+                        }
+                    }
+                }
+            }
+            .prix {
+                margin-bottom: 30px;
+                
+                label {
+                    float: left;
+                    width: 10%;
+                }
+                .slider-price {
+                    float: left;
+                    width: 90%;
+                    
+                    .min-price {
+                        padding-right: 10px;
+                        text-align: right;
+                    }
+                    .max-price {
+                        padding-left: 10px;
+                        text-align: left;
+                    }
+                    .min-price, .max-price {
+                        font-family: "Roboto-Bold";
+                        color: $bleu-marine;
+                        display: block;
+                        float: left;
+                        width: 10%;
+                        
+                        @media screen and (max-width: 767px) {
+                            width: 20%;
+                        }
+                    }
+                    #slider-range {
+                        float: left;
+                        width: 80%;
+                        margin-top: 5px;
+                        
+                        @media screen and (max-width: 767px) {
+                            width: 60%;
+                        }
+                        .ui-slider-range {
+                            background-color: $bleu-marine2;
+                            border: none;
+                        }
+                        .ui-state-default, .ui-state-active {
+                            background-color: $bleu-marine;
+                            border: none;
+                            cursor: w-resize;
+                        }
+                    }
+                }
+            }
+            .bottom {
+                a, button {
+                    width: 50%;
+                    float: left;
+                }
+                a {
+                    font-family: "Roboto-Medium";
+                    font-size: 13px;
+                    color: $bleu-marine2;
+                    line-height: 34px;
+                    text-decoration: underline;
+                }
+                button {
+                    font-family: "Roboto-Bold";
+                    font-size: 16px;
+                    background-color: $bleu-marine;
+                    border: none;
+                    @include border-radius(0);
+                    
+                    &:hover {
+                        background-color: $bleu-marine2;
+                    }
+                }
+            }
+            .filtres {
+                border-top: 1px solid $gris;
+                padding: 20px 0 0;
+                display: none;
+                
+                .etoiles, .metro {
+                    margin-bottom: 10px;
+                    
+                    label, .bootstrap-select {
+                        float: left;
+                        width: 50%;
+                        
+                        @media screen and (max-width: 767px) {
+                            width: 100%;
+                            float: none;
+                        }
+                        .btn {
+                            padding: 2px 10px;
+                            @include border-radius(0);
+                        }
+                    }
+                    &:after {
+                        content: "";
+                        display: block;
+                        clear: both;
+                    }
+                }
+                .configuration {
+                    .liste-salle {
+                        margin-bottom: 20px;
+                        
+                        a {
+                            display: inline-block;
+                            font-size: 11px;
+                            font-family: "Roboto-Medium";
+                            color: $gris6;
+                            width: 20%;
+                            text-align: center;
+                            margin-left: -4px;
+                            padding: 0 5px;
+                            
+                            &:hover, &.actif {
+                                color: $bleu-marine;
+                                text-decoration: none;
+                                
+                                &:after {
+                                    border-color: $blanc;
+                                    background-color: $blanc;
+                                    background-image:  url("../images/configuration-salle-hover.png");
+                                }
+                            }
+                            &:focus {
+                                text-decoration: none;
+                            }
+                            &:after {
+                                content: "";
+                                display: block;
+                                background: url("../images/configuration-salle.png") no-repeat;
+                                height: 47px;
+                                width: 46px;
+                                margin: 7px auto 0;
+                                border: 5px solid transparent;
+                            }
+                            &.u {
+                                &:after {
+                                    background-position: 0 center;
+                                }
+                            }
+                            &.rectangulaire {
+                                &:after {
+                                    background-position: -75px center;
+                                }
+                            }
+                            &.classe {
+                                &:after {
+                                    background-position: -150px center;
+                                }
+                            }
+                            &.vide {
+                                &:after {
+                                    background-position: -225px center;
+                                }
+                            }
+                            &.theatre {
+                                &:after {
+                                    background-position: -300px center;
+                                }
+                            }
+                        }
+                    }
+                }
+                .equipements, .services {
+                    clear: both;
+                    
+                    label {
+                        margin-bottom: 10px;
+                    }
+                    .liste-choix {
+                        .choix {
+                            float: left;
+                            width: 50%;
+                            
+                            @media screen and (max-width: 767px) {
+                                width: 100%;
+                                float: none;
+                            }
+                        }
+                    }
+                    a {
+                        color: $bleu-marine5;
+                        float: right;
+                    }
+                }
+                .btn-container {
+                    margin-top: 50px;
+                    text-align: center;
+                    
+                    .btn {
+                        float: left;
+                        width: 50%;
+                        @include border-radius(0);
+                        
+                        &.btn-annuler {
+                            width: 45%;
+                            margin-right: 5%;
+                            font-size: 16px;
+                            background-color: transparent;
+                            border-color: $gris-fonce;
+                            
+                            @media screen and (max-width: 767px) {
+                                width: auto;
+                                float: none;
+                            }
+                            &:hover {
+                                background-color: $blanc;
+                            }
+                        }
+                        &.btn-filtrer {
+                            font-family: "Roboto-Bold";
+                            font-size: 16px;
+                            background-color: $bleu-marine;
+                            color: $blanc;
+                            border-color: $bleu-marine;
+                    
+                            @media screen and (max-width: 767px) {
+                                width: auto;
+                                float: none;
+                            }
+                            &:hover {
+                                background-color: $bleu-marine2;
+                            }
+                        }
+                    }
+                     &:after {
+                        content: "";
+                        display: block;
+                        clear: both;
+                    }
+                }
+            }
+        }
+        .resultats {
+            padding: 15px 15px 0;
+            background-color: $blanc;
+            
+            > p {
+                float: left;
+                width: 33.3333%;
+                font-family: "Roboto-Bold";
+                font-size: 15px;
+                
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+            .tri {
+                float: left;
+                width: 66.6666%;
+                font-family: "Roboto-Medium";
+                font-size: 12px;
+                text-align: right;
+                margin-bottom: 10px;
+                
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                }
+                label {
+                    font-weight: normal;
+                    padding-right: 8px;
+                    
+                    @media screen and (max-width: 767px) {
+                        float: left;
+                        line-height: 23px;
+                        margin-bottom: 0;
+                    }
+                }
+                .bootstrap-select {
+                    width: auto !important;
+
+                    button {
+                        font-family: "Roboto-Medium";
+                        font-size: 12px;
+                        padding: 2px 25px 2px 5px;
+                        @include border-radius(0);
+                    }
+                    .dropdown-menu {
+                        li {
+                            a {
+                                font-size: 12px;
+                                padding: 3px 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            .map {
+                position: relative;
+                clear: both;
+                
+                .btn-container {
+                    position: absolute;
+                    top: 50%;
+                    @include transform-translate(0, -50%);
+                    text-align: center;
+                    width: 100%;
+                    height: 100%;
+                    
+                    .btn-recherche {
+                        padding: 2px 10px;
+                        width: auto;
+                    }
+                }
+            }
+            .liste-hotel {
+                clear: both;
+                border-top: 1px solid $gris-clair;
+                padding: 20px 0;
+                
+                .hotel {
+                    display: block;
+                    padding: 6px;
+                    color: $gris-fonce;
+                    
+                    &:hover {
+                        background-color: $gris-clair;
+                    }
+                    .photo {
+                        float: left;
+                        width: 50%;
+                    }
+                    .description {
+                        float: left;
+                        width: 50%;
+                        padding-left: 13px;
+                        
+                        .nom {
+                            font-family: "Roboto-Bold";
+                            font-size: 14px;
+                        }
+                        .lieu {
+                            font-family: "Roboto-Light";
+                            font-size: 12px;
+                            padding-bottom: 6px;
+                            border-bottom: 1px dashed $gris-fonce;
+                        }
+                        .note-avis {
+                            font-family: "Roboto-Bold";
+                            font-size: 12px;
+                            color: $bleu-marine;
+                            padding: 10px 0;
+                        }
+                        .bas {
+                            .favori {
+                                display: inline-block;
+                                background: url("../images/coeur.png") no-repeat;
+                                background-size: cover;
+                                width: 19px;
+                                height: 17px;
+                                float: left;
+                                margin-top: 12px;
+                                
+								&.plein {
+									background: url("../images/coeur-plein.png") no-repeat;
+									background-size: cover;
+								}
+								
+                                & + .prix {
+                                    text-align: right;
+                                }
+                            }
+                            .prix {
+                                font-family: "Roboto-Bold";
+                                font-size: 25px;
+                                color: $bleu-marine;
+                                
+                                span {
+                                    display: block;
+                                    margin-top: 15px;
+                                    font-family: "Roboto-Light";
+                                    font-size: 12px;
+                                    text-transform: uppercase;
+                                    color: $gris-fonce;
+                                }
+                                & + .prix {
+                                    text-align: right;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .colonne-principale {
+        margin-left: -15px;
+        margin-right: -15px;
+        
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+}

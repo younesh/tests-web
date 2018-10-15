@@ -1,0 +1,141 @@
+header {    
+    position: fixed;
+    width: 100%;
+    background-color: rgba($bleu-marine, 0.8);
+    z-index: 100;
+    
+	.navbar-custom {
+        margin-bottom: 0;
+        
+		.navbar-header {
+			float: left;
+
+			.logo-container {
+				a {
+                    display: inline-block;
+                    padding: 14px 0;
+                    
+				    h1 {
+				    	display: none;
+				    }
+				}
+			}
+		}
+		.navbar-collapse {
+			.navbar-right {
+				li {
+                    a {
+                        color: $blanc;
+                        line-height: 30px;
+                        outline: none;
+                        
+                        &:hover, &:focus {
+                            background-color: $bleu-marine;
+                        }
+                        &.boutique {
+                            position: relative;
+                            
+                            &:before {
+                                content: "";
+                                display: block;
+                                background: url(../images/boutique.png) center center no-repeat;
+                                width: 31px;
+                                height: 30px;
+                            }
+                            span {
+                                background-color: $rouge;
+                                @include border-radius(50%);
+                                display: inline-block;
+                                width: 18px;
+                                height: 18px;
+                                font-size: 11px;
+                                line-height: 18px;
+                                text-align: center;
+                                position: absolute;
+                                top: 55%;
+                                left: 60%;
+                            }
+                        }
+                        &.messagerie {
+                            &:before {
+                                content: "";
+                                display: block;
+                                background: url(../images/messagerie.png) center center no-repeat;
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+                        &.langue {
+                            &:before {
+                                content: "";
+                                display: block;
+                                background: center center no-repeat;
+                                width: 30px;
+                                height: 30px;
+                            }
+                            &.fr {
+                                &:before {
+                                    background-image: url(../images/drapeau-fr.png);
+                                }
+                            }
+                            &.en {
+                                &:before {
+                                    background-image: url(../images/drapeau-en.png);
+                                }
+                            }
+                            & + .dropdown-menu {
+                                min-width: 60px;
+                                padding: 0;
+                                
+                                a {
+                                    padding: 3px 14px;
+                                }
+                            }
+                        }
+                        &.mon-compte {
+                            &:before {
+                                content: "";
+                                display: block;
+                                background: url(../images/picto-mon-compte.png) center center no-repeat;
+                                width: 30px;
+                                height: 30px;
+                                float: left;
+                                margin-right: 10px;
+                            }
+                            + .dropdown-menu {
+                                li {
+                                    a {
+                                        color: $gris-fonce;
+                                        
+                                        &:hover {
+                                            color: $blanc;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.open {
+                        > a, > a:hover, > a:focus, > a:active {
+                            background-color: $bleu-marine;
+                        }
+                    }
+				}
+			}
+            .navbar-toggle {
+                margin-right: -15px;
+                
+                .icon-bar {
+                    background-color: $blanc;
+                    width: 28px;
+                    height: 3px;
+                    
+                    + .icon-bar {
+                        margin-top: 5px;
+                    }
+                }
+                
+            }
+		}
+	}
+}

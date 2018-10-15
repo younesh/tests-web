@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<head>
+	{{> head}}
+</head>
+<body>
+	{{> header}}
+	<div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="colonne-principale-2 mon-panier">
+                        <h2>Mon panier</h2>
+                        <fieldset>
+                            <div class="row entete hidden-xs hidden-sm">
+                                <div class="col-md-4">
+                                    <div class="text-uppercase">Hébergements / Prestation</div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="text-uppercase text-center">Quantité</div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="text-uppercase text-center">Dates</div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="text-uppercase text-center">Conditions d'annulation</div>
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="text-uppercase text-center">Prix</div>
+                                </div>
+                            </div>
+                            <div class="wrapper">
+                                <div class="demande">
+                                    <div class="row titre">
+                                        <div class="col-sm-9">
+                                            <h4>Best Western Premier Le Swann****<br/>234 rue de Bercy, 75012 Paris - Station Gare de Lyon</h4>
+                                        </div>
+                                        <div class="col-sm-3 text-right">
+                                            <strong class="prix">346 €</strong>
+                                        </div>
+                                    </div>
+                                    <div class="contenu">
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-8">
+                                                <div>
+                                                    <strong>Chambre Double ou Lits Jumeaux Standard</strong>
+                                                </div>
+                                                <div class="boutons">
+                                                    <a href="#" class="addComment">Ajouter un commentaire</a>
+                                                    <a href="#" class="defineUsers">Définir les occupants</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 text-center">
+                                                <div class="pad">
+                                                    <button>-</button>
+                                                    <span>3</span>
+                                                    <button class="plus">+</button>
+                                                </div>
+                                                <a href="#" class="trash">Supprimer</a>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 text-center">
+                                                <span class="dates">12/12/16 - 14/12/16</span>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 text-center">
+                                                <strong>Annulable avant le 10/12/16 à 16h</strong>
+                                            </div>
+                                            <div class="col-md-1 col-sm-4 text-center">
+                                                <span class="prix">217 €</span>
+                                            </div>
+                                        </div>
+                                        <div class="ajout-commentaire">
+                                            <p>Les demandes spéciales ne peuvent pas être garanties mais l'hôtel fera tout son possible pour les satisfaire</p>
+                                            <textarea></textarea>
+                                        </div>
+                                        <div class="definir-occupants">
+                                            <p>Indiquez les informations des personnes occupants la chambre</p>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <select class="selectpicker" title="Civilité">
+                                                        <option value="mme">Madame</option>
+                                                        <option value="mr">Monsieur</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <input type="text" placeholder="Nom" />
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <input type="text" placeholder="Prénom" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <select class="selectpicker" title="Civilité">
+                                                        <option value="mme">Madame</option>
+                                                        <option value="mr">Monsieur</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <input type="text" placeholder="Nom" />
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <input type="text" placeholder="Prénom" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contenu">
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-8">
+                                                <div>
+                                                    <strong>Chambre Double Supérieure</strong>
+                                                </div>
+                                                <div class="boutons">
+                                                    <a href="#" class="addComment">Ajouter un commentaire</a>
+                                                    <a href="#" class="defineUsers">Définir les occupants</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 text-center">
+                                                <div class="pad">
+                                                    <button>-</button>
+                                                    <span>2</span>
+                                                    <button class="plus">+</button>
+                                                </div>
+                                                <a href="#" class="trash">Supprimer</a>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 text-center">
+                                                <span class="dates">12/12/16 - 14/12/16</span>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 text-center">
+                                                <strong>Non annulable</strong>
+                                            </div>
+                                            <div class="col-md-1 col-sm-4 text-center">
+                                                <span class="prix">217 €</span>
+                                            </div>
+                                        </div>
+                                        <div class="ajout-commentaire">
+                                            <p>Les demandes spéciales ne peuvent pas être garanties mais l'hôtel fera tout son possible pour les satisfaire</p>
+                                            <textarea></textarea>
+                                        </div>
+                                        <div class="definir-occupants">
+                                            <p>Indiquez les informations des personnes occupants la chambre</p>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <select class="selectpicker" title="Civilité">
+                                                        <option value="mme">Madame</option>
+                                                        <option value="mr">Monsieur</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <input type="text" placeholder="Nom" />
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <input type="text" placeholder="Prénom" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <select class="selectpicker" title="Civilité">
+                                                        <option value="mme">Madame</option>
+                                                        <option value="mr">Monsieur</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <input type="text" placeholder="Nom" />
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <input type="text" placeholder="Prénom" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contenu">
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-8">
+                                                <div>
+                                                    <strong>Place de parking couvert surveillé</strong>
+                                                </div>
+                                                <div class="boutons">
+                                                    <a href="#" class="addComment">Ajouter un commentaire</a>
+                                                    <a href="#" class="defineUsers">Définir les occupants</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 text-center">
+                                                <div class="pad">
+                                                    <button>-</button>
+                                                    <span>6</span>
+                                                    <button class="plus">+</button>
+                                                </div>
+                                                <a href="#" class="trash">Supprimer</a>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 text-center">
+                                                <span class="dates">12/12/16 - 14/12/16</span>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 text-center">
+                                                <strong>Non annulable</strong>
+                                            </div>
+                                            <div class="col-md-1 col-sm-4 text-center">
+                                                <span class="prix">35 €</span>
+                                            </div>
+                                        </div>
+                                        <div class="ajout-commentaire">
+                                            <p>Les demandes spéciales ne peuvent pas être garanties mais l'hôtel fera tout son possible pour les satisfaire</p>
+                                            <textarea></textarea>
+                                        </div>
+                                        <div class="definir-occupants">
+                                            <p>Indiquez les informations des personnes occupants la chambre</p>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <select class="selectpicker" title="Civilité">
+                                                        <option value="mme">Madame</option>
+                                                        <option value="mr">Monsieur</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <input type="text" placeholder="Nom" />
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <input type="text" placeholder="Prénom" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <select class="selectpicker" title="Civilité">
+                                                        <option value="mme">Madame</option>
+                                                        <option value="mr">Monsieur</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <input type="text" placeholder="Nom" />
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <input type="text" placeholder="Prénom" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="demande">
+                                    <div class="row titre">
+                                        <div class="col-sm-9">
+                                            <h4>Hôtel Rochester Champs Elysées***<br/>234 rue de Bercy, 75012 Paris - Station Gare de Lyon</h4>
+                                        </div>
+                                        <div class="col-sm-3 text-right">
+                                            <strong class="prix">126 €</strong>
+                                        </div>
+                                    </div>
+                                    <div class="contenu">
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-8">
+                                                <div>
+                                                    <strong>Chambre Double ou Lits Jumeaux Standard</strong>
+                                                </div>
+                                                <div class="boutons">
+                                                    <a href="#" class="addComment">Ajouter un commentaire</a>
+                                                    <a href="#" class="defineUsers">Définir les occupants</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 text-center">
+                                                <div class="pad">
+                                                    <button>-</button>
+                                                    <span>3</span>
+                                                    <button class="plus">+</button>
+                                                </div>
+                                                <a href="#" class="trash">Supprimer</a>
+                                            </div>
+                                            <div class="col-md-2 col-sm-4 text-center">
+                                                <span class="dates">12/12/16 - 14/12/16</span>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 text-center">
+                                                <strong>Annulable avant le 10/12/16 à 16h</strong>
+                                            </div>
+                                            <div class="col-md-1 col-sm-4 text-center">
+                                                <span class="prix">126 €</span>
+                                            </div>
+                                        </div>
+                                        <div class="ajout-commentaire">
+                                            <p>Les demandes spéciales ne peuvent pas être garanties mais l'hôtel fera tout son possible pour les satisfaire</p>
+                                            <textarea></textarea>
+                                        </div>
+                                        <div class="definir-occupants">
+                                            <p>Indiquez les informations des personnes occupants la chambre</p>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <select class="selectpicker" title="Civilité">
+                                                        <option value="mme">Madame</option>
+                                                        <option value="mr">Monsieur</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <input type="text" placeholder="Nom" />
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <input type="text" placeholder="Prénom" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <select class="selectpicker" title="Civilité">
+                                                        <option value="mme">Madame</option>
+                                                        <option value="mr">Monsieur</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <input type="text" placeholder="Nom" />
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <input type="text" placeholder="Prénom" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="total">
+                                    <div class="row prix-ht">
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                            <strong>Prix HT</strong>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                                            <strong>530,10 €</strong>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                            <strong>TVA 10%</strong>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                                            <strong>58,90 €</strong>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                            <strong>TVA 20%</strong>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                                            <strong>74,25 €</strong>
+                                        </div>
+                                    </div>
+                                    <div class="row sous-total-ttc">
+                                        <div class="col-md-6 col-sm-6 col-xs-8">
+                                            <strong>Total hors taxes de séjour</strong>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-4 text-right">
+                                            <strong>714 €</strong>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-8">
+                                            <strong>Taxes de séjour</strong>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-4 text-right">
+                                            <strong>74,25 €</strong>
+                                        </div>
+                                    </div>
+                                    <div class="row total-ttc">
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                            <strong>Total TTC</strong>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                                            <strong>788,25 €</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="liste-boutons">
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-6">
+                                        <a href="#" class="btn btn-continuer">Continuer mes achats</a>
+                                    </div>
+                                    <div class="col-md-3 col-md-offset-6 col-sm-6 text-right">
+                                        <a href="#" class="btn btn-valider">Valider ma réservation</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nos-engagements hidden-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Vous allez dire ...</h2>
+                        <img src="images/engagements-2.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	{{> menu-mobile}}
+	{{> footer}}
+	{{> foot}}
+</body>
+</html>

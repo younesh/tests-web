@@ -1,0 +1,395 @@
+/************************/
+/*     PAGE REUNION     */
+/************************/
+
+.content {
+    .colonne-principale-2.reunion {
+        .infos-complementaires {
+            background-color: $blanc2;
+            margin-bottom: 30px;
+            
+            .liste-salle {
+                padding: 19px 4px;
+                
+                @media screen and (max-width: 991px) {
+                    border-bottom: 1px solid $gris5; 
+                }
+                div {
+                    display: inline-block;
+                    font-size: 11px;
+                    font-family: "Roboto-Medium";
+                    color: $bleu-marine;
+                    width: 20%;
+                    text-align: center;
+                    margin-left: -4px;
+                    padding: 0 5px;
+
+                    &:before {
+                        content: "";
+                        display: block;
+                        background: url("../images/configuration-salle-hover.png") no-repeat;
+                        height: 47px;
+                        width: 46px;
+                        margin: auto;
+                        border: 5px solid transparent;
+                    }
+                    &.u {
+                        &:before {
+                            background-position: 0 center;
+                        }
+                    }
+                    &.rectangulaire {
+                        &:before {
+                            background-position: -75px center;
+                        }
+                    }
+                    &.classe {
+                        &:before {
+                            background-position: -150px center;
+                        }
+                    }
+                    &.vide {
+                        &:before {
+                            background-position: -225px center;
+                        }
+                    }
+                    &.theatre {
+                        &:before {
+                            background-position: -300px center;
+                        }
+                    }
+                }
+            }
+            .col-md-5 {
+                @media screen and (max-width: 991px) {
+                    margin: 0;
+                }
+            }
+            .prix {
+                height: 102px;
+                padding: 0;
+                border-left: 1px solid $gris5;
+                text-align: center;
+                
+                @media screen and (max-width: 767px) {
+                    border-bottom: 1px solid $gris5;
+                }
+                &:first-child {
+                    @media screen and (max-width: 991px) {
+                        border-left: none;
+                    }
+                }
+                p {
+                    position: absolute;
+                    top: 50%;
+                    @include transform-translate(0,-50%);
+                    color: $noir;
+                    width: 100%;
+                    padding: 0 10px;
+                    
+                    span {
+                        display: block;
+                        font-family: "Roboto-Bold";
+                        font-size: 23px;
+                        line-height: 25px;
+                    }
+                }
+            }
+            .surface {
+                height: 102px;
+                padding: 0 10px;
+                border-left: 1px solid $gris5;
+                text-align: center;
+                
+                @media screen and (max-width: 767px) {
+                    border-left: none;
+                }
+                p {
+                    font-family: "Roboto-Bold";
+                    font-size: 23px;
+                    line-height: 25px;
+                    color: $bleu-marine;
+                    position: absolute;
+                    top: 50%;
+                    @include transform-translate(0,-50%);
+                    width: 100%;
+                    padding: 0 10px;
+                }
+            }
+        }
+        .reservation {
+            .date {
+                width: 45%;
+                
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                }
+                input {
+                    width: 100%;
+                }
+            }
+            .nbr-participants {
+                display: inline-block;
+                vertical-align: top;
+                width: 35%;
+                border: 1px solid $blanc2;
+                padding: 12px 9px 10px;
+                
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                label {
+                    display: inline-block;
+                    font-family: "Roboto-Medium";
+                    font-size: 13px;
+                    font-weight: normal;
+                    text-align: left;
+                    color: $bleu-marine;
+                    width: 65%;
+                    margin-bottom: 0;
+                }
+                .pad {
+                    display: inline-block;
+                    background-color: $blanc;
+                    text-align: left;
+                    padding: 1px 15px;
+                    width: 32%;
+                    
+                    span {
+                        padding: 0 3px;
+                    }
+                    button {
+                        background-color: transparent;
+                        border: none;
+
+                        &.plus {
+                            font-family: "Roboto-Medium";
+                            font-size: 13px;
+                            color: $bleu-marine;
+                        }
+                    }
+                }
+            }
+            .btn-container {
+                width: 17%;
+                
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                }
+                button {
+                    width: 100%;
+                }
+            }
+        }
+        .recherche {
+            h4 {
+                margin-top: 20px;
+            }
+            .details, .resume {
+                background-color: $blanc2;
+                margin-bottom: 30px;
+                
+                .duree {
+                    height: 102px;
+                    
+                    @media screen and (max-width: 767px) {
+                        width: calc(100% - 30px);
+                        text-align: center;
+                        border-bottom: 1px solid $gris5;
+                        margin: 0 15px;
+                    }
+                    p {
+                        position: absolute;
+                        top: 50%;
+                        @include transform-translate(0,-50%);
+                        color: $noir;
+                        width: calc(100% - 15px);
+                        padding: 0 10px;
+                        font-size: 14px;
+                        
+                        span {
+                            display: block;
+                            font-family: "Roboto-Bold";
+                            font-size: 23px;
+                            line-height: 25px;
+                        }
+                    }
+                }
+                .liste-salle {
+                    height: 102px;
+                    border-left: 1px solid $gris5;
+                    
+                    @media screen and (max-width: 767px) {
+                        width: calc(100% - 30px);
+                        border-left: none;
+                        border-bottom: 1px solid $gris5;
+                        text-align: center;
+                        margin: 0 15px;
+                    }
+                    a {
+                        display: inline-block;
+                        font-size: 11px;
+                        font-family: "Roboto-Medium";
+                        color: $gris6;
+                        width: 20%;
+                        text-align: center;
+                        margin-left: -4px;
+                        padding: 0 5px;
+                        text-indent: -3000px;
+
+                        &:hover, &.actif {
+                            color: $bleu-marine;
+                            text-decoration: none;
+
+                            &:after {
+                                border-color: $blanc;
+                                background-color: $blanc;
+                                background-image:  url("../images/configuration-salle-hover.png");
+                            }
+                        }
+                        &:focus {
+                            text-decoration: none;
+                        }
+                        &:after {
+                            content: "";
+                            display: block;
+                            background: url("../images/configuration-salle.png") no-repeat;
+                            height: 47px;
+                            width: 46px;
+                            margin: 7px auto 0;
+                            border: 5px solid transparent;
+                        }
+                        &.u {
+                            &:after {
+                                background-position: 0 center;
+                            }
+                        }
+                        &.rectangulaire {
+                            &:after {
+                                background-position: -75px center;
+                            }
+                        }
+                        &.classe {
+                            &:after {
+                                background-position: -150px center;
+                            }
+                        }
+                        &.vide {
+                            &:after {
+                                background-position: -225px center;
+                            }
+                        }
+                        &.theatre {
+                            &:after {
+                                background-position: -300px center;
+                            }
+                        }
+                    }
+                }
+                .options {
+                    height: 102px;
+                    padding: 0;
+                    border-left: 1px solid $gris5;
+                    margin-bottom: 0;
+
+                    @media screen and (max-width: 767px) {
+                        width: calc(100% - 30px);
+                        border-left: none;
+                        border-bottom: 1px solid $gris5;
+                        text-align: center;
+                        margin: 0 15px;
+                    }
+                    p {
+                        position: absolute;
+                        top: 50%;
+                        @include transform-translate(0,-50%);
+                        color: $noir;
+                        width: 100%;
+                        padding: 0 5px;
+                        font-size: 14px;
+                        
+                        span {
+                            display: block;
+                            font-family: "Roboto-Bold";
+                        }
+                        strong {
+                            color: $bleu-marine;
+                        }
+                    }
+                }
+                .prix {
+                    height: 102px;
+                    padding: 0;
+                    border-left: 1px solid $gris5;
+                    text-align: center;
+
+                    @media screen and (max-width: 767px) {
+                        width: calc(100% - 30px);
+                        border-left: none;
+                        border-bottom: 1px solid $gris5;
+                        text-align: center;
+                        margin: 0 15px;
+                    }
+                    p {
+                        position: absolute;
+                        top: 50%;
+                        @include transform-translate(0,-50%);
+                        color: $noir;
+                        width: 100%;
+                        padding: 0;
+
+                        span {
+                            display: block;
+                            font-family: "Roboto-Bold";
+                            font-size: 32px;
+                            line-height: 38px;
+                        }
+                    }
+                }
+                .bouton {
+                    height: 102px;
+                    padding: 0;
+                    border-left: 1px solid $gris5;
+                    
+                    @media screen and (max-width: 767px) {
+                        width: calc(100% - 30px);
+                        border-left: none;
+                        border-top: none !important;
+                        margin: 0 15px;
+                    }
+                    &.col-sm-12 {
+                        @media screen and (max-width: 991px) {
+                            border-left: none;
+                            border-top: 1px solid $gris5;
+                            margin: 0 15px;
+                            width: calc(100% - 30px);
+                        }
+                    }
+                    .btn-container {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        @include transform-translate(-50%,-50%);
+                        color: $noir;
+                        padding: 0;
+                        width: auto;
+                        margin-left: -7px;
+                        
+                        @media screen and (max-width: 767px) {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            .resume {
+                .duree {
+                    p {
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}

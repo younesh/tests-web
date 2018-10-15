@@ -1,0 +1,178 @@
+.concept {
+    
+        > h2 { 
+            margin-bottom: 15px;
+        }
+    
+    @media (max-width: 767px) {
+        > h2 , > p { 
+            text-align: center;
+        }
+        
+        > h2 {
+            font-size: 23px !important;
+        }
+
+    }
+    
+    &.concept-part2 {
+        padding-top: 40px;
+        
+       .pr-btn-action { 
+        margin-top: 50px;
+        }
+    }
+    
+    .numeros {
+            &:before {
+                @media (max-width: 991px) {
+                    display: none !important;
+                }
+            }
+
+
+        .num-box {
+         $border-num-box : solid 1px $bleu-marine;     
+          min-height: 193px;
+
+           @media  (max-width: 991px) and (min-width: 768px) {
+           padding-top: 20px;  
+            &:nth-of-type(1) { 
+
+                border-right : $border-num-box; 
+                border-bottom: $border-num-box;
+            }
+                &:nth-of-type(3) { 
+                   border-right : $border-num-box; 
+                }
+                 &:nth-of-type(2) { 
+                 border-bottom: $border-num-box;
+                }
+          }
+        
+            @media (max-width: 767px) {
+                border-bottom: $border-num-box;
+                margin-bottom: 20px;
+            }    
+
+        }
+        p {
+            margin-top: 25px;
+        }
+    }
+    
+    // row 
+    .solution-pour-vous {
+        ul ,li {
+            list-style: none;
+        }
+    
+        text-align: center;
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .spv-box {
+            @media (min-width : 768px) and (max-width: 991px) {
+                  min-height: 270px;
+                  margin-bottom: 30px;
+            }
+            .spv-title {  
+                font-size: 16px;
+                font-family: 'Roboto-Bold';
+                text-transform: uppercase;
+                margin-top: 30px;
+                @media (max-width: 767px) {
+                    margin: 15px auto 30px;
+                    width: 66%;
+                }
+            }
+            
+            .spv-txt {
+                text-align: left;
+                @media (max-width: 767px) {
+                    display: none;
+                }
+                
+                li {
+                    margin-top: 20px;
+                }
+                .puce {
+                    color : $pr-bleu; 
+                }
+            }
+            
+        }  
+    }
+    
+}
+
+.ctn-larg-concept {
+    
+   background-image: url("../images/bg-concept.jpg"); 
+    background-color: $bleu-marine6;
+    background-size: cover;
+    min-height: 648px;  
+    color : $blanc;
+    text-align: center; 
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+    @media (max-width: 767px) {
+        background-image: none;
+        
+        .pr-btn-action {
+            display: none;
+        }
+    }
+    
+            h2 {
+            margin: 40px auto;
+        }
+    
+    ul ,li {
+        list-style: none;
+    }
+    
+    .entreprise-solution {
+        .es-box {
+            margin: 0px auto 10px;
+            @media (max-width: 991px) {
+                min-height: 200px;
+            }
+            
+            .esb-title {
+                font-size: 16px;
+                font-family: 'Roboto-Bold';
+                text-transform: uppercase;
+                margin-top: 30px;
+                
+                @media (max-width: 767px) {
+                     margin-top: 15px;
+                     margin: 15px auto 30px;
+                    width: 66%;
+                }
+            }
+            
+            .esb-txt {
+                text-align: left;
+                
+                @media (max-width: 991px) {
+                  margin-bottom: 30px;
+                }
+                @media (max-width: 767px) {
+                   display: none;
+                }
+                
+                li {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    .pr-btn-action { 
+    margin-top: 50px;
+    }
+}
