@@ -9,20 +9,30 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous"> -->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
 </head>
 
 <body>
 
     <div class="page page-home">
+        <!-- header -->
         <header class="header">
             <div class="mini-header">
                 <div class="container">
                     <a class="btn-store">
-                        golgoth-store.com
+                        <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                        <span>golgoth-store.com </span>
                     </a>
-                    <div class="ctn-languge-barre">
-                        FR | EN | AR
-                    </div>
+                    <nav class="ctn-languge-barre">
+
+                        <a class="phone" href="https://www.linkedin.com/in/younesc/">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/younesc/">FR</a>
+                        <a href="https://www.linkedin.com/in/younesc/">EN</a>
+                        <a href="https://www.linkedin.com/in/younesc/">IT</a>
+                    </nav>
                 </div>
             </div>
             <div class="main-header">
@@ -41,6 +51,9 @@
                         </a>
                         <a href="#" class="basket">
                             <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                            <span class="nbr">
+                                0
+                            </span>
                         </a>
                     </nav>
 
@@ -54,6 +67,8 @@
             </div>
         </header>
         <div class="middle">
+
+            <!-- homm banner -->
             <div class="home-banner">
                 <div class="brand-intro">
                     <div class="container">
@@ -66,6 +81,7 @@
                 </div>
             </div>
 
+            <!-- descover-pdt -->
             <div class="descover-pdt">
                 <div class="container">
                     <h2 class="title-descover-pdt">
@@ -76,35 +92,49 @@
                     <div class="container">
 
                         <div class="pdt-slider">
-                            <span class="nav-slider">
+                            <!-- <span class="nav-slider">
                                 <i class="fa fa-arrow-left" aria-hidden="true"></i>
-                            </span>
-                            <div class="inner-slider-pdt">
+                            </span> -->
+                            <div class="wrapper-slides">
                                 <div class="item-slide">
-                                    <figure>
-                                        <img alt="pdt 01" src="images/pdt-charette-bateau-01.png" alt="">
-                                    </figure>
-                                    <div class="info-pdt">
-                                        <span class="price price-new"> 499€ </span>
-                                        <span class="price price-old"> 699€ </span>
-                                        <span>
-
-                                        </span>
-                                        <div> Remorque Nautilus </div>
+                                    <div class="inner-item">
+                                        <figure>
+                                            <img alt="pdt 01" src="images/pdt-charette-bateau-01.png" alt="">
+                                        </figure>
+                                        <div class="info-pdt">
+                                            <span class="price price-new"> 499€ </span>
+                                            <span class="price price-old"> 699€ </span>
+                                            <div> Remorque Nautilus </div>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <div class="item-slide">
+                                    <div class="inner-item">
+                                        <figure>
+                                            <img alt="pdt 01" src="images/pdt-charette-bateau-01.png" alt="">
+                                        </figure>
+                                        <div class="info-pdt">
+                                            <span class="price price-new"> 499€ </span>
+                                            <span class="price price-old"> 699€ </span>
+                                            <div> Remorque Nautilus </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                            <span class="nav-slider">
+                            <!-- <span class="nav-slider">
                                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                            </span>
-                            
+                            </span> -->
+
                         </div>
                         <div class="pdt-intro">
-                            <strong> </strong>
+                            <p> <strong> Nous transportons vos bateaux depuis bientôt 50 ans sous les marques Satellite, Océane, Rocca et Nautilus.</strong></p>
                             <p>
-                                 Nos marques s’inscrivent dans cette tradition historique à l’écoute des professionnels et confortent au quotidien leur image
-                                de leaders techniques. Dotées d’un design élégant, d’une construction de grande qualité, nos remorques intègrent les solutions
-                                techniques les plus abouties pour faciliter le transport et la manutention de votre bateau en toute sécurité.
+                                Nos marques s’inscrivent dans cette tradition historique à l’écoute des professionnels et confortent au quotidien leur image
+                                de leaders techniques. Dotées d’un design élégant, d’une construction de grande qualité,
+                                nos remorques intègrent les solutions techniques les plus abouties pour faciliter le transport
+                                et la manutention de votre bateau en toute sécurité.
                             </p>
                             <button class="btn-site">
                                 Découvrez nos produits
@@ -113,12 +143,167 @@
                     </div>
                 </div>
             </div>
+
+            <!-- locations-offres-->
+            <div class="locations-offres">
+                <div class="container">
+                    <div class="bloc-location">
+                        <figure>
+                            <img alt="pdt 02" src="images/pdt-charette-bateau-02.png">
+                        </figure>
+                        <div class="title-location-item">
+                            Jet Satellite
+                        </div>
+                        <div class="info-location">
+                            Charge utile : 1880kg PTC : 2500 kg Nb essieu : 2 Dimension utile : 4m10x2m00 Roues : 195/55R10C Frein : oui
+                        </div>
+                        <a href="#" class="btn-location">
+                            louer
+                        </a>
+                    </div>
+
+                    <div class="bloc-location">
+                        <figure>
+                            <img alt="pdt 02" src="images/pdt-charette-bateau-02.png">
+                        </figure>
+                        <div class="title-location-item">
+                            Jet Satellite
+                        </div>
+                        <div class="info-location">
+                            Charge utile : 1880kg PTC : 2500 kg Nb essieu : 2 Dimension utile : 4m10x2m00 Roues : 195/55R10C Frein : oui
+                        </div>
+                        <a href="#" class="btn-location">
+                            louer
+                        </a>
+                    </div>
+
+                    <div class="bloc-location">
+                        <figure>
+                            <img alt="pdt 02" src="images/pdt-charette-bateau-02.png">
+                        </figure>
+                        <div class="title-location-item">
+                            Jet Satellite
+                        </div>
+                        <div class="info-location">
+                            Charge utile : 1880kg PTC : 2500 kg Nb essieu : 2 Dimension utile : 4m10x2m00 Roues : 195/55R10C Frein : oui
+                        </div>
+                        <a href="#" class="btn-location">
+                            louer
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <footer class="footer-home">
-            footer
+        <!-- /.middle -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-form">
+                    <h1 class="site-name">
+                        Espace
+                        <span>NAUTIQUE</span>
+                    </h1>
+                    <div class="main-search">
+                        <input type="text" placeholder="Email">
+                    </div>
+                </div>
+
+                <div class="footer-main-menu">
+                    <div class="menu-bloc-item">
+                        <h2>Porte-bateaux</h2>
+                        <p>
+                            <a href="">Lorem ipsum</a>
+                        </p>
+                        <p>
+                            <a href="">Lorem ipsum</a>
+                        </p>
+                        <p>
+                            <a href="">Lorem ipsum</a>
+                        </p>
+                        <p>
+                            <a href="">Lorem ipsum</a>
+                        </p>
+                    </div>
+                    <div class="menu-bloc-item">
+                        <h2>Quickflex</h2>
+                        <p>
+                            <a href="">Lorem ipsum</a>
+                        </p>
+                        <p>
+                            <a href="">Lorem ipsum</a>
+                        </p>
+                        <p>
+                            <a href="">Lorem ipsum</a>
+                        </p>
+                        <p>
+                            <a href="">Lorem ipsum</a>
+                        </p>
+                    </div>
+                    <div class="menu-bloc-item">
+                        <h2>Location/Service</h2>
+                        <p>
+                            <a href="">Lorem ipsum</a>
+                        </p>
+                        <p>
+                            <a href="">Lorem ipsum</a>
+                        </p>
+                        <p>
+                            <a href="">Lorem ipsum</a>
+                        </p>
+                        <p>
+                            <a href="">Lorem ipsum</a>
+                        </p>
+                    </div>
+                    <div class="menu-bloc-item">
+                        <h2>Entretien</h2>
+                        <p>
+                            <a href="">Lorem ipsum</a>
+                        </p>
+                        <p>
+                            <a href="">Lorem ipsum</a>
+                        </p>
+                        <p>
+                            <a href="">Lorem ipsum</a>
+                        </p>
+                        <p>
+                            <a href="">Lorem ipsum</a>
+                        </p>
+                    </div>
+                    <div class="menu-bloc-item">
+                        <h2>Qui sommes-nous</h2>
+                        <p>
+                            <a href="">Lorem ipsum</a>
+                        </p>
+                        <p>
+                            <a href="">Lorem ipsum</a>
+                        </p>
+                        <p>
+                            <a href="">Lorem ipsum</a>
+                        </p>
+                        <p>
+                            <a href="">Lorem ipsum</a>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="footer-small-menu">
+
+                </div>
+
+            </div>
         </footer>
-        <!-- -->
-        <script src="js/app.js"></script>
+        <!-- https://code.jquery.com/jquery-3.3.1.min.js  -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+        <script src="scripts/js/app.js"></script>
+        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.20.13/system.js">
+        </script>
+        <script type="text/javascript">
+            // index.js is the transpiled index.ts
+            SystemJS.import("scripts/js/app.js");
+        </script>-->
+
 </body>
 
 </html>

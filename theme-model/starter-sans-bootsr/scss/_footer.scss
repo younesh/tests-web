@@ -1,1 +1,86 @@
-/* test */
+        /* test */
+        
+        .footer {
+            color: white;
+            background-color: $color-black-primary;
+            /* footer-form */
+            .footer-form {
+                .site-name {
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-family: $font-family-titles;
+                    font-weight: $fw-title-light;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-size: 19px;
+                    width: 200px;
+                    box-sizing: border-box;
+                    padding: 0px $gutter-half;
+                    span {
+                        font-weight: $fw-title-black;
+                        display: block;
+                        font-size: 24px;
+                    }
+                }
+                .main-search {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: calc(100% - 208px);
+                    input {
+                        width: 100%;
+                        display: inline-block;
+                        border: none;
+                        background-color: $color-black-secondary;
+                        color: white;
+                        line-height: 40px;
+                        padding: 0px 15px;
+                    }
+                }
+            }
+            /*footer-main-menu */
+            .footer-main-menu {
+                .menu-bloc-item {
+                    box-sizing: border-box;
+                    width: 100%;
+                    float: left;
+                    h2 {
+                        font-weight: $fw-title-bold;
+                        font-size: 14px;
+                        text-transform: none;
+                    }
+                }
+            }
+        }
+        
+        @media (min-width: $bp-min-md) {
+            .footer {
+                .footer-main-menu {
+                    .menu-bloc-item {
+                        width: 50%;
+                        padding: 0 $gutter;
+                    }
+                }
+            }
+        }
+        
+        @media (min-width: $bp-min-md) {
+            .footer {
+                .footer-main-menu {
+                    .menu-bloc-item {
+                        width: 33.33%;
+                    }
+                }
+            }
+        }
+        
+        @media (min-width: $bp-min-lg) {
+            .footer {
+                .footer-main-menu {
+                    .menu-bloc-item {
+                        width: 20%;
+                    }
+                }
+            }
+        }
+        
+        @media (min-width: $bp-min-xl) {}

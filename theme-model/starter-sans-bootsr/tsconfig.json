@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "emitDecoratorMetadata": false,
+        "module": "commonjs",
+        "target": "ES5",
+        "outDir": "scripts/js",
+        "rootDir": "scripts/ts"
+    }
+}

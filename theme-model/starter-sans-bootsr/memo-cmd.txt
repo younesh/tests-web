@@ -1,0 +1,16 @@
+## lancer le watch sur le scss 
+npm run scss
+
+## lancer le watch sur les typescript
+tsc -w
+
+
+## http://localhost/tests/theme-model/starter-sans-bootsr/
+
+@media (min-width: $bp-min-sm) {}
+
+@media (min-width: $bp-min-md) {}
+
+@media (min-width: $bp-min-lg) {}
+
+@media (min-width: $bp-min-xl) {}

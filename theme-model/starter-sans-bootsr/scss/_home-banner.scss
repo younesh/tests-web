@@ -1,0 +1,51 @@
+        .home-banner {
+            background-image: url('../images/home-main-banner.jpg');
+            background-size: cover;
+            background-color: #416fa1;
+            background-position: center center;
+            height: 479px;
+            .brand-intro {
+                box-sizing: border-box;
+                padding-top: 50px;
+                color: white;
+                font-family: $font-family-titles;
+                font-weight: $fw-title-black;
+                font-size: 70px;
+                text-align: center;
+                margin: auto;
+                text-shadow: 0px 0px 12px #416fa1;
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .intro-p1 {
+                    font-size: 90px;
+                    display: block;
+                    position: relative;
+                    z-index: 2;
+                }
+                .intro-p2 {
+                    width: 200px;
+                    font-size: 30px;
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+        } // descover pdt / slider ....
+        @media (min-width: $bp-min-md) {
+            .home-banner {
+                .brand-intro {
+                    box-sizing: border-box;
+                    padding-top: 112px;
+                    .intro-p1 {
+                        font-size: 150px;
+                        display: inline-block;
+                    }
+                    .intro-p2 {
+                        width: 340px;
+                        text-align: left;
+                        margin-left: -30px;
+                    }
+                }
+            }
+        }

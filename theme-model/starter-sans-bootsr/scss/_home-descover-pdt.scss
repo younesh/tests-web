@@ -1,0 +1,89 @@
+       .descover-pdt {
+           margin: 60px auto;
+           .title-descover-pdt {}
+           .pdt-wrapper {
+               background-color: $color-gray-lighter;
+               padding: $gutter-half 0px;
+           }
+           .pdt-intro {
+               width: 100%;
+               float: left;
+               box-sizing: border-box;
+           }
+           .pdt-slider {
+               width: 100%;
+               float: right;
+               box-sizing: border-box;
+               >* {
+                   display: inline-block;
+                   vertical-align: middle;
+               }
+               .wrapper-slides {
+                   width: calc(100% - 50px);
+                   margin-top: -15px;
+                   .info-pdt {
+                       text-align: center
+                   }
+                   /* prix */
+                   [class*='price-'] {
+                       padding: 5px $gutter-half;
+                       display: inline-block;
+                       &.price-new {
+                           color: $color-brand-primary;
+                           font-size: 35px;
+                           display: inline-block;
+                       }
+                       &.price-old {
+                           font-size: 25px;
+                           position: relative;
+                           &::before {
+                               content: " ";
+                               display: block;
+                               width: 100%;
+                               position: relative;
+                               height: 1px;
+                               background-color: $color-black-primary;
+                               transform: rotate(-30deg);
+                               top: 14px;
+                           }
+                       }
+                   }
+               } // slick-prev slick-arrow
+               .nav-slider,
+               .slick-arrow {
+                   width: 15px;
+                   text-align: center;
+                   display: inline-block;
+                   font-size: 20px;
+                   @extend .pointer;
+                   &.slick-prev {
+                       &::before {
+                           color: $color-black-primary;
+                           font-size: 35px;
+                       }
+                   }
+                   &.slick-next {
+                       &::before {
+                           color: $color-black-primary;
+                           font-size: 35px;
+                       }
+                   }
+               }
+           }
+       }
+       
+       @media (min-width: $bp-min-md) {
+           .descover-pdt {
+               .pdt-intro {
+                   width: 43%;
+                   padding-right: $gutter-half;
+               }
+               .pdt-slider {
+                   width: 55%;
+                   padding-left: $gutter-half;
+                   .wrapper-slides {
+                       margin-top: -80px;
+                   }
+               }
+           }
+       }

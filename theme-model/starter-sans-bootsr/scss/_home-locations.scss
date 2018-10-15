@@ -1,0 +1,15 @@
+    // locations offres :
+    $gutter-location: 140px;
+    .bloc-location {
+        width: 100%;
+        float: left;
+        background-color: $color-gray-lighter;
+        @media (min-width: $bp-min-md) {
+            width: calc(33% - 80px);
+            margin: 0px 40px;
+        }
+        @media (min-width: $bp-min-lg) {
+            width: calc(33% - #{$gutter-location});
+            margin: 0px $gutter-location/2;
+        }
+    }
