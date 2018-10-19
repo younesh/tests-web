@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+#footer {
+  @if mixin-exists(responsive-container) {
+    @if global-variable-exists(full-container) {  
+      @include responsive-container($full-container);
+    } @else {
+      @include responsive-container($default-container);
+    }
+  }
+  background-color: color(brand);
+  color: color(reverse-text);
+  overflow: hidden;
+
+  a {
+    color: inherit;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}

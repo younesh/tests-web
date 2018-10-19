@@ -1,0 +1,327 @@
+@charset "UTF-8";
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+#examples {
+
+  %example-wrapper {
+    border-color: color(dark-grey);
+    border-width: 1px;
+    border-style: dashed;
+  }
+
+  article > header,
+  main > header {
+    @include responsive-container($content-container);
+    background: color(background-secondary);
+    text-align: center;
+    ul {
+      @include centered-container(5);
+      text-align: left;
+    }
+  }
+
+  main > section {
+    &:nth-of-type(even) {
+      background-color: color(background-secondary);
+    }
+    > section {
+      &:nth-of-type(even) {
+        background-color: color(background-tertiary);
+      }
+    }
+  }
+
+  .example-wrapper {
+    @include grid-container;
+    @extend %example-wrapper;
+  }
+
+  .col-1of1 {
+    @include grid-column(1 of 1);
+    background-color: tint(color(purple), 30%);
+  }
+  .col-1of2 {
+    @include grid-column(1 of 2);
+    background-color: tint(color(orange), 30%);
+  }
+
+  .col-1of3 {
+    @include grid-column(1 of 3);
+    background-color: tint(color(green), 30%);
+  }
+
+
+  .col-2of3 {
+    @include grid-column(2 of 3);
+    background-color: tint(color(red), 30%);
+  }
+
+  .col-3of3 {
+    @include grid-column(3 of 3);
+    background-color: tint(color(purple), 30%);
+  }
+
+  .clear {
+    clear: left;
+  }
+
+  .collapsed-grid {
+    @include grid-container;
+    @include grid-collapse;
+  }
+
+  #grid-column {
+    @include responsive-container($default-container);
+
+    .stories {
+      @extend .collapsed-grid;
+
+      .story {
+        padding: modular-scale(1);
+        margin-bottom: _retrieve-neat-setting($neat-grid, gutter);
+      }
+
+      .collapsed-grid {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        background-color: tint(color(orange), 60%);
+      }
+    }
+  }
+
+  .grid-container {
+    @include grid-container;
+  }
+
+  .grid-collapse {
+    @include grid-collapse;
+  }
+  .absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .example-wrapper {
+    position: relative;
+  }
+
+  .column--full {
+    @include grid-column(1 of 1);
+  }
+
+  #centered-container {
+    @include responsive-container($content-container);
+
+  }
+
+  #example-1 {
+    @include centered-container(8);
+  }
+
+  #example-2 {
+    @include centered-container(8, $v-space: 0);
+
+  }
+
+  #example-3 {
+    @include centered-container(12, $max-width: false);
+    @include grid-media($media-xl) {
+      @include centered-container(12, $max-width: true, $grid-collapse: false);
+    }
+
+  }
+
+  #example-4 {
+    @include centered-container(12, $max-width: false);
+    $_gutter: _retrieve-neat-setting($neat-grid, gutter);
+    @include grid-media($grid: (media: 'screen and (min-width: #{800px})')) {
+      @include centered-container(12, $max-width: 800px);
+    }
+    @extend %example-wrapper;
+
+  }
+  #example-5 {
+    @include centered-container(12, $max-width: false, $grid-collapse: true);
+    $_gutter: _retrieve-neat-setting($neat-grid, gutter);
+    @include grid-media($grid: (media: 'screen and (min-width: #{800px})')) {
+      @include centered-container(12, $max-width: 800px, $grid-collapse: true);
+    }
+    @extend %example-wrapper;
+
+  }
+
+  #example-6 {
+    $_vspace: 1em;
+    $_container: (
+        xs:     ( columns: 8,  grid-media: $media-xs-only, v-space: $_vspace, max-width: false, grid-collapse: false ),
+        sm:     ( columns: 8,  grid-media: $media-sm-only, v-space: $_vspace, max-width: false, grid-collapse: false ),
+        md:     ( columns: 6,  grid-media: $media-md-only, v-space: $_vspace, max-width: false, grid-collapse: false ),
+        lg:     ( columns: 12,   grid-media: $media-lg-only, v-space: $_vspace, max-width: false, grid-collapse: false ),
+        xl:     ( columns: 12,   grid-media: $media-xl,      v-space: $_vspace, max-width: true,  grid-collapse: false ),
+        print:  ( columns: 8,   grid-media: $media-print,   v-space: $_vspace, max-width: true,  grid-collapse: false ),
+    );
+    @include responsive-container($_container);
+    span {
+      transition: all .3s ease;
+    }
+
+    @include grid-media($media-xs-only) {
+      $_gutter: _retrieve-neat-setting($neat-grid, gutter);
+      .xs {
+        @include material-shadow(medium);
+        @include grid-collapse;
+        background-color: tint(color(brand), 80%);
+        padding: 1em;
+        display: block;
+        transition: all .3s ease .25s;
+        margin: {
+          top: modular-scale(0);
+          bottom: modular-scale(0);
+        }
+      }
+    }
+    @include grid-media($media-sm-only) {
+      $_gutter: _retrieve-neat-setting($neat-grid, gutter);
+      .sm {
+        @include material-shadow(medium);
+        @include grid-collapse;
+        background-color: tint(color(brand), 80%);
+        padding: $_gutter;
+        display: block;
+        transition: all .3s ease .25s;
+        margin: {
+          top: modular-scale(0);
+          bottom: modular-scale(0);
+        }
+      }
+    }
+    @include grid-media($media-md-only) {
+      $_gutter: _retrieve-neat-setting($neat-grid, gutter);
+      .md {
+        @include material-shadow(medium);
+        @include grid-collapse;
+        background-color: tint(color(brand), 80%);
+        padding: $_gutter;
+        display: block;
+        transition: all .3s ease .25s;
+        margin: {
+          top: modular-scale(0);
+          bottom: modular-scale(0);
+        }
+      }
+    }
+    @include grid-media($media-lg-only) {
+      $_gutter: _retrieve-neat-setting($neat-grid, gutter);
+      .lg {
+        @include material-shadow(medium);
+        @include grid-collapse;
+        background-color: tint(color(brand), 80%);
+        padding: $_gutter;
+        display: block;
+        @include grid-collapse;
+        transition: all .3s ease .25s;
+        margin: {
+          top: modular-scale(-5);
+          bottom: modular-scale(-5);
+        }
+      }
+    }
+    @include grid-media($media-xl) {
+      $_gutter: _retrieve-neat-setting($neat-grid, gutter);
+      .xl {
+        @include material-shadow(medium);
+        @include grid-collapse;
+        background-color: tint(color(brand), 80%);
+        padding: $_gutter;
+        display: block;
+        transition: all .3s ease .25s;
+        margin: {
+          top: modular-scale(-5);
+          bottom: modular-scale(-5);
+        }
+      }
+    }
+    @include grid-media($media-print) {
+      $_gutter: _retrieve-neat-setting($neat-grid, gutter);
+      .print {
+        @include material-shadow(shallow);
+        @include grid-collapse;
+        background-color: shade(color(light-grey), 15%);
+        padding: $_gutter;
+        display: block;
+        transition: null;
+        margin: {
+          top: modular-scale(0);
+          bottom: modular-scale(0);
+        }
+      }
+    }
+  }
+
+  #items-per-row {
+
+    @include centered-container(10);
+
+    .item-grid--4 {
+      background-color: color(background-tertiary);
+      @include grid-container;
+      @include grid-collapse;
+      @extend %example-wrapper;
+      @include items-per-row(4, $children: '.item');
+
+      .item {
+        background-color: tint(color(brand), 80%);
+      }
+    }
+
+    .item-grid--5 {
+      background-color: color(background-tertiary);
+      @include grid-container;
+      @include grid-collapse;
+      @include items-per-row(5, $children: 'article');
+
+      article {
+        background-color: tint(color(brand), 80%);
+      }
+    }
+
+    .flex-item-grid--4 {
+      background-color: color(background-tertiary);
+      @include grid-container;
+      @include grid-collapse;
+      @include flex-items-per-row(4, $children: '.item', $center-grid: true, $equal-heights: true);
+
+      .item {
+        background-color: tint(color(brand), 80%);
+      }
+    }
+
+    .flex-item-grid--5-centered {
+      background-color: color(background-tertiary);
+      @include grid-container;
+      @include grid-collapse;
+      @include flex-items-per-row(5, $children: 'article', $center-grid: true, $equal-heights: false);
+
+      article {
+        background-color: tint(color(brand), 80%);
+      }
+    }
+
+    .flex-item-grid--5 {
+      background-color: color(background-tertiary);
+      @include grid-container;
+      @include grid-collapse;
+      @include flex-items-per-row(5, $children: 'article', $center-grid: false, $equal-heights: true);
+
+      article {
+        background-color: tint(color(brand), 80%);
+      }
+    }
+  }
+}

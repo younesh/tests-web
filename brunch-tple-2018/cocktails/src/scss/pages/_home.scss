@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+#about {
+  article {
+    > header {
+      @include responsive-container($content-container);
+      background-color: color(background-secondary);
+    }
+    > section {
+      @include responsive-container($content-container);
+    }
+  }
+}

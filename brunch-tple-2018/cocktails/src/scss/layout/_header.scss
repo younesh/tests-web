@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+#skiplinks {
+  @extend %hidden-print !optional;
+  background-color: color(dark-grey);
+  color: color(reverse-text);
+  cursor: pointer;
+  font-family: $base-font-family;
+  font-size: .75em;
+  font-weight: 400;
+  min-height: 1px;
+  padding: 0;
+  position: absolute;
+  top: -500px;
+  left: $small-spacing;
+  transition-duration: $base-duration;
+  transition-property: top;
+  transition-timing-function: $base-timing;
+  text-decoration: none;
+
+  &,
+  &:hover,
+  &:visited {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &:active,
+  &:focus {
+    border: $base-border;
+    border-radius: $base-border-radius;
+    position: fixed;
+    width: auto;
+    height: auto;
+    top: $small-spacing;
+    left: $small-spacing;
+    padding: $small-spacing / 2 $small-spacing ;
+    z-index: 200000;
+  }
+}
+
+
+body > header {
+  background-color: color(background);
+  color: color(text);
+  padding: .25em 0.5em;
+  font-size: modular-scale(1);
+  font-family: $heading-font-family;
+  font-weight: 900;
+  text-align: center;
+  padding-top: modular-scale(2);
+  a {
+    color: inherit;
+  }
+}

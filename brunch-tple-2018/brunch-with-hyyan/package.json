@@ -1,0 +1,36 @@
+{
+  "name": "brunch-with-hyyan",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": "~0.6.25 || 0.8 || 0.9"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "start": "brunch watch --server",
+    "test": "./node_modules/.bin/karma start ./karma.conf.js"
+  },
+  "dependencies": {
+    "assetsmanager-brunch": "^1.8.1",
+    "auto-reload-brunch": "latest",
+    "clean-css-brunch": "latest",
+    "css-brunch": "latest",
+    "javascript-brunch": "latest",
+    "sass-brunch": "latest",
+    "uglify-js-brunch": "latest"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "karma": "^1.7.1",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-mocha": "^1.3.0",
+    "karma-opera-launcher": "^1.0.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "mocha": "^4.0.1"
+  }
+}

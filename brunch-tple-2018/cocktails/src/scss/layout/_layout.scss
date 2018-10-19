@@ -1,0 +1,39 @@
+body {
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+// We rely on source order for mobile-first approach
+// in this case:
+//
+//  -50   header
+//  -40   nav
+//    1   main
+//   50   footer
+//
+
+body > header { order: -50; z-index: 2; }
+body > #skiplinks { order: -51; }
+body > nav { order: -40; z-index: 2; }
+body > main { order: 1; z-index: 1; }
+body > footer { order: 50; z-index: 2; }
+
+main {
+  overflow: hidden;
+  background-color: color(background);
+  flex: 1;
+}
+
+[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+#breakpoint-helper {
+  @include breakpoint-helper;
+  @media print {
+    display: none!important;
+  }
+}

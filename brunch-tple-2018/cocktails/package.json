@@ -1,0 +1,45 @@
+{
+  "name": "brunch-with-cocktails",
+  "description": "Brunch with Cocktails. Brunch, bourbon, neat, bitters, handlebars, html-brunch-static, postcss, autoprefixer",
+  "author": "Kevin Garcia",
+  "version": "1.0.4",
+  "contributors": [
+    {
+      "name": "Kevin Garcia",
+      "email": "kevin@kgcreative.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kgcreative/brunch-with-cocktails.git"
+  },
+  "scripts": {
+    "start": "brunch watch --server --port 3333",
+    "build": "brunch build --production"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "auto-reload-brunch": "^2.7.1",
+    "autoprefixer": "^8.4.1",
+    "babel-brunch": "^6.1.1",
+    "babel-preset-latest": "^6",
+    "bourbon": "^5.0.0",
+    "bourbon-neat": "^2.1.0",
+    "brunch": "2.10.12",
+    "brunch-static": "^1.2.1",
+    "coffee-script": "^1.12.7",
+    "coffee-script-brunch": "^2.10.2",
+    "decanter": "github:su-sws/decanter#1.0.0-alpha3",
+    "font-awesome": "~4.7.0",
+    "html-brunch-static": "^1.4.0",
+    "neat-omega": "^3.0.1",
+    "normalize.css": "^8.0.0",
+    "prismjs": "^1.14.0",
+    "sass-brunch": "^2.10.4",
+    "spostcss-brunch": "^1",
+    "uglify-js-brunch": "^2"
+  },
+  "license": "MIT"
+}
