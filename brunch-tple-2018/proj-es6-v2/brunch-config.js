@@ -1,4 +1,27 @@
 // See http://brunch.io for documentation.
+// See http://brunch.io for documentation.
+exports.files = {
+  javascripts: {
+    joinTo: {
+      'js/vendor.js': /^(?!app)/, // Files that are not in `app` dir.
+      'js/app.js': /^app/
+    }
+  },
+  // stylesheets: { joinTo: 'app.css' }
+  stylesheets: {
+    joinTo: {
+      'css/app.css': /^app\/scss/,
+      'css/vendor.css': /^app\/vendor\/css/
+    }
+  }
+};
+
+exports.plugins = {
+  babel: { presets: ['latest'] }
+};
+
+
+/*
 exports.files = {
   javascripts: {
     joinTo: {
@@ -28,3 +51,4 @@ exports.plugins = {
     outputDirectory: 'app/pages'
   }
 };
+*/
