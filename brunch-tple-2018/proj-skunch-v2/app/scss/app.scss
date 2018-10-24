@@ -1,0 +1,14 @@
+// plugins
+
+// paritials
+@import 'normaliz';
+@import 'variables';
+@import 'mixins';
+@import 'general';
+@import 'header';
+@import 'footer';
+
+// specifique pages
+body {
+    background-color: $bgbody !important;
+}

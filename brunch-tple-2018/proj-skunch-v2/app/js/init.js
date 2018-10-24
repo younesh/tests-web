@@ -1,3 +1,6 @@
+import initSearch from"../js/_cpt-search";
+
+initSearch(); 
 (function(){
     console.log('Js ready');
 })();
