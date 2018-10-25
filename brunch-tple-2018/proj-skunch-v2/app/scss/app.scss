@@ -1,4 +1,7 @@
 // plugins
+    //slick-carousel 
+@import "../../node_modules/slick-carousel/slick/slick-theme.scss";
+@import "../../node_modules/slick-carousel/slick/slick.scss";
 
 // paritials
 @import 'normaliz';
@@ -8,7 +11,13 @@
 @import 'header';
 @import 'footer';
 
+// componoent 
+@import 'components/cptIncrementField';
+
 // specifique pages
+@import "page-drafts";
+
+
 body {
     background-color: $bgbody !important;
 }
