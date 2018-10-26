@@ -1,23 +1,24 @@
-import { initSearch} from "./cpt-search.js";
+// plug npm packages
 
 // components
-import { initIncrementalField} from "./components/cptIncrementField";
+import { initIncrementalField } from "./components/cptIncrementField.js";
+
+//pages
+import { initHomePage } from "./pages/pageHome.js";
+import { initDraftsPage } from "./pages/pageDrafts";
 
 
-
-let nbr = 2441;
-
-// calls 
-initSearch(nbr);
+initHomePage();
+initDraftsPage(); 
 initIncrementalField();
 
-(function(){
+(function() {
     console.log('Js ready');
 })();
 
 
-$(document).ready(function(){
-   //  tt = require("../js/_cpt-search");
+$(document).ready(function() {
+    //  tt = require("../js/_cpt-search");
     console.log('jQuery ready');
-  //  tests();
+    //  tests();
 });

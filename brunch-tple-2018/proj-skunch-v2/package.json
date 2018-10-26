@@ -13,6 +13,7 @@
     "bootstrap": "^3",
     "bootstrap-datepicker": "^1.7.1",
     "bootstrap-select": "^1.12.4",
+    "flatpickr": "^4.5.2",
     "font-awesome": "^4.7.0",
     "html5shiv": "^3.7.3",
     "jquery": "^3",
