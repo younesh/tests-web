@@ -30,6 +30,9 @@
 ### 20181019 :  /proj-skunch-v2
 ### 20181019 :  /es6-bootstrap
 
+## 20181022 :  proj-skunch-v2 OK ( ça marche pour booter mais sans le watch des include !!!!)
+## 20181029 :  proj-skunch-v2 OK
+
 
 
     

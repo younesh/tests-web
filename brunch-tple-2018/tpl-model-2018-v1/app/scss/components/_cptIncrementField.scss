@@ -1,0 +1,26 @@
+/**
+ * incrementalField
+ *
+ * @type  componant
+ */
+
+/** ----------------------------------------------------------------
+ * COMMON
+ */
+
+.cpt-incremental-field {
+	.incremental-label {
+		// this span is added in label parameter macro
+		span { font-size: 12px; color: gray; display: block; }
+	}
+	.incremental-controller {
+		font-weight: bold; color: $color-brand-primary; font-size:15px; width: 120px; display: flex; border: 1px solid gray;
+		.btn-decrement,
+		.btn-increment {
+			text-align: center; line-height: 30px; width: 30px; height: 30px; cursor: pointer; display: block; flex-shrink: 0;
+			&.btn-decrement { border-right: 1px solid gray; }
+			&.btn-increment { border-left: 1px solid gray; }
+		}
+		.input-field { text-align: center; color: $color-brand-primary; min-width: 30px; border: none; flex-shrink: 1; }
+	}
+}

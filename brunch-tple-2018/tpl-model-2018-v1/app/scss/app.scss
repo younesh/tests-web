@@ -1,0 +1,62 @@
+// plugins
+//slick-carousel 
+@import "../../node_modules/slick-carousel/slick/slick-theme.scss";
+@import "../../node_modules/slick-carousel/slick/slick.scss";
+// flicker 
+// @import "../../node_modules/flatpickr/dist/flatpickr.min.css";
+
+/* import flatpickr begin */
+
+@import "../../node_modules/flatpickr/dist/flatpickr.min.css"; 
+/* import flatpickr begin */
+
+// paritials
+@import 'normaliz';
+@import 'variables';
+@import 'mixins';
+@import 'general';
+// @import 'header';
+
+// @@header : begin
+    .header {
+        .mini-header {
+          background-color: $color-black-secondary;
+          color: white; 
+          > .row {
+              align-items: center;
+              justify-content : space-between;
+
+          }
+
+          .btn-go {
+              @extend .btn-site;
+              padding: 5px 10px;
+          }
+        }
+        .big-header {
+
+        }
+    }
+    // min-sm
+    @media (min-width: $bp-min-sm) {
+    }
+
+    // min-md
+    @media (min-width: $bp-min-md) {
+    }
+
+    // min-lg
+    @media (min-width: $bp-min-lg) {
+    }
+
+    // min-xl
+    @media (min-width: $bp-min-lg) {
+    }
+
+// @@header : end
+@import 'footer';
+// componoent 
+@import 'components/cptIncrementField';
+// specifique pages
+@import "page-drafts";
+@import "page-home";
