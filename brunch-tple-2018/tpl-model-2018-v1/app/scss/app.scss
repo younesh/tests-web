@@ -21,16 +21,24 @@
     .header {
         .mini-header {
           background-color: $color-black-secondary;
-          color: white; 
+          color: white;
+
           > .row {
               align-items: center;
               justify-content : space-between;
-
           }
 
           .btn-go {
               @extend .btn-site;
               padding: 5px 10px;
+          }
+          .mini-menu {
+          @extend .d-flex-center;
+          // flex-direction: row-reverse;
+          justify-content: flex-end;
+            > a {
+                margin: 0 5px;
+            }
           }
         }
         .big-header {
@@ -52,11 +60,10 @@
      // min-xl
     @media (min-width: $bp-min-lg) {
     }
-
 // @@header : end
 @import 'footer';
 // componoent 
 @import 'components/cptIncrementField';
 // specifique pages
 @import "page-drafts";
-@import "page-home";
+@import "page-home"; 

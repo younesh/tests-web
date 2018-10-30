@@ -18,6 +18,13 @@ p {
     }
 }
 
+
+.d-flex-center {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
 .child-valign-middle {
     >* {
         vertical-align: middle;
@@ -86,8 +93,9 @@ img {}
 
 // LAYOUTAGE 
 .page {
-
-  .middle { background-color: white;} 
+    display: flex;
+    flex-direction: column;
+  .middle { background-color: white; flex: 1; } 
 }
 
 /* test */
