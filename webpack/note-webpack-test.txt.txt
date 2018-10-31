@@ -1,0 +1,25 @@
+
+---- Version 3.x.x -----------------------------------
+## tuto en cours :  https://www.alsacreations.com/tuto/lire/1754-debuter-avec-webpack.html
+    # 1. créer l'arbo :
+        > public/
+            > bundle.js
+            > index.html
+        > src/
+            > assets/
+                > icons/
+                > images/
+                > stylesheets/
+            > index.js
+    # 2. installer webpack à la racine du projet, commande : 
+        npm install --save-dev webpack@latest webpack-dev-server@latest
+    
+    # 3. inclure ces 2 lignes dans : webpack.config.js
+        const webpack = require("webpack");
+        const path = require("path");
+
+ 
+ ---- Version 4.x.x -----------------------------------
+
+#1 faut installer webpack-cli : 
+    npm i -D webpack webpack-cli
