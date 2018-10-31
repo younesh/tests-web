@@ -5,7 +5,13 @@ exports.files = {
       'js/vendor.js': /^node_modules/,
     },
   },
-  stylesheets: { joinTo: 'css/app.css' },
+    stylesheets: { joinTo: 'css/app.css' },
+    /* stylesheets: {
+      joinTo: {
+        'css/app.css': /^app\/scss/,
+        'css/vendor.css': /^app\/vendor\/css/
+      }
+    } */
 };
 
 exports.plugins = {

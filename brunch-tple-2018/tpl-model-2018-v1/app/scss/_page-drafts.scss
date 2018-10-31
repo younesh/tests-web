@@ -1,11 +1,26 @@
 /* page drafts */
 .page-drafts {
-
     .middle { 
         section {
             background-color: $color-gray-lighter;
             margin: $gutter-half - 0px;
             padding: $gutter-half;
+        }
+    }
+
+
+    // test 4: flex box, bloc allways in bottom
+    .test-4 {
+        min-height: 200px;
+        .test-inner {
+            display: flex;
+            flex-direction: column;
+            .boxs {
+                background-color: peru;
+                &.b1 { background-color: olive; }
+                &.b2 { background-color: peachpuff;}
+                &.b3 {background-color: palegreen; }
+            }
         }
     }
 }
