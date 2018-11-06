@@ -23,3 +23,24 @@
 
 #1 faut installer webpack-cli : 
     npm i -D webpack webpack-cli
+
+#2 pour tester ces page faut installer un server
+ npm i -D webpack-dev-server
+
+# pour générer l'html , faut installer un plugin : HTML-webpack-plugin
+ npm i -D html-webpack-plugin
+
+# puisqu'en va utiliser un plugin , faut créer le ficher  webpack.config.js à la racine (au même niveau que  package.json: 
+
+    const HTMLplugin = require("html-webpack-plugin");
+    module.exports = {
+        plugins : [
+            new HTMLplugin()
+        ]
+    }
+
+# pour loader su css ds son prj : 
+    npm install --save-dev extract-text-webpack-plugin
+
+
+
