@@ -1,5 +1,5 @@
 import { hello } from "./hello";
 import "./style.css";
 
-const name= "jean  5654188";
+const name= "salam :)";
 console.log(hello(name));
