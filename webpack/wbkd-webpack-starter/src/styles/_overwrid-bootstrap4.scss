@@ -1,0 +1,24 @@
+   /* 4 overwriding bootstrap 4 */
+  
+  // Grid breakpoints
+  $grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1230px
+  );
+
+  // Grid containers
+  $container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 991px,
+    xl: 1200px
+  );
+
+ // MEDIA QUERY
+ $orx-mobile-first-sm: "only screen and (min-width: #{map-get($grid-breakpoints, "sm")})";  // min 576px
+ $orx-mobile-first-md: "only screen and (min-width: #{map-get($grid-breakpoints, "md")})";  // min 768px
+ $orx-mobile-first-lg: "only screen and (min-width: #{map-get($grid-breakpoints, "lg")})";  // min 991px
+ $orx-mobile-first-xl: "only screen and (min-width: #{map-get($grid-breakpoints, "xl")})";  // min 1200px

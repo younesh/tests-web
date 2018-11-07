@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+    <%= require('html-loader!./tpl-included/head.html') %>
+<title> Drafts </title>
+</head>
+
+<body>
+    <div class="page page-home">
+        <!-- Header : begin -->
+        <%= require('html-loader!./tpl-included/header.html') %>
+        <!-- Header : end  -->
+        <!--middle : begin  -->
+    <div class="middle">
+        <div class="container">
+            <section class="test">
+                <h3> slick carousel </h3>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="slide-test">
+                            <div class="box min-sm"></div>
+                            <div class="box min-md"></div>
+                            <div class="box min-lg"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="test">
+                <h3> compostant/ controleur incremental fields </h3>
+                <p> lorem</p>
+                {{> cptIncrementField}}
+            </section>
+            <section class="test">
+                <h3> test cpt calendar ... </h3>
+                <div class="test-inner">
+                    <input type="text" class="calendar">
+                </div>
+            </section>
+            <!-- section.test>h3{title}+.test-inner -->
+        </div>
+    </div>
+        <!--middle : end  -->
+        <%= require('html-loader!./tpl-included/footer.html') %>
+    </div>
+</body>
+
+</html>
