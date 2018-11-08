@@ -1,0 +1,704 @@
+///////////////////////////////////////////////////////////
+//
+//		ACCUEIL
+//
+///////////////////////////////////////////////////////////
+
+/*
+	SLIDESHOW
+*/
+#slider {
+	color: $blanc;
+
+	@media (min-width: 992px) {
+		height: 645px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	// SLIDES
+	#first,
+	#second {		
+		@media (max-width: 991px) {
+			width: 100% !important;
+		}
+		@media (min-width: 992px) {
+			position: absolute;
+			z-index: 0;
+			height: 100%;
+			width: 50%;	
+		}
+		@media (min-width: 992px) and (max-width: 1199px) {
+			width: 50% !important;
+		}
+
+		&.active {
+			//z-index: 1;	
+
+			.content-invisible {
+
+				@media (min-width: 1200px) {
+					opacity: 1;
+				}			
+			}					
+		}
+	}
+
+	#first { 		
+		background-color: #1b98d8;
+		background-image:  url(../images/slide-left.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+
+		@media (max-width: 991px) {
+			right: 0 !important;
+		}
+		@media (min-width: 992px) {
+			left: 0;
+			background-position: center right;
+		}
+		@media (min-width: 992px) and (max-width: 1199px) {
+			left: 0 !important;
+			right: auto !important;
+		}
+
+		.content-wrapper {
+			@media (min-width: 768px) {
+				background-image: url(../images/woman.png);
+				background-repeat: no-repeat;
+				background-position: left top;
+			}
+			@media (min-width: 992px) {
+				background-position: right 430px bottom;
+			}
+			@media (min-width: 1200px) {
+				background-position: right 512px bottom;
+			}
+		}
+		.content {
+			&.content-visible {
+				@media (min-width: 992px) {
+					right: 0;
+					padding: 0 30px 0 15px;
+				}
+
+				.connect {
+					margin: 0 0 20px 30px;
+
+					@media (min-width: 992px) {
+						margin: 0 0 0 30px;
+					}
+				}
+			}
+			&.content-invisible {
+				@media (min-width: 992px) {
+					right: 100%;
+					padding: 0 15px;
+				}
+				@media (min-width: 1200px) {
+					padding: 0 30px 0 15px;
+				}
+			}
+		}
+
+		&.active {
+			.content-invisible {
+				@media (min-width: 992px) {
+					right: 590px !important;
+				}
+				@media (min-width: 1200px) {					
+					right: 670px !important;
+				}
+			}
+		}
+	}
+
+	#second {		
+		background-color: #88bd31;
+		background-image:  url(../images/slide-right.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+
+		@media (max-width: 991px) {
+			left: 0 !important;
+		}
+		@media (min-width: 992px) {
+			right: 0;
+			background-position: center left;
+		}
+		@media (min-width: 992px) and (max-width: 1199px) {
+			right: 0 !important;
+			left: auto !important;
+		}
+
+		&:before {			
+			@media (min-width: 992px) {
+				content: "";
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				left: -30px;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 30px 322px 0;
+				border-color: transparent #88bd31 transparent transparent;
+			}
+			@media (min-width: 1200px) {
+				left: -80px;
+				border-width: 0 80px 322px 0;
+			}
+		}
+
+		&:after {
+		    @media (min-width: 992px) {
+				content: "";
+			    display: inline-block;
+			    position: absolute;
+			    bottom: 0;
+			    left: 0;
+			    width: 0;
+			    height: 0;
+			    border-style: solid;
+			    border-width: 322px 0 0 30px;
+			    border-color: transparent transparent transparent #1b98d8;
+			}
+			@media (min-width: 1200px) {
+			    border-width: 322px 0 0 80px;
+			}
+		}
+
+		.content-wrapper {			
+			@media (min-width: 768px) {
+				background-image: url(../images/man.png);
+				background-repeat: no-repeat;
+				background-position: left -50px top;
+			}
+			@media (min-width: 992px) {
+				background-position: left 385px bottom;
+			}
+			@media (min-width: 1200px) {
+				background-position: left 470px bottom;
+			}
+		}
+		.content {
+			@media (min-width: 992px) {
+				text-align: right;
+			}
+			&.content-visible {
+				@media (min-width: 768px) {
+					
+				}
+				@media (min-width: 992px) {
+					left: 0;
+					margin: 0;
+					padding: 0 15px 0 30px;
+				}
+
+				.connect {
+					margin: 0 0 20px 30px;
+
+					@media (min-width: 992px) {
+						margin: 0 265px 0 0;
+					}
+				}
+			}
+			&.content-invisible {
+				@media (min-width: 992px) {
+					left: 100%;
+					padding: 0 15px;
+				}
+				@media (min-width: 1200px) {
+					padding: 0 15px 0 30px;
+				}
+			}
+		}
+
+		&.active {
+			.content-invisible {
+				left: 660px !important;
+
+				@media (min-width: 1200px) {					
+					left: 730px !important;
+				}
+			}
+		}
+	}
+
+	// CONTENU
+	.content-wrapper {	    
+		@media (min-width: 992px) {
+			position: absolute;
+		    left: 0;
+		    top: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.content {
+
+		&.content-visible,
+		&.content-invisible {			
+  			@media (min-width: 992px) {
+				position: absolute;
+				top: 50%;
+	  			transform: translateY(-50%);
+			}
+		}
+
+		&.content-visible {
+			@media (min-width: 768px) and (max-width: 991px) {
+			    padding: 0 50px 0 210px;
+			}		 
+			@media (min-width: 992px) {
+				width: 450px;
+			}
+			@media (min-width: 1200px) {
+				width: 532px;
+			}
+		}
+		&.content-invisible {	
+			display: none;
+			
+			@media (min-width: 1200px) {
+				display: block;
+				width: 400px;
+				opacity: 0;
+				@include transition(.4s ease);
+			}
+			@media (min-width: 1500px) {
+				width: 532px;
+			}
+		}
+
+		h2 {
+			margin: 20px 0;
+			font-size: 40px;	
+
+			@media (min-width: 992px) {
+				margin: 0 0 60px;
+				font-size: 60px;
+			}
+		}
+
+		h3 {
+			font-family: "droid_sansbold";
+			text-transform: uppercase;
+			font-size: 24px;
+
+			@media (min-width: 992px) {
+				margin-bottom: 40px;
+			}
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 30px;
+		}
+
+		a {
+			color: $blanc;
+
+			&.btn {
+				margin: 20px 0;
+				padding: 0 30px;
+				font-family: "droid_sansbold";
+				font-size: 18px;
+				line-height: 60px;
+				text-transform: uppercase;
+				@include text-shadow (0, 3px, 2px, rgba(0,0,0,0.2));
+				@include background-degrade2($orange, $orange2);
+				@include border-radius(45px);
+				border: 0;
+				@include box-shadow (0, 8px, 22px, 0, rgba(0,0,0,0.4));
+
+				@media (min-width: 992px) {
+					margin: 80px 0 20px;
+					line-height: 90px;
+					font-size: 24px;
+				}
+
+				.fa {
+					position: relative;
+    				top: 2px;
+					margin-left: 10px;
+					font-size: 24px;
+					opacity: 0.5;
+
+					@media (min-width: 992px) {
+						top: 5px;
+						margin-left: 20px;
+						font-size: 35px;
+					}
+
+					+ .fa {
+						margin-left: 5px;
+						opacity: 0.8;
+
+						@media (min-width: 992px) {
+							margin-left: 10px;
+						}
+					}
+				}
+			}
+
+			&.connect {
+				display: inline-block;
+				margin: 0 0 20px 30px;
+				text-decoration: underline;
+
+				@media (min-width: 992px) {
+					margin: 0 0 0 30px;
+				}
+			}
+		}
+	}
+
+	// SCROLL
+	.scroll {
+		position: absolute;
+		z-index: 10;
+		bottom: 10px;
+		width: 100px;
+		left: 50%;
+		margin-left: -50px;
+		text-align: center;
+
+		@media (max-width: 991px) {
+			display: none;
+		}
+
+		i {
+			display: block;
+			font-size: 30px;
+		}
+	}
+}
+
+/*
+	SECTIONS
+*/
+.section-home {
+	padding-bottom: 115px;
+
+	&.white {
+		background-color: $blanc;
+		.titre-section {
+			h2 { color: $bordeau; }
+			.btn { color: $bordeau; border-color: $bordeau; }
+		}
+	}
+
+	&.color {
+		.titre-section {
+			h2 { color: $blanc; }
+			.btn { color: $blanc; border-color: $blanc; }
+		}
+	}
+
+	&#derniers-concours { @include background-degrade1($bordeau, #d45b83); }
+	&#derniers-gagnants { @include background-degrade1(#b53044, #c9485a); }
+}
+
+.titre-section {
+
+	h2 {
+		padding: 70px 0 100px 215px;	
+		font-size: 40px;	
+
+		@media (min-width: 1200px) {
+			font-size: 60px;
+		}
+		@media (max-width: 767px) {
+			padding: 30px 0 40px;	
+			font-size: 24px;
+			text-align: center;
+			background: none !important;
+		}
+
+		#prix-important & { background: url('../images/prix.png') no-repeat center left; }
+		#derniers-concours & { background: url('../images/concours.png') no-repeat center left; }
+		#videos-buzz & { background: url('../images/buzz.png') no-repeat center left; }
+		#derniers-gagnants & { background: url('../images/gagnants.png') no-repeat center left; }
+	}
+	
+	.btn {
+		margin: 0 0 40px;
+		padding: 5px 0;
+		text-transform: uppercase;
+		padding-top: 0;
+		padding-bottom: 0;
+		line-height: 48px;
+		background: none !important;
+		box-shadow: none !important;
+		border-radius: 0 !important;
+
+		@media (min-width: 992px) {
+			margin: 80px 0 0;
+		}
+
+		.fa {
+			font-size: 17px;
+			margin-left: 10px;
+			opacity: 0.5;
+
+			+ .fa {
+				margin-left: 5px;
+				opacity: 0.8;
+			}
+		}
+	}
+}
+
+.block-home {
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 15px;
+	background-color: $blanc;
+	@include box-shadow (0, 1px, 4px, 0, rgba(0,0,0,0.6));
+
+	&:hover {
+
+		.hover {
+			display: block;
+		}
+	}
+
+	.img-stats {
+
+		.blur {
+			position: relative;
+			overflow: hidden;
+
+			img {
+				@include blur(2px);
+				@include scale(1.1);
+			}
+		}
+
+		.user {
+			position: absolute;
+			top: 20px;
+			left: 0;
+			width: 100%;
+			text-align: center;
+
+			@media (min-width: 768px) {
+				top: 30px;
+			}
+			@media (min-width: 992px) {
+				top: 20px;
+			}
+			@media (min-width: 1309px) {
+				top: 30px;
+			}
+
+			img {
+				@include box-shadow (0, 8px, 22px, 0, rgba(0,0,0,0.4));
+
+				@media (max-width: 1199px) {
+					width: 80px;
+					height: 80px;
+				}
+			}
+
+			.nom-user {
+				margin-top: 15px;
+				text-transform: uppercase;
+				text-align: center;
+				color: $blanc;
+			}
+		}
+
+		.count {
+			position: absolute;
+			right: 39px;
+			top: 24px;
+			width: 80px;
+			height: 80px;
+			font-family: 'playfair_displayregular';
+			font-size: 48px;
+			line-height: 66px;
+			text-align: center;
+			color: $blanc;
+			background: $orange;
+			@include border-radius(50%);
+
+			&:after {
+				content: "";
+				display: inline-block;
+				position: absolute;
+				top: -4px;
+				left: -4px;
+				width: 88px;
+				height: 88px;
+				padding: 5px;
+				border: 1px solid $orange;
+				@include border-radius(50%);
+			}
+		}
+
+		.stats {
+	    	position: relative;
+			overflow: hidden;
+			z-index: 1;
+			height: 60px;
+		    margin-top: -60px;
+		    padding: 0 30px;
+		    font-size: 14px;
+		    line-height: 80px;
+		    @include background-degrade2(rgba(0,0,0,0), rgba(0,0,0,0.7));
+		    color: $blanc;
+
+		    span + span {
+		    	margin-left: 10px;
+		    }
+		}
+	}
+
+	.content {
+		padding: 25px 15px;
+		text-align: center;
+		text-transform: uppercase;
+		color: $gris2;
+
+		&.img {
+			
+			.user {
+				display: table;
+
+				.img-circle {
+					float: left;
+					margin: 0 25px 0 60px;
+				}
+
+				.nom-user {
+					display: table-cell;
+					vertical-align: middle;
+					text-align: left;
+				}
+			}
+		}
+
+		> h3 {
+			font-family: "droid_sansbold";
+			margin-bottom: 15px;
+			font-size: 18px;
+			line-height: 24px;
+			color: $gris;
+		}
+
+		> p {
+			margin-bottom: 25px;
+		}
+
+		.reward {
+
+			.fa {
+				position: relative;
+				top: -3px;
+				width: 32px;
+				height: 32px;
+				margin-right: 10px;
+	    		font-size: 18px;
+				line-height: 32px;
+				color: $blanc;
+				@include background-degrade2($orange, $orange2);
+				@include border-radius(50%);
+			}
+
+			span {					
+		    	font-size: 30px;
+		    	line-height: 24px;
+				color: $orange;
+			}
+		}
+	}
+
+	.hover {
+		display: none;
+		position: absolute;
+		z-index: 2;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		color: $blanc;
+		background: rgba(228,121,24,0.9);
+
+		> div {
+		    position: absolute;
+		    width: 100%;
+		    top: 50%;
+			left: 0;
+			padding: 0 35px;
+		    margin-top: -35px; 
+
+		    @media (min-width: 992px) and (max-width: 1199px) {
+				height: 155px;
+		    	margin-top: -77px; 
+			}
+			@media (max-width: 767px) {
+				height: 155px;
+		    	margin-top: -77px; 
+			}
+		}
+
+		.fa,
+		.btn  {
+			float: left;
+			padding-top: 0;
+			padding-bottom: 0;
+			text-transform: uppercase;
+			line-height: 64px;
+			color: $blanc;
+			background: none;
+			border: 3px solid $blanc;
+
+			@media (min-width: 992px) and (max-width: 1199px) {
+				float: none;
+			}
+			@media (max-width: 767px) {
+				float: none;
+			}
+		}
+
+		.fa {
+			width: 70px;
+			margin-right: 35px;
+			font-size: 36px;
+			@include border-radius(50%);
+
+			@media (min-width: 992px) and (max-width: 1199px) {
+				margin-right: 0;
+			}
+			@media (max-width: 767px) {
+				margin-right: 0
+			}
+		}
+
+		.btn {
+			@include calc(width, "100% - 105px");
+			font-family: "droid_sansbold";
+			font-size: 18px;
+			box-shadow: none !important;
+			@include border-radius(35px);
+
+			@media (min-width: 992px) and (max-width: 1199px) {
+				display: block;
+				width: auto;
+				margin-top: 15px;
+			}
+			@media (max-width: 767px) {
+				display: block;
+				width: auto;
+				margin-top: 15px;
+			}
+
+			&:hover {
+				background-color: rgba(255,255,255,.3);
+			}
+		}
+	}
+}
