@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<head>
+  {{> head}}
+  <title> Drafts </title>
+</head>
+
+<body>
+  <div class="page page-drafts">
+
+    <!-- Header : begin -->
+   {{> header}}
+    <!-- Header : end  -->
+    <!--middle : begin  -->
+    <div class="middle"> 
+      <div class="container"> 
+        <section class="test">
+          <h3> slick carousel </h3>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="slide-test">
+                <div class="box min-sm"></div>
+                <div class="box min-md"></div>
+                <div class="box min-lg"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="test">
+          <h3> compostant/ controleur incremental fields </h3>
+          <p> </p>
+          {{> cptIncrementField}}
+        </section>
+         <section class="test">
+           <h3> test cpt calendar ...  </h3>
+           <div class="test-inner">
+              <input type="text" class="calendar">
+           </div>
+         </section>
+         <!-- section.test>h3{title}+.test-inner -->
+      </div>
+    </div>
+    <!--middle : end  -->
+   {{> footer}} 
+  </div>
+  {{> foot}} 
+
+</body>
+</html>

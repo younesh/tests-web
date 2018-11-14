@@ -46,3 +46,5 @@ COdPNBR-deslock-V12553:dakhlass-You!8152-younesharke@-FGH5!45-458DS@qMLS5-fDF#56
 ----  ARRETEE DS : ------------------------------------------------------------- 
 ----  2018/11/06 : AD ds C:\YOUNES\PROJETS\tests-web\webpack\wbkd-webpack-starter 
         > je suis dans l'etape qui consiste a copier l'architectur et inclusion depsuis C:\YOUNES\PROJETS\tests-web\brunch-tple-2018\proj-skunch-v2
+----  2018/11/14 : AD ds C:\YOUNES\PROJETS\tests-web\javascript\modern-js-test\app
+        > je suis dans je suis ds les tests js es6 

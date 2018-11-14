@@ -1,0 +1,33 @@
+{
+  "name": "brunch-app",
+  "description": "Brunch.io application",
+  "private": true,
+  "author": "Brunch",
+  "version": "0.0.1",
+  "repository": "",
+  "scripts": {
+    "start": "brunch watch --server LOGGY_STACKS=true",
+    "build": "brunch build --production"
+  },
+  "dependencies": {
+    "bootstrap": "^3",
+    "bootstrap-datepicker": "^1.7.1",
+    "bootstrap-select": "^1.12.4",
+    "flatpickr": "^4.5.2",
+    "font-awesome": "^4.7.0",
+    "html5shiv": "^3.7.3",
+    "jquery": "^3",
+    "jquery-selector-cache": "^1.0.2",
+    "slick-carousel": "^1.8.1",
+    "static-handlebars-brunch": "~ 0.1.0"
+  },
+  "devDependencies": {
+    "auto-reload-brunch": "^2",
+    "babel-brunch": "~6.0",
+    "babel-preset-latest": "^6",
+    "babel-preset-stage-0": "^6",
+    "brunch": "^2",
+    "copycat-brunch": "^1.1.0",
+    "sass-brunch": "^2"
+  }
+}

@@ -6,10 +6,14 @@ import { initIncrementalField } from "./components/cptIncrementField.js";
 //pages
 import { initHomePage } from "./pages/pageHome.js";
 import { initDraftsPage } from "./pages/pageDrafts";
+import { initTestJsPage  } from "./pages/pageTestJs";
 
-
+// les pages 
 initHomePage();
 initDraftsPage();
+initTestJsPage();
+
+// element : incriment field
 initIncrementalField();
 
 (function() {
@@ -18,7 +22,5 @@ initIncrementalField();
 
 
 $(document).ready(function() {
-    //  tt = require("../js/_cpt-search");
-    console.log('jQuery ready');
-    //  tests();
-});
+     console.log('jQuery ready 00000');
+}); 

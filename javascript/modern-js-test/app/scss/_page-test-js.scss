@@ -1,9 +1,10 @@
 /* page drafts */
-.page-drafts {
-    section {
-        background-color: $color-gray-lighter;
-        margin: $gutter-half 0;
-    }
+.page-test-js {
+ section {
+    background-color: $color-gray-lighter;
+    margin: $gutter-half 0;
+    padding: $gutter-half;
+ } 
 }
 
 // min-sm
