@@ -1,0 +1,25 @@
+{
+  "name": "tests-web",
+  "version": "1.0.0",
+  "description": "the first test of githip yes !!! --> ok edited in githup ;)\r the second modif in from desktop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/younesh/tests-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/younesh/tests-web/issues"
+  },
+  "homepage": "https://github.com/younesh/tests-web#readme",
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}

@@ -1,9 +1,8 @@
 // plug npm packages
 
 // components
-import { initIncrementalField } from "./components/cptIncrementField.js";
-
-//pages
+import { initIncrementalField } from "./components/cptIncrementField";
+/* pages */
 import { initHomePage } from "./pages/pageHome.js";
 import { initDraftsPage } from "./pages/pageDrafts";
 import { initTestJsPage  } from "./pages/pageTestJs";
@@ -23,4 +22,4 @@ initIncrementalField();
 
 $(document).ready(function() {
      console.log('jQuery ready 00000');
-}); 
+});

@@ -5,16 +5,40 @@
     margin: $gutter-half 0;
     padding: $gutter-half;
  } 
+
+ .test-sub-selector {
+    .box {
+        min-width: 150px;
+        &__red {
+           background-color:red; 
+        }
+
+        &__green {
+            background-color: green;
+        }
+
+        &--yellow {
+            background-color: yellow;
+        }
+
+        &-blue {
+            background-color: blue;
+        }
+    }
+ }
 }
 
 // min-sm
 @media (min-width: $bp-min-sm) {
+
 }
 
 // min-md
 @media (min-width: $bp-min-md) {
+
 }
 
 // min-lg
 @media (min-width: $bp-min-lg) {
+
 }
