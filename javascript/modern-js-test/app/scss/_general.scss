@@ -8,6 +8,8 @@ p {
     text-align: justify;
 }
 
+ul,li {list-style: none;}
+
 // clearing
 .clearfix {
     &::after {
@@ -87,8 +89,14 @@ img {}
 // LAYOUTAGE 
 .page {
 
-  .middle { background-color: white;} 
+  .middle { background-color: white;}
+  section.test {
+    background-color: $color-gray-lighter;
+    margin: $gutter-half 0;
+    padding: $gutter-half;
+  }
 }
+
 
 /* test */
 .box { width: 50px; height: 50px; background-color: gray; color: #000;

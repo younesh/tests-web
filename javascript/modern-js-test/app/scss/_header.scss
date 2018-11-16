@@ -1,11 +1,24 @@
+
 .header {
 
+     .menu {
+         position: fixed;
+         right: 0; top: 33%;
+         padding: $gutter-half;
+         background-color: white; //  $color-gray-meduim
+         border: 15px solid $color-gray-lighter;
+
+         a  {
+          display: block;
+          margin-bottom: 5px;      
+         }
+     }
 }
 
 
 // min-sm
 @media (min-width: $bp-min-sm) {
-}
+} 
 
 // min-md
 @media (min-width: $bp-min-md) {

@@ -1,5 +1,8 @@
 /* page drafts */
-.page-test-js {
+.page-api-rest {
+    .testItem {
+        width: 100%;
+    }
 }
 
 // min-sm
@@ -8,8 +11,14 @@
 
 // min-md
 @media (min-width: $bp-min-md) {
+    .testItem {
+        width: 50%;
+    }
 }
 
 // min-lg
 @media (min-width: $bp-min-lg) {
-}   
+    .testItem {
+        width: 33%;
+    }
+}

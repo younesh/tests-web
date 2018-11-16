@@ -6,11 +6,13 @@ import { initIncrementalField } from "./components/cptIncrementField";
 import { initHomePage } from "./pages/pageHome.js";
 import { initDraftsPage } from "./pages/pageDrafts";
 import { initTestJsPage  } from "./pages/pageTestJs";
+import {initAPIRest} from "./pages/pageAPIRest";
 
 // les pages 
 initHomePage();
 initDraftsPage();
 initTestJsPage();
+initAPIRest();
 
 // element : incriment field
 initIncrementalField();

@@ -15,7 +15,7 @@
         <style>
             body {
                 padding-top: 50px;
-                padding-bottom: 20px;
+                padding-bottom: 20px; 
             }
             
             .error {
@@ -41,6 +41,8 @@
                 color: red;
                 font-weight: bold;
             }
+
+            blockquote { font-size: 9px;}
 
             #modalLoading .modal-body { text-align: center; }
         </style>
@@ -157,7 +159,7 @@
                 }
 
              // getMySessionDetail : afficher dedail session du user connecté 
-             function getMySessionDetail(data) {
+                function getMySessionDetail(data) {
               dataDetailUser = data;
                  $(".result").append(
                      $("<h2>").text("Détail utilisateur"),
@@ -179,7 +181,7 @@
              }  //  function getMySessionDetail(data)
 
              // getTestsList : afficher la list dfes test disponible 
-             function getTestsList(data) {
+                 function getTestsList(data) {
                 dataTestsDispo = data;
                 $(".result").append("<h2> List des tests disponible </h2>");
                 for (i=0; i < dataTestsDispo.data.length ; i++ ) {
@@ -235,7 +237,7 @@
             */
             function getTestDetails (data) { 
                 var testDescription = "";
-                var TestName ="";   
+                var TestName ="";
                  for (i=0; i < dataTestsDispo.data.length ; i++ ) {  
                     if ( dataTestsDispo.data[i].id == idTestClick ) { 
                         testDescription = dataTestsDispo.data[i].description;
@@ -243,7 +245,7 @@
                         nbr_qt = data.data.questions.data.length;
                         rnd_qt  =Math.floor(Math.random() * nbr_qt); 
                         libQuestHazard = data.data.questions.data[rnd_qt].label; 
-                    } 
+                    }
                   }
            
                    $('#myModal .modal-header .modal-title').html(" Test : " + TestName );
@@ -252,7 +254,6 @@
                           $("<dl>").append(
                               $("<dt>").append("Description :"), 
                               $("<dd>").append(testDescription),
-
                               $("<dt>").append("Exemple de question  :"), 
                               $("<dd>").append(libQuestHazard)
                           )
@@ -276,7 +277,7 @@
                    } else if (!isDossier(NumDossier)) { 
                        $(".error").html("fomat incorrect du num dossier ");
                        $("#Num_doss").focus();
-                   } else  {
+                   } else {
                        // autntificaion au service identification : http://testrh-rec.sv.webnet.fr/api/login_check
                        loadingOn ();
                         $.post('http://testrh-rec.sv.webnet.fr/api/login_check', 
@@ -326,7 +327,7 @@
 
                             }).always(loadingOff)
                               .fail(function( data ) { // fail du service "my session detail"  :  http://testrh-rec.sv.webnet.fr/api/sessions/my
-  
+
                                 failerCase (data, "(!) : échec de connexion au service http://testrh-rec.sv.webnet.fr/api/sessions/my (get my session detail)");
                                 
                             });  
@@ -342,6 +343,9 @@
          <!--@ END script exo02 -->
         
  <!-- Modal -->
+ <blockquote>
+ '4EABAA' //  'benjamin@test.com'
+ </blockquote>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
