@@ -6,7 +6,7 @@ export function initDraftsPage() {
     if (!$(".page-drafts").length) {
         return;
     }
-
+    console.log("initDraftsPage !! ");
     // test du calendar https://flatpickr.js.org/examples/
     let optional_config = {};
     $(".calendar").flatpickr(optional_config);

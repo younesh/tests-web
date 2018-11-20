@@ -4,5 +4,6 @@ export function initHomePage() {
         return;
     }
     // launch the slideer 
+    console.log("initHomePage !! ");
     $(".slide-test").slick({ arrows: true });
 }
