@@ -44,6 +44,22 @@
         git reset --hard
     # 
 
+## lister les branches qui sont ds mon repo :
+    git branch
+
+## supprimer les branches : 
+    # supprimer la branche local : 
+        git branch -d [nom_de_la_branche]    // avec le '-d' il te mettra un avertissement
+        git branch -D [nom_de_la_branche]    // avec le '-D' il supprime directement 
+    # supprimer la branche distante : 
+        git push origin :[nom_de_la_branche]
+
+
+
 ## (!) Doc a ajouter : { push -- forece with lease /  les cas resolve conflit en merge / .... / }
 
 ## (!) ajouter l'équivalant du "merge-into" en commandes ( merge-into de la branche destination du merge request ( exple :develop ou master) vers la branch du travail )
+
+
+> conclusion :
+    ds le même fichier  si les modif ne concerne pas les même ligne la modification passe sans probleme, et le merge est auto sans conflit
