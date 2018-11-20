@@ -2,6 +2,14 @@
 .page-api-rest {
     .testItem {
         width: 100%;
+        background-color: #eee;
+        box-sizing: border-box;
+        padding: 2%;
+        cursor: pointer;
+        &:hover {
+            background-color: $color-gray-meduim;
+          //  border : solid 1px $color-gray-meduim ; 
+        }
     }
     .id-cnx {
         font-size: 10px;
@@ -15,14 +23,21 @@
 
 // min-md
 @media (min-width: $bp-min-md) {
-    .testItem {
-        width: 50%;
+    .page-api-rest {
+        .testItem {
+            width: 48%;
+            margin: 1%;
+            float: left;
+            img { width: 100%;}
+        }
     }
 }
 
 // min-lg
 @media (min-width: $bp-min-lg) {
-    .testItem {
-        width: 33%;
+    .page-api-rest {
+        .testItem {
+            width: 31%;
+        }
     }
 }
