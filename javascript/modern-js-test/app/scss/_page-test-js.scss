@@ -2,8 +2,11 @@
 .page-test-js {
 
  .test-sub-selector {
-    .box {
+             opacity: 0.8;
+             background-color: #000;
+  .box {
         min-width: 150px;
+         opacity: .2;
         &__red {
            background-color:red; 
         }
@@ -19,7 +22,7 @@
         &-blue {
             background-color: blue;
         }
-    }
+    } 
  }
 }
 

@@ -17,6 +17,16 @@ export function initTestJsPage() {
 
     console.log(" la pa1 se presnete > " + pa1.sePresenter());
     var jk = "qsdqsd";
+
+
+
+    const nArray = new upperCaseArray ();
+    nArray.push("samir");
+    nArray.push("hassan");
+    nArray.push("ayoub");
+    nArray.push("ahmed");
+    // let A2 = nArray.makeUpperCase();
+   //  console.log(nArray.makeUpperCase());
 }
 
 
@@ -56,4 +66,15 @@ class personneActif extends personne {
     sePresenter() {
         return super.sePresenter() + " et  le secteur = " +  this.secteur;
     }
+}
+
+
+/// etendre des objets integrée 
+class upperCaseArray extends Array {
+
+    makeUpperCase() {
+        let newArray = [];
+        this.forEach(elem => newArray.push(elem.toUpperCase()));
+        return newArray;
+    };
 }
