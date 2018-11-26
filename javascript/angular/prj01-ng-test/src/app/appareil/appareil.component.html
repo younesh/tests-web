@@ -1,3 +1,11 @@
-<li class="list-group-item">
-  <h4>Appareil : {{ appareilName }} -- Statut : {{ getStatus() }} </h4>
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success' : appareilStatus === 'allumee',
+                'list-group-item-danger' : appareilStatus === 'éteint'
+                }">  <!-- list-group-item cpt-appareil -->
+  <h4 [ngStyle]="{color: getColor()}"> 
+    <span class="eteint" *ngIf="appareilStatus === 'éteint'"></span>
+    <span class="allumee" *ngIf="appareilStatus === 'allumee'"></span>
+     Appareil : {{ appareilName }} -- Statut : {{ getStatus() }} </h4>
+  <input type="text" class="form-control" [(ngModel)]="appareilName">
+  
 </li>

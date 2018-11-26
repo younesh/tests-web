@@ -1,0 +1,13 @@
+.cpt-appareil {
+        .neutre {
+            width: 20px; height: 20px; background-color: gray; display: inline-block; margin-right: 15px;
+         } 
+        .eteint {
+            background-color: red;
+             @extend .neutre;
+        }
+        .allumee {
+            background-color: green;
+             @extend .neutre;
+        }
+}
