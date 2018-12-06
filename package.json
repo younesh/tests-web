@@ -23,6 +23,7 @@
     "eslint-plugin-import": "^2.14.0"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "npm": "^6.4.1"
   }
 }
