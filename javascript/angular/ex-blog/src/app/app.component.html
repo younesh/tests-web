@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="cpt-app">
+  <header>
+    <div class="container">
+      main menu 
+    </div>
+  </header>
+  <div class="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>list des posts</h2>
+          <ul class="list-group">
+            <app-post *ngFor="let post of listPosts" [title]="post.title" [content]="post.content" [created_at]="post.created_at" [loveIts]="post.loveIts"></app-post>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <router-outlet></router-outlet> -->
+</div>

@@ -1,0 +1,12 @@
+<li [ngClass]="{'list-group-item': true,
+              'app-post' : true,
+              'list-group-item-success': loveIts > 0,
+              'list-group-item-danger': loveIts < 0
+              }">
+  <em class="date"> {{ created_at | date: 'yyyy/MM/dd, hh:mm a' }}</em>
+  <h4> {{ title }} </h4> 
+  <p>  {{ content }} </p>
+  <button class="btn btn-success" (click)="onIncrimentLove()">love-it</button>
+  <button class="btn btn-danger" (click)="onDecrimentLove()">  dont love it !</button>
+  <input type="text" [(ngModel)]="loveIts">
+</li>
