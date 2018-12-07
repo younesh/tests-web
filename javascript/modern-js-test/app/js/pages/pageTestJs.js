@@ -27,6 +27,10 @@ export function initTestJsPage() {
     nArray.push("ahmed");
     // let A2 = nArray.makeUpperCase();
    //  console.log(nArray.makeUpperCase());
+
+
+   // 
+    initCanvas(); 
 }
 
 
@@ -77,4 +81,20 @@ class upperCaseArray extends Array {
         this.forEach(elem => newArray.push(elem.toUpperCase()));
         return newArray;
     };
+}
+
+
+/// 
+function initCanvas() {
+    /* test de */
+
+    let cvn = document.createElement("canvas");
+    //let canvas = $(".test-canvas .canvas");
+
+    console.log(cvn);
+    let ctx = cvn.getContext("2d");
+    ctx.fillStyle = 'green';
+    ctx.fillRect(10, 10, 100, 100);
+    $(".inner-canvas").html(ctx);
+
 }

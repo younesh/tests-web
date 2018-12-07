@@ -1,5 +1,31 @@
 /* page drafts */
-.page-test-js {
+.page-drafts {
+
+
+  /*test-anim-hover-btn */  
+  .test-anim-hover-btn {
+    .btn-01 {
+        background-color: #fff;
+        border : 1px solid #000;
+        display: inline-block;
+        width: 200px;
+        height: 70px; line-height: 70px;
+        text-align: left;
+
+        .engrenages-anim {
+            display: inline-block;
+            .fa-cog {
+                &.bigg {
+                    font-size: 30px;
+                } 
+                 &.small {
+                    font-size: 20px;
+                } 
+            } 
+
+        }
+    }
+  }
 }
 
 // min-sm

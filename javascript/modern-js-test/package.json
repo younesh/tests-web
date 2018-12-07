@@ -22,6 +22,7 @@
     "static-handlebars-brunch": "~ 0.1.0"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.5.0",
     "auto-reload-brunch": "^2",
     "babel-brunch": "~6.0",
     "babel-preset-latest": "^6",

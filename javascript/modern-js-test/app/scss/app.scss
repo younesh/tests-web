@@ -8,7 +8,8 @@
 
 /* import flatpickr begin */
 
-@import "../../node_modules/flatpickr/dist/flatpickr.min.css"; 
+@import "../../node_modules/flatpickr/dist/flatpickr.min.css";
+@import "../../node_modules/font-awesome/css/font-awesome.min.css";
 /* import flatpickr begin */
 
 // paritials
@@ -24,4 +25,4 @@
 @import "page-drafts";
 @import "page-home";
 @import "page-test-js";
-@import "page-api-rest";
+@import "page-api-rest"; 
