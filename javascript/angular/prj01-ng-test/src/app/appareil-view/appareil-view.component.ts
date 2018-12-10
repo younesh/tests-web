@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppareilService } from '../services/appareil.service';
 
 @Component({
   selector: 'app-appareil-view',
@@ -7,9 +8,46 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppareilViewComponent implements OnInit {
 
-  constructor() { }
+  // title = 'prj01-ng-test';
+  isAuth = false;
+  lastUpdate = new Promise((resolve, reject) => {
+    const date = new Date();
+    setTimeout(
+      () => {
+        resolve(date);
+      }, 3000
+    );
+  });
 
-  ngOnInit() {
+
+
+  statusOne = "éteint";
+  statusTwo = "allumee";
+  statusTree = "éteint";
+
+
+  appareils: any[]; /*03*/
+  constructor(private appareilService: AppareilService) {
+    setTimeout(
+      () => {
+        this.isAuth = true;
+      }, 4000
+    );
   }
 
+  ngOnInit() { /*04*/
+    this.appareils = this.appareilService.appareils;
+  }
+
+  onAllumer() {
+    this.appareilService.switchOnAll();
+  }
+
+  onEteindre() {
+    if (confirm('Etes-vous sûr de vouloir éteindre tous vos appareils ?')) {
+      this.appareilService.switchOffAll();
+    } else {
+      return null;
+    }
+  }
 }
