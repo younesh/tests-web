@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit /*01*/} from '@angular/core';
+import { AppareilService } from './services/appareil.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit /*02*/ {
   // title = 'prj01-ng-test';
   isAuth = false;
   lastUpdate = new Promise((resolve, reject) => {
@@ -17,20 +18,6 @@ export class AppComponent {
     );
   });
 
-  appareils = [
-   {
-      name: "Machine à laver 000",
-      status:"éteint"
-   },
-   {
-     name: "Frigo 000",
-     status: "allumee"
-    },
-    {
-      name: "Ordinateur 000",
-      status: "allumee"
-    }
-  ];
 
 
   statusOne ="éteint";
@@ -38,8 +25,8 @@ export class AppComponent {
   statusTree ="éteint";
 
 
-
-  constructor() {
+  appareils: any[]; /*03*/
+  constructor(private appareilService : AppareilService ) {
     setTimeout(
       () => {
         this.isAuth = true;
@@ -47,8 +34,19 @@ export class AppComponent {
     );
   }
 
+  ngOnInit() { /*04*/
+    this.appareils = this.appareilService.appareils;
+  }
+
   onAllumer() {
-    console.log('On allume tout ! ...');
-    
+    this.appareilService.switchOnAll();
+  }
+
+  onEteindre() {
+    if (confirm('Etes-vous sûr de vouloir éteindre tous vos appareils ?')) {
+      this.appareilService.switchOffAll();
+    } else {
+      return null;
+    }
   }
 }
