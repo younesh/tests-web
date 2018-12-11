@@ -6,12 +6,14 @@
     <span class="eteint" *ngIf="appareilStatus === 'éteint'"></span>
     <span class="allumee" *ngIf="appareilStatus === 'allumee'"></span>
      Appareil : {{ appareilName }} -- Statut : {{ getStatus() }} </h4>
-  <input type="text" class="form-control" [(ngModel)]="appareilName">
-  
+
+  <a [routerLink]="id"> Détail 222 </a>
   <button class="btn btn-sm btn-success"
           *ngIf="appareilStatus === 'éteint'"
           (click)="onSwitch()">Allumer</button>
   <button class="btn btn-sm btn-danger"
           *ngIf="appareilStatus === 'allumé'"
           (click)="onSwitch()">Eteindre</button>
+
+        <input type="text" class="form-control" [(ngModel)]="appareilName">
 </li>

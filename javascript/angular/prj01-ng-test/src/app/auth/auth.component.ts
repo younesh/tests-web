@@ -14,7 +14,7 @@ export class AuthComponent implements OnInit {
   constructor(private authService: AuthService, private router: Router) {
 
   }  /*02*/ // injecter le service authService 
-     // injjecter aussi le service rout
+     // injecter aussi la vartiable de type Router
 
   ngOnInit() {
     this.authStatus = this.authService.isAuth;
