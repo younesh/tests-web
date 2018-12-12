@@ -1,0 +1,4 @@
+## demarrer le prj en watch continue
+
+    brunch watch --server
+

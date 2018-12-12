@@ -11,6 +11,14 @@
     1.5 UX et redesign des controller html5 ( checkbox, radio, combobox ...
     1.5 Bonnes pratiques en CSS : BEM et OOCSS : https://www.alsacreations.com/article/lire/1641-bonnes-pratiques-en-css-bem-et-oocss.html
 
+     faire les cas de figures du responsive parfais
+     les regles de base UX 
+     paralaxe
+     animation 
+     performence tests 
+     compression d'images 
+
+     
 2. Framwork js : vueJS , react .... 
     2.1 installation et parametrage d'environnement avec nodeJS
     2.2 passer de revu les fondamentaux et princibe de base

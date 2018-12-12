@@ -1,9 +1,9 @@
+
 /* page drafts */
 .page-drafts {
-
-
   /*test-anim-hover-btn */  
   .test-anim-hover-btn {
+
     .btn-01 {
         background-color: #fff;
         border : 1px solid #000;
@@ -11,21 +11,51 @@
         width: 200px;
         height: 70px; line-height: 70px;
         text-align: left;
+        cursor: pointer;
 
         .engrenages-anim {
             display: inline-block;
             .fa-cog {
                 &.bigg {
                     font-size: 30px;
-                } 
+                    animation: rotate-gearings 3s infinite linear;
+                }
                  &.small {
+                    position: relative;
+                    top: -17px;
+                    right: 8px;
                     font-size: 20px;
+                    animation: rotate-gearings-inverse 3s infinite linear;
+                }
+                &.pause {
+                  animation-play-state: paused;
                 }
             } 
 
         }
     }
-  }
+
+    
+      /* animation to rotate */
+      @keyframes rotate-gearings {
+        from {
+            transform: rotate(0deg);
+          }
+        to {
+            transform: rotate(359deg);
+          }
+      }
+
+       @keyframes rotate-gearings-inverse {
+        from {
+            transform: rotate(359deg);
+          }
+        to {
+            transform: rotate(0);
+          }
+      }
+  } /* end test-anim-hover-btn*/
+
 }
 
 // min-sm
@@ -38,4 +68,4 @@
 
 // min-lg
 @media (min-width: $bp-min-lg) {
-}   
+}
