@@ -90,13 +90,30 @@
 
 
   .test-bloc-responsive {
+
+
+     figure {
+        //  height: 100%;
+        img {
+            max-width: 100%;
+          object-fit: cover;
+        }
+     }
     .pushing-bloc {
-        background-color: #fff;
-        .img-pdt {
-         width: 100%; 
-        } 
+        background-color: #fff; 
+
+        .col-ctn {
+           // background-color: yellowgreen;
+            .main-ctn {
+                padding: $gutter-half;
+            }
+        }
+        .col-img {
+           background-color: blueviolet;
+        }
+
         .btns {
-            .btn {  color: #fff;
+            .btn-site {  color: #fff;
             
                 &.btn-01 { background-color: orange;} 
                 &.btn-02 { background-color: maroon;} 
