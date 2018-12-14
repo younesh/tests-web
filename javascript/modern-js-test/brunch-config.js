@@ -26,11 +26,12 @@ exports.npm = {
     datepicker: 'bootstrap-datepicker',
   },
   styles: {
-    bootstrap: ['dist/css/bootstrap.css'],
+     /*   bootstrap:
+    ['dist/css/bootstrap.css'],
     "bootstrap-select": ['dist/css/bootstrap-select.css'],
     "bootstrap-datepicker": ['dist/css/bootstrap-datepicker.css'],
     "bootstrap-datepicker": ['dist/css/bootstrap-datepicker.css'],
-    "font-awesome": ['css/font-awesome.css'],
+    "font-awesome" : ['css/font-awesome.css'], */
   },
 };
 

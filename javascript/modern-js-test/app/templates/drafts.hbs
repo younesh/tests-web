@@ -9,11 +9,11 @@
   <div class="page page-drafts">
 
     <!-- Header : begin -->
-   {{> header}}
+    {{> header}}
     <!-- Header : end  -->
     <!--middle : begin  -->
-    <div class="middle"> 
-      <div class="container"> 
+    <div class="middle">
+      <div class="container">
         <section class="test">
           <h3> slick carousel </h3>
           <div class="row">
@@ -31,64 +31,249 @@
           <p> </p>
           {{> cptIncrementField }}
         </section>
-         <section class="test">
-           <h3> test cpt calendar ...  </h3>
-           <div class="test-inner">
-              <input type="text" class="calendar">
-           </div>
-         </section>
+        <section class="test">
+          <h3> test cpt calendar ... </h3>
+          <div class="test-inner">
+            <input type="text" class="calendar">
+          </div>
+        </section>
 
         <section class="test test-anim-hover-btn">
           <h3>anime btn hover effect </h3>
           <div class="test-inner">
-              <div class="btn-01">
-                <span> text btn </span>
-                <div class="engrenages-anim">
-                  <i class="fa fa-cog bigg" aria-hidden="true"></i>
-                  <i class="fa fa-cog small" aria-hidden="true"></i>
-                </div>
+            <div class="btn-01">
+              <span> text btn </span>
+              <div class="engrenages-anim">
+                <i class="fa fa-cog bigg" aria-hidden="true"></i>
+                <i class="fa fa-cog small" aria-hidden="true"></i>
               </div>
+            </div>
           </div>
         </section>
         <section class="test test-bloc-responsive">
           <h3>title</h3>
           <div class="test-inner">
 
-              <div class="pushing-bloc">
-                <div class="row no-gutters">
-                  <div class="col-sm-6 col-img">
-                    <figure>
-                      <img class="img-pdt" src="img/newyork.jpg" alt="">
-                    </figure>
-                  </div>
-                  <div class="col-sm-6 col-ctn">
+            <div class="pushing-bloc">
+              <div class="row no-gutters">
+                <div class="col-sm-6 col-img">
+                  <figure>
+                    <img class="img-pdt" src="img/newyork.jpg" alt="">
+                  </figure>
+                </div>
+                <div class="col-sm-6 col-ctn">
 
-                      <div class="main-ctn">
-                        <span class="badge badge-pill badge-info">Info</span>
-                        <span class="badge badge-pill badge-info">Info</span>
-                        <span class="badge badge-pill badge-info">Info</span>
-                        <span class="badge badge-pill badge-info">Info</span>
-                        <span class="badge badge-pill badge-info">Info</span>
-                        
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus reprehenderit iure accusantium voluptatum impedit optio veritatis dicta, sunt cum atque sed asperiores esse unde numquam omnis consectetur perferendis! Beatae, dolore?</p>
-                      </div>
-                      <div class="row btns no-gutters">
-                        <a href="" class="col btn-site btn-01"> btn 01</a>
-                        <a href="" class="col btn-site btn-02" >btn 02</a>
-                      </div>
-                  </div> 
+                  <div class="main-ctn">
+                    <span class="badge badge-pill badge-info">Info</span>
+                    <span class="badge badge-pill badge-info">Info</span>
+                    <span class="badge badge-pill badge-info">Info</span>
+                    <span class="badge badge-pill badge-info">Info</span>
+                    <span class="badge badge-pill badge-info">Info</span>
+
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus reprehenderit iure
+                      accusantium voluptatum impedit optio veritatis dicta, sunt cum atque sed asperiores esse unde
+                      numquam omnis consectetur perferendis! Beatae, dolore?</p>
+                  </div>
+                  <div class="row btns no-gutters">
+                    <a href="" class="col btn-site btn-01"> btn 01</a>
+                    <a href="" class="col btn-site btn-02">btn 02</a>
+                  </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        <section class="test test-lazyloading-observer">
+          <h3> test du lazyloading observer : <span class="badge small badge-info">
+              https://developer.mozilla.org/fr/docs/Web/API/Intersection_Observer_API </span></h3>
+          <div class="test-inner">
+
+            <figure>
+              <img src="img/newyork.jpg" alt="" class="lazyload-img">
+            </figure>
+
+            <figure>
+              <img src="img/newyork2.jpg" alt="" class="lazyload-img">
+            </figure>
+
+            <figure>
+              <img src="img/nature02.jpg" alt="" class="lazyload-img">
+            </figure>
 
           </div>
         </section>
-         <!-- section.test>h3{title}+.test-inner -->
+        <section class="test test-lazyload-codpin">
+          <h3>title span </h3>
+          <div class="test-inner">
+            <header>
+              <div class=hero_bg></div>
+              <h1>Performant lazy-load method using the Intersection Observer API</h1>
+            </header>
+
+
+            <section>
+
+              <h2 class=centered-1>No visual jank, runs at the full 60fps</h2>
+
+              <!--   <img data-LL-src="https://source.unsplash.com/pFqrYbhIAXs/?w=1920x1080"> -->
+              <img data-LL-src="https://websemantics.uk/unsplash/needle-on-the-record.jpg">
+
+              <noscript>
+                <img src="https://websemantics.uk/unsplash/needle-on-the-record.jpg">
+              </noscript>
+
+              <a href="https://unsplash.com/@lukechesser" target=_blank rel="noopener noreferrer">
+                <svg>
+                  <use xlink:href="#icon_camera"></use>
+                </svg>
+                Luke Chesser
+              </a>
+
+            </section>
+
+
+            <section>
+
+              <h2 class=centered-2>Ultra lightweight vanilla JavaScript</h2>
+
+              <!--   <img data-LL-src="https://source.unsplash.com/bq-1seg1cPI/?w=1920x1080"> -->
+              <img data-LL-src="https://websemantics.uk/unsplash/busy-bike.jpg">
+
+              <noscript>
+                <img src="https://websemantics.uk/unsplash/busy-bike.jpg">
+              </noscript>
+
+              <a href="https://unsplash.com/@clemono2" target=_blank rel="noopener noreferrer">
+                <svg>
+                  <use xlink:href="#icon_camera"></use>
+                </svg>
+                Clem Onojeghuo
+              </a>
+
+            </section>
+
+
+            <section>
+
+              <h2 class=centered-3>Images loaded when JavaScript is unavailable</h2>
+
+              <!--   <img data-LL-src="https://source.unsplash.com/X2gM-SIufpU/?w=1920x2390"> -->
+              <img data-LL-src="https://websemantics.uk/unsplash/sunday-delight.jpg">
+
+              <noscript>
+                <img src="https://websemantics.uk/unsplash/sunday-delight.jpg">
+              </noscript>
+
+              <a href="https://unsplash.com/@foodess" target=_blank rel="noopener noreferrer">
+                <svg>
+                  <use xlink:href="#icon_camera"></use>
+                </svg>
+                Jennifer Pallian
+              </a>
+
+            </section>
+
+
+            <section>
+
+              <h2 class=centered-4>Images loaded when IntersectionObserver is unsupported.</h2>
+
+              <!--   <img data-LL-src="https://source.unsplash.com/AYSorKGDm10/?w=1920x1080"> -->
+              <img data-LL-src="https://websemantics.uk/unsplash/red-door.jpg">
+
+              <noscript>
+                <img src="https://websemantics.uk/unsplash/red-door.jpg">
+              </noscript>
+
+              <a href="https://unsplash.com/@shttefan" target=_blank rel="noopener noreferrer">
+                <svg>
+                  <use xlink:href="#icon_camera"></use>
+                </svg>
+                SHTTEFAN
+              </a>
+
+            </section>
+
+
+            <section>
+
+              <h2 class=centered>Neat huh?</h2>
+
+              <!--   <img data-LL-src="https://source.unsplash.com/PC_lbSSxCZE/?w=1920x1080"> -->
+              <img data-LL-src="https://websemantics.uk/unsplash/excalibur-sparkles.jpg">
+
+              <noscript>
+                <img src="https://websemantics.uk/unsplash/excalibur-sparkles.jpg">
+              </noscript>
+
+              <a href="https://unsplash.com/@krisroller" target=_blank rel="noopener noreferrer">
+                <svg>
+                  <use xlink:href="#icon_camera"></use>
+                </svg>
+                Kristopher Roller
+              </a>
+
+            </section>
+
+
+
+
+            <footer>
+
+              <h2>Details</h2>
+
+              <p>Method utilises the new Intersection Observer API. Which has zero jank and runs at the full 60fps
+                using ultra
+                lightweight vanilla JavaScript.</p>
+
+              <p>Under fallback conditions (method unsupported, no JavaScript available) images are loaded as normal.</p>
+
+              <h2>Credits</h2>
+
+              <p>Based heavily on Dean Humes article: <a class=details_lnk title="[new window]" target=_blank href="http://www.deanhume.com/Home/BlogPost/lazy-loading-images-using-intersection-observer/10163">Lazy-loading
+                  images using Intersection Observer</a></p>
+
+              <p>Images from <a class=details_lnk target=_blank title="[new window]" href="https://unsplash.com/">Unsplash</a></p>
+
+              <h2>More info</h2>
+
+              <p>MDN: <a class=details_lnk target=_blank title="[new window]" href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection
+                  Observer API</a></p>
+
+              <p>Google Developers: <a class=details_lnk target=_blank title="[new window]" href="https://developers.google.com/web/updates/2016/04/intersectionobserver">IntersectionObserver’s
+                  coming into view</a></p>
+
+              <p>Can I Use: <a class=details_lnk target=_blank title="[new window]" href="http://caniuse.com/#feat=intersectionobserver">browser
+                  support</a></p>
+
+
+              <p class=myStuff><a class=details_lnk target=_blank title="[new window]" href="https://codepen.io/2kool2/pens/popular/?grid_type=list#">Pens
+                  by Mike Foskett</a> &mdash; <a class=details_lnk target=_blank title="[new window]" href="https://websemantics.uk/">webSemantics</a></p>
+
+
+            </footer>
+
+
+
+
+
+            <svg class=visually-hidden>
+              <defs>
+                <symbol id="icon_camera" viewBox="0 0 32 32">
+                  <path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
+                </symbol>
+              </defs>
+            </svg>
+          </div>
+        </section> <!-- test-lazyload-codpin  -->
+        <!-- section.test>h3{title}+.test-inner -->
       </div>
     </div>
     <!--middle : end  -->
-   {{> footer}}
+    {{> footer}}
   </div>
-  {{> foot}} 
+  {{> foot}}
 
 </body>
+
 </html>

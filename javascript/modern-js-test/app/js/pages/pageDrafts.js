@@ -21,8 +21,7 @@ export function initDraftsPage() {
         let btn = $(elm.currentTarget);
         console.log("click " + btn.attr("class"));
         btn.find(".fa-cog").toggleClass('pause');
-        
-    })
+    });
 
 
     // open mobile menu 
@@ -33,4 +32,148 @@ export function initDraftsPage() {
         
     });
     
+    // 
+    let  options = {
+        root: document.querySelector('#scrollArea'),
+        rootMargin: '0px',
+        threshold: 0.5
+    }
+    let  observer = new IntersectionObserver(callback, options);
+    let target = document.querySelector('.lazyload-img');
+    observer.observe(target);
+
+
+    lazy_loader();
+
 }
+
+
+
+
+function callback(entries, observer) {
+    entries.forEach(entry => {
+        console.log("callback observer launched  000110111000111 !! ");
+        // chaque élément de entries correspond à une variation
+        // d'intersection pour un des éléments cible:
+        //   entry.boundingClientRect
+        //   entry.intersectionRatio
+        //   entry.intersectionRect
+        //   entry.isIntersecting
+        //   entry.rootBounds
+        //   entry.target
+        //   entry.time
+    });
+};
+
+
+
+/* codepin lazyload */ 
+// Dean Hume:  https://deanhume.github.io/lazy-observer-load/
+
+// TODO: background-images
+
+var lazy_loader = (() => {
+
+    "use strict";
+
+    const dataAttr = "data-LL-src";
+    const imageLoaded = "-js-lazyImageLoaded";
+    const imageFadeClass = "-js-fadeIn";
+
+    // Get all of the images that are marked up to lazy load
+    const images = document.querySelectorAll("[" + dataAttr + "]");
+
+    const config = {
+        // If the image gets within 50px in the Y axis, start the download.
+        //rootMargin: '50px 0px',
+        rootMargin: '-50px 0px', // 50px into viewport before loading so you can see it kick in
+        threshold: 0.01
+    };
+
+    let imageCount = images.length;
+    let observer;
+
+    // If we don't have support for intersection observer, loads the images immediately
+    if (!('IntersectionObserver' in window)) {
+
+        console.log("No IntersectionObserver support");
+        Array.from(images).forEach(image => preloadImage(image));
+
+    } else {
+        // It is supported, load the images
+        console.log("IntersectionObserver supported");
+        observer = new IntersectionObserver(onIntersection, config);
+        images.forEach(image => {
+            if (image.classList.contains(imageLoaded)) {
+                return;
+            }
+
+            observer.observe(image);
+        });
+    }
+
+    // Fetch image for given URL
+    function fetchImage(url) {
+        return new Promise((resolve, reject) => {
+            const image = new Image();
+            image.src = url;
+            image.onload = resolve;
+            image.onerror = reject;
+        });
+    }
+
+    // Preloads the image
+    function preloadImage(image) {
+        const src = image.getAttribute(dataAttr);
+        if (!src) {
+            return;
+        }
+
+        return fetchImage(src).then(() => {
+            applyImage(image, src);
+        });
+    }
+
+    // Load all of the images immediately
+    function loadImagesImmediately(images) {
+        Array.from(images).forEach(image => preloadImage(image));
+    }
+
+    // Disconnect the observer
+    function disconnect() {
+        if (!observer) {
+            return;
+        }
+
+        observer.disconnect();
+    }
+
+    // On intersection
+    function onIntersection(entries) {
+        // Disconnect if we've already loaded all of the images
+        if (imageCount === 0) {
+            observer.disconnect();
+        }
+
+        // Loop through the entries
+        entries.forEach(entry => {
+            // Are we in viewport?
+            if (entry.intersectionRatio > 0) {
+                imageCount--;
+
+                // Stop watching and load the image
+                observer.unobserve(entry.target);
+                preloadImage(entry.target);
+            }
+        });
+    }
+
+    // Apply the image
+    function applyImage(img, src) {
+        // Prevent this from being lazy loaded a second time.
+        img.classList.add(imageLoaded);
+        img.src = src;
+        img.classList.add(imageFadeClass);
+    }
+
+});
