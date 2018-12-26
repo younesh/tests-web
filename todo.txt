@@ -59,6 +59,6 @@ COdPNBR-deslock-V12553:dakhlass-You!8152-younesharke@-FGH5!45-458DS@qMLS5-fDF#56
         > je suis dans je suis ds les tests js es6 
 
 ---- 20181123 : arrete ds angular formation openclassroom ds sesct / " Two-way binding "
----- 20181221 : AD ds les test WP ds  CMS\wp-5x\wp-content\themes\fromzero 
+---- 20181226 : AD ds les test WP ds  CMS\wp-5x\wp-content\themes\fromzero 
                     nb la BD ici :  CMS/wp-5x/wp-5x.sql
-                    tuto a la min 3:36 : https://www.youtube.com/watch?v=LXh67yBRZF0&list=PL-0MHjzdA9EyvwxiQGE2hh3l2d8hUadfp&index=3
+                    tuto a la min eps 07/13  min 9:36 : 
