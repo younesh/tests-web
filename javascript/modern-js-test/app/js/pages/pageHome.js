@@ -6,4 +6,5 @@ export function initHomePage() {
     // launch the slideer 
     console.log("initHomePage !! ");
     $(".slide-test").slick({ arrows: true });
+    // slider : le test 
 }
