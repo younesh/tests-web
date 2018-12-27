@@ -43,6 +43,8 @@
     npm install --save-dev extract-text-webpack-plugin
 
 
+# pour lancer le serveur
+    npm start
 
 
 
