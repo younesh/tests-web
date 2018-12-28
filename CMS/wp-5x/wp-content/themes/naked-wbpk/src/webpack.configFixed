@@ -6,9 +6,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 
 let config = {
+    context: path.resolve(__dirname, 'js'),
     entry: {
-        app: __dirname + '/js/index.js',
-        vendors: __dirname + '/js/vendors.js'
+       app: path.resolve(__dirname, 'js/index.js'),  //  __dirname + '/js/index.js',
+       vendors: path.resolve(__dirname, 'js/vendors.js')  // __dirname + '/js/vendors.js'
     },
     module: {
         rules: [{
