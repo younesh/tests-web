@@ -81,30 +81,20 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./js/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./js/index.js":
-/*!*********************!*\
-  !*** ./js/index.js ***!
-  \*********************/
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ../sass/main.scss */ \"./sass/main.scss\");\n\n//# sourceURL=webpack:///./js/index.js?");
-
-/***/ }),
-
-/***/ "./sass/main.scss":
-/*!************************!*\
-  !*** ./sass/main.scss ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("throw new Error(\"Module build failed (from ./node_modules/extract-text-webpack-plugin/dist/loader.js):\\nModuleBuildError: Module build failed (from ./node_modules/postcss-loader/src/index.js):\\nError: No PostCSS Config found in: C:\\\\YOUNES\\\\PROJETS\\\\tests-web\\\\CMS\\\\wp-5x\\\\wp-content\\\\themes\\\\naked-wbpk\\\\src\\\\sass\\n    at config.load.then (C:\\\\YOUNES\\\\PROJETS\\\\tests-web\\\\CMS\\\\wp-5x\\\\wp-content\\\\themes\\\\naked-wbpk\\\\src\\\\node_modules\\\\postcss-load-config\\\\src\\\\index.js:55:15)\\n    at runLoaders (C:\\\\Users\\\\ychrak\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\\\\webpack\\\\lib\\\\NormalModule.js:301:20)\\n    at C:\\\\Users\\\\ychrak\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\\\\webpack\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:364:11\\n    at C:\\\\Users\\\\ychrak\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\\\\webpack\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:230:18\\n    at context.callback (C:\\\\Users\\\\ychrak\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\\\\webpack\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:111:13)\\n    at Promise.resolve.then.then.catch (C:\\\\YOUNES\\\\PROJETS\\\\tests-web\\\\CMS\\\\wp-5x\\\\wp-content\\\\themes\\\\naked-wbpk\\\\src\\\\node_modules\\\\postcss-loader\\\\src\\\\index.js:208:9)\");\n\n//# sourceURL=webpack:///./sass/main.scss?");
+"use strict";
+eval("\n\nconsole.log(\"hello, world  test tuto https://hackernoon.com/a-tale-of-webpack-4-and-how-to-finally-configure-it-in-the-right-way-4e94c8e7e5c1 \");\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
