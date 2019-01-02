@@ -63,7 +63,7 @@ COdPNBR-deslock-V12553:dakhlass-You!8152-younesharke@-FGH5!45-458DS@qMLS5-fDF#56
                     nb la BD ici :  CMS/wp-5x/wp-5x.sql
                     tuto a la min eps 07/13  min 9:36 : 
 
-
-C:\YOUNES\PROJETS\tests-web\CMS\wp-5x\wp-content\themes\naked-wbpk\src\js\index.js
-
-C:\YOUNES\PROJETS\tests-web\CMS\wp-5x\wp-content\themes\naked-wbpk\src\js\vendor.js
+THE LAST ÂD : 
+.... 20190102 : ÂD CMS\wp-5x\wp-content\themes\from0wbpk 
+                + ajouté le mecanisme webpack : OK ça marche !!! 
+                + suite des videos : AD : episode 12/13  , min:00

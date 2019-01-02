@@ -1,0 +1,74 @@
+/* ---- HEADER : begin -------*/
+.header {
+
+     .menu-descktop {
+         position: fixed;
+         right: 0; top: 33%;
+         padding: $gutter-half;
+         background-color: white; //  $color-gray-meduim
+         border: 15px solid $color-gray-lighter;
+         z-index: 1000;
+
+         a  {
+          display: block;
+          margin-bottom: 5px;      
+         }
+     }
+
+
+     /* menu mobile : ouverture 01 */
+     .btn-menu-mobile {
+         float: right; display: inline-block; cursor: pointer;
+     }
+
+
+     /* menu mobile : ouverture 01 */
+     .menu-mobile {
+         position: fixed; z-index: 1; height: 100%;
+         width: 100%;  top: 0px;
+         // transition: left 0.5s ease;
+         @include transit(left, 0.5s, ease);
+
+         left :-100%;
+
+         > div {
+            background-color: #ccc;
+            width: 50%; height: 100%;
+            padding: 15px 0;
+         }
+
+         a { 
+             display: block;
+             text-align: center;
+             padding: 5px;
+             position: relative;
+             background-color: transparent;
+             
+             &:hover, &:focus, &.active {
+                 background-color: #fff;
+                 padding-left: 70px;
+                 font-weight: bold;
+                  @include transit(all, .3s, ease-in);
+             }
+         }
+
+        &.open {
+            left: 0px;
+        }
+     } /* menu-mobile */ 
+}
+
+
+// min-sm
+@media (min-width: $bp-min-sm) {
+} 
+
+// min-md
+@media (min-width: $bp-min-md) {
+}
+
+// min-lg
+@media (min-width: $bp-min-lg) {
+}
+
+/* ---- HEADER : end -------*/

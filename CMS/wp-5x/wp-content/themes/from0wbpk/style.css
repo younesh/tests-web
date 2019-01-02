@@ -8,8 +8,4 @@ Requires at least: WordPress 5.x
 Version: 1.1
 */
 
-body {
-    background-color: #eee;
-}
-
-.menu-main-menu {}
+/*  LES STYLES SONT CHARGEE DEPUIS  SRC/CSS/STYLES */

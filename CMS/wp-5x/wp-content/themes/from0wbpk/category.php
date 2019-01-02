@@ -1,10 +1,11 @@
 <?php get_header(); ?>
     <!--middle : begin  -->
-    <div class="middle home-page">
+    <div class="middle category-page">
       <div class="container">
         <!-- liste de poste  --> 
         <section>
-          <?php if (have_posts()):  ?> 
+            <h2> liste des article de la categories : <span> <?php single_cat_title('', true);  ?> </span> </h2>
+          <?php if (have_posts()):  ?>
           <?php  while (have_posts()):  the_post(); ?> 
                 <?php get_template_part('content'); ?>
           <?php  endwhile; ?> 

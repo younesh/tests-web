@@ -1,0 +1,131 @@
+
+body {
+    font-size: 16px;
+    font-family: $font-family-content;
+    color: $color-black-primary;
+}
+
+p {
+    text-align: justify;
+}
+
+ul,li {list-style: none;}
+
+// clearing
+.clearfix {
+    &::after {
+        /*  display: table; */
+        content: " ";
+        clear: both;
+        display: block;
+    }
+}
+
+.child-valign-middle {
+    >* {
+        vertical-align: middle;
+        display: inline-block;
+    }
+}
+
+// pointer : for all clicable element, ith effect hover transtion
+.pointer {
+    cursor: pointer;
+    transition: all .5s ease;
+    opacity: 1;
+    &:hover {
+        opacity: .7;
+    }
+}
+
+a {
+    @extend .pointer;
+    color: inherit;
+    text-decoration: none;
+}
+
+// title, heading 
+.title {
+    font-family: $font-family-titles;
+    font-weight: $fw-title-black;
+    text-transform: uppercase;
+}
+
+h1,
+.h1-like {
+    @extend .title;
+    font-size: 40px;
+}
+
+h2,
+.h2-like {
+    @extend .title;
+    font-size: 30px;
+}
+
+// img, figure
+figure {
+    padding: 0;
+    margin: 0;
+    width: 100%; height: 100%;
+    img {
+      @extend .img-fluid;
+      object-fit: cover;
+      height: 100%; width: 100%;
+    }
+}
+
+img {}
+
+// botton
+.btn-site {
+    display: inline-block;
+    padding: $gutter-half;
+    color: white;
+    text-align: center;
+    min-width: 50px;
+    appearance: none;
+    border: none;
+    background-color: $color-brand-primary;
+    @extend .pointer;
+}
+
+// LAYOUTAGE 
+.page {
+
+  .middle { background-color: white;}
+  section.test {
+    background-color: $color-gray-lighter;
+    margin: $gutter-half 0;
+    padding: $gutter-half;
+  }
+}
+
+
+/* test */
+.box { width: 50px; height: 50px; background-color: gray; color: #000;
+    &.min-sm {
+        content: "#{$bp-min-sm}";
+        background-color: yellow;
+    }
+   &.min-md {
+        content: "#{$bp-min-md}";
+        background-color: yellowgreen;
+    }
+    &.min-lg {
+        content: "#{$bp-min-lg}";
+        background-color: orange;
+    }
+}
+
+// min-lg
+@media (min-width: $bp-min-sm) {
+}
+
+// min-md
+@media (min-width: $bp-min-md) {
+}
+
+// min-lg
+@media (min-width: $bp-min-lg) {
+}

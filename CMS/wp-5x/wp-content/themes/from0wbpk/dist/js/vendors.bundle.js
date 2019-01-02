@@ -81,30 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./js/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./js/vendors.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./js/index.js":
-/*!*********************!*\
-  !*** ./js/index.js ***!
-  \*********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("__webpack_require__(/*! ../sass/main.scss */ \"./sass/main.scss\");\n\n//# sourceURL=webpack:///./js/index.js?");
-
-/***/ }),
-
-/***/ "./sass/main.scss":
-/*!************************!*\
-  !*** ./sass/main.scss ***!
-  \************************/
+/***/ "./js/vendors.js":
+/*!***********************!*\
+  !*** ./js/vendors.js ***!
+  \***********************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sass/main.scss?");
+eval("// import 'bootstrap';\n\n//# sourceURL=webpack:///./js/vendors.js?");
 
 /***/ })
 

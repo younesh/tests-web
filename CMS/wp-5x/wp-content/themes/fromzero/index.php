@@ -15,22 +15,22 @@
   <div class="page page-home">
     <!-- Header : begin -->
    <!-- <%= require('html-loader!./tpl-included/header.html') %> -->
+
+    <header class="header">
+        <div class="menu-descktop">
+          <?php
+            wp_nav_menu( array(
+              'menu' => 'top-menu',
+              'theme_location' => 'primary' // position , deja declaré ds functions.php
+            ));
+          ?>
+        </div>
+    </header>
     <!-- Header : end  -->
     <!--middle : begin  -->
     <div class="middle">
       <div class="container">
-        <div class="row">
-          <div class="jumbotron">
-            <h1> heading page ...</h1>
-          </div>
-        </div>
 
-        <?php
-          wp_nav_menu( array(
-            'menu' => 'top-menu',
-            'theme_location' => 'primary' // position , deja declaré ds functions.php
-          ));
-        ?> 
           <!-- liste de poste  --> 
           <?php
            /* 
@@ -67,7 +67,15 @@
       </div>
     </div>
     <!--middle : end  -->
-   <!-- <%= require('html-loader!./tpl-included/footer.html') %> --> 
+   <!-- <%= require('html-loader!./tpl-included/footer.html') %> -->
+    <footer>
+        <?php
+          wp_nav_menu( array(
+            'menu' => 'footer-menu',
+            'theme_location' => 'footer' // position , deja declaré ds functions.php
+          ));
+        ?> 
+    </footer>
   </div>
 
     <?php wp_footer(); ?>

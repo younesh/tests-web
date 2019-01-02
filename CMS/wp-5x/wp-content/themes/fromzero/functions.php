@@ -35,8 +35,8 @@ function from0_setup () {
     // ajouter la balise title
     add_theme_support('title-tag');
 
-    // activer la gestion des menu
-    register_nav_menus(array('primary' => 'principal', 'secondary'=>"Secondaire"));
+    // activer la gestion des menu > primary et secondary c'est des declaration de postion qu'en verra en BO
+    register_nav_menus(array('primary' => 'principal', 'secondary'=>'Secondaire', 'footer' => 'Footer'));
 }
 
   add_action ('after_setup_theme', 'from0_setup');

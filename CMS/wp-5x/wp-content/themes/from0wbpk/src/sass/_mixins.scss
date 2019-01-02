@@ -1,0 +1,6 @@
+@mixin transit ($proprity : all, $delay : 1s , $timingFct : ease) {
+    transition-property : $proprity;
+    transition-duration: $delay;
+    transition-timing-function : $timingFct;
+
+}
