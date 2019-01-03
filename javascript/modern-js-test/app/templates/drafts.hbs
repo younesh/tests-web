@@ -14,8 +14,8 @@
     <!--middle : begin  -->
     <div class="middle">
       <div class="container">
-        <section class="test">
-          <h3> slick carousel </h3>
+        <section class="test"  id="test-01">
+          <h3> js / plugin : slick carousel </h3>
           <div class="row">
             <div class="col-sm-3">
               <div class="slide-test">
@@ -26,20 +26,20 @@
             </div>
           </div>
         </section>
-        <section class="test">
-          <h3> compostant/ controleur incremental fields </h3>
+        <section class="test"  id="test-02">
+          <h3> js > compostant : controleur incremental fields </h3>
           <p> </p>
           {{> cptIncrementField }}
         </section>
-        <section class="test">
-          <h3> test cpt calendar ... </h3>
+        <section class="test" id="test-03">
+          <h3> js > plug : test cpt calendar ... </h3>
           <div class="test-inner">
             <input type="text" class="calendar">
           </div>
         </section>
 
-        <section class="test test-anim-hover-btn">
-          <h3>anime btn hover effect </h3>
+        <section class="test test-anim-hover-btn" id="test-anim-hover-btn">
+          <h3>css3 > animate :  btn hover effect </h3>
           <div class="test-inner">
             <div class="btn-01">
               <span> text btn </span>
@@ -50,8 +50,9 @@
             </div>
           </div>
         </section>
-        <section class="test test-bloc-responsive">
-          <h3>title</h3>
+
+        <section class="test test-bloc-responsive" id="test-bloc-responsive">
+          <h3> html-css / inté > bloc pushing responsive </h3>
           <div class="test-inner">
 
             <div class="pushing-bloc">
@@ -83,7 +84,8 @@
             </div>
           </div>
         </section>
-        <section class="test test-lazyloading-observer">
+
+        <section class="test test-lazyloading-observer" id="test-lazyloading-observer">
           <h3> test du lazyloading observer : <span class="badge small badge-info">
               https://developer.mozilla.org/fr/docs/Web/API/Intersection_Observer_API </span></h3>
           <div class="test-inner">
@@ -102,19 +104,16 @@
 
           </div>
         </section>
-        <section class="test test-lazyload-codpin">
-          <h3>title span </h3>
+
+        <section class="test test-lazyload-codpin" id="test-lazyload-codpin">
+          <h3> js > perf : astuce de lazyloading des images  </h3>
           <div class="test-inner">
             <header>
               <div class=hero_bg></div>
               <h1>Performant lazy-load method using the Intersection Observer API</h1>
             </header>
-
-
             <section>
-
               <h2 class=centered-1>No visual jank, runs at the full 60fps</h2>
-
               <!--   <img data-LL-src="https://source.unsplash.com/pFqrYbhIAXs/?w=1920x1080"> -->
               <img data-LL-src="https://websemantics.uk/unsplash/needle-on-the-record.jpg">
 
@@ -250,7 +249,6 @@
               <p class=myStuff><a class=details_lnk target=_blank title="[new window]" href="https://codepen.io/2kool2/pens/popular/?grid_type=list#">Pens
                   by Mike Foskett</a> &mdash; <a class=details_lnk target=_blank title="[new window]" href="https://websemantics.uk/">webSemantics</a></p>
 
-
             </footer>
 
 
@@ -266,7 +264,50 @@
             </svg>
           </div>
         </section> <!-- test-lazyload-codpin  -->
-        <!-- section.test>h3{title}+.test-inner -->
+ 
+        <section class="test test-height-100" id="test-height-100">
+          <h3>Css :  pb du height 100% </h3>
+          <div class="test-inner">
+
+            <div class="parrent-0">
+                <div class="parrent-1">
+                    <div class="parrent-2">
+                      ... 
+                    </div>
+                </div>
+            </div>  
+
+            <div class="nb">
+               en C/c le parrent direct doit avoir un height definit pour que son fils puis appliquer le height : 100% 
+            </div> 
+          </div>
+        </section>
+
+        <section class="test test-chiffre-incrimentes-animes" id="test-chiffre-incrimentes-animes">
+          <h3>css, js > effet animation : les chiffre incrémenté animée </h3>
+          <div class="test-inner">
+              <div class="box count">
+                300
+              </div>
+              <div class="box count">
+                1000
+              </div>
+
+          </div>
+        </section>
+
+      <!-- section.test#test-XX>h3{title}+.test-inner -->
+
+      <div class="menu-draft">
+        <a class="btn-menu-draft">
+          <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+        </a>
+        <input type="text" name="" id="" class="txtFilterTest">
+        <nav class="inner-list">
+
+        </nav>
+      </div>
+
       </div>
     </div>
     <!--middle : end  -->

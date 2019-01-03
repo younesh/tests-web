@@ -1,0 +1,137 @@
+  @media (min-width: 20em) {
+    :root {
+      font-size: calc(1rem + ((1vw - 0.2em) * 1));
+    }
+  }
+
+  @media (min-width: 120em) {
+    :root {
+      font-size: 2em;
+    }
+  }
+  body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 100;
+    margin: 1rem;
+    padding: 1rem .5rem;
+    position: absolute; /* Collapses box */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 2px #000, 0 1px 1px #000;
+    background-color: rgba(0,0,0, .5);
+  /*   backdrop-filter: grayscale(1) contrast(3) blur(5px); */
+  }
+
+
+  h2  {
+    margin: 2em 0 1em;
+    font-size: 1.25em;
+    font-weight: 100;
+  }
+
+  [class^="centered"] {
+    color: #fff;
+    background-color: rgba(0,0,0, .5);
+    position: absolute; /* Collapses box */
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-shadow: 0 0 2px #000, 0 1px 1px #000;
+    letter-spacing: 0.05em;
+  /*   white-space: nowrap; */
+    z-index: 1;
+    margin:0;
+    padding: .25em .5em;
+  }
+
+
+    header,
+    footer,
+    section {
+      display: block;
+      position: relative;
+      min-height: calc(100vw / 16 * 10);
+    }
+    footer {
+      min-height: 0;
+      max-width: 36em;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .myStuff, .myStuff .details_lnk {
+      background-color: #f7f7f7;
+    }
+
+
+  .hero_bg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    // left;
+    background-image: url(https://websemantics.uk/unsplash/duvet-days.jpg);
+    background-size:cover;
+  /*   filter: blur(1px); */
+  }
+ 
+  img {
+    display:block;
+    max-width: 100%;
+    margin:0 auto;
+  }
+
+  a {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    text-decoration: none;
+    padding: .25em 1em;
+  }
+  .details_lnk {
+    position: relative;
+    padding: 0;
+    text-decoration: underline;
+    background-color: #fff;
+    color: #000;
+  }
+
+  svg {
+    width: .9em;
+    height: .9em;
+    vertical-align: text-top;
+    fill: #ccc;
+    margin-right:.35em;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+
+
+  .-js-fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
+    animation-fill-mode: forwards;
+}
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }

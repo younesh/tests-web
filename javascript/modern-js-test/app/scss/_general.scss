@@ -98,6 +98,11 @@ img {}
     background-color: $color-gray-lighter;
     margin: $gutter-half 0;
     padding: $gutter-half;
+    .nb {
+        background-color: wheat;
+        font-size: 13px;
+        font-family: 'Courier New', Courier, monospace;
+    } 
   }
 }
 

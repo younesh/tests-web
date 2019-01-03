@@ -2,3 +2,6 @@
 
     brunch watch --server
 
+## l'url du serveur ( by default)  pour voir les modif :
+
+    http://localhost:3333/

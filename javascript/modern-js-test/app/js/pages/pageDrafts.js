@@ -14,9 +14,6 @@ export function initDraftsPage() {
     // launch the slideer 
     $(".slide-test").slick({ arrows: true });
 
-    // 
-
-
     $(".btn-01").click((elm)=>{
         let btn = $(elm.currentTarget);
         console.log("click " + btn.attr("class"));
@@ -42,13 +39,53 @@ export function initDraftsPage() {
     let target = document.querySelector('.lazyload-img');
     observer.observe(target);
 
+    // test-lazy-load 
+     lazy_loader();
+     
+     // generer le menu draft 
+     generate_menu_draft();
 
-    lazy_loader();
+     // ouvrir / fermer le menu draft 
+    $(".menu-draft .btn-menu-draft").click(()=>{
+        $(".menu-draft").toggleClass("close-menu-draft");
+    });
 
+     // filrer test select 
+    $(".txtFilterTest").keyup(onChangeFilterTest);
+
+    // test-chiffre-incrimentes-animes
+    $('.test-chiffre-incrimentes-animes .box').each(function () {
+        $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+        }, {
+                duration: 4000,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+    });
+
+    // effet d'animation des chiffre  en js 
 }
 
+/**
+ * function qui génére un menu des test dynmaiquement 
+ */
+function generate_menu_draft () {
+    let listChaine = "";
+    $("section.test").each((index, elm)=>{
+        listChaine += `<a href="#${$(elm).attr("id")}">(${index+1})  ${$(elm).children("h3").text()}</a>`;
+    });
+    $(".menu-draft .inner-list").html(listChaine);
+}
+function onChangeFilterTest (evt) {
+    console.log(" ok onChangeFilterTest  " + $(evt.currentTarget).val());
+    const listElmContainKeyWord = $(".menu-draft .inner-list a:contains('" + $(evt.currentTarget).val() + "')");
+    $(".menu-draft .inner-list a").hide();
+    listElmContainKeyWord.show();
 
-
+}
 
 function callback(entries, observer) {
     entries.forEach(entry => {
