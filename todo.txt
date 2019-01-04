@@ -6,10 +6,11 @@
         1.3.1 : les paralallax -> exemple ( http://www.apple.com/apple-watch-series-2/ + googleSearch {"parallax zoom effect scrolling"})
         1.3.2 : les animation ( image zoom + btn link visible > expl : http://themeforest.net/item/worker-small-business-booking-template/full_screen_preview/12001625
             1.3.2.1 la proprité animation : test les animations les plus connus... 
-            1.3.2.2 animation des chiffre à l'apparaission commmr : http://www.rawnet.com/case-studies/baxter-storey
+            1.3.2.2  @OK  animation des chiffre à l'apparaission commmr : http://www.rawnet.com/case-studies/baxter-storey
     1.4 @OK : modele de boite FLEX : le flex ds tous ces etats https://css-tricks.com/snippets/css/a-guide-to-flexbox/ 
     1.5 UX et redesign des controller html5 ( checkbox, radio, combobox ...
     1.5 Bonnes pratiques en CSS : BEM et OOCSS : https://www.alsacreations.com/article/lire/1641-bonnes-pratiques-en-css-bem-et-oocss.html
+    1.5 
 
      faire les cas de figures du responsive parfais
      les regles de base UX 
@@ -66,4 +67,4 @@ COdPNBR-deslock-V12553:dakhlass-You!8152-younesharke@-FGH5!45-458DS@qMLS5-fDF#56
 THE LAST ÂD : 
 .... 20190102 : ÂD CMS\wp-5x\wp-content\themes\from0wbpk 
                 + ajouté le mecanisme webpack : OK ça marche !!! 
-                + suite des videos : AD : episode 12/13  , min:00
+                + suite des videos : AD : episode 12/13  , min:6:00

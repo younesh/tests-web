@@ -329,9 +329,68 @@
               <div class="box count">
                 1000
               </div>
+            <div class="nb">
+                <h4> pour les nbr incrementable </h4>
+                <p> en utilise ce scropt  </p>
+                <pre> 
+                      $('.test-chiffre-incrimentes-animes .box').each(function () {
+                        $(this).prop('Counter', 0).animate({
+                            Counter: $(this).text()
+                          }, {
+                            duration: 4000,
+                            easing: 'swing',
+                            step: function (now) {
+                            $(this).text(Math.ceil(now));
+                          }
+                        });
+                      });
+                </pre>
 
+                <h4> pour declancher un comportement quand l'element est visible en viewport du navigateur </h4>
+                <p> en utilise cette lib : <a href="https://github.com/protonet/jquery.inview" target="_blank"> https://github.com/protonet/jquery.inview </a></p>
+                <pre>
+                  // inclure la lib 
+                  import "../lib/jquery.inview.min.js";
+
+
+                  // lancer le script qui ecoute l'apparaition de l'element ds le viewport 
+                  $('.test-chiffre-incrimentes-animes').on('inview', function (event, isInView) {
+                    if (isInView) {
+                      // element is now visible in the viewport
+                      console.log(".test-chiffre-incrimentes-animes is inView !! ");
+                      animateNumberIncriment();
+                    }
+                  });
+
+                </pre>
+            </div>
           </div>
         </section>
+
+
+        <section class="test" id="test-cpt-range-slider">
+          <h3>css/js : cpt composant rang slider, filtrer par valeur min et valeur max </h3>
+          <div class="test-inner">
+               <div class="cpt-range-slider" id="cpt-id-range-slider">
+    <div class="slider-values">
+        Entre <span class="min-value"></span>
+        et <span class="max-value"></span>
+    </div>
+    <div class="slider-label">
+        <span class="label-min"></span>
+        <span class="label-max"></span>
+    </div>
+    <div class="slide-range" data-min="0" data-max="10" data-unit="$" data-step="1"
+        data-min-current="" data-max-current="">
+    </div>
+    <input type="hidden" value="5" name="rangeSlider" class="price-input">
+</div>
+               <div class="nb">
+                 <p> status : <br> marche pas !!! </p>
+               </div>
+          </div>
+        </section>
+
 
       <!-- section.test#test-XX>h3{title}+.test-inner -->
 
@@ -341,7 +400,6 @@
         </a>
         <input type="text" name="" id="" class="txtFilterTest">
         <nav class="inner-list">
-
         </nav>
       </div>
 

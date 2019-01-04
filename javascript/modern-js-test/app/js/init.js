@@ -2,6 +2,7 @@
 
 // components
 import { initIncrementalField } from "./components/cptIncrementField";
+import { initRangeSlider } from "./components/cptRangeSlider";
 /* pages */
 import { initHomePage } from "./pages/pageHome.js";
 import { initDraftsPage } from "./pages/pageDrafts";
@@ -16,6 +17,7 @@ initAPIRest();
 
 // element : incriment field
 initIncrementalField();
+initRangeSlider();
 
 (function() {
     console.log('Js ready');

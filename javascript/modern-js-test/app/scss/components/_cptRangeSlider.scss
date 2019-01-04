@@ -1,0 +1,41 @@
+
+/**
+ * rangelider
+ *
+ * @type element
+ */
+
+
+/** ----------------------------------------------------------------
+ * COMMON
+ */
+
+.cpt-range-slider {	
+	.slider-values {
+        color : orange;
+        margin-bottom: 10px;
+	}
+	
+	.slider-label {
+		display: flex;
+		.label-min { flex: 1 }
+	}
+	
+	// OVERWRIDE  Uislider:  range elem
+	.slide-range {
+		@include margin(14px auto);
+		width: 98%;
+		&.noUi-horizontal {
+			height:7px;
+			.noUi-handle {
+				@include size(1.5rem);
+				@include border-top-radius(100%);
+				@include border-bottom-radius(100%);
+				top:-9px;
+				&:before,
+				&:after{ display: none; }
+			}
+		}
+		.noUi-connect { background : orange; }
+	}
+}

@@ -25,7 +25,8 @@
                             echo from0_meta_poste( 
                                 esc_attr( get_the_date('c')),
                                 esc_html(get_the_date()),
-                                get_the_category_list(', ')
+                                get_the_category_list(', '),
+                                get_the_tag_list('', ', ')
                             );
                         ?> 
                         </p>

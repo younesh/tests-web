@@ -18,8 +18,10 @@
     "html5shiv": "^3.7.3",
     "jquery": "^3",
     "jquery-selector-cache": "^1.0.2",
+    "nouislider": "^12.1.0",
     "slick-carousel": "^1.8.1",
-    "static-handlebars-brunch": "~ 0.1.0"
+    "static-handlebars-brunch": "~ 0.1.0",
+    "wnumb": "^1.1.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.5.0",

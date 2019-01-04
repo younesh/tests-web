@@ -1,6 +1,8 @@
 import { French } from "flatpickr/dist/l10n/fr";
 import * as flatpickr from "flatpickr";
 import "slick-carousel";
+import "../lib/jquery.inview.min.js";
+
 
 export function initDraftsPage() {
     if (!$(".page-drafts").length) {
@@ -54,17 +56,14 @@ export function initDraftsPage() {
     $(".txtFilterTest").keyup(onChangeFilterTest);
 
     // test-chiffre-incrimentes-animes
-    $('.test-chiffre-incrimentes-animes .box').each(function () {
-        $(this).prop('Counter', 0).animate({
-            Counter: $(this).text()
-        }, {
-                duration: 4000,
-                easing: 'swing',
-                step: function (now) {
-                    $(this).text(Math.ceil(now));
-                }
-            });
+    $('.test-chiffre-incrimentes-animes').on('inview', function (event, isInView) {
+        if (isInView) {
+            // element is now visible in the viewport
+            console.log(".test-chiffre-incrimentes-animes is inView !! ");
+            animateNumberIncriment();
+        }
     });
+
 
     // effet d'animation des chiffre  en js 
 }
@@ -109,6 +108,7 @@ function callback(entries, observer) {
 
 // TODO: background-images
 
+/* test-lazyload-codpin  */
 var lazy_loader = (() => {
 
     "use strict";
@@ -214,3 +214,19 @@ var lazy_loader = (() => {
     }
 
 });
+
+
+/* test test-chiffre-incrimentes-animes  */
+function animateNumberIncriment () {
+    $('.test-chiffre-incrimentes-animes .box').each(function () {
+        $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+        }, {
+                duration: 2000,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+    });
+} 

@@ -9,7 +9,9 @@ p {
     text-align: justify;
 }
 
-ul,li {list-style: none;}
+ul,li {
+    list-style: none;
+}
 
 // clearing
 .clearfix {
@@ -77,6 +79,11 @@ figure {
 
 img {}
 
+pre {
+    border: solid 1px $color-gray-meduim; 
+    color : blue; 
+} 
+
 // botton
 .btn-site {
     display: inline-block;
@@ -99,9 +106,10 @@ img {}
     margin: $gutter-half 0;
     padding: $gutter-half;
     .nb {
-        background-color: wheat;
+        background-color: white;
         font-size: 13px;
-        font-family: 'Courier New', Courier, monospace;
+        padding: $gutter-half;
+        margin-top: $gutter-half;
     } 
   }
 }
