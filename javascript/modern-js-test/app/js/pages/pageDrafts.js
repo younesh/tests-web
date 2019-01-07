@@ -56,7 +56,7 @@ export function initDraftsPage() {
     $(".txtFilterTest").keyup(onChangeFilterTest);
 
     // test-chiffre-incrimentes-animes
-    $('.test-chiffre-incrimentes-animes').on('inview', function (event, isInView) {
+    $('.test-chiffre-incrimentes-animes .counts').on('inview', function (event, isInView) {
         if (isInView) {
             // element is now visible in the viewport
             console.log(".test-chiffre-incrimentes-animes is inView !! ");

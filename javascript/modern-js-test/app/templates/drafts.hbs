@@ -286,12 +286,14 @@
         <section class="test test-chiffre-incrimentes-animes" id="test-chiffre-incrimentes-animes">
           <h3>css, js > effet animation : les chiffre incrémenté animée </h3>
           <div class="test-inner">
-              <div class="box count">
-                300
-              </div>
-              <div class="box count">
-                1000
-              </div>
+             <div class="counts">
+                <div class="box count">
+                  300
+                </div>
+                <div class="box count">
+                  1000
+                </div>
+             </div>
             <div class="nb">
                 <h4> pour les nbr incrementable </h4>
                 <p> en utilise ce scropt  </p>
@@ -340,7 +342,43 @@
                </div>
           </div>
         </section>
+      
+      <section class="test" id="test-anim-css-poussee">
+        <h3> css3 : les anim pousser </h3>
+        <div class="test-inner">
+        </div>
+      </section>
 
+      <section class="test test-masques-sur-img" id="test-masques-sur-img">
+        <h3> css test des masque en svg </h3>
+        <div class="test-inner">
+          <article class="methode1">
+            <h4> 1er metode </h4>
+            <img src="img/mask-triangle.png" alt="">
+            <svg>
+              <defs>
+                <mask id="svgmask">
+                  <image xlink:href="img/mask-triangle.png" width="500" height="auto" />
+                </mask>
+              </defs>
+              <image xlink:href="img/nature02.jpg" width="500" height="auto" mask="url(#svgmask)" />
+            </svg>
+          </article>
+
+          <article class="methode2">
+            <h4> 2e methode   </h4>
+            <div class="mask">
+                <img src="img/nature02.jpg" alt="">
+                <div class="text">
+                  <h5> text 01 </h5>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nostrum perspiciatis sint beatae ea veritatis nisi ex, libero deleniti recusandae fugit accusamus, non, molestiae corrupti similique repudiandae expedita. Voluptate, molestiae.
+                  </p>
+                </div>
+            </div>
+          </article>
+        </div>
+      </section>
 
       <!-- section.test#test-XX>h3{title}+.test-inner -->
 

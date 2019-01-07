@@ -206,10 +206,58 @@
     .parrent-2 {  background-color: lightsalmon; width: 50%; display: block; padding-top: $gutter;}
   }
 
+
   /* test-chiffre-incrimentes-animes */
   .test-chiffre-incrimentes-animes {
     .box {display: inline-block;}
   }
+
+  
+  .test-masques-sur-img {
+    .methode2 {
+      .mask {
+        width: 50%;
+        min-height: 200px;
+        overflow: hidden;
+        position: relative;
+        img {
+          @extend .img-fluid;
+        } 
+
+        // le triangle qui cache 
+        &:before { 
+          content : " "; 
+          width: 50%;
+          height: 100%;
+          position: absolute;
+          z-index: 1;
+          @include triangle("up-left", 34rem, 19rem, rgba(255,255,255, 0.5));
+          left :-100%;
+          @include transit(); 
+
+        }
+
+        .text {
+          position: absolute;
+          top: 100%; left: 0;
+          padding: 15px;
+          z-index: 3;
+          width: 50%;
+          @include transit(); 
+        } 
+
+        &:hover {
+           cursor: pointer;
+           &:before {
+             left :0;
+           }
+           .text {
+             top : 0;
+           }
+        } 
+      } 
+    } 
+  } 
 }
 
 // min-sm
