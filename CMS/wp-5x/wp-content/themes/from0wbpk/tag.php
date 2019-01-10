@@ -15,6 +15,6 @@
         </section>
       </div>
     </div>
-    <!--middle : end  --> 
+    <!--middle : end  -->
 <?php get_footer(); ?>
 

@@ -156,37 +156,6 @@
       }
   } /* end test-anim-hover-btn*/
 
-  .test-bloc-responsive {
-     figure {
-         height: 100%; 
-         background-color: blueviolet;
-        img { 
-        }
-     }
-    .pushing-bloc {
-        background-color: #fff; 
-
-        .col-ctn {
-           // background-color: yellowgreen;
-            display: flex; 
-            flex-direction: column;
-            .main-ctn {
-               flex: 1;
-                padding: $gutter-half;
-            }
-        }
-        .col-img {
-        }
-
-        .btns {
-            .btn-site {  color: #fff;
-            
-                &.btn-01 { background-color: orange;} 
-                &.btn-02 { background-color: maroon;}
-            } 
-        } 
-    }     
-  } /* end test-bloc-responsive */
 
   .test-lazyloading-observer {
       .lazyload-img {
@@ -258,6 +227,62 @@
       } 
     } 
   } 
+
+
+  .test-scss-imbricat-separateur {
+      .pushing {
+        width: 250px; position: relative;
+        @include make-visible-boite();
+        &__img {
+           @include make-visible-boite($Colr: red);
+        }
+        &Ctn {
+          @include make-visible-boite($Colr: violet );
+        }
+
+        &-btns {
+           @include make-visible-boite($Colr: orange );
+        }
+
+        &_footer {
+          @include make-visible-boite($Colr: black );
+        }
+      }
+  }
+
+    .test-bloc-responsive {
+     figure {
+         height: 100%; 
+         background-color: blueviolet;
+        img { 
+        }
+     }
+    .pushing-bloc {
+        background-color: #fff; 
+
+        .col-ctn {
+           // background-color: yellowgreen;
+            display: flex; 
+            flex-direction: column;
+            .main-ctn {
+               flex: 1;
+                padding: $gutter-half;
+            }
+        }
+        .col-img {
+        }
+
+        .btns {
+            .btn-site {  color: #fff;
+            
+                &.btn-01 { background-color: orange;} 
+                &.btn-02 { background-color: maroon;}
+            } 
+        } 
+    }     
+  } /* end test-bloc-responsive */
+
+
 }
 
 // min-sm

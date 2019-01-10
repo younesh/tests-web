@@ -51,40 +51,6 @@
           </div>
         </section>
 
-        <section class="test test-bloc-responsive" id="test-bloc-responsive">
-          <h3> html-css / inté > bloc pushing responsive </h3>
-          <div class="test-inner">
-
-            <div class="pushing-bloc">
-              <div class="row no-gutters">
-                <div class="col-sm-6 col-img">
-                  <figure>
-                    <img class="img-pdt" src="img/newyork.jpg" alt="">
-                  </figure>
-                </div>
-                <div class="col-sm-6 col-ctn">
-
-                  <div class="main-ctn">
-                    <span class="badge badge-pill badge-info">Info</span>
-                    <span class="badge badge-pill badge-info">Info</span>
-                    <span class="badge badge-pill badge-info">Info</span>
-                    <span class="badge badge-pill badge-info">Info</span>
-                    <span class="badge badge-pill badge-info">Info</span>
-
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus reprehenderit iure
-                      accusantium voluptatum impedit optio veritatis dicta, sunt cum atque sed asperiores esse unde
-                      numquam omnis consectetur perferendis! Beatae, dolore?</p>
-                  </div>
-                  <div class="row btns no-gutters">
-                    <a href="" class="col btn-site btn-01"> btn 01</a>
-                    <a href="" class="col btn-site btn-02">btn 02</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section class="test test-lazyloading-observer" id="test-lazyloading-observer">
           <h3> test du lazyloading observer : <span class="badge small badge-info">
               https://developer.mozilla.org/fr/docs/Web/API/Intersection_Observer_API </span></h3>
@@ -354,7 +320,7 @@
         <div class="test-inner">
           <article class="methode1">
             <h4> 1er metode </h4>
-            <img src="img/mask-triangle.png" alt="">
+
             <svg>
               <defs>
                 <mask id="svgmask">
@@ -379,6 +345,171 @@
           </article>
         </div>
       </section>
+
+      <section class="test test-scss-imbricat-separateur" id="test-scss-imbricat-separateur">
+        <h3>scss css : test des imbrication css avec comme séparateur  '-' '--' '_' '__'  ... </h3>
+        <div css="test-inner">
+
+            <div class="pushing">
+              <div class="pushing__img">
+                  <img src="img/nature02.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="pushingCtn">
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ratione, soluta ducimus quis asperiores magnam harum nobis, consequatur eum voluptatibus esse! Adipisci veniam quos qui iusto tempore quisquam incidunt mollitia. </p>
+              </div>
+              <div class="pushing-btns">
+                  <a href="" class="btn btn-success"> valider </a> 
+              </div>
+              <div class="pushing_footer">
+                le footer pushing 
+              </div>
+            </div>
+
+
+              <div class="nb">
+                c/c : les '&-'; '&_' ; '&--'; '&__'; .. sont tolétert en sass comme racourcis de supordination ...
+                <br> et même la separation en majiscule marche 'pushingCtn' =>  '&Ctn' !!! 
+              </div>
+
+        </div>
+      </section>
+
+
+      <section class="test test-bloc-responsive" id="test-bloc-responsive">
+        <h3> html-css / inté > bloc pushing responsive </h3>
+        <div class="test-inner">
+      
+          <div class="pushing-bloc">
+            <div class="row no-gutters">
+              <div class="col-sm-6 col-img">
+                <figure>
+                  <img class="img-pdt" src="img/newyork.jpg" alt="">
+                </figure>
+              </div>
+              <div class="col-sm-6 col-ctn">
+      
+                <div class="main-ctn">
+                  <span class="badge badge-pill badge-info">Info</span>
+                  <span class="badge badge-pill badge-info">Info</span>
+                  <span class="badge badge-pill badge-info">Info</span>
+                  <span class="badge badge-pill badge-info">Info</span>
+                  <span class="badge badge-pill badge-info">Info</span>
+      
+                  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus reprehenderit iure
+                    accusantium voluptatum impedit optio veritatis dicta, sunt cum atque sed asperiores esse unde
+                    numquam omnis consectetur perferendis! Beatae, dolore?</p>
+                </div>
+                <div class="row btns no-gutters">
+                  <a href="" class="col btn-site btn-01"> btn 01</a>
+                  <a href="" class="col btn-site btn-02">btn 02</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="test" id="test-table-invers-bootstrap">
+        <h3> bootstrap table inversé , table inverse ... </h3>
+        <div class="test-inner"> 
+            <div class="row">
+              <div class="container">
+                <table class="col-xs-2 col-xs-8 col-xs-2 table " style="width: 100%">
+                  <thead>
+                    <tr>
+                      <th>
+                        [HEADER]
+                      </th>
+                      <th>
+                        [HEADER]
+                      </th>
+                      <th>
+                        [HEADER]
+                      </th>
+                      <th>
+                        [HEADER]
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        [CONTENT]
+                      </td>
+                      <td>
+                        [CONTENT]
+                      </td>
+                      <td>
+                        [CONTENT]
+                      </td>
+                      <td>
+                        [CONTENT]
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        [CONTENT]
+                      </td>
+                      <td>
+                        [CONTENT]
+                      </td>
+                      <td>
+                        [CONTENT]
+                      </td>
+                      <td>
+                        [CONTENT]
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        [CONTENT]
+                      </td>
+                      <td>
+                        [CONTENT]
+                      </td>
+                      <td>
+                        [CONTENT]
+                      </td>
+                      <td>
+                        [CONTENT]
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        [CONTENT]
+                      </td>
+                      <td>
+                        [CONTENT]
+                      </td>
+                      <td>
+                        [CONTENT]
+                      </td>
+                      <td>
+                        [CONTENT]
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        [CONTENT]
+                      </td>
+                      <td>
+                        [CONTENT]
+                      </td>
+                      <td>
+                        [CONTENT]
+                      </td>
+                      <td>
+                        [CONTENT]
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+        </div>
+      </section>
+
 
       <!-- section.test#test-XX>h3{title}+.test-inner -->
 

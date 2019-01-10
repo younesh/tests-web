@@ -2,5 +2,15 @@
     transition-property : $proprity;
     transition-duration: $delay;
     transition-timing-function : $timingFct;
+}
 
+/*
+c'est une mixin pour mettre de bloc ( model de boite ) de text visible
+*/
+@mixin make-visible-boite ( $Colr : #ccc , $padd : 5px, $bg : transparent, $disply: inline-block, $Margn : 5px 0px ) {
+    border: solid 2px $Colr;
+    padding: $padd;
+    background : $bg;
+    display: $disply;
+    margin: $Margn;
 }

@@ -10,7 +10,7 @@
     1.4 @OK : modele de boite FLEX : le flex ds tous ces etats https://css-tricks.com/snippets/css/a-guide-to-flexbox/ 
     1.5 UX et redesign des controller html5 ( checkbox, radio, combobox ...
     1.5 Bonnes pratiques en CSS : BEM et OOCSS : https://www.alsacreations.com/article/lire/1641-bonnes-pratiques-en-css-bem-et-oocss.html
-    1.5 
+    1.6 Constructeur Bootstrap Mobirise
 
      faire les cas de figures du responsive parfais
      les regles de base UX 
