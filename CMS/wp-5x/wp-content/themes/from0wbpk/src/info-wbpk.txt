@@ -1,1 +1,4 @@
-## demarrer webpack 
+## demarrer webpack en watch ( mode-dev ) 
+  npm run watch
+  
+ demarrer webpack en mode production ( m
