@@ -1,0 +1,21 @@
+.cpt-tabs-slides {
+
+    .tabs-item {
+
+    } 
+    
+    .item-nav {
+        background-color: orange;
+        border: 1px solid #eee;
+
+        &.active {
+             background-color: yellow;
+            + .item-ctn {
+                display: none;
+            }
+        } 
+    } 
+    .item-ctn {
+        border: 1px solid #eee;
+    } 
+} 
