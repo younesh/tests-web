@@ -4,5 +4,6 @@
  * 
 */
 export function initCPtTabsSlide ( isTabsDesktop = true) {
-
+    var H_item = $(".cpt-tabs-slides .tabs-item .item-ctn .ctn-wrapper").height();
+    $(".cpt-tabs-slides .tabs-item .item-ctn ").height(H_item);
 } 

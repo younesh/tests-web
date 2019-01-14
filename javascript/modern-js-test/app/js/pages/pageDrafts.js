@@ -64,7 +64,6 @@ export function initDraftsPage() {
         }
     });
 
-
     // effet d'animation des chiffre  en js 
 }
 

@@ -165,7 +165,7 @@
   }
 
   .test-lazyload-codpin {
-    @import "test-lazyload-codpin"; // les import dans le milieu du code ça marche !!! 
+    @import "test-lazyload-codpin"; // les import dans le milieu du code ça marche !!!
   }/* test-lazyload-codpin */
 
   .test-height-100 {
@@ -282,6 +282,30 @@
         } 
     }     
   } /* end test-bloc-responsive */
+
+  .test-tabs-slide {
+    .tst-1021 {
+      &:before {
+        content: " ";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: green;
+      }
+    }
+
+    
+      .select-1021 {
+        background: violet; display: block;
+        &::before {
+          content: " ";
+          display: block;
+          width: 20px;
+          height: 20px;
+          background: orange;
+        }
+      }
+  } 
 
 
 }

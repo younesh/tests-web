@@ -3,19 +3,25 @@
     .tabs-item {
 
     } 
+
+
     
     .item-nav {
         background-color: orange;
         border: 1px solid #eee;
+        padding: $gutter-half;
 
-        &.active {
+        &.closed {
              background-color: yellow;
             + .item-ctn {
-                display: none;
+               height: 0px !important;
             }
-        } 
-    } 
+        }
+    }
+
     .item-ctn {
         border: 1px solid #eee;
+        overflow: hidden;
+        @include transit();
     } 
 } 
