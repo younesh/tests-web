@@ -12,7 +12,7 @@
         padding: $gutter-half;
 
         &.closed {
-             background-color: yellow;
+             background-color: lightblue;
             + .item-ctn {
                height: 0px !important;
             }
