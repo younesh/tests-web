@@ -1,0 +1,18 @@
+    /* _global partial : begin */
+    
+    body {
+        background-color: $color-gray-light;
+    }
+    
+    .box {
+        margin-bottom: 5px;
+        width: $w-box;
+        height: $h-box;
+        &.primary {
+            background-color: $color-primary;
+        }
+        &.secondary {
+            background-color: $color-secondary;
+        }
+    }
+    /* _global partial : end */

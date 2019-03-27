@@ -1,0 +1,18 @@
+/* _variables partial : begin */
+/* _variables partial : end  */
+/* _mixin partial : begin */
+/* _mixin partial : end */
+/* _global partial : begin */
+body {
+  background-color: #eee; }
+
+.box {
+  margin-bottom: 5px;
+  width: 150px;
+  height: 75px; }
+  .box.primary {
+    background-color: orange; }
+  .box.secondary {
+    background-color: blue; }
+
+/* _global partial : end */
