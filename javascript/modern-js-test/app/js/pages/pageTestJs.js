@@ -1,4 +1,6 @@
 
+let R = 100;
+
 export function initTestJsPage() {
     if (!$(".page-test-js").length) {
         return;
@@ -25,8 +27,8 @@ export function initTestJsPage() {
     nArray.push("hassan");
     nArray.push("ayoub");
     nArray.push("ahmed");
-    // let A2 = nArray.makeUpperCase();
-   //  console.log(nArray.makeUpperCase());
+   //   let A2 = nArray.makeUpperCase();
+   // console.log(nArray.makeUpperCase());
 
 
    // 
