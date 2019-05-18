@@ -1,6 +1,4 @@
-public/*
-node_modules/*
-*/public/*
-*/node_modules/*
-/theme-model/tpl-brunch-bootsr-sass/public/*
-/theme-model/tpl-brunch-bootsr-sass/node_modules/*
+**/public/*
+**/_public/*
+**/dist/*
+**/node_modules/*
