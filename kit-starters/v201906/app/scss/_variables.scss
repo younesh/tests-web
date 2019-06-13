@@ -1,16 +1,52 @@
-// Media Queries
-$mq-620-down: "only screen and (max-width: 620px)";
-$mq-620-up: "only screen and (min-width: 620px)";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900');
 
-$mq-760-down: "only screen and (max-width: 759px)";
-$mq-760-up: "only screen and (min-width: 760px)";
 
-$mq-900-down: "only screen and (max-width: 899px)";
-$mq-900-up: "only screen and (min-width: 900px)";
+// FONTS
+$font-regular : 'OpenSans-Regular';
+$font-semibold : 'OpenSans-SemiBold';
+$font-bold : 'OpenSans-Bold';
+$font-extrabold : 'OpenSans-ExtraBold';
+$font-family-titles: $font-bold;
+$font-family-content: $font-semibold;
+$fw-title-light: 300;
+$fw-title-regular: 400;
+$fw-title-bold: 700;
+$fw-title-black: 900;
 
-$mq-1000-down: "only screen and (max-width: 999px)";
-$mq-1000-up: "only screen and (min-width: 1000px)";
+// COLORS 
+$color-black-primary: #22252b;
+$color-black-secondary: #30333b;
+$color-gray-meduim: #e6e6e6;
+$color-gray-lighter: #f3f3f3;
+$color-brand-primary: #fe000d;
+$color-brand-secondary : #3cd52e;
+$color-brand-third : #ff8626;
 
-$mq-1180-up: "only screen and (min-width: 1180px)";
+// spacing
+$gutter: 30px;
+$gutter-half: $gutter/2;
+$header-hight : 90px;
 
-$mq-1400-up: "only screen and (min-width: 1400px)";
+
+/*----- RESPONSIVE ------*/
+$grid-breakpoints: (xs: 0,
+sm: 576px,
+md: 768px,
+lg: 992px,
+xl: 1200px);
+
+// Grid containers
+$container-max-widths: (sm: 540px,
+md: 720px,
+lg: 991px,
+xl: 1200px);
+
+// MEDIA QUERY
+$bp-min-sm : "only screen and (min-width: #{map-get($grid-breakpoints, "sm")})"; // min 576px
+$bp-min-md : "only screen and (min-width: #{map-get($grid-breakpoints, "md")})"; // min 768px
+$bp-min-lg : "only screen and (min-width: #{map-get($grid-breakpoints, "lg")})"; // min 991px
+$bp-min-xl : "only screen and (min-width: #{map-get($grid-breakpoints, "xl")})"; // min 1200px
+
+$bp-max-sm : "only screen and (max-width: #{map-get($grid-breakpoints, "md")-1})"; // max 767px
+$bp-max-md : "only screen and (max-width: #{map-get($grid-breakpoints, "lg")-1})"; // max 991px
+$bp-max-lg : "only screen and (max-width: #{map-get($grid-breakpoints, "xl")-1})"; // max 1199px

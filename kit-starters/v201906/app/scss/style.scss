@@ -1,4 +1,27 @@
-@import "variables";
-@import "colors";
-@import "global";
-@import "typography";
+//-------- PLUGIN ---------
+
+/*LIB : BOOTSTRAP 4 */
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+/*LIB : SASS/BOURBON */
+@import "../../node_modules/bourbon/core/bourbon";
+
+/* FONTS */
+@import "fonts";
+
+/* INCLUDES */
+@import 'normaliz';
+@import 'variables';
+@import 'mixins';
+@import 'general';
+// @import 'header';
+// @import 'footer';
+// @import 'data-table';
+// @import 'widget';
+
+/* PAGES SPECIFIQUES */
+// @import "page-suivi-projet";
+// @import "page-home";
+// @import "page-meteo";
+
+/*---- Temp to move in appropriate place  ----*/

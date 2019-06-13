@@ -1,0 +1,37 @@
+{# layout.twig #}
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+        <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+
+        <title>
+            {% block pageTitle %}
+                {% set title ="by default title page" %}
+                {% set siteName =" - kit-starter 201906" %}
+                {{title}}
+                {{ siteName}}
+            {% endblock %}
+        </title>
+
+
+        <!-- Google Fonts -->
+        <link
+        href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"/>
+
+        <!-- CSS File -->
+        <link href="style.css?cb=1560431403150YnS" rel="stylesheet"/>
+    </head>
+
+    <body>
+        {% include "includes/_header.twig" %}
+        <main class="main"> {% block page %}{% endblock %}
+            </main>
+            {% include "includes/_footer.twig" %}
+
+            <!-- JavaScript File-->
+            <script src="all.js?cb=1560431403150YnS"></script>
+        </body>
+    </html>

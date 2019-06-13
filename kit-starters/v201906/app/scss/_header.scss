@@ -1,0 +1,36 @@
+.header {
+    min-height: 90px;
+    background-color: white;
+    @include Y-center;
+
+    .container-fluid {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .logo {
+        margin-right: $gutter;
+    }
+
+    h1 {
+        font-family: "OpenSans-ExtraBold";
+    }
+}
+
+
+
+//-----  MEDIA QUERY / RESPONSIVE ----
+@media #{$bp-min-sm} {}
+
+@media #{$bp-min-md} {}
+
+@media #{$bp-min-lg} {
+    .header {
+        height: $header-hight;
+
+        .logo {}
+    }
+}
+
+@media #{$bp-min-xl} {}
