@@ -1,4 +1,8 @@
 {# layout.twig #}
+{# import "includes/_globals.twig" as global #}
+{# not working as php !!! #}
+{% import "includes/_macros.twig" as macros %}
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -10,9 +14,10 @@
         <title>
             {% block pageTitle %}
                 {% set title ="by default title page" %}
-                {% set siteName =" - kit-starter 201906" %}
-                {{title}}
+                {{macros.titleSEO(title)}}
+                -
                 {{ siteName}}
+
             {% endblock %}
         </title>
 
@@ -27,6 +32,8 @@
 
     <body>
         {% include "includes/_header.twig" %}
+        <h2>{{ siteName }}</h2>
+
         <main class="main"> {% block page %}{% endblock %}
             </main>
             {% include "includes/_footer.twig" %}

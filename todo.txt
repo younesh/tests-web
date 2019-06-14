@@ -68,3 +68,10 @@ THE LAST ÂD :
 .... 20190102 : ÂD CMS\wp-5x\wp-content\themes\from0wbpk 
                 + ajouté le mecanisme webpack : OK ça marche !!! 
                 + suite des videos : AD : episode 12/13  , min:6:00
+
+
+.... 20190614 : ÂD ..\tests-web\kit-starters\v201906  ( pour faire un kit-statrter inté statique sur gulp/scss/js .... )
+                c/c le mecaniseme d'automatisation marche à la perfection , systeme sera adopté ( juste faut cruser le twig plus)
+                + add guideline utilitaire : les element de formulaire modrnes + les animation et transition moderne
+                + implementer en logique atomic avec BEM en nomenclature
+                + 

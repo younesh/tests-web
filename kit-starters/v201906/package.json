@@ -35,7 +35,8 @@
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-twig": "^1.2.0",
-    "gulp-uglify": "^3.0.1"
+    "gulp-uglify": "^3.0.1",
+    "jquery": "^3.4.1"
   },
   "dependencies": {}
 }

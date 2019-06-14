@@ -1,16 +1,23 @@
 {# index.twig #}
 {% extends "layout.twig" %}
+{% import "includes/_macros.twig" as macros %}
+
 
 {% block pageTitle %}
     {% set title ="la home" %}
-    {{title}}
-    {{ siteName}}
+    {{macros.titleSEO(title)}}
 {% endblock %}
 
 {% block page %}
+    {% include "includes/_varsGlobals.twig" %}
+    {% set siteName = "( index ! ) kit v201906" %}
+
     <div class="container">
         <h1>
-            c'est la home ...
+            c'est la home  .../...
+            {{ test01 }}
+
+
         </h1>
     </div>
 {% endblock %}

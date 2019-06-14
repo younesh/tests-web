@@ -93,19 +93,21 @@ function tplTask() {
     .pipe(
       twig({
         data: {
-          //title: "Gulp and Twig",
-        }
+          // here define a global variable for all site
+          siteName: "( gulpfiles ) kit v201906"
+        },
+        errorLogToConsole: true
       })
     )
     .pipe(dest(dist.tplPath));
 }
 
-// Cachebust : permet de changer la valeur des parametre des applle des fichier pour enlever la persistance du cache nav
+// Cachebust : add param version to called files ( js ,css ..) in html page, to remove persistance browser cache
 var cbString = new Date().getTime();
 function cacheBustTask() {
-  return src(["index.html"])
+  return src([dist.ServerEnterLoad + "/*.html"])
     .pipe(replace(/cb=\d+/g, "cb=" + cbString))
-    .pipe(dest("."));
+    .pipe(dest(dist.ServerEnterLoad));
 }
 
 //@@STEP--03 : watch path/task implement > watch([PATH1, PAHT2,...], parallel(TASK1,TASK2,...));
@@ -126,7 +128,7 @@ function watchTask() {
   );
 }
 
-//@@STEP--04 : default gulb launch serices > implementing tasks
+//@@STEP--04 : default gulb launch serices (cmd: gulp) > implementing tasks
 // Export the default Gulp task so it can be run
 // Runs the scss and js tasks simultaneously
 // then runs cacheBust, then watch task
