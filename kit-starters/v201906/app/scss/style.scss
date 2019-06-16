@@ -14,14 +14,10 @@
 @import 'variables';
 @import 'mixins';
 @import 'general';
-// @import 'header';
-// @import 'footer';
-// @import 'data-table';
-// @import 'widget';
+@import 'header';
+@import 'footer';
 
 /* PAGES SPECIFIQUES */
-// @import "page-suivi-projet";
-// @import "page-home";
-// @import "page-meteo";
+@import "page-home";
 
 /*---- Temp to move in appropriate place  ----*/
