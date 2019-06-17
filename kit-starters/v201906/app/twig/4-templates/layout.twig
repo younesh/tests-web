@@ -1,7 +1,7 @@
 {# layout.twig #}
 {# import "includes/_globals.twig" as global #}
 {# not working as php !!! #}
-{% import "includes/_macros.twig" as macros %}
+{% import "../0-config/_macros.twig" as macros %}
 
 
 <!DOCTYPE html>
@@ -31,13 +31,10 @@
     </head>
 
     <body>
-        {% include "includes/_header.twig" %}
-        <h2>{{ siteName }}</h2>
-
+        {% include "../3-organisms/_header.twig" %}
         <main class="main"> {% block page %}{% endblock %}
             </main>
-            {% include "includes/_footer.twig" %}
-
+            {% include "../3-organisms/_footer.twig" %}
             <!-- JavaScript File-->
             <script src="all.js?cb=1560431403150YnS"></script>
         </body>

@@ -14,6 +14,7 @@ const cssnano = require("cssnano");
 const imagemin = require("gulp-imagemin");
 const twig = require("gulp-twig");
 const server = require("browser-sync").create();
+const babel = require("gulp-babel");
 
 var replace = require("gulp-replace");
 
@@ -21,7 +22,7 @@ var replace = require("gulp-replace");
 // source File paths
 const source = {
   scssPath: "app/scss/**/*.scss",
-  jsPath: "app/js/**/*.js",
+  jsPath: "app/js/**/*.js", // "app/js/**/*.js" |  "app/js/script.js"
   imgPath: "app/img/**/*.*",
   fontPath: "app/fonts/**/*.*",
   tplPath: "app/twig/**/*.*"
@@ -77,10 +78,7 @@ function fontTask() {
 
 // JS task: concatenates and uglifies JS files to script.js
 function jsTask() {
-  return src([
-    source.jsPath
-    //,'!' + 'includes/js/jquery.min.js', // to exclude any specific files
-  ])
+  return src(["node_modules/jquery/dist/jquery.js", source.jsPath])
     .pipe(concat("all.js"))
     .pipe(uglify())
     .pipe(dest(dist.jsPath));

@@ -6,18 +6,28 @@
 /*LIB : SASS/BOURBON */
 @import "../../node_modules/bourbon/core/bourbon";
 
-/* FONTS */
-@import "fonts";
 
-/* INCLUDES */
-@import 'normaliz';
-@import 'variables';
-@import 'mixins';
-@import 'general';
-@import 'header';
-@import 'footer';
 
-/* PAGES SPECIFIQUES */
-@import "page-home";
+/* 0- config / global */
+@import "0-config/fonts";
+@import "0-config/normaliz";
+@import "0-config/variables";
+@import "0-config/mixins";
+@import '0-config/general';
 
-/*---- Temp to move in appropriate place  ----*/
+/* 1- atoms */
+
+/* 2- molecules */
+// une card pushing 
+
+/* 3- organisms */
+@import '3-organismes/header';
+@import '3-organismes/footer';
+// un groupe de card pushing 
+
+
+/* 4- Templates */
+
+
+/* 5- Pages */
+@import "5-Pages/page-home";
