@@ -2,6 +2,7 @@
 {# import "includes/_globals.twig" as global #}
 {# not working as php !!! #}
 {% import "../0-config/_macros.twig" as macros %}
+{% import "../3-organisms/_header.twig" as header %}
 
 
 <!DOCTYPE html>
@@ -31,7 +32,10 @@
     </head>
 
     <body>
-        {% include "../3-organisms/_header.twig" %}
+        {{ header.dispaly("cccc") }}
+        <br/>
+        pathbase :
+        {{ app.request.basepath }}
         <main class="main"> {% block page %}{% endblock %}
             </main>
             {% include "../3-organisms/_footer.twig" %}

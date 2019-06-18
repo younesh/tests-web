@@ -1,7 +1,12 @@
-<header class="header">
-    <div class="container">
-        <div class="header_logo"></div>
-        {% include "../2-molecules/_main-menu.twig" %}
-        {% include "../2-molecules/_search.twig" %}
-    </div>
-</header>
+{% import "../2-molecules/_main-menu.twig" as mainMenu %}
+{% import "../2-molecules/_search-form.twig" as searchForm %}
+{% macro dispaly(addClass="") %}
+    <header class="header {{addClass}}">
+
+        <div class="container">
+            <div class="header_logo"></div>
+            {{ mainMenu.dispaly("") }}
+            {{ searchForm.dispaly("") }}
+        </div>
+    </header>
+{% endmacro %}

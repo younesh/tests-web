@@ -1,11 +1,13 @@
-<nav class="main-menu">
-    <a href="#">
-        home
-    </a>
-    <a href="./services.html">
-        services
-    </a>
-    <a href="./contact.html">contact</a>
-    <a href="#">
-        actu</a>
-</nav>
+{% macro dispaly(addClass="") %}
+    <nav class="main-menu {{addClass}}">
+        <a href="#">
+            home
+        </a>
+        <a href="./services.html">
+            services
+        </a>
+        <a href="./contact.html">contact</a>
+        <a href="#">
+            actu</a>
+    </nav>
+{% endmacro %}
