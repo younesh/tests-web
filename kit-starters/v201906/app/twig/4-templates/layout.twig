@@ -4,6 +4,9 @@
 {% import "../0-config/_macros.twig" as macros %}
 {% import "../3-organisms/_header.twig" as header %}
 
+{% import "../2-molecules/_main-menu.twig" as mainMenu %}
+{% import "../2-molecules/_search-form.twig" as searchForm %}
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,7 +20,7 @@
                 {% set title ="by default title page" %}
                 {{macros.titleSEO(title)}}
                 -
-                {{ siteName}}
+                {{ siteName }}
 
             {% endblock %}
         </title>
@@ -32,10 +35,12 @@
     </head>
 
     <body>
-        {{ header.dispaly("cccc") }}
-        <br/>
-        pathbase :
-        {{ app.request.basepath }}
+        {{ header.display("") }}
+        {{ searchForm.display("") }}
+
+
+        {#   {{ mainMenu.dispaly("") }} #}
+
         <main class="main"> {% block page %}{% endblock %}
             </main>
             {% include "../3-organisms/_footer.twig" %}

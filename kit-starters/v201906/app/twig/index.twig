@@ -2,18 +2,15 @@
 {% extends "4-templates/layout.twig" %}
 {% import "0-config/_macros.twig" as macros %}
 
+
 {% block pageTitle %}
     {% set title ="la home" %}
     {{macros.titleSEO(title)}}
 {% endblock %}
 
 {% block page %}
-    {% include "0-config/_varsGlobals.twig" %}
-    {% set siteName = "( index ! ) kit v201906" %}
     <div class="container">
-        <h1>
-            c'est la home  .../...
-            {{ test01 }}
-        </h1>
+        c'est le ctn de la  home fff .../...
+        {{ test01 }}
     </div>
 {% endblock %}

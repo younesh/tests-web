@@ -14,7 +14,6 @@ const cssnano = require("cssnano");
 const imagemin = require("gulp-imagemin");
 const twig = require("gulp-twig");
 const server = require("browser-sync").create();
-const babel = require("gulp-babel");
 
 var replace = require("gulp-replace");
 

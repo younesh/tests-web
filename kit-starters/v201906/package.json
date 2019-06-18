@@ -6,8 +6,6 @@
   "author": "younes.C",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
     "autoprefixer": "^9.5.0",
     "bootstrap": "^4.3.1",
     "bourbon": "^5.1.0",
