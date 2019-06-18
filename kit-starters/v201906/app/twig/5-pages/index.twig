@@ -1,6 +1,7 @@
 {# index.twig #}
-{% extends "4-templates/layout.twig" %}
-{% import "0-config/_macros.twig" as macros %}
+{% import "../0-config/_macros.twig" as macros %}
+{% import "../3-organisms/_header.twig" as header %}
+{% extends "../4-templates/layout.twig" %}
 
 
 {% block pageTitle %}
@@ -10,7 +11,8 @@
 
 {% block page %}
     <div class="container">
-        c'est le ctn de la  home fff .../...
+        ctn home
+        {{ header.display("") }}
         {{ test01 }}
     </div>
 {% endblock %}

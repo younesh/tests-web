@@ -29,12 +29,12 @@ const source = {
 
 // distination File paths
 const dist = {
-  scssPath: "dist",
-  jsPath: "dist",
+  scssPath: "dist/5-pages",
+  jsPath: "dist/5-pages",
   imgPath: "dist/img",
   fontPath: "dist/fonts",
   tplPath: "dist",
-  ServerEnterLoad: "dist" // entry point for loading/reloading browser
+  ServerEnterLoad: "dist/5-pages" // entry point for loading/reloading browser
 };
 
 // local Server and reload after updating
@@ -86,14 +86,16 @@ function jsTask() {
 // Templating task: TWIG
 function tplTask() {
   console.log("tplTask : OK !!");
-  return src([source.tplPath])
+  return src([source.tplPath]) // ["app/twig/5-page/*.*", "app/twig/**/*.*"]  ||  source.tplPath
     .pipe(
       twig({
         data: {
           // here define a global variable for all site
           siteName: "( gulpfiles ) kit v201906"
         },
-        errorLogToConsole: true
+        errorLogToConsole: true,
+        cache: false
+        // cacheBustTask: false
       })
     )
     .pipe(dest(dist.tplPath));
