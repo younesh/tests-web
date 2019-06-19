@@ -1,0 +1,12 @@
+{# <{{tag|default('button')}}>
+    {{caption|default('button')}}
+</{{tag|default('button')}>
+ #}
+
+{% if tag == "submit" %}
+    <input class="button {{addClass}}" type="submit" value="{{caption|default('envoyer')}}"/>
+{% else %}
+    <{{tag|default("button")}} class="button {{addClass}}">
+        {{caption|default('envoyer')}}
+    </{{tag|default("button")}}>
+{% endif %}

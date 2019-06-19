@@ -13,6 +13,9 @@
     <div class="container">
         ctn home
         {{ header.display("") }}
+        {% set title ="la home" %}
+        {{macros.titleSEO(title)}}
+
         {{ test01 }}
     </div>
 {% endblock %}

@@ -29,12 +29,12 @@ const source = {
 
 // distination File paths
 const dist = {
-  scssPath: "dist/5-pages",
-  jsPath: "dist/5-pages",
+  scssPath: "dist",
+  jsPath: "dist",
   imgPath: "dist/img",
   fontPath: "dist/fonts",
   tplPath: "dist",
-  ServerEnterLoad: "dist/5-pages" // entry point for loading/reloading browser
+  ServerEnterLoad: "dist" // entry point for loading/reloading browser
 };
 
 // local Server and reload after updating

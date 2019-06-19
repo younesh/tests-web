@@ -1,16 +1,11 @@
-{# {% import "../2-molecules/_main-menu.twig" as mainMenu %}
-{% import "../2-molecules/_search-form.twig" as searchForm %} #}
+{# import "../2-molecules/_main-menu.twig" as mainMenu #}
+{# include "../2-molecules/_search-form.twig" #}
 
-{% macro dispaly(addClass="XXX") %}
-    <header class="header {{addClass}}">
-
-        <div class="container">
-            <div class="header_logo">
-                LOGO
-            </div>
-            <p>
-                header ctn
-            </p>
+    <header class="header {{addClass}}"> <div class="container">
+        <div class="header_logo">
+            LOGO
         </div>
-    </header>
-{% endmacro %}
+        {% include "../2-molecules/_main-menu.twig" with { 'addClass': 'added-mm'} %}
+        {% include "../2-molecules/_search-form.twig" with { 'addClass': 'search--top'} %}
+    </div>
+</header>

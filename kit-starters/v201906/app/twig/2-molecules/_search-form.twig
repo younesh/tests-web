@@ -1,6 +1,5 @@
-{% macro dispaly(addClass="") %}
-    <div class="search-bar {{addClass}}">
-        <input class="search-bar_text" type="text"/>
-        <button class="btn" class="search-bar_button">btn search</button>
-    </div>
-{% endmacro %}
+<div class="search-bar {{addClass}}">
+    <input placeholder="{{addClass}}" class="search-bar_text" type="text"/>
+    <button class="btn" class="search-bar_button">btn search</button>
+    {% include "../1-atoms/_buttons.twig" with { 'addClass': 'search--top', tag: 'submit'} %}
+</div>
