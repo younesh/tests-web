@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900');
 
-
 // FONTS
 $font-regular : 'OpenSans-Regular';
 $font-semibold : 'OpenSans-SemiBold';
@@ -14,13 +13,13 @@ $fw-title-bold: 700;
 $fw-title-black: 900;
 
 // COLORS 
-$color-black-primary: #22252b;
+$color-black-primary: #2D2926;
 $color-black-secondary: #30333b;
-$color-gray-meduim: #e6e6e6;
-$color-gray-lighter: #f3f3f3;
-$color-brand-primary: #fe000d;
-$color-brand-secondary : #3cd52e;
-$color-brand-third : #ff8626;
+$color-gray-meduim: #DBDCDE;
+$color-gray-lighter: #DBDCDE;
+$color-brand-primary: #1BA8ED;
+$color-brand-secondary : #F35800;
+$color-brand-third : #36BC74;
 
 // spacing
 $gutter: 30px;
@@ -50,3 +49,21 @@ $bp-min-xl : "only screen and (min-width: #{map-get($grid-breakpoints, "xl")})";
 $bp-max-sm : "only screen and (max-width: #{map-get($grid-breakpoints, "md")-1})"; // max 767px
 $bp-max-md : "only screen and (max-width: #{map-get($grid-breakpoints, "lg")-1})"; // max 991px
 $bp-max-lg : "only screen and (max-width: #{map-get($grid-breakpoints, "xl")-1})"; // max 1199px
+
+
+// conditional variable by query
+
+:root {
+    // mobile
+    --fz-default: 16px;
+    --fz-h1: 25px;
+}
+
+@media #{$bp-min-md} {
+
+    // tab et +
+    :root {
+        --fz-default: 20px;
+        --fz-h1: 40px;
+    }
+}

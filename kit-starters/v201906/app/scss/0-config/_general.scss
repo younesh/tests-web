@@ -1,5 +1,5 @@
 body {
-    font-size: 20px;
+    font-size: var(--fz-default);
     font-family: $font-family-content;
     color: $color-black-primary;
     background-color: $color-gray-meduim;
@@ -64,14 +64,19 @@ a {
     }
 }
 
+@media #{$bp-min-md} {
+    input {
+        width: auto;
+    }
+
+}
+
+
+
 h1,
 .h1-like {
     @extend .title;
-    font-size: 25px;
-
-    @media #{$bp-min-md} {
-        font-size: 40px;
-    }
+    font-size: var(--fz-h1);
 }
 
 h2,
@@ -105,6 +110,13 @@ pre {
     color: $color-brand-third;
 }
 
+// forms reset : 
+input {
+    border: 1px solid $color-gray-meduim;
+    width: 100%;
+}
+
+
 // LAYOUTAGE 
 .page {}
 
@@ -112,7 +124,13 @@ pre {
 //-----  MEDIA QUERY / RESPONSIVE ----
 @media #{$bp-min-sm} {}
 
-@media #{$bp-min-md} {}
+@media #{$bp-min-md} {
+    input {
+        width: auto;
+    }
+
+
+}
 
 @media #{$bp-min-lg} {}
 
