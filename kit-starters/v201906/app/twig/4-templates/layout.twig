@@ -12,14 +12,12 @@
         <meta charset="UTF-8"/>
         <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
         <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
-
         <title>
             {% block pageTitle %}
                 {% set title ="by default title page" %}
                 {{macros.titleSEO(title)}}
                 -
                 {{ siteName }}
-
             {% endblock %}
         </title>
 
@@ -32,7 +30,7 @@
         <link href="style.css?cb=1560431403150YnS" rel="stylesheet"/>
     </head>
 
-    <body>
+    <body class="layout page {% block classPage %}{% endblock %}">
         {% include "../3-organisms/_header.twig" with { 'addClass': 'header-main'} %}
         <main class="main"> {% block page %}{% endblock %}
             </main>

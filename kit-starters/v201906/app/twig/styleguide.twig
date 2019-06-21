@@ -1,0 +1,33 @@
+{# index.twig #}
+{% extends "4-templates/layout.twig" %}
+{% block pageTitle %}
+    {% set title ="contact page" %}
+    {{macros.titleSEO(title)}}
+{% endblock %}
+{% block classPage %} page-styleguide {% endblock %}
+
+{% block page %}
+    <div class="container">
+        p: styleguide
+        
+        <section class="sect-icons">
+            <h2> les icones </h2>
+                <div class="doc-icones">
+                    <i class="icon-person_outline"></i>
+                                    <code>
+                     .icon-person_outline <br> "\e7ff"
+
+
+                </code>
+                </div>
+        </section>
+
+    <section class="sect-titles">
+        <h1> Title 1 , h1 </h1>
+        <h2> Title 2 , h2 </h2>
+        <h3> Title 3 , h3 </h3>
+        <h4> Title 4 , h4 </h4>
+    </section>
+       <!-- section.sect>h2{test}+article -->
+    </div>
+{% endblock %}

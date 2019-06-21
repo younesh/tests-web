@@ -1,0 +1,22 @@
+.page-styleguide {
+
+    // icones 
+    .doc-icones {
+        width: 150px;
+        display: inline-block;
+        border: 1px solid $color-gray-lighter;
+        padding: $gutter-half;
+        margin: $gutter-half;
+        @include Y-center;
+
+        .doc-icones_display {}
+
+        i {
+            font-size: 70px;
+        }
+
+        code {
+            font-size: 10px;
+        }
+    }
+}

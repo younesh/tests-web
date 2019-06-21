@@ -19,7 +19,7 @@ c'est une mixin pour mettre de bloc ( model de boite ) de text visible
 @mixin Y-center () {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
 }
 
 

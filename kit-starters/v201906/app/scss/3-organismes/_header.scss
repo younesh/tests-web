@@ -1,6 +1,9 @@
 .header {
     min-height: 90px;
     background-color: white;
+    border: 1px solid $color-gray-lighter;
+    padding: $gutter-base;
+    display: block;
     @include Y-center;
 
     .container-fluid {
@@ -10,7 +13,7 @@
     }
 
     .logo {
-        margin-right: $gutter;
+        margin-right: $gutter-base;
     }
 
     h1 {
@@ -30,8 +33,6 @@
 
 @media #{$bp-min-lg} {
     .header {
-        height: $header-hight;
-
         .logo {}
     }
 }

@@ -1,11 +1,10 @@
 {# index.twig #}
 {% extends "4-templates/layout.twig" %}
-
 {% block pageTitle %}
     {% set title ="services page" %}
     {{macros.titleSEO(title)}}
 {% endblock %}
-
+{% block classPage %} page-services {% endblock %}
 {% block page %}
     <div class="container">
         P: services

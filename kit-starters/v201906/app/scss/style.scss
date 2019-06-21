@@ -13,6 +13,7 @@
 @import "0-config/normaliz";
 @import "0-config/variables";
 @import "0-config/mixins";
+@import "0-config/iconFont";
 @import '0-config/general';
 
 /* 1- atoms */
@@ -25,11 +26,12 @@
 /* 3- organisms */
 @import '3-organismes/header';
 @import '3-organismes/footer';
-// un groupe de card pushing 
+
 
 
 /* 4- Templates */
-
+@import '4-Templates/layout';
 
 /* 5- Pages */
 @import "5-Pages/page-home";
+@import "5-Pages/guideline";

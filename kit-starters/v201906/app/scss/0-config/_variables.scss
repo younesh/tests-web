@@ -21,10 +21,11 @@ $color-brand-primary: #1BA8ED;
 $color-brand-secondary : #F35800;
 $color-brand-third : #36BC74;
 
-// spacing
-$gutter: 30px;
-$gutter-half: $gutter/2;
-$header-hight : 90px;
+
+
+
+
+// border shadow :
 
 
 /*----- RESPONSIVE ------*/
@@ -51,12 +52,18 @@ $bp-max-md : "only screen and (max-width: #{map-get($grid-breakpoints, "lg")-1})
 $bp-max-lg : "only screen and (max-width: #{map-get($grid-breakpoints, "xl")-1})"; // max 1199px
 
 
-// conditional variable by query
+// conditional variable by media query, in this case only css variable are possible not sass variable !! 
 
+// step 01 : make conditional varibale by css variable mecanisme 
 :root {
     // mobile
     --fz-default: 16px;
-    --fz-h1: 25px;
+    --fz-h1: 30px;
+    --fz-h2: 24px;
+    --fz-h3: 20px;
+    --fz-h4: 17px;
+    --gutter-base: calc(30px * .8);
+    --gutter-half: calc(15px * .8);
 }
 
 @media #{$bp-min-md} {
@@ -65,5 +72,20 @@ $bp-max-lg : "only screen and (max-width: #{map-get($grid-breakpoints, "xl")-1})
     :root {
         --fz-default: 20px;
         --fz-h1: 40px;
+        --fz-h2: 34px;
+        --fz-h3: 28px;
+        --fz-h4: 22px;
+        --gutter-base: 30px;
+        --gutter-half: 15px;
     }
 }
+
+// step 03 : affect css variable on scss varaible
+// spacing 
+$gutter-base: var(--gutter-base);
+$gutter-half: var(--gutter-half);
+$fz-default : var(--fz-default);
+$fz-h1: var(--fz-h1);
+$fz-h2: var(--fz-h2);
+$fz-h3: var(--fz-h3);
+$fz-h4: var(--fz-h4);

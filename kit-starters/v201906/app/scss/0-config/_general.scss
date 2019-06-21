@@ -1,3 +1,8 @@
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-size: var(--fz-default);
     font-family: $font-family-content;
@@ -76,17 +81,27 @@ a {
 h1,
 .h1-like {
     @extend .title;
-    font-size: var(--fz-h1);
+    font-size: $fz-h1;
 }
 
 h2,
 .h2-like {
     @extend .title;
-    font-size: 18px;
+    font-size: $fz-h2;
+}
 
-    @media #{$bp-min-md} {
-        font-size: 30px;
-    }
+
+h3,
+.h3-like {
+    @extend .title;
+    font-size: $fz-h3;
+}
+
+
+h4,
+.h4-like {
+    @extend .title;
+    font-size: $fz-h4;
 }
 
 
