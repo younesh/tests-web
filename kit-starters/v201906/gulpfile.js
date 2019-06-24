@@ -24,7 +24,8 @@ const source = {
   jsPath: "app/js/**/*.js", // "app/js/**/*.js" |  "app/js/script.js"
   imgPath: "app/img/**/*.*",
   fontPath: "app/fonts/**/*.*",
-  tplPath: "app/twig/**/*.*"
+  tplPath: "app/twig/**/*.*",
+  dataPath: "app/data/**/*.*"
 };
 
 // distination File paths
@@ -34,6 +35,7 @@ const dist = {
   imgPath: "dist/img",
   fontPath: "dist/fonts",
   tplPath: "dist",
+  dataPath: "dist/data",
   ServerEnterLoad: "dist" // entry point for loading/reloading browser
 };
 
@@ -75,6 +77,10 @@ function fontTask() {
   return src(source.fontPath).pipe(dest(dist.fontPath));
 }
 
+// fonts task : compile fonts task
+function dataTask() {
+  return src(source.dataPath).pipe(dest(dist.dataPath));
+}
 // JS task: concatenates and uglifies JS files to script.js
 function jsTask() {
   return src(["node_modules/jquery/dist/jquery.js", source.jsPath])
@@ -121,9 +127,10 @@ function watchTask() {
       source.jsPath,
       source.imgPath,
       source.fontPath,
+      source.dataPath,
       source.tplPath
     ],
-    parallel(scssTask, jsTask, imgTask, fontTask, tplTask, reload)
+    parallel(scssTask, jsTask, imgTask, fontTask, dataTask, tplTask, reload)
   );
 }
 
@@ -132,7 +139,7 @@ function watchTask() {
 // Runs the scss and js tasks simultaneously
 // then runs cacheBust, then watch task
 exports.default = series(
-  parallel(scssTask, jsTask, imgTask, fontTask, tplTask, serve),
+  parallel(scssTask, jsTask, imgTask, fontTask, dataTask, tplTask, serve),
   cacheBustTask,
   watchTask
 );
