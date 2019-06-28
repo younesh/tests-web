@@ -1,0 +1,40 @@
+.layout {
+    main.main {
+        min-height: 600px;
+        @include padding($gutter-base null);
+
+        .container {
+            // @@container overload
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+    }
+}
+
+
+//-----  MEDIA QUERY / RESPONSIVE ----
+// only mobile : from 0 to 767
+@media #{$bp-max-sm} {
+    .layout {
+        main.main {
+
+            h1,
+            h2 {
+                padding-left: $gutter-half;
+            }
+        }
+    }
+}
+
+@media #{$bp-min-md} {
+    .layout {
+        main.main {
+            .container {
+                // @@container overload
+
+            }
+        }
+    }
+
+}

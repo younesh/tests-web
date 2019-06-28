@@ -1,0 +1,65 @@
+.filter {
+    background-color: $color-gray-dark;
+    color: white;
+    background-color: $color-black-meduim;
+
+    .filter_title {
+        padding: $gutter-half;
+        font-size: 16px;
+        font-family: $font-regular;
+        text-transform: uppercase;
+        background-color: $color-gray-dark;
+    }
+
+    // 
+    .type-is-inscript {
+        margin-top: $gutter-half;
+        @include padding($gutter-half null);
+
+        
+    }
+}
+
+
+
+// criteria
+.criteria {
+    border-bottom: $border-default;
+
+    .criteria_title {
+        padding: $gutter-half;
+        display: block;
+        font-size: 15px;
+        @include Y-center;
+
+        span {
+            flex: 1;
+        }
+    }
+
+    .criteria_content {
+        padding: $gutter-half;
+        transition: all 0.3 ease;
+        overflow: hidden;
+
+        #{$all-text-inputs} {
+            min-width: 150px;
+        }
+
+        .input-checkbox {
+            margin-bottom: $gutter-half;
+            margin-left: $gutter-half;
+        }
+    }
+
+    &.criteria--closed {
+        .criteria_content {
+            padding: 0;
+            height: 0;
+        }
+
+        .icon-arrow-slide {
+            @extend .icon-arrow-slide-up;
+        }
+    }
+}

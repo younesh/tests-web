@@ -1,0 +1,23 @@
+.button {
+    background-color: $color-gray-dark; //  $color-brand-primary
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: $gutter-half;
+    font-family: $font-regular;
+    text-transform: uppercase;
+    @include border-radius(5px);
+}
+
+.btn-group {
+    justify-content: center;
+    width: 100%;
+
+    &.right {
+        justify-content: flex-end;
+    }
+
+    &.left {
+        text-align: flex-start;
+    }
+}

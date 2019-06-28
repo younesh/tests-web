@@ -1,0 +1,417 @@
+{# index.twig #}
+{% extends "includes/layout.base.twig" %}
+
+{% block pageTitle %}
+    liste des journées         -
+    {{siteName}}
+
+{% endblock %}
+{% block classPage %}
+    page-liste-journees
+{% endblock %}
+{% block page %}
+    <div class="container">
+        <div class="row no-gutters">
+            <aside class="col-md-4 col-lg-3 pr-md-3 pr-lg-5">
+                <div class="filter filter--days">
+                    <div class="filter_title">
+                        Filtre
+                    </div>
+
+                    <div
+                        class="criteria  criteria--Hiking-type">
+
+                        {#  criteria--closed  #}
+
+                        <a class="criteria_title">
+                            <span>
+                                Type de randonnée
+                            </span>
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            {% include TplInputCheckbox with { addClass: 'type-hiking',label : 'Randonnée' } %}
+                            {% include TplInputCheckbox with { addClass: 'type-nordic-walk',label : 'M. nordique' } %}
+                            {% include TplInputCheckbox with { addClass: 'type-event',label : 'Evènement' } %}
+                            <div class="type-is-inscript">
+                                <span>
+                                    Sur inscription
+                                </span>
+                                {%  include TplInputRadio with { addClass : 'is-inscription d-flex', nameRadio : 'is-inscription', options : [{label : 'oui', value : 'yes' }, {label : 'Non', value :'no' }]} %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="criteria criteria--closed criteria--look">
+
+
+                        <a class="criteria_title">
+                            <span>
+                                Allure
+                            </span>
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            {% include TplInputCheckbox with { addClass: 'look-slow',label : 'Lente' } %}
+                            {% include TplInputCheckbox with { addClass: 'look-average',label : 'Moyenne' } %}
+                            {% include TplInputCheckbox with { addClass: 'look-supported',label : 'Soutenue' } %}
+                            {% include TplInputCheckbox with { addClass: 'look-speed',label : 'Rapide' } %}
+
+
+                        </div>
+                    </div>
+
+                    <div class="criteria criteria--closed criteria--days">
+
+
+                        <a class="criteria_title">
+                            <span>
+                                Jour de la semaine
+                            </span>
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div
+                            class="criteria_content">
+
+                            {# (!) all twig global variable are defined on gulpfiles.js, like $TplInputCheckbox #}
+
+                            {% include TplInputCheckbox with { addClass: 'day-mond',label : 'Lundi' } %}
+
+                            {% include TplInputCheckbox with { addClass: 'day-tues',label : 'Mardi' } %}
+
+                            {% include TplInputCheckbox with { addClass: 'day-wedn',label : 'Mercredi' } %}
+
+                            {% include TplInputCheckbox with { addClass: 'day-thue',label : 'Jeudi' } %}
+
+                            {% include TplInputCheckbox with { addClass: 'day-frid',label : 'Vendredi' } %}
+
+                            {% include TplInputCheckbox with { addClass: 'day-satu',label : 'Samdi' } %}
+
+                            {% include TplInputCheckbox with { addClass: 'day-sund',label : 'Dimanche' } %}
+
+
+                        </div>
+                    </div>
+
+                    <div class="criteria criteria--closed criteria--distance">
+                        <a class="criteria_title">
+                            <span>
+                                Distance
+                            </span>
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            <input id="" name="" type="text">
+                            <input id="" name="" type="text">
+                        </div>
+                    </div>
+
+                    <div class="criteria criteria--closed criteria--date">
+
+
+                        <a class="criteria_title">
+                            <span>
+                                Date
+                            </span>
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            <input id="" name="" type="text">
+                            <input id="" name="" type="text">
+                        </div>
+                    </div>
+
+                    <div class="criteria criteria--closed criteria--theme">
+                        <a class="criteria_title">
+                            <span>
+                                Thème
+                            </span>
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            {% include TplInputCheckbox with { addClass: 'theme-health',label : 'Rando santé' } %}
+                            {% include TplInputCheckbox with { addClass: 'theme-fresh',label : 'Rando douce' } %}
+                            {% include TplInputCheckbox with { addClass: 'theme-bus',label : 'Rando bus' } %}
+                            {% include TplInputCheckbox with { addClass: 'theme-nature',label : 'Nature et environnement' } %}
+                        </div>
+                    </div>
+
+
+                </div>
+            </aside>
+            <div class="col-md">
+                <div class="btn-group right">
+                    <button class="button">
+                        liste PDF
+                    </button>
+                </div>
+                <div class="events-group">
+                    <h2>
+                        Vendredi 24 mai 2019
+                    </h2>
+
+                    {# event-line : begin : <div class="flag flag--L">L</div> #}
+
+                    {% set flagLine1 = '<div class="flag flag--L">L</div>' %}
+
+                    <div class="event-line row no-gutters">
+                        <div class="col-md-1 d-none d-md-block">
+                            {{ flagLine1 }}
+                        </div>
+
+                        <div class="col-md">
+                            <div class="event-line_title">
+                                <span class="d-inline-block d-md-none">
+                                    {{ flagLine1 }}
+                                </span>
+
+                                M. nordique
+                            </div>
+                            <div class="event-line_description">
+                                50 km / 8 heures     François l’animateur
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <i class="icon-inscript-dark"></i>
+                            <i class="icon-tortoise-dark "></i>
+                            <i class="icon-info-dark "></i>
+                        </div>
+
+                    </div>
+                    {# event-line : end   #}
+
+                    {# event-line : begin : <div class="flag flag--L">L</div> #}
+
+                    {% set flagLine1 = '<div class="flag flag--L">L</div>' %}
+
+                    <div class="event-line row no-gutters">
+                        <div class="col-md-1 d-none d-md-block">
+                            {{ flagLine1 }}
+                        </div>
+
+                        <div class="col-md">
+                            <div class="event-line_title">
+                                <span class="d-inline-block d-md-none">
+                                    {{ flagLine1 }}
+                                </span>
+
+                                M. nordique
+                            </div>
+                            <div class="event-line_description">
+                                50 km / 8 heures     François l’animateur
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <i class="icon-inscript-dark"></i>
+                            <i class="icon-tortoise-dark "></i>
+                            <i class="icon-info-dark "></i>
+                        </div>
+
+                    </div>
+                    {# event-line : end   #}
+
+
+                    {# event-line : begin : <div class="flag flag--L">L</div> #}
+
+                    {% set flagLine1 = '<div class="flag flag--L">L</div>' %}
+
+                    <div class="event-line row no-gutters">
+                        <div class="col-md-1 d-none d-md-block">
+                            {{ flagLine1 }}
+                        </div>
+
+                        <div class="col-md">
+                            <div class="event-line_title">
+                                <span class="d-inline-block d-md-none">
+                                    {{ flagLine1 }}
+                                </span>
+
+                                M. nordique
+                            </div>
+                            <div class="event-line_description">
+                                50 km / 8 heures     François l’animateur
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <i class="icon-inscript-dark"></i>
+                            <i class="icon-tortoise-dark "></i>
+                            <i class="icon-info-dark "></i>
+                        </div>
+
+                    </div>
+                    {# event-line : end   #}
+
+
+                    {# event-line : begin : <div class="flag flag--L">L</div> #}
+
+                    {% set flagLine1 = '<div class="flag flag--L">L</div>' %}
+
+                    <div class="event-line row no-gutters">
+                        <div class="col-md-1 d-none d-md-block">
+                            {{ flagLine1 }}
+                        </div>
+
+                        <div class="col-md">
+                            <div class="event-line_title">
+                                <span class="d-inline-block d-md-none">
+                                    {{ flagLine1 }}
+                                </span>
+
+                                M. nordique
+                            </div>
+                            <div class="event-line_description">
+                                50 km / 8 heures     François l’animateur
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <i class="icon-inscript-dark"></i>
+                            <i class="icon-tortoise-dark "></i>
+                            <i class="icon-info-dark "></i>
+                        </div>
+
+                    </div>
+                    {# event-line : end   #}
+
+                </div>
+
+                {#   2eme animation ---------------------------------------------  #}
+                <div class="events-group">
+                    <h2>
+                        Vendredi 24 mai 2019
+                    </h2>
+
+                    {# event-line : begin : <div class="flag flag--L">L</div> #}
+
+                    {% set flagLine1 = '<div class="flag flag--L">L</div>' %}
+
+                    <div class="event-line row no-gutters">
+                        <div class="col-md-1 d-none d-md-block">
+                            {{ flagLine1 }}
+                        </div>
+
+                        <div class="col-md">
+                            <div class="event-line_title">
+                                <span class="d-inline-block d-md-none">
+                                    {{ flagLine1 }}
+                                </span>
+
+                                M. nordique
+                            </div>
+                            <div class="event-line_description">
+                                50 km / 8 heures     François l’animateur
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <i class="icon-inscript-dark"></i>
+                            <i class="icon-tortoise-dark "></i>
+                            <i class="icon-info-dark "></i>
+                        </div>
+
+                    </div>
+                    {# event-line : end   #}
+
+                    {# event-line : begin : <div class="flag flag--L">L</div> #}
+
+                    {% set flagLine1 = '<div class="flag flag--S">S</div>' %}
+
+                    <div class="event-line row no-gutters">
+                        <div class="col-md-1 d-none d-md-block">
+                            {{ flagLine1 }}
+                        </div>
+
+                        <div class="col-md">
+                            <div class="event-line_title">
+                                <span class="d-inline-block d-md-none">
+                                    {{ flagLine1 }}
+                                </span>
+
+                                M. nordique
+                            </div>
+                            <div class="event-line_description">
+                                50 km / 8 heures     François l’animateur
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <i class="icon-inscript-dark"></i>
+                            <i class="icon-tortoise-dark "></i>
+                            <i class="icon-info-dark "></i>
+                        </div>
+
+                    </div>
+                    {# event-line : end   #}
+
+
+                    {# event-line : begin : <div class="flag flag--L">L</div> #}
+
+                    {% set flagLine1 = '<div class="flag flag--M">M</div>' %}
+
+                    <div class="event-line row no-gutters">
+                        <div class="col-md-1 d-none d-md-block">
+                            {{ flagLine1 }}
+                        </div>
+
+                        <div class="col-md">
+                            <div class="event-line_title">
+                                <span class="d-inline-block d-md-none">
+                                    {{ flagLine1 }}
+                                </span>
+
+                                M. nordique
+                            </div>
+                            <div class="event-line_description">
+                                50 km / 8 heures     François l’animateur
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <i class="icon-inscript-dark"></i>
+                            <i class="icon-tortoise-dark "></i>
+                            <i class="icon-info-dark "></i>
+                        </div>
+
+                    </div>
+                    {# event-line : end   #}
+
+
+                    {# event-line : begin : <div class="flag flag--L">L</div> #}
+
+                    {% set flagLine1 = '<div class="flag flag--L">L</div>' %}
+
+                    <div class="event-line row no-gutters">
+                        <div class="col-md-1 d-none d-md-block">
+                            {{ flagLine1 }}
+                        </div>
+
+                        <div class="col-md">
+                            <div class="event-line_title">
+                                <span class="d-inline-block d-md-none">
+                                    {{ flagLine1 }}
+                                </span>
+
+                                M. nordique
+                            </div>
+                            <div class="event-line_description">
+                                50 km / 8 heures     François l’animateur
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <i class="icon-inscript-dark"></i>
+                            <i class="icon-tortoise-dark "></i>
+                            <i class="icon-info-dark "></i>
+                        </div>
+
+                    </div>
+                    {# event-line : end   #}
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

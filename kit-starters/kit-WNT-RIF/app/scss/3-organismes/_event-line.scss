@@ -1,0 +1,13 @@
+.event-line {
+    padding: $gutter-half;
+    border: $border-default;
+    border-bottom: none;
+
+    &:nth-last-of-type(1) {
+        border-bottom: $border-default;
+    }
+}
+
+.events-group {
+    margin-bottom: $gutter-base;
+}

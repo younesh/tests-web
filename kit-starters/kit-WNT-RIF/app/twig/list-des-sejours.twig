@@ -1,0 +1,112 @@
+{# index.twig #}
+{% extends "includes/layout.base.twig" %}
+
+{% block pageTitle %}
+    liste des séjours
+        -
+    {{siteName}}
+
+{% endblock %}
+{% block classPage %}
+    page-liste-sejours
+{% endblock %}
+{% block page %}
+    <div class="container">
+        <div class="row no-gutters">
+            <aside class="col-md-3">
+                <div class="filter">
+                    <div class="filter_title">
+                        Filtre
+
+                    </div>
+
+                    <div class="criteria criteria--stay">
+                        <a class="criteria_title">
+                            <span>
+                                Séjour
+                            </span>
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            {%  include TplInputRadio with { addClass : 'sejour', options : [{label : ' 2-3 jours', value : '2-3-days' }, {label : '4 jours et +', value :'4-days-and-more' }]} %}
+                        </div>
+                    </div>
+
+                    <div class="criteria criteria--closed criteria--date">
+
+
+                        <a class="criteria_title">
+                            <span>
+                                Date
+                            </span>
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            <select id="" name="">
+                                <option value="">
+                                    Après le
+                                </option>
+                            </select>
+
+                            <input id="" name="" type="text">
+                        </div>
+                    </div>
+
+                    <div class="criteria criteria--closed criteria--Hiking-type">
+                        <a class="criteria_title">
+                            <span>
+                                Type de randonnée
+
+                            </span>
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            {% include TplInputCheckbox with { addClass: 'type-hiking',label : 'Randonnée' } %}
+                            {% include TplInputCheckbox with { addClass: 'type-nordic-walk',label : 'M. nordique' } %}
+                        </div>
+                    </div>
+                    <div class="criteria criteria--closed criteria--Circuit">
+
+
+                        <a class="criteria_title">
+                            <span>
+                                Circuit
+                            </span>
+
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            {% include TplInputCheckbox with { addClass: 'fixed-point',label : 'Point Fixe' } %}
+
+                            {% include TplInputCheckbox with { addClass: 'roaming',label : 'Itinérance' } %}
+
+
+                        </div>
+                    </div>
+
+                    {#<div class="criteria criteria--closed criteria--XX">
+                                                                                                                                                                <a class="criteria_title">
+                                                                                                                                                                <span>
+                                                                                                                                                                Criteria title
+                                                                                                                                                                </span>
+                                                                                                                                                                <i class="icon-arrow-slide"></i>
+                                                                                                                                                                </a>
+                                                                                                                                                                <div class="criteria_content">
+                                                                                                                                                                ....
+                                                                                                                                                                </div>
+                                                                                                                                                                </div>#}
+
+
+                </div>
+            </aside>
+            <div class="col-md">
+                <div class="btn-group right">
+                    <button class="button">
+                        liste PDF
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
