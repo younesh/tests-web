@@ -30,6 +30,7 @@
 
 .header_logo {
     @include Y-center;
+    background-color: $color-gray-meduim;
     justify-content: center;
 
     img {
@@ -44,7 +45,7 @@
 
 .header_main-menu {
     min-height: 66px;
-    background-color: $color-green-meduim;
+    background-color: $color-blue-meduim;
     color: white;
     font-family: $font-semibold;
     text-transform: uppercase;
@@ -145,7 +146,7 @@
     }
 
     .header_logo {
-        background-image: url("img/header-banner.jpg");
+ 
         background-repeat: no-repeat;
         background-position: 0 0;
         background-size: cover;
