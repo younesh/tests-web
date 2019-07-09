@@ -74,4 +74,8 @@ THE LAST ÂD :
                 c/c le mecaniseme d'automatisation marche à la perfection , systeme sera adopté ( juste faut cruser le twig plus)
                 + add guideline utilitaire : les element de formulaire modrnes + les animation et transition moderne
                 + implementer en logique atomic avec BEM en nomenclature
-                + 
+                +
+
+.... 20190709 :
+        doc : https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance
+         vueJS > javascript\vueJS\js\appVue.js
