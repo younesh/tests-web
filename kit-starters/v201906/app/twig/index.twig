@@ -1,11 +1,4 @@
-{# index.twig #}
-{% extends "4-templates/layout.twig" %}
-{% block pageTitle %}
-    {% set title ="la home888" %}
-    {{macros.titleSEO(title)}}
-{% endblock %}
-{% block classPage %} page-styleguide {% endblock %}
-{% block page %}
+{# index.twig #} {% extends "4-templates/layout.twig" %} {% block pageTitle %} {% set title ="la home888" %} {{macros.titleSEO(title)}} {% endblock %} {% block classPage %} page-styleguide {% endblock %} {% block page %}
 <div class="container">
     p: home
     <div class="row">
@@ -13,4 +6,14 @@
             {% include "1-atoms/_figureImg.twig" with {src : "img/building.jpg", addClass : 'figure-img--full'} %}
         </div>
     </div>
-{% endblock %}
+    <div class="">
+        <h3> les icones a tester ... depuis icomoon </h3>
+        <i class="icon-calendar"></i>
+        <i class="icon-delete"></i>
+        <i class="icon-home"></i>
+        <i class="icon-search"></i>
+        <i class="icon-cheveron"></i>
+        <i class="icon-search"></i>
+        <i class="icon-arrow"></i>
+    </div>
+    {% endblock %}

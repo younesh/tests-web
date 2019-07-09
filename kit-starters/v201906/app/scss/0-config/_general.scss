@@ -7,7 +7,7 @@ body {
     font-size: var(--fz-default);
     font-family: $font-family-content;
     color: $color-black-primary;
-    background-color: $color-gray-meduim;
+    background-color: $color-gray-meduim; // 
 }
 
 p {
@@ -31,7 +31,6 @@ li {
     cursor: pointer;
     transition: all .5s ease;
     opacity: 1;
-
     &:hover {
         opacity: .7;
     }
@@ -50,11 +49,9 @@ a {
     text-transform: uppercase;
 }
 
-
 .big-txt {
     font-size: 45px;
     @extend .title;
-
     @media #{$bp-min-md} {
         font-size: 90px;
     }
@@ -63,7 +60,6 @@ a {
 .h0-like {
     @extend .title;
     font-size: 30px;
-
     @media #{$bp-min-md} {
         font-size: 50px;
     }
@@ -73,10 +69,7 @@ a {
     input {
         width: auto;
     }
-
 }
-
-
 
 h1,
 .h1-like {
@@ -90,20 +83,17 @@ h2,
     font-size: $fz-h2;
 }
 
-
 h3,
 .h3-like {
     @extend .title;
     font-size: $fz-h3;
 }
 
-
 h4,
 .h4-like {
     @extend .title;
     font-size: $fz-h4;
 }
-
 
 img {}
 
@@ -131,10 +121,8 @@ input {
     width: 100%;
 }
 
-
 // LAYOUTAGE 
 .page {}
-
 
 //-----  MEDIA QUERY / RESPONSIVE ----
 @media #{$bp-min-sm} {}
@@ -143,8 +131,6 @@ input {
     input {
         width: auto;
     }
-
-
 }
 
 @media #{$bp-min-lg} {}
