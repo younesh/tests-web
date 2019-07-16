@@ -20,7 +20,8 @@
   "devDependencies": {
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0"
+    "eslint-plugin-import": "^2.14.0",
+    "vue": "^2.6.10"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",

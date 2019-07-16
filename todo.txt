@@ -13,7 +13,7 @@
     1.6 Constructeur Bootstrap Mobirise
 
      faire les cas de figures du responsive parfais
-     les regles de base UX 
+     les regles de base UX
      paralaxe
      animation 
      performence tests 
