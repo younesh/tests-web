@@ -1,7 +1,9 @@
 <template>
   <div class="cpt-test">
     <h2>title = {{title}}</h2>
-    <button @click="clicTest">click test evant</button>
+    <span>Val01 :</span>
+    <span>{{val01}}</span>
+    <button @click="incrementVal">click test evant</button>
   </div>
 </template>
 
@@ -9,11 +11,14 @@
 export default {
   name: "cptTest",
   props: {
-    title: String
+    title: String,
+    val01: String
+    // ,value01: "c 'est la val 01 du cpt !!! ",
+    // value02: "c 'est la val 02 du cpt !!! "
   },
   methods: {
-    clicTest: function() {
-      console.log("cptTest ....  ");
+    incrementVal: function() {
+      this.val01 = this.val01 * 1 + 1;
     }
   }
 };

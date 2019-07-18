@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <cptTest title="my cpt custom title lol !!! " />3
+    <cptTest title="my cpt custom title lol !!! " val01="0" />3
     <br />----------- app ctn
     <br />
     <h2>title in app</h2>
