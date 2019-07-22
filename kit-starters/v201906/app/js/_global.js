@@ -6,6 +6,7 @@ app.global = {
     app.global.loadHeader();
     app.global.loadFooter();
     app.global.lecteurDataIcon();
+    app.global.parallax();
   },
 
   loadHeader: function() {
@@ -13,12 +14,20 @@ app.global = {
     var sn = $(".sitename").text();
     console.log("loadHeader() > " + sn);
   },
-
   loadFooter: function() {
     console.log("loadFooter ....... ");
   },
 
-  lecteurDataIcon: function() {}
+  lecteurDataIcon: function() {},
+  parallax: function() {
+    var paralax = $(".parallax");
+    window.addEventListener("scroll", function() {
+      var offset = window.pageYOffset;
+      //  paralax.style.backgroundPositionY = offset * 0.5 + "px";
+      paralax.css("background-position-y", offset * 0.7 + "px");
+      //  console.log(offset);
+    });
+  }
 };
 
 // Run the global stuff

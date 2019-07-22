@@ -1,0 +1,30 @@
+.page-TEST-parallax2 {
+
+    section {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        //background-repeat: no-repeat;
+
+        >div {
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            color: white;
+        }
+
+        &.para-01 {
+            background-image: url('img/astres-etoiles.jpg');
+
+        }
+
+        &.para-02 {
+            background-color: yellowgreen;
+        }
+
+        &.para-03 {
+            background-image: url("img/bull-lumineux.jpg");
+        }
+    }
+
+}

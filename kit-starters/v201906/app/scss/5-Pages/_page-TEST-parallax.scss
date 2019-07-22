@@ -1,0 +1,44 @@
+.page-TEST-parallax {
+    section {
+        padding: 1%;
+        width: 100%;
+        box-sizing: border-box;
+        min-height: 300px;
+
+        >div {
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            color: white;
+        }
+
+        /*
+         c'est un cas de parallax claqqie , ou le bg va resté que static au scroll
+         */
+        &.para-etoile {
+            background-image: url('img/astres-etoiles.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+
+        &.para-bulls {
+            position: relative;
+            box-sizing: border-box;
+            transform-style: preserve-3d;
+            padding-bottom: 20vh;
+
+            &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-image: url("img/bull-lumineux.jpg");
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                z-index: -1;
+                transform: translateZ(-3px) scale(2);
+            }
+        }
+    }
+}

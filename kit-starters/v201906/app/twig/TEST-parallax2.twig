@@ -1,0 +1,61 @@
+{# index.twig #}
+{% extends "4-templates/layout.twig" %}
+{% block pageTitle %}
+    {% set title ="contact page" %}
+    {{macros.titleSEO(title)}}
+{% endblock %}
+{% block classPage %}
+    page-TEST-parallax2
+{% endblock %}
+
+{% block page %}
+
+    <section class="parallax para-01" id="parallax">
+
+        <div class="container">
+            <h2>
+                ctn 01
+            </h2>
+            <p>
+                <code>
+                    parallax: function() {
+                        var paralax = $(".parallax");
+                        window.addEventListener("scroll", function() {
+                          var offset = window.pageYOffset;
+                          //  paralax.style.backgroundPositionY = offset * 0.5 + "px";
+                          paralax.css("background-position-y", offset * 0.7 + "px");
+                          //  console.log(offset);
+                        });
+                </code>
+            </p>
+        </div>
+    </section>
+
+    <section class="parallax para-02">
+        <div class="container">
+            <h2>
+                ctn 01
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus fugit qui deserunt ratione maiores rerum error, nisi rem minima, sapiente assumenda, illo fugiat labore officia voluptatum. Inventore voluptates consequatur harum!
+            </p>
+
+        </div>
+    </section>
+
+
+    <section class="parallax para-03">
+        <div class="container">
+            <h2>
+                ctn 01
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus fugit qui deserunt ratione maiores rerum error, nisi rem minima, sapiente assumenda, illo fugiat labore officia voluptatum. Inventore voluptates consequatur harum!
+            </p>
+
+        </div>
+    </section>
+
+    <script></script>
+
+{% endblock %}

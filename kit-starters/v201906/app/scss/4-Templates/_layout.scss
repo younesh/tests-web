@@ -1,7 +1,8 @@
 .layout {
     main.main {
-        background-color: white;
         min-height: 600px;
-        padding: $gutter-base;
+        padding-bottom: $gutter-half;
+
+        .container {}
     }
 }
