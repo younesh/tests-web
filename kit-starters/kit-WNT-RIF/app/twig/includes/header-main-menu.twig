@@ -1,0 +1,51 @@
+{% if _context._target.relative == "list-des-journees.html" %}
+    {% set listDaysClassItem = "active" %}
+{% endif %}
+
+{% if _context._target.relative == "list-des-sejours.html" %}
+    {% set listStayClassItem = "active" %}
+{% endif %}
+
+
+{% if _context._target.relative == "programmation.html" %}
+    {% set programsClassItem = "active" %}
+{% endif %}
+
+
+<nav>
+    <a class="{{listDaysClassItem}}" href="list-des-journees.html">
+
+        Journées
+    </a>
+
+    <a class="{{listStayClassItem}}" href="list-des-sejours.html">
+
+        Séjours
+    </a>
+
+    <a href="#">
+        Bibliothèque du RIF
+    </a>
+
+    <a href="index.html">
+        Vie du RIF
+    </a>
+
+    <a href="#">
+        Infos utiles
+    </a>
+    <a class="{{programsClassItem}}" href="programmation.html">
+        Programmation
+    </a>
+
+    <a href="#">
+        Mon compte
+    </a>
+
+    {# (!) hide for mobile   #}
+    <a class="deconnextion d-block d-md-none" href="#">
+        Déconnexion
+    </a>
+
+
+</nav>

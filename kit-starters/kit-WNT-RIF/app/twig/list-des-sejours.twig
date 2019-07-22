@@ -1,0 +1,222 @@
+{# index.twig #}
+{% extends "includes/layout.base.twig" %}
+
+{% block pageTitle %}
+    liste des séjours
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                -
+    {{siteName}}
+
+{% endblock %}
+{% block classPage %}
+    page-liste-sejours
+{% endblock %}
+{% block page %}
+    <div class="container">
+        <div class="row no-gutters">
+            <aside class="col-aside col-md-4 col-lg-3 pr-md-3 pr-lg-4">
+                <div class="filter">
+                    <div class="filter_title">
+                        <span>Filtre</span>
+                        <a class="icon-close-white d-inline-block d-md-none"></a>
+                    </div>
+
+                    <div class="criteria criteria--stay">
+                        <a class="criteria_title">
+                            <span>
+                                Séjour
+                            </span>
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            {%  include TplInputRadio with { addClass : 'sejour', options : [{label : ' 2-3 jours', value : '2-3-days' }, {label : '4 jours et +', value :'4-days-and-more' }]} %}
+                        </div>
+                    </div>
+
+                    <div class="criteria criteria--closed criteria--date">
+
+
+                        <a class="criteria_title">
+                            <span>
+                                Date
+                            </span>
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            <select id="" name="">
+                                <option value="">
+                                    Après le
+                                </option>
+                            </select>
+                            <div class="d-flex align-items-center">
+                                <input class="calendar mb-0" id="" name="" type="text">
+                                <i class="icon-calendar ml-2"></i>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="criteria criteria--closed criteria--Hiking-type">
+                        <a class="criteria_title">
+                            <span>
+                                Type de randonnée
+
+                            </span>
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            {% include TplInputCheckbox with { addClass: 'type-hiking',label : 'Randonnée' } %}
+                            {% include TplInputCheckbox with { addClass: 'type-nordic-walk',label : 'M. nordique' } %}
+                        </div>
+                    </div>
+                    <div class="criteria criteria--closed criteria--Circuit">
+
+
+                        <a class="criteria_title">
+                            <span>
+                                Circuit
+                            </span>
+
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            {% include TplInputCheckbox with { addClass: 'fixed-point',label : 'Point Fixe' } %}
+                            {% include TplInputCheckbox with { addClass: 'roaming',label : 'Itinérance' } %}
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </aside>
+            <div class="col-md col-main-content">
+
+                {% include TplMainTopBtns %}
+                <div
+                    class="events-group">
+
+                    {# event-line 1: begin #}
+                    {% set config = {
+                            flagLine :'<div class="flag flag--M">M</div>',
+                            eventTitle : {class: "m-nordique", text: "M. nordique"} ,
+                            title2Sejour   : "20-01 - En projet - Compostelle dans la vallée du Célé",
+                            iconsNotif : '<i class="icon-pdf"></i>' ,
+                            eventDescript :  {dates : "vendredi 24 mai 2019 au dimanche 26 mai 2019 ", animator : "François l’animateur", budget : "Budget prévisionnel  : 150 € - Clos"}
+                        }
+                    %}
+                    {% include TplEventLineStay with config %}
+                    {# event-line 1: end   #}
+
+                    {# event-line 2: begin #}
+                    {% set config = {
+                            flagLine :'<div class="flag flag--M">M</div>',
+                            eventTitle : {class: "hiking", text: "Randonnée"},
+                            title2Sejour   : "20-01 - En projet - Compostelle dans la vallée du Célé",
+                            iconsNotif : '<i class="icon-pdf"></i>' ,
+                            eventDescript :  { dates : "vendredi 24 mai 2019 au dimanche 26 mai 2019 ", animator : "François l’animateur", budget : "Budget prévisionnel  : 150 € - Clos"},
+                            status :  {class: "status--update", text: "Modifé"}
+                        }
+                    %}
+                    {% include TplEventLineStay with config %}
+                    {# event-line 2: end   #}
+
+                    {# event-line 3: begin event-line_description--barred #}
+                    {% set config = {
+                            flagLine :'<div class="flag flag--M">M</div>',
+                            eventTitle : {class: "hiking", text: "Randonnée"},
+                            title2Sejour   : "20-01 - En projet - Compostelle dans la vallée du Célé",
+                            eventDescript :  { addClass : "event-line_description--barred", dates : "vendredi 24 mai 2019 au dimanche 26 mai 2019 ", animator : "François l’animateur", budget : "Budget prévisionnel  : 150 € - Clos"},
+
+                            status :  {class: "status--cancel", text: "Annulé"}
+
+                        }
+                    %}
+                    {% include TplEventLineStay with config %}
+                    {# event-line 3: end   #}
+
+                    {# event-line 1: begin #}
+                    {% set config = {
+                            flagLine :'<div class="flag flag--M">M</div>',
+                            eventTitle : {class: "m-nordique", text: "M. nordique"} ,
+                            title2Sejour   : "20-01 - En projet - Compostelle dans la vallée du Célé",
+                            iconsNotif : '<i class="icon-pdf"></i>' ,
+                            eventDescript :  { dates : "vendredi 24 mai 2019 au dimanche 26 mai 2019 ", animator : "François l’animateur", budget : "Budget prévisionnel  : 150 € - Clos"}
+                        }
+                    %}
+                    {% include TplEventLineStay with config %}
+                    {# event-line 1: end   #}
+
+                    {# event-line 2: begin #}
+                    {% set config = {
+                            flagLine :'<div class="flag flag--M">M</div>',
+                            eventTitle : {class: "hiking", text: "Randonnée"},
+                            title2Sejour   : "20-01 - En projet - Compostelle dans la vallée du Célé",
+                            iconsNotif : '<i class="icon-pdf"></i>' ,
+                            eventDescript :  { dates : "vendredi 24 mai 2019 au dimanche 26 mai 2019 ", animator : "François l’animateur", budget : "Budget prévisionnel  : 150 € - Clos"},
+                            status :  {class: "status--update", text: "Modifé"}
+                        }
+                    %}
+                    {% include TplEventLineStay with config %}
+                    {# event-line 2: end   #}
+
+                    {# event-line 3: begin event-line_description--barred #}
+                    {% set config = {
+                            flagLine :'<div class="flag flag--M">M</div>',
+                            eventTitle : {class: "hiking", text: "Randonnée"},
+                            title2Sejour   : "20-01 - En projet - Compostelle dans la vallée du Célé",
+                           eventDescript :  { addClass : "event-line_description--barred", dates : "vendredi 24 mai 2019 au dimanche 26 mai 2019 ", animator : "François l’animateur", budget : "Budget prévisionnel  : 150 € - Clos"},
+                            status :  {class: "status--cancel", text: "Annulé"}
+                        }
+                    %}
+                    {% include TplEventLineStay with config %}
+                    {# event-line 3: end   #}
+
+
+                    {# event-line 1: begin #}
+                    {% set config = {
+                            flagLine :'<div class="flag flag--M">M</div>',
+                            eventTitle : {class: "m-nordique", text: "M. nordique"} ,
+                            title2Sejour   : "20-01 - En projet - Compostelle dans la vallée du Célé",
+                            iconsNotif : '<i class="icon-pdf"></i>' ,
+                            eventDescript :  { dates : "vendredi 24 mai 2019 au dimanche 26 mai 2019 ", animator : "François l’animateur", budget : "Budget prévisionnel  : 150 € - Clos"}
+
+
+                        }
+                    %}
+                    {% include TplEventLineStay with config %}
+                    {# event-line 1: end   #}
+
+                    {# event-line 2: begin #}
+                    {% set config = {
+                            flagLine :'<div class="flag flag--M">M</div>',
+                            eventTitle : {class: "hiking", text: "Randonnée"},
+                            title2Sejour   : "20-01 - En projet - Compostelle dans la vallée du Célé",
+                            iconsNotif : '<i class="icon-pdf"></i>' ,
+                            eventDescript :  { dates : "vendredi 24 mai 2019 au dimanche 26 mai 2019 ", animator : "François l’animateur", budget : "Budget prévisionnel  : 150 € - Clos"},
+                            status :  {class: "status--update", text: "Modifé"}
+                        }
+                    %}
+                    {% include TplEventLineStay with config %}
+                    {# event-line 2: end   #}
+
+                    {# event-line 3: begin event-line_description--barred #}
+                    {% set config = {
+                            flagLine :'<div class="flag flag--M">M</div>',
+                            eventTitle : {class: "hiking", text: "Randonnée"},
+                            title2Sejour   : "20-01 - En projet - Compostelle dans la vallée du Célé",
+                            eventDescript :  { addClass : "event-line_description--barred", dates : "vendredi 24 mai 2019 au dimanche 26 mai 2019 ", animator : "François l’animateur", budget : "Budget prévisionnel  : 150 € - Clos"},
+                            status :  {class: "status--cancel", text: "Annulé"}
+
+                        }
+                    %}
+                {% include TplEventLineStay with config %}
+                    {# event-line 3: end   #}
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

@@ -6,6 +6,9 @@
 /*LIB : SASS/BOURBON */
 @import "../../node_modules/bourbon/core/bourbon";
 
+/*LIB : calendar (flatpickr) */
+@import "../../node_modules/flatpickr/dist/flatpickr";
+
 
 
 /* 0- config / global */
@@ -19,9 +22,17 @@
 /* 1- atoms */
 @import '1-atoms/buttons';
 @import '1-atoms/figureImg';
+@import '1-atoms/inputCheckbox';
+@import '1-atoms/inputRadio';
+@import '1-atoms/inputText';
+@import '1-atoms/flag';
+@import '1-atoms/status';
 
 /* 2- molecules */
-
+@import '2-molecules/small-title';
+@import '2-molecules/bloc-info';
+@import '2-molecules/dataTable';
+@import '2-molecules/slider-down';
 
 /* 3- organisms */
 @import '3-organismes/header';

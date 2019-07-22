@@ -1,11 +1,13 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
+    <div>Test vue ...</div>
     <cptTest title="my cpt custom title lol !!! " val01="0" />3
     <br />----------- app ctn
     <br />
     <h2>title in app</h2>
     <br />
+    <button class="clickbtn">click btn</button>
+    <span>{{var01}}</span>
   </div>
 </template>
 
@@ -14,6 +16,12 @@ import cptTest from "./components/cptTest.vue";
 
 export default {
   name: "app",
+  data: {
+    function() {
+      return (var01 = "555");
+    }
+  },
+
   components: {
     //HelloWorld,
     cptTest

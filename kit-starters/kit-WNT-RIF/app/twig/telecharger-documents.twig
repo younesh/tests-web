@@ -1,0 +1,60 @@
+{# index.twig #}
+{% extends "includes/layout.base.twig" %}
+{% block pageTitle %}
+    Télécharger des documents
+    {{siteName}}
+{% endblock %}
+{% block classPage %}
+    page-telecharger-documents
+{% endblock %}
+{% block page %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="wrapper-sliaders mt-4">
+                    <div class="slider-down">
+                        <div class="slider-down_title">
+                            <span>Documents administratifs</span>
+                            <i class="icon-slide"></i>
+                        </div>
+                        <div class="slider-down_content">
+                            <a class="slider-down_row">
+                                <span>
+                                    Formulaire d'inscription
+                                </span>
+                                <i class="icon-download"></i>
+                            </a>
+                            <a class="slider-down_row">
+                                <span>
+                                    Les status
+                                </span>
+                                <i class="icon-download"></i>
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slider-down">
+                        <div class="slider-down_title">
+                            <span>Animation</span>
+                            <i class="icon-slide"></i>
+
+                        </div>
+                        <div class="slider-down_content">
+                            <a class="slider-down_row">
+                                <span>Repas de fin d'année</span>
+                                <i class="icon-download"></i>
+
+                            </a>
+                            <a class="slider-down_row">
+                                <span>Galette des rois</span>
+                                <i class="icon-download"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
