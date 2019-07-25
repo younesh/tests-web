@@ -10,7 +10,7 @@
 
 {% block page %}
 
-    <section class="parallax para-01" id="parallax">
+    <section class="parallax para-01">
 
         <div class="container">
             <h2>
@@ -19,13 +19,13 @@
             <p>
                 <code>
                     parallax: function() {
-                        var paralax = $(".parallax");
-                        window.addEventListener("scroll", function() {
-                          var offset = window.pageYOffset;
-                          //  paralax.style.backgroundPositionY = offset * 0.5 + "px";
-                          paralax.css("background-position-y", offset * 0.7 + "px");
-                          //  console.log(offset);
-                        });
+                                                                                                                                                                                                                                                                                                                                                                                                                                        var paralax = $(".parallax");
+                                                                                                                                                                                                                                                                                                                                                                                                                                        window.addEventListener("scroll", function() {
+                                                                                                                                                                                                                                                                                                                                                                                                                                          var offset = window.pageYOffset;
+                                                                                                                                                                                                                                                                                                                                                                                                                                          //  paralax.style.backgroundPositionY = offset * 0.5 + "px";
+                                                                                                                                                                                                                                                                                                                                                                                                                                          paralax.css("background-position-y", offset * 0.7 + "px");
+                                                                                                                                                                                                                                                                                                                                                                                                                                          //  console.log(offset);
+                                                                                                                                                                                                                                                                                                                                                                                                                                        });
                 </code>
             </p>
         </div>
@@ -56,6 +56,22 @@
         </div>
     </section>
 
-    <script></script>
+    <section class="parallax-sect para-04">
+        <img ="image" class="parallax-img" src="img/building.jpg">
+
+        <div class="container">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla expedita ratione ipsa maiores? Excepturi tenetur voluptates vel iure a dolorem, provident amet. Nam officiis, illo doloremque assumenda tempore omnis inventore!
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla expedita ratione ipsa maiores? Excepturi tenetur voluptates vel iure a dolorem, provident amet. Nam officiis, illo doloremque assumenda tempore omnis inventore!
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla expedita ratione ipsa maiores? Excepturi tenetur voluptates vel iure a dolorem, provident amet. Nam officiis, illo doloremque assumenda tempore omnis inventore!
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla expedita ratione ipsa maiores? Excepturi tenetur voluptates vel iure a dolorem, provident amet. Nam officiis, illo doloremque assumenda tempore omnis inventore!
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla expedita ratione ipsa maiores? Excepturi tenetur voluptates vel iure a dolorem, provident amet. Nam officiis, illo doloremque assumenda tempore omnis inventore!
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla expedita ratione ipsa maiores? Excepturi tenetur voluptates vel iure a dolorem, provident amet. Nam officiis, illo doloremque assumenda tempore omnis inventore!
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla expedita ratione ipsa maiores? Excepturi tenetur voluptates vel iure a dolorem, provident amet. Nam officiis, illo doloremque assumenda tempore omnis inventore!
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla expedita ratione ipsa maiores? Excepturi tenetur voluptates vel iure a dolorem, provident amet. Nam officiis, illo doloremque assumenda tempore omnis inventore!
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla expedita ratione ipsa maiores? Excepturi tenetur voluptates vel iure a dolorem, provident amet. Nam officiis, illo doloremque assumenda tempore omnis inventore!
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.1.0/dist/simpleParallax.min.js"></script>
+
 
 {% endblock %}

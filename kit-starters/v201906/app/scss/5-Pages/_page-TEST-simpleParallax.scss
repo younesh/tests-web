@@ -1,0 +1,27 @@
+.page-TEST-simpleParallax {
+    min-height: 1000px;
+
+    section {
+        position: relative;
+        overflow: hidden;
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        @include padding($gutter-half null);
+
+        .container {
+            z-index: 10;
+            position: relative;
+            background-color: rgba(white, 0.5);
+            @include padding($gutter-half);
+            text-align: justify;
+        }
+
+        .parallax-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+    }
+}

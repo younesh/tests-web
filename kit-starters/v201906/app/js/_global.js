@@ -1,4 +1,5 @@
 // Global
+"use strict";
 app.global = {
   init: function() {
     // Load all global functions here
@@ -26,6 +27,14 @@ app.global = {
       //  paralax.style.backgroundPositionY = offset * 0.5 + "px";
       paralax.css("background-position-y", offset * 0.7 + "px");
       //  console.log(offset);
+
+      var images = document.querySelectorAll("img.parallax-img");
+      new simpleParallax(images, {
+        delay: 1,
+        orientation: "down",
+        scale: 2,
+        overfow: true
+      });
     });
   }
 };

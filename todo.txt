@@ -79,3 +79,8 @@ THE LAST ÂD :
 .... 20190709 :
         doc : https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance
          vueJS > javascript\vueJS\js\appVue.js
+
+
+.... 20190725 : les test PARALLAX OK ds : kit-starters\v201906\app\twig\TEST-simpleParallax.twig
+
+

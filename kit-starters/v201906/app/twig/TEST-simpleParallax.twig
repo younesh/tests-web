@@ -1,0 +1,141 @@
+{# index.twig #}
+{% extends "4-templates/layout.twig" %}
+{% block pageTitle %}
+    page-TEST-simpleParallax
+{% endblock %}
+{% block classPage %}
+    page-TEST-simpleParallax
+
+{% endblock %}
+
+{% block page %}
+
+
+    <section>
+        <img alt="" class="img-fluid parallax-img" src="img/bull-lumineux.jpg">
+
+        <div class="container">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae itaque voluptatum dolor rem, quia optio numquam doloribus alias incidunt qui aut nemo mollitia doloremque in ratione deleniti animi fuga.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae itaque voluptatum dolor rem, quia optio numquam doloribus alias incidunt qui aut nemo mollitia doloremque in ratione deleniti animi fuga.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae itaque voluptatum dolor rem, quia optio numquam doloribus alias incidunt qui aut nemo mollitia doloremque in ratione deleniti animi fuga.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae itaque voluptatum dolor rem, quia optio numquam doloribus alias incidunt qui aut nemo mollitia doloremque in ratione deleniti animi fuga.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae itaque voluptatum dolor rem, quia optio numquam doloribus alias incidunt qui aut nemo mollitia doloremque in ratione deleniti animi fuga.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae itaque voluptatum dolor rem, quia optio numquam doloribus alias incidunt qui aut nemo mollitia doloremque in ratione deleniti animi fuga.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae itaque voluptatum dolor rem, quia optio numquam doloribus alias incidunt qui aut nemo mollitia doloremque in ratione deleniti animi fuga.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae itaque voluptatum dolor rem, quia optio numquam doloribus alias incidunt qui aut nemo mollitia doloremque in ratione deleniti animi fuga.
+        </div>
+    </section>
+
+    <section>
+
+        <div class="container">
+
+            <h2>
+                Doc parallax appliqué
+            </h2>
+            <h3>
+                a. en HTML</h3>
+            <p>
+                en a appliqué a cette archi dom :
+                <br>
+                <code>
+                    section
+                    <br>
+                    &nbsp;&nbsp; img.img-fluid.parallax-img
+
+
+                    <br>
+                    &nbsp;&nbsp; .container{ ... text content ... }
+
+                </code>
+            </p>
+
+            <h3>
+                B. en js :
+            </h3>
+
+            <p>
+                1. en appelle la biblio :
+                <br>
+                <code>
+                    script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"> ...
+                </code>
+            </p>
+            <p>
+                2- en appelle le js :
+                <br>
+                <code>
+
+                    var images = document.querySelectorAll("img.parallax-img");<br>
+                    new simpleParallax(images, {<br>
+                    delay: 1,<br>
+                    orientation: "down",<br>
+                    scale: 1<br>
+                    // overfow: true<br>
+                    });
+                </code>
+            </p>
+
+        </div>
+    </section>
+
+    <section>
+        <img alt="" class="img-fluid parallax-img" src="img/astres-etoiles.jpg">
+
+
+        <div class="container">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam obcaecati itaque atque doloribus quas impedit ratione consequuntur optio nemo nulla error iure iste laborum aut, officia quaerat? Ducimus, iure delectus?
+                                                                                                                                                                                                                                                                                                                                                                    Illo, sunt! Quisquam at possimus eligendi rem quod vero nam veniam sint, iste maiores molestiae fugiat placeat incidunt quis temporibus corrupti corporis. Nesciunt, ullam ex! Libero labore voluptates ut hic!
+                                                                                                                                                                                                                                                                                                                                                                    Tempore autem est iste rerum recusandae corrupti. Animi soluta beatae a voluptatem laboriosam autem eius iure, corporis ea possimus consequatur facere labore harum voluptate obcaecati. Aliquid inventore ab labore enim?
+                                                                                                                                                                                                                                                                                                                                                                    Dicta, asperiores? Doloribus libero esse sapiente odio iste asperiores sed sint fuga deleniti minus placeat laborum dolores eaque amet autem maxime temporibus distinctio, quia consectetur quasi ex suscipit rem et.
+                                                                                                                                                                                                                                                                                                                                                                    Impedit incidunt unde blanditiis asperiores voluptatem porro praesentium dolor in culpa, beatae nostrum hic corrupti, delectus laborum. Officia a ullam voluptatem sequi molestiae, vel quod fugiat culpa incidunt, iusto perspiciatis.
+        </div>
+    </section>
+
+    <section>
+        <img alt="" class="img-fluid parallax-img" src="">
+        <div class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, dolores ad numquam, consequatur adipisci quae debitis optio corporis necessitatibus, quod doloribus quibusdam quam ducimus perferendis neque officia repellat quo laborum.
+                                                                                                                                                                                                                                                                                                                                                        Porro, accusamus autem molestiae ut ad quos quod maxime asperiores aperiam totam ipsum explicabo nemo. Eaque, repudiandae? Autem sequi doloribus iure commodi, nam vero tempore voluptates assumenda ea praesentium rerum.
+                                                                                                                                                                                                                                                                                                                                                        Veniam facere repellat ipsum provident laboriosam quasi, autem possimus voluptatem quibusdam cum aliquam, maiores eum accusantium, similique inventore at delectus? Illum culpa labore maxime quas molestias? Maxime quisquam quos voluptatibus.
+                                                                                                                                                                                                                                                                                                                                                        Sint assumenda nemo amet? Hic exercitationem perferendis reiciendis et impedit, atque laborum odio earum, necessitatibus minus quis ipsam ipsum nulla dolorum iste aperiam optio nobis ut dolor nihil odit tempora?
+                                                                                                                                                                                                                                                                                                                                                        Aut perferendis, dolorem quasi officiis labore optio vitae! Delectus, voluptates! Autem eligendi dignissimos dolore nisi provident, excepturi natus corrupti, animi, odit nobis aspernatur ullam unde voluptates impedit perspiciatis porro sint.
+        </div>
+    </section>
+
+    <section>
+        <img alt="" class="img-fluid parallax-img" src="img/building.jpg">
+
+
+        <div class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, dolores ad numquam, consequatur adipisci quae debitis optio corporis necessitatibus, quod doloribus quibusdam quam ducimus perferendis neque officia repellat quo laborum.
+                                                                                                                                                                                                                                                                                                                                                                Porro, accusamus autem molestiae ut ad quos quod maxime asperiores aperiam totam ipsum explicabo nemo. Eaque, repudiandae? Autem sequi doloribus iure commodi, nam vero tempore voluptates assumenda ea praesentium rerum.
+                                                                                                                                                                                                                                                                                                                                                                Veniam facere repellat ipsum provident laboriosam quasi, autem possimus voluptatem quibusdam cum aliquam, maiores eum accusantium, similique inventore at delectus? Illum culpa labore maxime quas molestias? Maxime quisquam quos voluptatibus.
+                                                                                                                                                                                                                                                                                                                                                                Sint assumenda nemo amet? Hic exercitationem perferendis reiciendis et impedit, atque laborum odio earum, necessitatibus minus quis ipsam ipsum nulla dolorum iste aperiam optio nobis ut dolor nihil odit tempora?
+                                                                                                                                                                                                                                                                                                                                                                Aut perferendis, dolorem quasi officiis labore optio vitae! Delectus, voluptates! Autem eligendi dignissimos dolore nisi provident, excepturi natus corrupti, animi, odit nobis aspernatur ullam unde voluptates impedit perspiciatis porro sint.
+        </div>
+    </section>
+    <section>
+        <img alt="" class="img-fluid parallax-img" src="">
+        <div class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur facere odio, eius quo dolores culpa aliquam cupiditate illum ea quia deserunt velit sunt vitae? Modi, provident rerum? Neque, quidem repudiandae.
+                                                                                                                                                                                                                                                                            Fugiat doloribus vero sit modi facilis numquam eveniet laudantium praesentium soluta, tenetur delectus. Delectus iure possimus sapiente dolorem asperiores ipsa quidem ab laboriosam. Explicabo consectetur dignissimos mollitia aut, odit at?
+                                                                                                                                                                                                                                                                            Sequi iusto natus nihil quae ad eaque? Perspiciatis aperiam pariatur consectetur quam dolorum! Neque sunt voluptate fugit impedit, minus pariatur officia aut ipsa corrupti laboriosam consequuntur vitae atque facilis consequatur?
+                                                                                                                                                                                                                                                                            Saepe voluptatum cupiditate dolor iste atque, dicta laboriosam eaque voluptas ea. Nobis doloribus consectetur, laudantium a atque unde doloremque nihil eaque illo veritatis nulla deserunt veniam repellendus sequi nisi fuga.
+                                                                                                                                                                                                                                                                            A, praesentium. Officia accusamus iusto optio natus quis eum dicta deserunt repudiandae modi ducimus aperiam eaque ut, explicabo odio omnis necessitatibus blanditiis in dolorum ullam ratione. Quibusdam sunt in adipisci?</div>
+    </section>
+
+    {# section>(img.img-fluid.parallax-img+.container{lorem*5}) #}
+
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
+    <script>
+        // alert(" test !!! ");
+        var images = document.querySelectorAll("img.parallax-img");
+
+        new simpleParallax(images, {
+            delay: 1,
+            orientation: "down",
+            scale: 1
+            // overfow: true
+        });
+    </script>
+
+
+{% endblock %}
