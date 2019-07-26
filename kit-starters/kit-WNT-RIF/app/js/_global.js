@@ -1,5 +1,4 @@
 // Global
-var app = {};
 app.global = {
   init: function() {
     // Load all global functions here

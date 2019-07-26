@@ -25,6 +25,12 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+
+.icon-burger-menu:before {
+    content: "bu";
+    /*\62*/
+}
+
 .icon-arrow:before {
     content: "\61";
 }
@@ -56,4 +62,5 @@
     i {
         font-size: 40px;
     }
+    
 }
