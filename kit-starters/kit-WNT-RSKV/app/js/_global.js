@@ -1,3 +1,6 @@
+"use strict";
+// Instantiating the global app object
+var app = {};
 // Global
 app.global = {
     init: function() {
@@ -100,12 +103,16 @@ app.global = {
     },
 
     testsall: function() {
+        var tabulator = $("#example-table");
+        if (!tabulator.length) {
+            return;
+        }
 
         /* tabulator test !!!  */
-        alert ("test tabulator "); 
+        alert("test tabulator ");
         var table = new Tabulator("#example-table", {
-            data:[], //load row data from array
-            layout:"fitColumns", //fit columns to width of table
+            data: [], //load row data from array
+            layout: "fitColumns", //fit columns to width of table
             responsiveLayout: "hide", //hide columns that dont fit on the table
             tooltips: true, //show tool tips on cells
             addRowPos: "top", //when adding a new row, add it to the top of the table
