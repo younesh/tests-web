@@ -1,0 +1,321 @@
+{# index.twig #}
+{% extends "includes/layout.base.twig" %}
+{% block pageTitle %}
+    Programmation                                                                                                                                                                                                                                                                                       -
+    {{siteName}}
+{% endblock %}
+{% block classPage %}
+    page-programmation
+{% endblock %}
+{% block page %}
+    <div class="container">
+        <div
+            class="row no-gutters">
+            {# aside : begin  #}
+            <aside class="col-aside col-md-4 col-lg-3 pr-md-3 pr-lg-4">
+                <div class="filter">
+                    <div class="filter_title">
+                        <span>Filtre</span>
+                        <a class="icon-close-white d-inline-block d-md-none"></a>
+                    </div>
+
+                    <div class="criteria criteria--stay">
+                        <a class="criteria_title">
+                            <span>
+                                Séjour
+                            </span>
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            {%  include TplInputRadio with { addClass : 'sejour', options : [{label : ' 2-3 jours', value : '2-3-days' }, {label : '4 jours et +', value :'4-days-and-more' }]} %}
+                        </div>
+                    </div>
+
+                    <div class="criteria criteria--closed criteria--date">
+
+
+                        <a class="criteria_title">
+                            <span>
+                                Date
+                            </span>
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            <select id="" name="">
+                                <option value="">
+                                    Après le
+                                </option>
+                            </select>
+                            <div class="d-flex align-items-center">
+                                <input class="calendar mb-0" id="" name="" type="text">
+                                <i class="icon-calendar ml-2"></i>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="criteria criteria--closed criteria--Hiking-type">
+                        <a class="criteria_title">
+                            <span>
+                                Type de randonnée
+
+                            </span>
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            {% include TplInputCheckbox with { addClass: 'type-hiking',label : 'Randonnée' } %}
+                            {% include TplInputCheckbox with { addClass: 'type-nordic-walk',label : 'M. nordique' } %}
+                        </div>
+                    </div>
+                    <div class="criteria criteria--closed criteria--Circuit">
+
+
+                        <a class="criteria_title">
+                            <span>
+                                Circuit
+                            </span>
+
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            {% include TplInputCheckbox with { addClass: 'fixed-point',label : 'Point Fixe' } %}
+                            {% include TplInputCheckbox with { addClass: 'roaming',label : 'Itinérance' } %}
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </aside>
+            {# aside : end  #}
+
+            <div class="col-md col-main-content">
+                <div class="row pt-3">
+                    <div class="col">
+                        <a class="button" href="list-des-journees.html">
+                            Nouvelle Journée
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row pt-3">
+                    <div class="col">
+                        {% set hideTDOnlyMobile ="d-none d-md-table-cell" %}
+                        {% set hideOnlyMobile ="d-none d-md-inline-block" %}
+                        {% set showOnlyMobile ="d-inline-block d-md-none" %}
+
+
+                        <div
+                            class="data-table">
+                            {#  test box  #}
+
+                            <table class="">
+                                <thead>
+                                    <tr>
+                                        <th class="col-date">Date
+                                            <a class="btn-sort"></a>
+                                        </th>
+                                        <th class="col-type ">Type</th>
+                                        <th class="col-title">Titre</th>
+                                        <th class="col-distance">
+                                            <span class="{{hideOnlyMobile}}">
+                                                Distance
+                                            </span>
+                                            <span class="{{showOnlyMobile}}">
+                                                Dist.
+                                            </span>
+
+                                        </th>
+                                        <th class="col-allure {{hideTDOnlyMobile}}">Allure</th>
+                                        <th class="col-program {{hideTDOnlyMobile}}">Nom au programme</th>
+                                        <th class="col-arrival {{hideTDOnlyMobile}}">Gare d’arrivée à l’aller</th>
+                                        <th class="col-status">Statut</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="col-date">
+                                            <span class="{{hideOnlyMobile}}">
+                                                Samedi  09 Juin 2019
+                                            </span>
+
+                                            <span class="{{showOnlyMobile}}">
+
+                                                08/06</span>
+
+                                        </td>
+                                        <td class="">
+                                            M. Nordique
+                                        </td>
+                                        <td>
+                                            Vive le sport !
+                                        </td>
+                                        <td>
+                                            10 km
+                                        </td>
+                                        <td class="{{hideTDOnlyMobile}}">
+                                            <div class="flag flag--M">M</div>
+                                        </td>
+                                        <td class="{{hideTDOnlyMobile}}">
+                                            François l'animateur
+                                        </td>
+
+                                        <td class="{{hideTDOnlyMobile}}">
+                                            Paris Saint Lazare
+                                        </td>
+
+                                        <td>
+                                            <span class="status status--draft">Brouillon</span>
+                                        </td>
+
+                                        <td>
+                                            <a class="icon-info"></a>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+
+                                            <span class="{{hideOnlyMobile}}">
+
+                                                Dimanche 09 Juin 2019
+                                            </span>
+
+                                            <span class="{{showOnlyMobile}}">
+
+                                                08/06</span>
+
+                                        </td>
+
+                                        <td>
+                                            Randonnée</td>
+
+                                        <td>
+                                            Les bords de Seine
+                                        </td>
+
+                                        <td>
+                                            5 km
+                                        </td>
+
+                                        <td class="{{hideTDOnlyMobile}}">
+                                            <div class="flag flag--M">M</div>
+                                        </td>
+                                        <td class="{{hideTDOnlyMobile}}">
+                                            Jeanne la marcheuse
+                                        </td>
+
+                                        <td class="{{hideTDOnlyMobile}}">
+                                            Montparnasse
+                                        </td>
+
+                                        <td>
+                                            <span class="status status--publish">Publié</span>
+                                        </td>
+
+                                        <td>
+                                            <a class="icon-info"></a>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <span class="{{hideOnlyMobile}}">
+
+                                                Samedi  09 Juin 2019
+                                            </span>
+
+                                            <span class="{{showOnlyMobile}}">
+
+                                                08/06</span>
+
+
+                                        </td>
+                                        <td>
+                                            Evènement
+                                        </td>
+
+                                        <td>
+                                            Fête du RIF
+                                        </td>
+
+                                        <td></td>
+
+                                        <td class="{{hideTDOnlyMobile}}"></td>
+
+                                        <td class="{{hideTDOnlyMobile}}">
+                                            François l'animateur
+                                        </td>
+
+                                        <td class="{{hideTDOnlyMobile}}"></td>
+
+                                        <td>
+                                            <span class="status status--update">Modifié</span>
+                                        </td>
+
+                                        <td>
+                                            <a class="icon-info"></a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <span class="{{hideOnlyMobile}}">
+
+                                                Samedi  09 Juin 2019
+                                            </span>
+
+                                            <span class="{{showOnlyMobile}}">
+
+                                                08/06</span>
+
+                                        </td>
+                                        <td>
+                                            Evènement
+                                        </td>
+
+                                        <td>
+                                            Fête du RIF
+                                        </td>
+
+                                        <td></td>
+
+                                        <td class="{{hideTDOnlyMobile}}"></td>
+
+                                        <td class="{{hideTDOnlyMobile}}">
+                                            François l'animateur
+                                        </td>
+
+                                        <td class="{{hideTDOnlyMobile}}"></td>
+
+                                        <td>
+                                            <span class="status status--cancel">Annulé</span>
+                                        </td>
+
+                                        <td>
+                                            <a class="icon-info"></a>
+                                        </td>
+
+
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

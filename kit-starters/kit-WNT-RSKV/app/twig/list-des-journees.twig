@@ -1,0 +1,364 @@
+{# index.twig #}
+{% extends "includes/layout.base.twig" %}
+
+{% block pageTitle %}
+    liste des journées         -
+    {{siteName}}
+
+{% endblock %}
+{% block classPage %}
+    page-liste-journees
+{% endblock %}
+{% block page %}
+    <div class="container">
+        <div class="row no-gutters">
+            <aside class="col-aside col-md-4 col-lg-3 pr-md-3 pr-lg-4">
+
+                <div class="filter filter--days">
+                    <div class="filter_title">
+                        <span>Filtre</span>
+                        <a class="icon-close-white d-inline-block d-md-none"></a>
+
+                    </div>
+
+                    <div
+                        class="criteria  criteria--Hiking-type">
+
+                        {#  criteria--closed  #}
+
+                        <a class="criteria_title">
+                            <span>
+                                Type de randonnée
+                            </span>
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            {% include TplInputCheckbox with { addClass: 'type-hiking',label : 'Randonnée' } %}
+                            {% include TplInputCheckbox with { addClass: 'type-nordic-walk',label : 'M. nordique' } %}
+                            {% include TplInputCheckbox with { addClass: 'type-event',label : 'Evènement' } %}
+                            <div class="type-is-inscript">
+                                <span>
+                                    Sur inscription
+                                </span>
+                                {%  include TplInputRadio with { addClass : 'is-inscription d-flex', nameRadio : 'is-inscription', options : [{label : 'oui', value : 'yes' }, {label : 'Non', value :'no' }]} %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="criteria criteria--closed criteria--look">
+
+
+                        <a class="criteria_title">
+                            <span>
+                                Allure
+                            </span>
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            {% include TplInputCheckbox with { addClass: 'look-slow',label : 'Lente' } %}
+                            {% include TplInputCheckbox with { addClass: 'look-average',label : 'Moyenne' } %}
+                            {% include TplInputCheckbox with { addClass: 'look-supported',label : 'Soutenue' } %}
+                            {% include TplInputCheckbox with { addClass: 'look-speed',label : 'Rapide' } %}
+
+
+                        </div>
+                    </div>
+
+                    <div class="criteria criteria--closed criteria--days">
+
+
+                        <a class="criteria_title">
+                            <span>
+                                Jour de la semaine
+                            </span>
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div
+                            class="criteria_content">
+
+                            {# (!) all twig global variable are defined on gulpfiles.js, like $TplInputCheckbox #}
+
+                            {% include TplInputCheckbox with { addClass: 'day-mond',label : 'Lundi' } %}
+
+                            {% include TplInputCheckbox with { addClass: 'day-tues',label : 'Mardi' } %}
+
+                            {% include TplInputCheckbox with { addClass: 'day-wedn',label : 'Mercredi' } %}
+
+                            {% include TplInputCheckbox with { addClass: 'day-thue',label : 'Jeudi' } %}
+
+                            {% include TplInputCheckbox with { addClass: 'day-frid',label : 'Vendredi' } %}
+
+                            {% include TplInputCheckbox with { addClass: 'day-satu',label : 'Samdi' } %}
+
+                            {% include TplInputCheckbox with { addClass: 'day-sund',label : 'Dimanche' } %}
+
+
+                        </div>
+                    </div>
+
+                    <div class="criteria criteria--closed criteria--distance">
+                        <a class="criteria_title">
+                            <span>
+                                Distance
+                            </span>
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            <select id="" name="">
+                                <option value="">
+                                    Plus de
+                                </option>
+                            </select>
+
+                            <select id="" name="">
+                                <option value="">
+                                    0 Km
+                                </option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <div class="criteria criteria--closed criteria--date">
+
+
+                        <a class="criteria_title">
+                            <span>
+                                Date
+                            </span>
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            <select id="" name="">
+                                <option value="">
+                                    Après le
+                                </option>
+                            </select>
+
+                            <div class="d-flex align-items-center">
+                                <input class="calendar mb-0" id="" name="" type="text">
+                                <i class="icon-calendar ml-2"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="criteria criteria--closed criteria--theme">
+                        <a class="criteria_title">
+                            <span>
+                                Thème
+                            </span>
+                            <i class="icon-arrow-slide"></i>
+                        </a>
+                        <div class="criteria_content">
+                            {% include TplInputCheckbox with { addClass: 'theme-health',label : 'Rando santé' } %}
+                            {% include TplInputCheckbox with { addClass: 'theme-fresh',label : 'Rando douce' } %}
+                            {% include TplInputCheckbox with { addClass: 'theme-bus',label : 'Rando bus' } %}
+                            {% include TplInputCheckbox with { addClass: 'theme-nature',label : 'Nature et environnement' } %}
+                        </div>
+                    </div>
+
+
+                </div>
+            </aside>
+            <div class="col-md col-main-content">
+
+                {% include TplMainTopBtns %}
+                <div class="events-group">
+                    {% set dateEventsGroup = "Vendredi 24 mai 2019" %}
+
+                    <h2 class="d-none d-md-block mt-0">
+                        {{dateEventsGroup}}
+                    </h2>
+
+                    {# event-line 1: begin #}
+                    {% set config = {
+                            flagLine :'<div class="flag flag--L">L</div>',
+                            eventTitle : {class: "m-nordique", text: "M. nordique"} ,
+                            date: dateEventsGroup,
+                            iconsNotif : '<i class="icon-inscript"></i><i class="icon-tortoise"></i>' ,
+                            eventDescript :  { distance : "50 km ", animator : "François l’animateur" }
+                        }
+                    %}
+
+                    {% include TplEventLineDays with config %}
+                    {# event-line 1: end   #}
+
+                    {# event-line 2: begin : <div class="flag flag--L">L</div> #}
+                    {% set config = {
+                            flagLine :'<div class="flag flag--M">M</div>',
+                            eventTitle : {class: "hiking", text: "Randonnée"} ,
+                            date: dateEventsGroup,
+                            iconsNotif : '<i class="icon-bus"></i>' ,
+                            eventDescript :  { modifierClass : "barred", distance : "30 km ", animator : "Jeanne l’animatrice, spécialiste ...", departureGare : "Départ : Paris Austerlitz grands lorem ipsum dolor", departureHoure : "18:50",  arrivalGare: "St Quentin en Yvelines ( lorem ipsum dolor)", arrivalHoure : "22:00"},
+                            status :  {class: "status--update", text: "Modifié"}
+                        }
+                    %}
+                    {% include TplEventLineDays with config %}
+                    {# event-line 2: end   #}
+
+
+                    {# event-line 3: begin : <div class="flag flag--L">L</div> #}
+                    {% set config = {
+                            flagLine :'<div class="flag flag--S">S</div>',
+                            eventTitle : {class: "m-nordique", text: "M. nordique"} ,
+                            date: dateEventsGroup,
+                            iconsNotif : '<i class="icon-heart"></i>' ,
+                            eventDescript :  {  distance : "30 km ", animator : "Jeanne l’animatrice, spécialiste ...", departureGare : "Départ : Paris Austerlitz grandes lorem ipsum d'autres faux text ", departureHoure : "18:50",  arrivalGare: "Lyon Austerlitz grandes lorem ipsum d'autres faux text ", arrivalHoure : "22:00"},
+                            status :  {class: "status--cancel", text: "Annulé"}
+                        }
+                    %}
+                {% include TplEventLineDays with config %}
+                    {# event-line 3: end   #}
+
+                </div>
+
+                <div class="events-group">
+                    {% set dateEventsGroup = "Vendredi 31 mai 2019" %}
+                    <h2 class="d-none d-md-block">
+                        {{dateEventsGroup}}
+                    </h2>
+
+                    {# event-line 1: begin #}
+                    {% set config = {
+                            eventTitle : {class: "event", text: "Evènement"} ,
+                            date: dateEventsGroup,
+                            eventDescript :  { distance : "50 km " }
+
+                        }
+                    %}
+
+                    {% include TplEventLineDays with config %}
+                    {# event-line 1: end   #}
+
+                    {# event-line 2: begin : <div class="flag flag--L">L</div> #}
+                    {% set config = {
+                            flagLine :'<div class="flag flag--L">L</div>',
+                            eventTitle : {class: "m-nordique", text: "M. nordique"} ,
+                            date: dateEventsGroup,
+                            iconsNotif : '<i class="icon-inscript"></i><i class="icon-tortoise"></i>' ,
+                            eventDescript :  { distance : "50 km", animator : "François l’animateur" }
+                        }
+                    %}
+
+
+                    {% include TplEventLineDays with config %}
+                    {# event-line 2: end   #}
+
+                    {# event-line 3: begin  #}
+
+                    {% set config = {
+                            flagLine :'<div class="flag flag--M">M</div>',
+                            eventTitle : {class: "hiking", text: "Randonnée"} ,
+                            date: dateEventsGroup,
+                            iconsNotif : '<i class="icon-bus"></i>' ,
+                            eventDescript :  { distance : "30 km ", animator : "François l’animateur", departure : "Départ : Paris à 08h30" },
+                            status :  {class: "status--update", text: "Modifié"}
+                        }
+                    %}
+                    {% include TplEventLineDays with config %}
+                    {# event-line 3: end  #}
+
+
+                    {# event-line 4: begin : <div class="flag flag--L">L</div> #}
+                    {% set config = {
+                            flagLine :'<div class="flag flag--S">S</div>',
+                            eventTitle : {class: "m-nordique", text: "M. nordique"} ,
+                            date: dateEventsGroup,
+                            iconsNotif : '<i class="icon-heart"></i>' ,
+                            eventDescript :  { modifierClass : "barred", distance : "30 km ", animator : "Jeanne l’animatrice, spécialiste ...", departure : "Départ : Paris à 08h30" },
+
+                            status :  {class: "status--cancel", text: "Annulé"}
+                        }
+                    %}
+                {% include TplEventLineDays with config %}
+                    {# event-line 4: end   #}
+
+                </div>
+
+                <div class="events-group">
+                    {% set dateEventsGroup = "Vendredi 07 juin 2019" %}
+
+                    <h2 class="d-none d-md-block">
+                        {{dateEventsGroup}}
+                    </h2>
+                    {# event-line 1: begin #}
+                    {% set config = {
+                            flagLine :'<div class="flag flag--R">R</div>',
+                            eventTitle : {class: "m-nordique", text: "M. nordique"} ,
+                            date: dateEventsGroup,
+                            iconsNotif : '<i class="icon-plant"></i>' ,
+                            eventDescript :  { distance : "50 km ", animator : "François l’animateur" }
+
+                        }
+                    %}
+
+                    {% include TplEventLineDays with config %}
+                    {# event-line 1: end   #}
+
+                    {# event-line 2: begin : <div class="flag flag--L">L</div> #}
+                    {% set config = {
+                            eventTitle : {class: "event", text: "Evènement"} ,
+                            date: dateEventsGroup,
+                            eventDescript :  { distance : "30 km ",  departure : "Départ : Paris à 08h30" }
+                        }
+                    %}
+                    {% include TplEventLineDays with config %}
+                    {# event-line 2: end   #}
+
+
+                    {# event-line 3: begin : <div class="flag flag--L">L</div> #}
+                    {% set config = {
+                            flagLine :'<div class="flag flag--L">L</div>',
+                            eventTitle : {class: "m-nordique", text: "M. nordique"} ,
+                            date: dateEventsGroup,
+                            iconsNotif : '<i class="icon-inscript"></i><i class="icon-tortoise"></i>' ,
+                            eventDescript :  { distance : "50 km ", animator : "François l’animateur" }
+                        }
+                    %}
+
+                {% include TplEventLineDays with config %}
+                    {# event-line 3: end   #}
+
+                </div>
+
+                <div class="events-group">
+                    {% set dateEventsGroup = "Vendredi 14 juin 2019" %}
+
+                    <h2 class="d-none d-md-block">
+                        {{dateEventsGroup}}
+                    </h2>
+
+
+                    {# event-line 2: begin : <div class="flag flag--L">L</div> #}
+                    {% set config = {
+                            flagLine :'<div class="flag flag--M">M</div>',
+                            eventTitle : {class: "hiking", text: "Randonnée"} ,
+                            date: dateEventsGroup,
+                            iconsNotif : '<i class="icon-bus"></i>' ,
+                            eventDescript :  { distance : "30 km ", animator : "François l’animateur", departure : "Départ : Paris à 08h30" },
+                            status :  {class: "status--update", text: "Modifié"}
+                        }
+                    %}
+                    {% include TplEventLineDays with config %}
+                    {# event-line 2: end   #}
+
+                    {# event-line 1: begin #}
+                    {% set config = {
+                            flagLine :'<div class="flag flag--L">L</div>',
+                            eventTitle : {class: "m-nordique", text: "M. nordique"} ,
+                            date: dateEventsGroup,
+                            iconsNotif : '<i class="icon-inscript"></i><i class="icon-tortoise"></i>' ,
+                            eventDescript :  { distance : "50 km ", animator : "François l’animateur" }
+                        }
+                    %}
+
+                {% include TplEventLineDays with config %}
+                    {# event-line 1: end   #}
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
