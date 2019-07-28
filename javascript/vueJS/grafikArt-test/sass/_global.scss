@@ -1,0 +1,54 @@
+
+/* une partie du code global SASS */
+// @VARIABLE > DEBUT
+$color-d-d : #fff;
+
+
+$FontF_exo1 : 'Prosto One', cursive , 'verdana', sans-serif; // font exotique 1
+$FontF_exo2 :  'Questrial', sans-serif, 'verdana', sans-serif; // font exotique 1
+
+
+// @VARIABLE > FIN
+
+
+// @FONCTION > DEBUT
+@mixin BordRad ($radius) {  //  creer des arrondu : border raduis
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+
+@mixin BordShad ($SizShad , $rgb1, $rgb2, $rgb3 ) { // creer des lueur externe : un shadow
+  -webkit-box-shadow: 0px 0px $SizShad 0px rgba($rgb1, $rgb2, $rgb3,  1);
+  -moz-box-shadow:    0px 0px $SizShad 0px rgba($rgb1, $rgb2, $rgb3,  1);
+  box-shadow:         0px 0px $SizShad 0px rgba($rgb1, $rgb2, $rgb3,  1);
+}
+
+@mixin BtnSite { /* bouton du site */
+  background: rgba(243,226,199,1);
+  background: -moz-linear-gradient(top, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 50%, rgba(182,141,76,1) 51%, rgba(233,212,179,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(243,226,199,1)), color-stop(50%, rgba(193,158,103,1)), color-stop(51%, rgba(182,141,76,1)), color-stop(100%, rgba(233,212,179,1)));
+  background: -webkit-linear-gradient(top, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 50%, rgba(182,141,76,1) 51%, rgba(233,212,179,1) 100%);
+  background: -o-linear-gradient(top, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 50%, rgba(182,141,76,1) 51%, rgba(233,212,179,1) 100%);
+  background: -ms-linear-gradient(top, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 50%, rgba(182,141,76,1) 51%, rgba(233,212,179,1) 100%);
+  background: linear-gradient(to bottom, rgba(243,226,199,1) 0%, rgba(193,158,103,1) 50%, rgba(182,141,76,1) 51%, rgba(233,212,179,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#e9d4b3', GradientType=0 );
+
+}
+// @FONCTION > END
+
+
+
+
+/* parametrer le main  menu (mm)  */
+// $ID_mmenu : #test ;
+$mm_color_txt : #9d1c21; // coleur du text du menu  ( les a  )
+$mm_color_bg : #fff ; // coleur du fond du menu
+$mm_color_bgHover : #A8D539 ; // coleur du fond du menu au survol des  a
+$mm_BrPt : 768px ; // breack point des menu
+ // $mm_btnA_1erLevel :  ;
+
+
+
