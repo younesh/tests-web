@@ -24,7 +24,11 @@
     "gulp-uglify": "^3.0.1",
     "gulp-webpack": "^1.5.0",
     "jquery": "^3.4.1",
+    "popper": "^1.0.1",
+    "sweetalert2": "^8.14.0",
     "tabulator-tables": "^4.3.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "popper.js": "^1.15.0"
+  }
 }

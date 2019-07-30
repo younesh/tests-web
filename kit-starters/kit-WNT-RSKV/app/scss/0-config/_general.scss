@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html,
 body {
     height: 100%;
@@ -6,9 +10,11 @@ body {
 body {
     font-size: $fz-default;
     font-family: $font-family-content;
-    color: $color-black-dark;
+    color: $color-black;
     background-color: white;
+    line-height: 1;
 }
+
 
 p {
     text-align: justify;
@@ -53,7 +59,7 @@ a {
 .title {
     font-family: $font-family-titles;
     font-weight: $fw-title-black;
-    color: $color-black-meduim;
+    // color: $color-black-meduim;
 }
 
 
@@ -133,22 +139,11 @@ h4,
 img {}
 
 pre {
-    border: solid 1px $color-gray-meduim;
+    // border: solid 1px $color-gray-meduim;
     color: blue;
 }
 
-// colors 
-.txt-red {
-    color: $color-brand-primary;
-}
 
-.txt-green {
-    color: $color-brand-secondary;
-}
-
-.txt-orange {
-    color: $color-brand-third;
-}
 
 // forms reset : 
 input {
@@ -156,10 +151,9 @@ input {
     width: 100%;
 }
 
-
-// LAYOUTAGE 
-.page {}
-
+.hide {
+    display: none;
+}
 
 //-----  MEDIA QUERY / RESPONSIVE ----
 @media #{$bp-min-sm} {}
@@ -168,8 +162,6 @@ input {
     input {
         width: auto;
     }
-
-
 }
 
 @media #{$bp-min-lg} {}

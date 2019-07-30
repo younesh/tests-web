@@ -1,59 +1,35 @@
 .layout {
     main.main {
-        min-height: 600px;
-        // @include padding($gutter-half null);
         padding-bottom: $gutter-half;
+        padding-top: $header-height;
 
-        .container {}
-    }
-}
-
-
-
-
-//-----  MEDIA QUERY / RESPONSIVE ----
-// only mobile : from 0 to 767
-@media #{$bp-max-sm} {
-    .container {
-        max-width: 100%;
-    }
-}
-
-@media #{$bp-only-tablet} {
-    .container {
-        max-width: 96%;
-    }
-
-    .layout {
-        aside.col-aside {
-            max-width: 200px;
+        .sidebar {
+            width: $sidebarWidth;
+            margin-right: $sidebarMargR;
         }
 
-        /* special case page-programmation */
-        &.page-programmation {
-            .col-main-content {
-                width: calc(100% - 200px);
+        .main-content {
+            width: calc(100% - (#{$sidebarWidth} + #{$sidebarMargR}));
+            margin-left: calc(#{$sidebarWidth} + #{$sidebarMargR});
+        }
+
+        // modifier : main.main.main--full-one-col  >> hide side barre, end make main content on full width .... 
+        &--full-one-col {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+
+            .main-content {
+                width: 100%;
+                margin-left: $sidebarMargR;
+            }
+
+            .tabulator-table-container {
+                width: 100%;
             }
         }
     }
 }
 
-@media #{$bp-min-md} {
-    .layout {
-        main.main {
-            .container {
-                // @@container overload
-                padding-left: 0px;
-                padding-right: 0px;
-            }
-        }
-
-        // cas specifique des page en liste : 
-        &.page-liste-journees {
-            .btn-group {
-                margin-bottom: -32px;
-            }
-        }
-    }
-
-}
+//-----  MEDIA QUERY / RESPONSIVE ----/ 
+@media #{$bp-max-sm} {}

@@ -1,18 +1,22 @@
-{# index.twig #}
-{% extends "includes/layout.base.twig" %}
-{% block pageTitle %}
-    tests 
-    {{siteName}}
-{% endblock %}
-{% block classPage %}
-     tests
-{% endblock %}
-{% block page %}
-    <div class="container-fluid">
-        <section>
-             <h2> tabulator test </h2>
-             <div id="example-table"></div>
-
-        </section>
+{# index.twig #} {% extends "includes/layout.base.twig" %} {% block pageTitle %}
+home -
+{{ siteName }}
+{% endblock %} {% block classPage %} page-home {% endblock %} {% block page %}
+<div class="container-fluid">
+  <div class="d-flex">
+    {# sidebar begin #}
+    <!-- Sidebar -->{% include "includes/sidebar.twig" with { 'addClass':
+    'slider-home'} %} {# sidebar end #}
+    <div class="main-content">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        architecto aliquid totam nihil maxime molestiae, quae facilis quibusdam,
+        assumenda impedit quia fugiat nam, voluptatem non commodi optio
+        voluptates possimus repudiandae.
+      </p>
+      <h2>test notification</h2>
+      <button class="btn btn-sweet-alert">notif popin !!!</button>
     </div>
+  </div>
+</div>
 {% endblock %}

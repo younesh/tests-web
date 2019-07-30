@@ -1,17 +1,23 @@
-{# index.twig #}
-{% extends "includes/layout.base.twig" %}
+{# index.twig #} {% extends "includes/layout.base.twig" %} {% block pageTitle %}
+home -
+{{ siteName }}
+{% endblock %} {% block classPage %} page-tests {% endblock %} {% block page %}
+<div class="container-fluid">
+  <div class="d-flex">
+    {# sidebar begin #}
+    <!-- Sidebar -->
+    {% include "includes/sidebar.twig" with { 'addClass': 'slider-home'} %} {#
+    sidebar end #}
 
-{% block pageTitle %}
-    home -
-    {{siteName}}
-{% endblock %}
+    <div class="main-content">
+      <!--  @@tabulator@@ -->
+      <!-- subNavCentent : begin  -->
+      {% include "includes/subNavContent.twig" with { 'addClass': 'slider-home'}
+      %}
+      <!-- subNavCentent : end   -->
 
-{% block classPage %}
-    page-home
-{% endblock %}
-
-{% block page %}
-    <div class="container">
-        p: home
+      <div class="tabulator-table-container"></div>
     </div>
+  </div>
+</div>
 {% endblock %}

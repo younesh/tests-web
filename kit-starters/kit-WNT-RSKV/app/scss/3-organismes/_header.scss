@@ -1,193 +1,131 @@
-.header {
-    .header_wrapper {
-        align-items: center;
-        padding: $gutter-half 0px;
+/* ----------------------------------------------------- */
+/* Styles de la navigation principal 
+/* ----------------------------------------------------- */
+
+header {
+    position: fixed !important;
+    z-index: 1000;
+    background-color: $color-gray-light-5;
+    border-bottom: 1px solid $color-gray-light-1;
+    width: 100%;
+    @include padding(null $gutter-half);
+
+    .nav-link {
+        color: $color-gray-meduim;
+        font-size: .8rem;
+        text-transform: uppercase;
     }
 
-    .header_btn {
-        width: 100px;
-        display: block;
-        text-align: center;
+    .second-navbar {
+        padding-bottom: 0;
 
-        i {
-            display: inline-block;
+        div:first-child {
+            padding-left: 0;
+        }
+
+        li.active {
+            border-bottom: 4px solid $color-blue-meduim;
+
+            a {
+                color: $color-blue-meduim;
+            }
+        }
+    }
+
+    .concerned-company {
+        position: relative;
+        padding-left: 4rem;
+
+        &:after {
+            content: " ";
+            position: absolute;
+            top: .1rem;
+            left: 3rem;
+            height: 2.3rem;
+            width: 0.2rem;
+            border-right: 1px solid $color-gray-light;
+        }
+
+        .concerned-company-img {
+            height: 2.5rem;
+            width: 2.5rem;
+            background: $color-red-medium;
+            position: absolute;
+            left: 0;
+            border-radius: .5rem;
+        }
+
+        a {
+            color: $color-blue-dark;
+            font-size: 1.3rem;
+        }
+
+        .dropdown-menu {
+            top: -3rem !important;
+            left: -1rem !important;
+            width: 20rem;
         }
 
         span {
-            font-family: $font-bold;
-            display: block;
-        }
-
-        &.header_btn-burger {
-            text-align: left;
-        }
-
-        &.header_btn-rif {
-            width: 60px;
+            font-size: .7rem;
         }
     }
-}
 
-.header_logo {
-    @include Y-center;
-    justify-content: center;
-
-    img {
-        width: 104px;
-    }
-}
-
-.header_second-menu {
-    @include Y-center;
-    justify-content: flex-end;
-}
-
-.header_main-menu {
-    min-height: 47px;
-    background-color: $color-green-meduim;
-    color: white;
-    font-family: $font-semibold;
-    text-transform: uppercase;
-
-    nav {
-        @include Y-center;
-        width: 100%;
-        height: 100%;
-    }
-
-
-
-
-    //md-display
-    &.md-display {
-        padding-left: 70px;
+    .dropdown-menu {
+        border: none;
+        box-shadow: 1px 1px 15px $color-gray-light-4;
 
         a {
-            margin: 0px $gutter-half;
-            position: relative;
+            font-size: 1rem;
+            color: $color-gray-light-2;
 
-            &:hover,
-            &:focus,
-            &.active {
-                color: inherit;
-                text-decoration: none;
+            &:first-child {
+                color: $color-blue-dark !important;
+            }
 
-                &:after {
-                    content: " ";
-                    display: block;
-                    height: 2px;
-                    width: 100%;
-                    background-color: white;
-                    position: absolute;
-                    bottom: -5px;
+            &:focus {
+                color: $color-blue-dark !important;
+                background-color: transparent !important;
+            }
+
+            .actual {
+                color: $color-blue-dark;
+            }
+        }
+
+        .dropdown-item {
+            color: $color-gray-meduim;
+        }
+
+        .btn {
+            border-radius: 5rem;
+            padding: 0rem 1rem;
+            background-color: $color-blue-meduim;
+            text-transform: uppercase;
+            font-size: .8rem;
+
+            &-light {
+                color: $color-blue-meduim;
+                background-color: transparent;
+                border: none;
+
+                &:hover {
+                    border: none;
                 }
             }
         }
-    }
 
-    // le menu mobile : .header_main-menu--mobile
-    &.mobile-display {
-        position: absolute;
-        top: 0px;
-        left: -100%;
-        z-index: 10;
-        transition: $transition;
-        min-height: 480px; // 80%
-
-        &.show {
-            left: 0;
-        }
-
-        nav {
-            flex-direction: column;
-            align-content: flex-start;
-        }
-
-        a {
+        .btn-company {
+            width: 80%;
             display: block;
-            width: 100%;
-            padding: $gutter-half 0px;
-
-            &.deconnextion {
-                border-top: $border-white;
-                margin-top: $gutter-base;
-            }
+            margin: auto;
+            padding: .5rem 1rem;
         }
+    }
 
-        .header_btn-close {
-            padding: $gutter-half;
-            text-align: right;
-
-            .icon-close-white {
-                cursor: pointer;
-            }
+    .dropdown-user .dropdown-menu {
+        a {
+            color: $color-blue-dark !important;
         }
     }
 }
-
-//-----  MEDIA QUERY / RESPONSIVE ----
-// ONLY ON MOBILE
-@media #{$bp-max-sm} {
-    .header {
-        border-bottom: $border-blue-dark;
-
-        .header_wrapper {
-            @include padding(6px null);
-        }
-
-        .icon-burger {
-            height: 27px;
-            width: 32px;
-            background-position: -58px -153px;
-        }
-
-        .icon-flech-left {
-            height: 27px;
-            width: 37px;
-            background-position: -5px -54px;
-        }
-    }
-}
-
-@media #{$bp-min-sm} {}
-
-@media #{$bp-only-tablet} {
-
-    .header_main-menu {
-        &.md-display {
-            padding-left: 10px;
-
-            a {
-                @include margin (null 7px);
-                font-size: 13px;
-            }
-        }
-    }
-}
-
-@media #{$bp-min-md} {
-
-    .header {
-        .header_wrapper {
-            padding: 0px 0px;
-        }
-    }
-
-    .header_logo {
-        background-image: url("img/header-banner.jpg");
-        background-repeat: no-repeat;
-        background-position: 0 0;
-        background-size: cover;
-        height: 80px;
-        padding-left: 40px;
-        justify-content: flex-start;
-
-        img {
-            width: auto;
-        }
-    }
-}
-
-@media #{$bp-min-lg} {}
-
-@media #{$bp-min-xl} {}

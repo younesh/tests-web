@@ -1,0 +1,248 @@
+/* ----------------------------------------------------- */
+/* Styles de la sidebar 
+/* ----------------------------------------------------- */
+
+.sidebar {
+    background-color: $color-blue-dark-1;
+    color: $color-blue-light-1;
+    transform: translate(0);
+    transition: transform .4s ease-out;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: $header-height 0 0;
+    transition: width .2s ease;
+    padding-bottom: 5rem;
+
+    hr {
+        margin: .5rem 0;
+        border-color: #fafbff;
+        opacity: 0.2
+    }
+
+    .sub-sidebar {
+        height: 50%;
+        margin-top: -3rem;
+    }
+
+    .sidebar-search-container {
+        position: fixed;
+        z-index: 1000;
+        padding: 1rem 1rem 0;
+        background-color: $color-blue-dark-1;
+        user-select: none;
+        cursor: pointer;
+
+        input[type="text"] {
+            width: 80%;
+            margin: 1rem 0;
+            background-color: $color-blue-dark;
+            border: none;
+            color: $color-blue-light-1;
+            border-bottom: 1px solid $color-blue-light-1;
+        }
+
+        .sidebar-search-field {
+            position: relative;
+            margin-top: -2.6rem;
+            background-color: $color-blue-dark;
+
+            input {
+                height: 1.8rem;
+                margin-left: 2rem !important;
+                font-size: .8rem;
+            }
+
+            i.ico-search {
+                position: absolute;
+                top: 1.2rem;
+            }
+
+            i.ico-cross {
+                position: absolute;
+                top: 1rem;
+                right: 1.5rem;
+            }
+
+            li {
+                padding: .5rem 0 0;
+                font-size: .8rem;
+            }
+        }
+    }
+
+    .sidebar-search-content-hide {
+        width: 100%;
+        position: relative;
+        margin: 0;
+    }
+
+    .sidebar-search-container-title {
+        margin: 0;
+        padding-bottom: 1rem;
+        width: 90%;
+        font-size: .9rem;
+
+        i.ico-search {
+            position: absolute;
+            top: 0;
+            right: 0.5rem;
+            font-size: 1rem;
+        }
+
+        i.ico-edit {
+            position: absolute;
+            left: -0.7rem;
+            font-size: 0.9rem;
+        }
+    }
+
+    .sidebar-search-menu {
+        position: absolute;
+        z-index: 1000;
+        right: 0rem;
+        font-size: .9rem;
+    }
+
+    .sidebar-search-selection {
+        ul {
+            padding-left: 1.5rem;
+            margin-top: 0;
+        }
+
+        li {
+            font-size: .8rem;
+            padding: .5rem 0 0;
+        }
+    }
+
+    .sidebar-tree-container {
+        position: relative;
+        margin-top: 3rem;
+        padding: 0;
+    }
+
+    .jstree {
+        a {
+            font-size: .8rem;
+        }
+    }
+
+    .jstree-wholerow-hovered,
+    .jstree-hovered {
+        background: transparent !important;
+    }
+
+    .jstree-icon.jstree-checkbox {
+        &:before {
+            content: $ico-checked-case-empty;
+            font-family: icomoon;
+            border-radius: 5rem;
+        }
+    }
+
+    .jstree-clicked {
+        color: $color-white;
+
+        .jstree-icon.jstree-checkbox {
+            &:before {
+                content: $ico-checked-case;
+                font-family: icomoon;
+                color: $color-blue-meduim;
+                border-radius: 5rem;
+            }
+        }
+    }
+
+    .jstree-wholerow-ul {
+        position: static;
+    }
+
+    div.jstree.jstree-1.jstree-default.jstree-checkbox-no-clicked.jstree-checkbox-selection {
+        width: 100%;
+    }
+
+    .jstree-wholerow-ul .jstree-anchor,
+    .jstree-wholerow-ul .jstree-icon {
+        position: static;
+    }
+
+    @mixin arrow-list-jstree ($icon) {
+        position: absolute;
+        right: -.1rem;
+        content: $icon;
+        font-family: icomoon;
+        color: $color-blue-light;
+        font-size: 1rem;
+        width: 2rem;
+    }
+
+    .jstree-default>.jstree-no-dots .jstree-closed>.jstree-ocl {
+        &:before {
+            @include arrow-list-jstree($ico-arrow-right)
+        }
+    }
+
+    .jstree-default>.jstree-no-dots .jstree-open>.jstree-ocl {
+        &:before {
+            @include arrow-list-jstree($ico-arrow-down)
+        }
+    }
+}
+
+.nano {
+    margin-top: 3rem;
+}
+
+.closed-sidebar {
+    width: 0;
+    transition: width .2s ease
+}
+
+.menu-burger-sidebar {
+    position: relative;
+    width: 100%;
+
+    i {
+        position: absolute;
+        top: 1rem;
+        right: -1.6rem;
+        font-size: 1rem;
+        color: $color-blue-dark;
+        cursor: pointer;
+        user-select: none;
+    }
+}
+
+.maj-panel-sidebar {
+    position: absolute;
+    bottom: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 60px;
+    background-color: $color-blue-meduim;
+    text-align: center;
+    padding: 1rem;
+    text-transform: uppercase;
+    color: $color-white;
+    cursor: pointer;
+    user-select: none;
+
+    p {
+        position: relative;
+        margin-top: .4rem;
+        font-size: 0.8rem;
+
+        &:before {
+            position: absolute;
+            content: $ico-refresh;
+            font-family: icomoon;
+            margin: 0 0.5rem;
+            font-size: 1rem;
+top: -.2rem;
+left: 3rem;
+}
+}
+}
