@@ -1,4 +1,4 @@
-new Vue({
+let vm = new Vue({
   el: "#main",
   data: {
     message: "message vue js ... ",
