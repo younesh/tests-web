@@ -3,7 +3,7 @@
         { 
             "id" :1,
             "title" : "learn js ",
-            "completed" : false
+            "completed" : true
         },
         {
             "id": 2,
