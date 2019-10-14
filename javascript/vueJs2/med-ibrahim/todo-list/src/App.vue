@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import "";
+import ""
 export default {
   
 }
