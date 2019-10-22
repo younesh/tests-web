@@ -2,6 +2,7 @@
   <div id="app">
     <div class="container">
      <Todos />
+     {{ BD }}
     </div>
   </div>
 </template>
@@ -12,10 +13,16 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 // COMPOSANTS INTERNE 
 import Todos from './components/Todos.vue'
+const urlServiceBD = "http://localhost:5000/todos/"
 export default {
   name: 'app',
   components: {
     Todos
+  },
+  data() {
+    return {
+       BD : urlServiceBD
+    }
   }
 }
 </script>
