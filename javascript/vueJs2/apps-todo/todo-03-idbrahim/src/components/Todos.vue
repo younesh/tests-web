@@ -1,15 +1,17 @@
 <template>
 <div class="todos">
   <h1>list OPcvm test  </h1>
-  <form action="">
+
       <div class="from-group">
            <input v-model="currentTitle" type="text" class="form-control" placeholder="new todo ...">
       </div>
-      <button @click.prevent="addTodo()" class="btn btn-primary btn-block btn-success mb-2 mt-2">add todo </button>
-  </form>
+      
+      <!-- @@ affichage conditionnel des btn addtodo ou edit todo selon la valeur de  currentEditedTodo -->
+      <button v-if="currentEditedTodo" @click="EditTodo" class="btn btn-primary btn-block btn-warning mb-2 mt-2">Edit todo </button>
+      <button v-else @click.prevent="addTodo()" class="btn btn-primary btn-block btn-success mb-2 mt-2">add todo </button>
   <ul class="list-group">
       <li class="list-group-item" v-bind:key="todo.id" v-for="todo in todos">
-          <Todo :todo="todo"  @deleteTodoEmit="deleteOneTodo" />
+          <Todo :todo="todo"  @deleteTodoEmit="deleteOneTodo" @editTodoEmit="PreEditingTodo(todo)" />
       </li>
   </ul>
   <button class="btn btn-primary"> valider </button>
@@ -28,6 +30,7 @@ export default {
     data() {
         return {
             currentTitle: '', // le titre saisie ds le champ de text du from
+            currentEditedTodo :null, // on save le todo en cours de modification
             todos : [ ]
         }
     },
@@ -45,12 +48,36 @@ export default {
                     // et puis en ajout a la list en front ( this.todos ) le nouveau todo ajouté ds la BD
                     this.todos = [res.data, ...this.todos]
 
-                    // puis apres l'ajout en vide les champs
+                    // puis apres l'ajout en vide le champs text
                    this.currentTitle = '';
 
                 })
             }
 
+        },
+        PreEditingTodo(editedTodo){
+            //  preparer l'edition d'un todo ( en se position sur le todo a editer et en affichant le btn edit)
+            this.currentEditedTodo = editedTodo;
+            this.currentTitle = editedTodo.title;
+
+        },
+        EditTodo(){
+            let editedTodo = {
+                ...this.currentEditedTodo, // en recuper le todo dans notre objet local ( spreding )
+                title:  this.currentTitle // en surcharge le title avec le champ text modifié
+            }
+            axios.put("http://localhost:5000/todos/" + editedTodo.id, editedTodo)
+                .then(res =>{
+                     // en modifier la list front par le update effectué ds la BD
+                    this.todos = this.todos.map( itemTodo => {
+                        if (res.data.id === itemTodo.id){
+                            return res.data;
+                        } 
+                        return itemTodo;
+                    })
+                    this.currentTitle =''; // vider le champ text
+                    this.currentEditedTodo = null; // implique l'affichage du btn "add todo" a la place de "edit todo"      
+                 });
         },
         getTodos() {
              axios.get("http://localhost:5000/todos")
