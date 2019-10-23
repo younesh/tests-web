@@ -3,6 +3,7 @@
       <h2 :class="{
           'is-completed' : todo.completed
       }">
+      <input type="checkbox" @change="changeStateTodo" v-model="todo.completed">
        {{todo.title}}
        </h2>
       <div class="btn-groupe">
@@ -13,6 +14,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
     props: ['todo'],
     methods: {
@@ -23,6 +25,13 @@ export default {
         updateTodo() {
             // console.log(this.todo);
              this.$emit("editTodoEmit", this.todo.id)
+        },
+        changeStateTodo() {
+          // console.log(this.todo.completed);
+           axios.put("http://localhost:5000/todos/" + this.todo.id, this.todo)
+                .then(res => {
+                    console.log(res.data);
+                })
         }
     }
 }

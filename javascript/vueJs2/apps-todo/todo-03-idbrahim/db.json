@@ -3,26 +3,26 @@
     {
       "id": 1,
       "title": "voyage à dubai 111",
-      "completed": true
+      "completed": false
     },
     {
       "id": 2,
       "title": "voyage à tokyo",
-      "completed": false
+      "completed": true
     },
     {
       "title": "voyage turkie zimpiç",
-      "completed": false,
+      "completed": true,
       "id": 4
     },
     {
       "title": "voyage hong kong",
-      "completed": false,
+      "completed": true,
       "id": 5
     },
     {
       "title": "voyage mekka",
-      "completed": false,
+      "completed": true,
       "id": 6
     }
   ]
