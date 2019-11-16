@@ -63,7 +63,6 @@ export default {
     test01() {
       //var v01 = "lol";
       var a = "a value";
-
       var b = "b value";
       if (a) {
         var c = "C value";
@@ -132,6 +131,16 @@ export default {
                  alert ("sont rong ds le table " + item);
              }
          } 
+     },
+     algoNearZero(tab) {
+       tab.forEach((item, index)=>{
+           console.log("log ", item + "    index : ", index);
+          /* if (item == Math.min(...tab)) {
+             return index;
+          }; */ 
+       })
+
+
      }
   },
   created() {
