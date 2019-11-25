@@ -9,7 +9,7 @@
     <hr />
     <h2>une serie d'exercice algo : http://pise.info/algo/enonces5.html</h2>
     <div class="card mb-3 exo52">
-      <div class="card-title p-3">exo saisir jusqu' un nombre entre 10 et 20 </div>
+      <div class="card-title p-3">exo saisir jusqu' un nombre entre 10 et 20</div>
       <div class="card-body">
         <p>Ecrire un algorithme qui demande un nombre compris entre 10 et 20, jusqu’à ce que la réponse convienne. En cas de réponse supérieure à 20, on fera apparaître un message : « Plus petit ! », et inversement, « Plus grand ! » si le nombre est inférieur à 10.</p>saisir un nombre entre 10 et 20
         <button
@@ -19,33 +19,43 @@
       </div>
     </div>
     <div class="card mb-3">
-      <div class="card-title p-3">exo 5.5 : ecrire la table de multiplication d'un nombre </div>
+      <div class="card-title p-3">exo 5.5 : ecrire la table de multiplication d'un nombre</div>
       <div class="card-body">
         saisissez un chiffre et vous aurez sa table de multiplication en bas lol :
-        <input type="text" @keyup="exo55" v-model="dataExo55.nbr" />
+        <input
+          type="text"
+          @keyup="exo55"
+          v-model="dataExo55.nbr"
+        />
         <br />
         <span v-html="dataExo55.tableMultip"></span>
       </div>
     </div>
 
     <div class="card">
-      <div class="card-title p-3">exo 5.7 : calculer le factorial d'un nombre </div>
+      <div class="card-title p-3">exo 5.7 : calculer le factorial d'un nombre</div>
       <div class="card-body">
         <button class="btn btn-primary" @click="exo57">lauch the scrpir 5.7</button>
       </div>
     </div>
-<div class="card">
-    <div class="card-title p-3"> exo 5.8 : saisir n nombre et puis difinir le plus grand et dans quelle rond se trouve t il </div>
-    <div class="card-body">
-         <button class="btn btn-primary" @click="exo58">lauch the scrpir 5.8</button>
+    <div class="card">
+      <div
+        class="card-title p-3"
+      >exo 5.8 : saisir n nombre et puis difinir le plus grand et dans quelle rond se trouve t il</div>
+      <div class="card-body">
+        <button class="btn btn-primary" @click="exo58">lauch the scrpir 5.8</button>
+      </div>
     </div>
-</div>
+    <div class="card">
+      <div class="card-title p-3">POO : POO en js</div>
+      <div class="card-body"></div>
+    </div>
     <!-- .card>.card-title.p-3+.card-body -->
   </div>
 </template>
 
 <script>
-import { isNumber } from 'util';
+import { isNumber } from "util";
 // import axios from "axios";
 export default {
   name: "es6test",
@@ -75,8 +85,8 @@ export default {
       // let nbr = 0;
       alert("lol man exo52");
       let nbr = 0;
-    
-      while (nbr < 10 || nbr > 20 ) {
+
+      while (nbr < 10 || nbr > 20) {
         // pareil si en utilisait : while ((nbr<10) || (nbr>20)) <==> while (!((nbr>=10) && (nbr<=20)))
         nbr = prompt("saisir un nbr entre 10 et 20 ");
         if (nbr < 10) {
@@ -85,11 +95,11 @@ export default {
         if (nbr > 20) {
           alert("trop grand !!! ");
         }
-        if (!isNumber(nbr*1)) {
+        if (!isNumber(nbr * 1)) {
           alert(" c'est pas un numbre ça , faut un nombre !! ");
         }
-        if(confirm (" vous vous sortir man ? ")){
-            break;
+        if (confirm(" vous vous sortir man ? ")) {
+          break;
         }
       }
       alert("Resultat de sortie" + nbr);
@@ -108,45 +118,104 @@ export default {
       }
     },
 
-    exo57() { // le factorial 
-        let  factorial,nbr;
-        factorial =1;
-        nbr = prompt("saississez le nbr dont vous voulez son factoriel  ");
-        for (let i=1; i<=nbr; i++ ){
-            factorial*=i
-        }
-        alert("le factorial" + nbr + " est =" + factorial);
+    exo57() {
+      // le factorial
+      let factorial, nbr;
+      factorial = 1;
+      nbr = prompt("saississez le nbr dont vous voulez son factoriel  ");
+      for (let i = 1; i <= nbr; i++) {
+        factorial *= i;
+      }
+      alert("le factorial" + nbr + " est =" + factorial);
     },
-     exo58() {
-         let input = [];
+    exo58() {
+      let input = [];
 
-         for (let i=0; i<4; i++) {
-             input =[...input, prompt("saisissez votre nombre num " + i)];
-         }
-         let maxValue = Math.max(...input);
-          alert ("la plus grande valeur saisi est " + maxValue);
-         let  item;
-         for (item in input) {
-             if (maxValue == input[item]) {
-                 alert ("sont rong ds le table " + item);
-             }
-         } 
-     },
-     algoNearZero(tab) {
-       tab.forEach((item, index)=>{
-           console.log("log ", item + "    index : ", index);
-          /* if (item == Math.min(...tab)) {
+      for (let i = 0; i < 4; i++) {
+        input = [...input, prompt("saisissez votre nombre num " + i)];
+      }
+      let maxValue = Math.max(...input);
+      alert("la plus grande valeur saisi est " + maxValue);
+      let item;
+      for (item in input) {
+        if (maxValue == input[item]) {
+          alert("sont rong ds le table " + item);
+        }
+      }
+    },
+    algoNearZero(tab) {
+      tab.forEach((item, index) => {
+        console.log("log ", item + "    index : ", index);
+        /* if (item == Math.min(...tab)) {
              return index;
-          }; */ 
-       })
+          }; */
+      });
+    },
+    poo() { // c'est tester qq principe de la poo en es6 .... 
+      class personne {
+        constructor(
+          nom = "(vide)",
+          prenom = "(vide)",
+          dateNaissance = "(vide)"
+        ) {
+          this.name = nom;
+          this.lastName = prenom;
+          this.birdDay = dateNaissance;
+        }
 
+        sePresenter() {
+          return (
+            "mon nom est : " +
+            this.name +
+            ", prenom est " +
+            this.lastName +
+            ", et je suis né le " +
+            this.birdDay
+          );
+        }
 
-     }
+        get name() {
+         //   console.log(" getter name declanchee !! " );
+          return "smia hia : " + this.name;
+        }
+        
+        set name(nom) {
+          this.name = nom;
+        }
+      }
+
+      class personneActif extends personne {
+        constructor(
+          nom = "(vide)",
+          prenom = "(vide)",
+          dateNaissance = "(vide)"
+        ) {
+          super(nom, prenom, dateNaissance);
+          this.secteur = "informatique ";
+        }
+        sePresenter() {
+          return super.sePresenter() + " et  le secteur = " + this.secteur;
+        }
+      }
+
+      console.log(" lancement des tests de la POO en JS : fct poo()");
+      let p1 = new personne("selecon", "ahmed", "02/05/1980");
+      let p2 = new personne("albiz", "khalid", "01/01/1981");
+      let pa1 = new personneActif("chagir", "hatim", "02/05/1986");
+
+      console.log(" la P1 se presnete > " + p1.sePresenter());
+      console.log(" la P2 se presnete > " + p2.sePresenter());
+      console.log(" la pa1 se presnete > " + pa1.sePresenter());
+     console.log(p1.name());
+    }
   },
   created() {
     this.test01();
+    this.poo();
   }
 };
+
+/* definiyion de class */
 </script>
 
 <style>

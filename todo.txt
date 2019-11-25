@@ -90,3 +90,7 @@ THE LAST ÂD :
 .... 20190725 : les test PARALLAX OK ds : kit-starters\v201906\app\twig\TEST-simpleParallax.twig
 
 
+.... 201910 : test vueJs/todo et es6  ds : javascript\vueJs2\apps-todo\todo-03-idbrahim
+
+
+
