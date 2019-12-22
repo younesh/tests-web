@@ -1,6 +1,6 @@
 <template>
 <div class="todos">
-    <es6Test />
+    <!-- <es6Test /> --> 
     <hr>
   <h1>list OPcvm test  </h1>
 
@@ -24,11 +24,11 @@
 <script>
 import axios from "axios";
 import Todo from "./Todo";
-import es6Test from "./es6Test";
+// import es6Test from "./es6Test";
 export default {
     name: "Todos",
     components: {
-        Todo, es6Test
+        Todo //, es6Test
     },
     data() {
         return {

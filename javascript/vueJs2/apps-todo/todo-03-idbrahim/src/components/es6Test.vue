@@ -46,11 +46,38 @@
         <button class="btn btn-primary" @click="exo58">lauch the scrpir 5.8</button>
       </div>
     </div>
-    <div class="card">
+    <div class="card pooTest">
       <div class="card-title p-3">POO : POO en js</div>
-      <div class="card-body"></div>
+      <div class="card-body">
+        <h4> les get et set </h4> 
+
+      </div>
+    </div>
+
+    <div class="card fetchTest">
+      <div class="card-title p-3"> utiliser fetch ( le new ajax !!! lol ) </div>
+      <div class="card-body" v-html="dataFetchTest"> </div>
+    </div>
+
+    <div class="card UI-effect-hover">
+      <div class="card-title p-3"> test animation hover </div>
+      <div class="card-body">
+          <div class="card_img">
+              <img src="dist/assets/logo.png" alt="">
+          </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title p-3"> vBind chekbox </div>
+      <div class="card-body">
+        <input type="checkbox" v-model="chkSucess">
+        <input type="text" name="" id="" v-model="chkMessage"> {{ chkMessage }}
+        <div :class="chekStatus"> message a styler par la checkbox !! </div>
+      </div>
     </div>
     <!-- .card>.card-title.p-3+.card-body -->
+
   </div>
 </template>
 
@@ -66,7 +93,10 @@ export default {
       dataExo55: {
         nbr: 0,
         tableMultip: "(vide)"
-      }
+      },
+      dataFetchTest: "",
+      chkSucess : true,
+      chkMessage : ''
     };
   },
   methods: {
@@ -158,7 +188,7 @@ export default {
           prenom = "(vide)",
           dateNaissance = "(vide)"
         ) {
-          this.name = nom;
+          this._name = nom;
           this.lastName = prenom;
           this.birdDay = dateNaissance;
         }
@@ -176,11 +206,18 @@ export default {
 
         get name() {
          //   console.log(" getter name declanchee !! " );
-          return "smia hia : " + this.name;
+          return "MR " + this._name;
         }
         
         set name(nom) {
-          this.name = nom;
+          //  alert ("vous est ds le SET et vous avez saisie " + nom);
+          this._name = "Mr" + nom;
+          if (nom.length > 2) {
+            this._name = nom;
+          }
+          else{
+            console.log(" oups vous avza affecter un nom trop court !!! ");
+          }
         }
       }
 
@@ -206,17 +243,57 @@ export default {
       console.log(" la P1 se presnete > " + p1.sePresenter());
       console.log(" la P2 se presnete > " + p2.sePresenter());
       console.log(" la pa1 se presnete > " + pa1.sePresenter());
-     console.log(p1.name());
+     console.log(p1.name);
+ 
+     p1.name = "younes";
+    },
+
+    // consommer des api  et ou ajax 
+     async fetchContentPage () { // url
+       // fitch
+       //   let pageList = await fetch(url)
+       "https://www.senscritique.com/liste/Sorties_cinema_2019_a_voir/1704691"
+        
+      this.dataFetchTest = await fetch("http://fariso.net/fr/")
+        
+    },
+
+
+  },
+  computed: {
+    chekStatus :  function() { // applique une classe condistionnellment au valeur chkSucess
+      console.log('chekStatus called !! ');
+      return this.chkSucess ? "alert-success" : "alert-danger"
     }
   },
   created() {
     this.test01();
-    this.poo();
+     this.poo();
+
+      // https://www.senscritique.com/liste/Sorties_cinema_2019_a_voir/1704691
+      this.fetchContentPage ();
   }
 };
 
 /* definiyion de class */
+
+// tools : convert jquery to vanilla 
+/*
+ https://tobiasahlin.com/blog/move-from-jquery-to-vanilla-javascript/
+*/
+
+
+// tester du js en live : https://jsfiddle.net/
 </script>
 
-<style>
+<style lang="scss">
+ $bgCarte : orange;
+ $bgTitle: violet;
+ .UI-effect-hover {
+   background-color:  $bgCarte;
+   .card-title 
+    {
+      background-color: $bgTitle;
+    }
+ }
 </style>

@@ -1,7 +1,13 @@
 <template>
   <div id="app">
     <div class="container">
-     <Todos />
+          <div id="nav">
+      <router-link to="/todos">todos</router-link> |
+      <router-link to="/about">About</router-link> |
+      <router-link to="/es6Test">ES6 test</router-link> | 
+      <router-link to="/sliders">sliders</router-link>
+    </div>
+    <router-view/>
      {{ BD }}
     </div>
   </div>
@@ -12,12 +18,12 @@
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 // COMPOSANTS INTERNE 
-import Todos from './components/Todos.vue'
+// import Todos from './components/Todos.vue'
 const urlServiceBD = "http://localhost:5000/todos/"
 export default {
   name: 'app',
   components: {
-    Todos
+    //Todos
   },
   data() {
     return {

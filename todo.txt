@@ -92,5 +92,5 @@ THE LAST ÂD :
 
 .... 201910 : test vueJs/todo et es6  ds : javascript\vueJs2\apps-todo\todo-03-idbrahim
 
-
+--- 20191202 https://github.com/younesh/MyStyleGuide my style guide pour cérer mes personal cpt 
 

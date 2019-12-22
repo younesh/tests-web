@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-      body {
-          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-          font-size: 12px;
-      }
-      .container > section {
-        background-color : #ededed;
-        padding: 10px; margin: 10px;
-    }
-
-    .container > section > div {}
-    h1, h2, h3, h4 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-     }
-
-     /* test0002 : test de contour de text */
-     .test0002 h3  { font-family: Arial, Helvetica, sans-serif; font-weight:bold; 
-                    font-size: 30px; color: #fff;
-                        -webkit-text-stroke: 1px;
-                        -webkit-text-stroke-color: #ccc;
-                }
-    
-    /* test0003 : */
-
-
-  </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 12px;
+        }
+        
+        .container>section {
+            background-color: #ededed;
+            padding: 10px;
+            margin: 10px;
+        }
+        
+        .container>section>div {}
+        
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        /* test0002 : test de contour de text */
+        
+        .test0002 h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            color: #fff;
+            -webkit-text-stroke: 1px;
+            -webkit-text-stroke-color: #ccc;
+        }
+        /* test0003 : */
+    </style>
 
 </head>
+
 <body>
     <div class="container">
         <section>
@@ -47,22 +55,31 @@
         <section class="test0003">
             <h3> canvas : desssin canvae</h3>
             <div id="canvas">
-            
+
             </div>
             <script>
-            var canvas =$("#canvas");
+                var canvas = $("#canvas");
                 console.log(canvas);
                 var ctx = canvas.getContext("2d");
                 ctx.fillStyle = 'green';
                 ctx.fillRect(10, 10, 100, 100);
             </script>
         </section>
-        
+
         <section>
-            <h3></h3>
-            <div></div>
+            <h3> brouillon pour un html pour farisonet ( a supprmer ) </h3>
+            <div>
+                <nav class="menu-media-sociaux">
+                    <a href="https://www.youtube.com/user/farisonet/" target="_blank"><img src="http://fariso.net/fr/wp-content/uploads/2019/12/youtube.png" alt="Youtube de farisonet" width="40"></a>
+                    <a href="https://twitter.com/Farisonet1" target="_blank"><img src="http://fariso.net/fr/wp-content/uploads/2019/12/twitter.png" alt="Twitter de farisonet" width="40"></a>
+                    <a href="https://www.facebook.com/farisonett" target="_blank"><img src="http://fariso.net/fr/wp-content/uploads/2019/12/facebook.png" alt="Facebook fun page de farisonet" width="40"></a>
+                </nav>
+            </div>
         </section>
+
+
         <!-- section>h3+p  -->
     </div>
 </body>
+
 </html>
