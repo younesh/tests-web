@@ -76,6 +76,34 @@
         <div :class="chekStatus"> message a styler par la checkbox !! </div>
       </div>
     </div>
+
+    <div class="card boocleContinue">
+      <div class="card-title p-3"> test boocle continue </div>
+      <div class="card-body">
+         <span>
+           {{valBoocleContinue}}
+         </span>
+      </div>
+    </div>
+
+    <div class="card ALgoPointJointure">
+      <div class="card-title p-3"> algo point de jointure de 2 nombre</div>
+      <div class="card-body">
+        <p>
+          ennoncé : admettons une suite ds la quelle un nombre est suivi de lui même plus la somme de ces chiffre, exmple 34 est suivie de 34 + (3 + 4) cad 41 
+          et 41 est suivie de 46 ... etc 
+
+        </p>
+        <div>
+          <label for=""> serie 01 </label> <input type="text" v-model="APJ_s1" /><br>
+           <label for=""> serie 02 </label><input type="text" v-model="APJ_s2" /> <br>
+           <button class="btn btn-primary" @click="ALgoPointJointure"> calculer le point de jointure</button>
+
+          est le point de jointure est : <strong> {{ APJ_result}}</strong> 
+        </div>
+
+      </div>
+    </div>
     <!-- .card>.card-title.p-3+.card-body -->
 
   </div>
@@ -96,7 +124,13 @@ export default {
       },
       dataFetchTest: "",
       chkSucess : true,
-      chkMessage : ''
+      chkMessage : '',
+      valBoocleContinue : '',
+
+      // ALgoPointJointure
+        APJ_s1 : 0,
+        APJ_s2 : 0,
+        APJ_result : 0
     };
   },
   methods: {
@@ -258,6 +292,39 @@ export default {
         
     },
 
+     // test command continue in boocle, 
+    boocleContinue () {
+      for (let i=0; i<10; i++){
+        if(i%2 == 0){
+          continue
+        }else {
+          this.valBoocleContinue +=i + " - ";
+        }
+      }
+    },
+    ALgoPointJointure () {
+      let s1 = Number(this.APJ_s1);
+      let s2 = Number(this.APJ_s2);
+      if (s1 > 0 && s2 > 0) {
+        while (s1!=s2 && s1 < 20000 ) {
+                // s1 
+                s1=s1 + this.sumChiffreDuNbr(s1);
+                s2=s2 + this.sumChiffreDuNbr(s2);
+                console.log("S1 :" + s1);
+                console.log("S1 :" + s2);
+        }
+        if (s1 == s2 ) this.APJ_result = s1;
+        else this.APJ_result = "pas de jointure avant 20000 "; 
+      }
+    },
+    sumChiffreDuNbr (nbr) {
+      let chaine = nbr.toString();
+      let sum = 0;
+      for (let i = 0; i < chaine.length; i++ ) {
+        sum += Number(chaine[i]);
+      }
+      return sum; 
+    }
 
   },
   computed: {
@@ -272,6 +339,7 @@ export default {
 
       // https://www.senscritique.com/liste/Sorties_cinema_2019_a_voir/1704691
       this.fetchContentPage ();
+      this.boocleContinue();
   }
 };
 
