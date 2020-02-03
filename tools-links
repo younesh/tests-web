@@ -53,7 +53,7 @@
         2.0.1 Guidelines Alsacréations : https://www.alsacreations.com/outils/guidelines/
     2.1 Test multi navigateurs / multi-platforme
         2.1.1 : https://www.browserstack.com/ (ID Zlmouatassime@visiativ.com / visiativ2015 )
-                                                (ID srs@webnet.fr / Webnet@2017! ) 
+                                                (ID srs@webnet.fr / Webnet@2017! )
     2.2 news frameworke de templating rapide
         2.2.1 : http://materializecss.com/ > equivalant de bootstrap en light > nb a tester encore et encore ...
     2.3 javascript
@@ -80,6 +80,8 @@
         2.5.2 lazyloading plugins .... search in google :
              https://translate.google.fr/translate?sl=en&tl=fr&js=y&prev=_t&hl=fr&ie=UTF-8&u=https%3A%2F%2Fdevelopers.google.com%2Fweb%2Ffundamentals%2Fperformance%2Flazy-loading-guidance%2Fimages-and-video%2F&edit-text=
              https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/
+    2.6 accessibilité web :
+        2.6.1 couleur > tester si le contrast entre le text et sonfond est valide : https://contrastchecker.com/
 
 
 
