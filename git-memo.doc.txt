@@ -35,9 +35,9 @@
 
 ## ajouter/corriger des petites modifs oublié à un commit déja crée [--amend ]: 
   a. en peut ajouter des petites modifs a un commit sans modifier sans message/commentaire initia : 
-     git commit --amend
-  b. en peut corriger ausssi le commentaire initial en plus des modification : 
-     git commit --amend -m "new comment fixed ... !!"
+     git commit --amend --no-edit
+  b. en peut corriger aussi le commentaire initial en plus des modification : 
+     git commit --amend -m "new comment fixed "
 
 
 ## pour pusher les commites au serveur ( remote ) [push -u origin]
