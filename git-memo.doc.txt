@@ -33,6 +33,9 @@
 ## faire un commit [commit -m ]: 
     git commit -m "le message du commite"
 
+## ajouter des petites modifs oublié à un commit [--amend ]: 
+  a. en peut ajouter des petites modifs a un commit déja pusher 
+
 
 ## pour pusher les commites au serveur ( remote ) [push -u origin]
     git push -u origin nom-de-branch-cible
