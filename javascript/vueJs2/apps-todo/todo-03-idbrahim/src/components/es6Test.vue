@@ -311,7 +311,7 @@ export default {
                 s1=s1 + this.sumChiffreDuNbr(s1);
                 s2=s2 + this.sumChiffreDuNbr(s2);
                 console.log("S1 :" + s1);
-                console.log("S1 :" + s2);
+                console.log("S2 :" + s2);
         }
         if (s1 == s2 ) this.APJ_result = s1;
         else this.APJ_result = "pas de jointure avant 20000 "; 
