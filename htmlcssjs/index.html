@@ -2,1225 +2,1373 @@
 <!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="fr-FR"> <![endif]-->
 <!--[if IE 8]> <html class="no-js ie8 ie678" lang="fr-FR"> <![endif]-->
 <!--[if IE 9]> <html class="no-js ie9" lang="fr-FR"> <![endif]-->
-<!--[if gt IE 9]> <!--><html class="no-js" lang="fr-FR"> <!--<![endif]-->
+<!--[if gt IE 9]> <!-->
+<html class="no-js" lang="fr-FR">
+<!--<![endif]-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link href="styles.css" rel="stylesheet">
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <title> test global html5 et css3 js  </title>
+    <title> test global html5 et css3 js </title>
 </head>
+
 <body>
 
-<div id="page">
-<h1> tests R et D html-js-css </h1>
-    <a href="test-formation.html"> tests certif MS front </a>
-    <section id="t0001">
-        <h2> CSS - sélécteur ( A ~ B ) : </h2>
-        <article>
-            <style>
-                #t0001 { }
-                #t0001 .selected ~ .bx001  { background:  orange;  }
-            </style>
-            <p> </p>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box bx001"></div>
-            <div class="box selected"></div>
-            <div class="box bx001"></div>
-            <div class="box"></div>
-            <div class="box bx001"></div>
-        </article>
-    </section>
+    <div id="page">
+        <div>
+            <!DOCTYPE html>
+            <html>
 
-    <section id="t0002">
-        <h2> CSS - sélécteur ( A + B ) :  </h2>
-        <article>
-            <style>
-                #t0002 { }
-                #t0002 .selected + .box  { background:  orange;  }
-            </style>
-            <p>   le 1er élement qui suis le selecteur </p>
-            <div class="box"></div>
-            <div class="box selected"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </article>
-    </section>
-    <section id="t0003">
-        <h2> CSS - sélécteur (:nth-child(n)) </h2>
-        <article>
-            <style>
-                #t003 {}
-                    /* :nth-child(3) */
-                #t0003 .box:nth-child(3) { background: violet; }
-                #t0003 .box:nth-child(2) { background: green;  }
-                #t0003 .box:nth-child(1) { background: blue;  }
+            <head>
+                <meta charset="utf-8">
+                <title>Link</title>
+            </head>
 
+            <body>
+                <!-- Write the code below this line -->
+                <a target="_blank" href="http://www.bing.com/search&q=calculator">Is a&lt;b?</a>
+            </body>
 
-            </style>
-            <p>
-                 nb: le nth-child(n) ne marche correctement qu'avec les li !!!
-            </p>
+            </html>
 
-            <ul>
-                <li class="box"> blue </li>
-                <li class="box"> green</li>
-                <li class="box"> violet </li>
-                <li class="box"> X  </li>
-                <li class="box"> X  </li>
-                <li class="box">  </li>
-                <li class="box">  </li>
-                <li class="box">  </li>
-                <li class="box">  </li>
-            </ul>
-        </article>
-    </section>
-    <section id="t0004">
-        <h2>css3 transition :</h2>
-        <article>
-            <style>
-               #t0004 .link .box {
-                   transition: 0.5s opacity, 0.5s top;
-                   position: relative;
-                }
-
-               #t0004 .link:hover .box {
-                   opacity: 0.7;
-                   top:10px;
-               }
-            </style>
-            <p></p>
-            <a class="link"> <div class="box"></div> </a>
-            <a class="link"> <div class="box"></div> </a>
-            <a class="link"> <div class="box"></div> </a>
-        </article>
-    </section>
-    <section id="t0005">
-        <h2> creation d'un plugin rideaux sofistique </h2>
-        <article>
-            <style>
-                .plug_rideaux {}
-                    .pr_row {}
-                        .prr_btn { background:orange; color: #fff; font-weight: bold; display: block; line-height: 30px;
-                            padding-left: 45px; line-height: 50px; cursor: pointer;
-                            transition: background 0.3s, padding-left 0.3s;
-                        }
-                            .prr_btn.close {
-                                background : #008000;
-                                padding-left: 20px;
-                            }
-                        .prr_ctn {}
-
-            </style>
-            <script>
-                $(function(){
-                    var $CONF_OneOpenAllClose = true; // { | true } si vrai : ferme tous les autres ctn ouvert si on ouvre un
-                    if ($CONF_OneOpenAllClose) {
-                        $(".prr_ctn").each(function(){
-                            $(this).hide();
-                            $(this).prev(".prr_btn").addClass("close");
-                        });
+        </div>
+        <h1> tests R et D html-js-css </h1>
+        <a href="test-formation.html"> tests certif MS front </a>
+        <section id="t0001">
+            <h2> CSS - sélécteur ( A ~ B ) : </h2>
+            <article>
+                <style>
+                    #t0001 {}
+                    
+                    #t0001 .selected~.bx001 {
+                        background: orange;
                     }
+                </style>
+                <p> </p>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box bx001"></div>
+                <div class="box selected"></div>
+                <div class="box bx001"></div>
+                <div class="box"></div>
+                <div class="box bx001"></div>
+            </article>
+        </section>
 
-                    $(".prr_btn").click(function(){ /* .rs_rd_head || #link_worksWithMe */
+        <section id="t0002">
+            <h2> CSS - sélécteur ( A + B ) : </h2>
+            <article>
+                <style>
+                    #t0002 {}
+                    
+                    #t0002 .selected+.box {
+                        background: orange;
+                    }
+                </style>
+                <p> le 1er élement qui suis le selecteur </p>
+                <div class="box"></div>
+                <div class="box selected"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </article>
+        </section>
+        <section id="t0003">
+            <h2> CSS - sélécteur (:nth-child(n)) </h2>
+            <article>
+                <style>
+                    #t003 {}
+                    /* :nth-child(3) */
+                    
+                    #t0003 .box:nth-child(3) {
+                        background: violet;
+                    }
+                    
+                    #t0003 .box:nth-child(2) {
+                        background: green;
+                    }
+                    
+                    #t0003 .box:nth-child(1) {
+                        background: blue;
+                    }
+                </style>
+                <p>
+                    nb: le nth-child(n) ne marche correctement qu'avec les li !!!
+                </p>
+
+                <ul>
+                    <li class="box"> blue </li>
+                    <li class="box"> green</li>
+                    <li class="box"> violet </li>
+                    <li class="box"> X </li>
+                    <li class="box"> X </li>
+                    <li class="box"> </li>
+                    <li class="box"> </li>
+                    <li class="box"> </li>
+                    <li class="box"> </li>
+                </ul>
+            </article>
+        </section>
+        <section id="t0004">
+            <h2>css3 transition :</h2>
+            <article>
+                <style>
+                    #t0004 .link .box {
+                        transition: 0.5s opacity, 0.5s top;
+                        position: relative;
+                    }
+                    
+                    #t0004 .link:hover .box {
+                        opacity: 0.7;
+                        top: 10px;
+                    }
+                </style>
+                <p></p>
+                <a class="link">
+                    <div class="box"></div>
+                </a>
+                <a class="link">
+                    <div class="box"></div>
+                </a>
+                <a class="link">
+                    <div class="box"></div>
+                </a>
+            </article>
+        </section>
+        <section id="t0005">
+            <h2> creation d'un plugin rideaux sofistique </h2>
+            <article>
+                <style>
+                    .plug_rideaux {}
+                    
+                    .pr_row {}
+                    
+                    .prr_btn {
+                        background: orange;
+                        color: #fff;
+                        font-weight: bold;
+                        display: block;
+                        line-height: 30px;
+                        padding-left: 45px;
+                        line-height: 50px;
+                        cursor: pointer;
+                        transition: background 0.3s, padding-left 0.3s;
+                    }
+                    
+                    .prr_btn.close {
+                        background: #008000;
+                        padding-left: 20px;
+                    }
+                    
+                    .prr_ctn {}
+                </style>
+                <script>
+                    $(function() {
+                        var $CONF_OneOpenAllClose = true; // { | true } si vrai : ferme tous les autres ctn ouvert si on ouvre un
                         if ($CONF_OneOpenAllClose) {
-                            $(".prr_ctn").each(function(){
+                            $(".prr_ctn").each(function() {
                                 $(this).hide();
                                 $(this).prev(".prr_btn").addClass("close");
                             });
                         }
-                        $(this).removeClass("close");
 
-                        if($(this).hasClass("close")){
-                            $(this).next(".prr_ctn").hide('slow');
-                        }else{
-                            $(this).next(".prr_ctn").show('slow');
-                        }
+                        $(".prr_btn").click(function() { /* .rs_rd_head || #link_worksWithMe */
+                            if ($CONF_OneOpenAllClose) {
+                                $(".prr_ctn").each(function() {
+                                    $(this).hide();
+                                    $(this).prev(".prr_btn").addClass("close");
+                                });
+                            }
+                            $(this).removeClass("close");
 
+                            if ($(this).hasClass("close")) {
+                                $(this).next(".prr_ctn").hide('slow');
+                            } else {
+                                $(this).next(".prr_ctn").show('slow');
+                            }
+
+                        });
                     });
-                });
-            </script>
+                </script>
 
 
-            <div class="plug_rideaux">
-                <div class="pr_row">
-                    <a class="prr_btn"> link 1</a>
-                    <div class="prr_ctn">
-                      1111  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias esse fugiat in laborum perspiciatis provident recusandae tenetur. Ad consequuntur ducimus molestiae nihil quia repudiandae? Deleniti doloremque ipsum nihil pariatur repellat.
+                <div class="plug_rideaux">
+                    <div class="pr_row">
+                        <a class="prr_btn"> link 1</a>
+                        <div class="prr_ctn">
+                            1111 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias esse fugiat in laborum perspiciatis provident recusandae tenetur. Ad consequuntur ducimus molestiae nihil quia repudiandae? Deleniti doloremque ipsum nihil pariatur repellat.
+                        </div>
+                    </div>
+
+                    <div class="pr_row">
+                        <a class="prr_btn"> link 2 </a>
+                        <div class="prr_ctn">
+                            222 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur autem distinctio dolorem, dolorum ducimus eveniet illo labore maxime molestiae odio officiis quia reprehenderit tempore! Dolor dolorum mollitia qui repellendus tempora?
+                        </div>
+                    </div>
+
+                    <div class="pr_row">
+                        <a class="prr_btn">link 3</a>
+                        <div class="prr_ctn">
+                            3333 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, consectetur consequuntur deserunt dolorem ea, enim facilis in libero magni mollitia nihil nobis numquam officiis optio pariatur quos saepe tempore vel!
+                        </div>
+                    </div>
+
+                    <div class="pr_row">
+                        <a class="prr_btn">link 4</a>
+                        <div class="prr_ctn">
+                            4444 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, consectetur consequuntur deserunt dolorem ea, enim facilis in libero magni mollitia nihil nobis numquam officiis optio pariatur quos saepe tempore vel!
+                        </div>
+                    </div>
+
+                    <div class="pr_row">
+                        <a class="prr_btn">link 5</a>
+                        <div class="prr_ctn">
+                            5555 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, consectetur consequuntur deserunt dolorem ea, enim facilis in libero magni mollitia nihil nobis numquam officiis optio pariatur quos saepe tempore vel!
+                        </div>
                     </div>
                 </div>
 
-                <div class="pr_row">
-                    <a class="prr_btn"> link 2 </a>
-                    <div class="prr_ctn">
-                        222 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur autem distinctio dolorem, dolorum ducimus eveniet illo labore maxime molestiae odio officiis quia reprehenderit tempore! Dolor dolorum mollitia qui repellendus tempora?
-                    </div>
-                </div>
-
-                <div class="pr_row">
-                    <a class="prr_btn">link 3</a>
-                    <div class="prr_ctn">
-                      3333 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, consectetur consequuntur deserunt dolorem ea, enim facilis in libero magni mollitia nihil nobis numquam officiis optio pariatur quos saepe tempore vel!
-                    </div>
-                </div>
-
-                <div class="pr_row">
-                    <a class="prr_btn">link 4</a>
-                    <div class="prr_ctn">
-                        4444 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, consectetur consequuntur deserunt dolorem ea, enim facilis in libero magni mollitia nihil nobis numquam officiis optio pariatur quos saepe tempore vel!
-                    </div>
-                </div>
-
-                <div class="pr_row">
-                    <a class="prr_btn">link 5</a>
-                    <div class="prr_ctn">
-                        5555 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, consectetur consequuntur deserunt dolorem ea, enim facilis in libero magni mollitia nihil nobis numquam officiis optio pariatur quos saepe tempore vel!
-                    </div>
-                </div>
-            </div>
-            
-            <!--   .plug_rideaux>.pr_row*3>(a.prr_btn+.prr_ctn) -->
-        </article>
-    </section>
-    <section id="t0006">
-        <h2> liens à voir </h2>
-        <article>
-            <style></style>
-            <p>
-            <ul>
-                <li>
-                    <a target="_blank" href="http://code.tutsplus.com/fr/tutorials/the-30-css-selectors-you-must-memorize--net-16048">
+                <!--   .plug_rideaux>.pr_row*3>(a.prr_btn+.prr_ctn) -->
+            </article>
+        </section>
+        <section id="t0006">
+            <h2> liens à voir </h2>
+            <article>
+                <style></style>
+                <p>
+                    <ul>
+                        <li>
+                            <a target="_blank" href="http://code.tutsplus.com/fr/tutorials/the-30-css-selectors-you-must-memorize--net-16048">
                         Les 30 Sélecteurs CSS à Absolument Connaître
                     </a>
-                </li>
+                        </li>
 
-            <li><a href="http://www.creativejuiz.fr/blog/tutoriels/nth-child-css2-compatible-ie7"> Un Nth-child en CSS 2 compatible depuis IE7 </a></li>
-            <li><a href="http://www.marevueweb.com/css-html/liste-nth-child-propriete/"> http://www.marevueweb.com/css-html/liste-nth-child-propriete/  </a></li>
-            </ul> 
-            </p>
+                        <li><a href="http://www.creativejuiz.fr/blog/tutoriels/nth-child-css2-compatible-ie7"> Un Nth-child en CSS 2 compatible depuis IE7 </a></li>
+                        <li><a href="http://www.marevueweb.com/css-html/liste-nth-child-propriete/"> http://www.marevueweb.com/css-html/liste-nth-child-propriete/  </a></li>
+                    </ul>
+                </p>
 
-        </article>
-    </section>
-    <section id="t0007">
-        <h2> test des fantawsome <a href="http://fontawesome.io/get-started/" target="_blank"> http://fontawesome.io/get-started/ </a>   </h2>
-        <article>
-            <style>
-              /*  @import "font-awesome.min.css"; */  /* importer la lib fa */
-               #test_font_icon {  }
-              #t0007  .box * {
-                 display: inline;
-              }
-             #t0007  .box {
-                 background-color: orangered ;
-                 border: solid 2px orangered;
-                 vertical-align: middle;
-                 color : #fff;
-                 margin-left: 5px;
-                 font-size: 25px;
-                 line-height: 100px;
-                 width: 100px;
-                 border-radius: 8px;
-                 transition: color 0.5s,    background-color 0.5s ;
-             }
-
-              #t0007  .box:hover  {
-                  color : orangered;
-                  background-color : #ffff00;
-                  border: solid 2px orangered;
-                  cursor: pointer;
-              }
-            </style>
-            <p>
-                <div class="box">
+            </article>
+        </section>
+        <section id="t0007">
+            <h2> test des fantawsome <a href="http://fontawesome.io/get-started/" target="_blank"> http://fontawesome.io/get-started/ </a> </h2>
+            <article>
+                <style>
+                    /*  @import "font-awesome.min.css"; */
+                    /* importer la lib fa */
+                    
+                    #test_font_icon {}
+                    
+                    #t0007 .box * {
+                        display: inline;
+                    }
+                    
+                    #t0007 .box {
+                        background-color: orangered;
+                        border: solid 2px orangered;
+                        vertical-align: middle;
+                        color: #fff;
+                        margin-left: 5px;
+                        font-size: 25px;
+                        line-height: 100px;
+                        width: 100px;
+                        border-radius: 8px;
+                        transition: color 0.5s, background-color 0.5s;
+                    }
+                    
+                    #t0007 .box:hover {
+                        color: orangered;
+                        background-color: #ffff00;
+                        border: solid 2px orangered;
+                        cursor: pointer;
+                    }
+                </style>
+                <p>
+                    <div class="box">
                         <span class="fa fa-camera-retro fa-lg"> </span>
-                </div>
+                    </div>
 
-                <div class="box">
-                    <span class="fa fa-coffee  fa-lg">   </span>
-                </div>
-            
-                 <div class="box">
-                     <span class="fa fa-refresh fa-spin fa-3x fa-fw  ">    </span>
-                 </div>
-            </p>
+                    <div class="box">
+                        <span class="fa fa-coffee  fa-lg">   </span>
+                    </div>
 
-        </article>
-    </section>
-    <section id="t0008">
-        <h2> test 3d css3 http://www.html5-css3.fr/css3/transformations-3d-css3  </h2>
-        <article>
-            <style>
-                #t0008 .box {/*
+                    <div class="box">
+                        <span class="fa fa-refresh fa-spin fa-3x fa-fw  ">    </span>
+                    </div>
+                </p>
+
+            </article>
+        </section>
+        <section id="t0008">
+            <h2> test 3d css3 http://www.html5-css3.fr/css3/transformations-3d-css3 </h2>
+            <article>
+                <style>
+                    #t0008 .box {
+                        /*
                     transform: rotateX(45deg);
                     transform: rotateY(45deg);
                     transform: rotateZ(45deg);
                     perspective:500px;*/
-                    transform: perspective(600px) rotateY(60deg);
-                }
+                        transform: perspective(600px) rotateY(60deg);
+                    }
+                </style>
+                <p></p>
+                <div id="" class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </article>
+        </section>
+        <section id="t0009">
+            <h2>test display inline-block VS float </h2>
+            <article>
+                <style>
+                    #t0009 {
+                        /* font-size: 0;*/
+                    }
+                    
+                    #t0009 .box {
+                        margin: 0;
+                        font-size: inherit;
+                    }
+                </style>
+                <p></p>
 
-            </style>
-            <p></p>
-            <div id="" class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </article>
-    </section>
-    <section id="t0009">
-        <h2>test display inline-block VS float </h2>
-        <article>
-            <style>
-                #t0009 {
-                   /* font-size: 0;*/
-                }
+                <div class="box"> TEST 1 </div>
+                <div class="box"> TEST 2 </div>
+                <div class="box"> TEST 3 </div>
+            </article>
+        </section>
+        <section id="t0010">
+            <h2> selectionner le n-ième élément : .box:nth-of-type(3) { background-color: orangered; } </h2>
+            <article>
+                <style>
+                    #t0010 .box:nth-of-type(3) {
+                        background-color: orangered;
+                    }
+                    /* cibler le nieme element */
+                    /*  #t0010 .box:nth-of-type(4) ~ .box:first-of-type {background-color: cyan;}*/
+                    
+                    #t0010 .box:nth-of-type(5) {
+                        position: relative;
+                    }
+                    
+                    #t0010 .box:nth-of-type(5):before {
+                        content: " ";
+                        display: block;
+                        height: 10px;
+                        width: 10px;
+                        background: red;
+                        position: absolute;
+                        top: -5px;
+                    }
+                    
+                    #t0010 .box:nth-of-type(5):hover:before {
+                        background: #ffff00;
+                    }
+                </style>
+                <p></p>
 
-                #t0009 .box {
-                    margin: 0;
-                    font-size: inherit;
-                }
+                <span class="box"> 1 </span>
+                <span class="box"> 2 </span>
+                <span class="box"> 3 </span>
+                <span class="box"> 4 </span>
+                <span class="box"> 5 </span>
+                <span class="box"> 6 </span>
+                <span class="box"> 7 </span>
+            </article>
+        </section>
 
-            </style>
-            <p></p>
+        <section id="t0011">
+            <h2> faire des triangle en css : http://www.grafikart.fr/tutoriels/html-css/triangles-css-border-422 </h2>
+            <article>
+                <style>
+                    /* Pour faire un triangle vers la droite */
+                    
+                    .triangle {
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 10px 10px 0 0;
+                        border-color: #007bff transparent transparent transparent;
+                    }
+                </style>
+                <p></p>
 
-            <div class="box"> TEST 1 </div>
-            <div class="box"> TEST 2 </div>
-            <div class="box"> TEST 3 </div>
-        </article>
-    </section>
-    <section id="t0010">
-        <h2> selectionner le n-ième élément  : .box:nth-of-type(3) { background-color: orangered; }   </h2>
-        <article>
-            <style>
-                #t0010 .box:nth-of-type(3) { background-color: orangered; } /* cibler le nieme element */
-              /*  #t0010 .box:nth-of-type(4) ~ .box:first-of-type {background-color: cyan;}*/
-                #t0010 .box:nth-of-type(5) { position: relative; }
-                #t0010 .box:nth-of-type(5):before { content: " "; display: block; height: 10px;  width: 10px; background: red; position: absolute; top: -5px;   }
-                #t0010 .box:nth-of-type(5):hover:before {background: #ffff00;}
-            </style>
-            <p></p>
+                <div class="triangle"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </article>
+        </section>
 
-            <span class="box"> 1 </span>
-            <span class="box"> 2 </span>
-            <span class="box"> 3 </span>
-            <span class="box"> 4 </span>
-            <span class="box"> 5 </span>
-            <span class="box"> 6 </span>
-            <span class="box"> 7 </span>
-        </article>
-    </section>
+        <section id="t00012">
+            <h2> test des svg color </h2>
+            <article>
+                <style>
+                    #t00012 .twitter {
+                        /*fill: #F47414;*/
+                        stroke: #006600;
+                        /* color: #006600;*/
+                    }
+                    
+                    #t00012 object path {
+                        fill: blue;
+                    }
+                    
+                    #t00012 object path {
+                        fill: blue;
+                    }
+                    
+                    #t00012 .twitter {
+                        background-color: red;
+                        -webkit-mask-image: url("images/twitter.svg");
+                        -moz-mask-image: url("images/twitter.svg");
+                        mask-image: url("images/twitter.svg");
+                    }
+                </style>
+                <p>
 
-    <section id="t0011">
-        <h2> faire des triangle en css : http://www.grafikart.fr/tutoriels/html-css/triangles-css-border-422  </h2>
-        <article>
-            <style>
+                    <rect> </rect>
 
-                /* Pour faire un triangle vers la droite */
+                </p>
 
-                .triangle{
-                    width: 0;
-                    height: 0;
-                    border-style: solid;
-                    border-width: 10px 10px 0 0;
-                    border-color: #007bff transparent transparent transparent;
-                }
-
-            </style>
-            <p></p>
-
-            <div class="triangle"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </article>
-    </section>
-
-    <section id="t00012">
-        <h2> test des svg color </h2>
-        <article>
-            <style>
-
-                #t00012 .twitter {
-                    /*fill: #F47414;*/
-                    stroke: #006600;
-                   /* color: #006600;*/
-                }
-
-
-
-                #t00012  object  path {
-                    fill: blue;
-                }
-
-                #t00012  object  path {
-                    fill: blue;
-                }
-
-                #t00012  .twitter {
-                    background-color: red;
-                    -webkit-mask-image: url("images/twitter.svg");
-                    -moz-mask-image: url("images/twitter.svg");
-                    mask-image: url("images/twitter.svg");
-                }
-            </style>
-            <p>
-
-              <rect> </rect>
-
-            </p>
-
-            <p>
-            <h3> <\img>\ </h3>
-             <img src="images/twitter.svg" alt="" style="" class="twitter"/>
-            </p>
+                <p>
+                    <h3>
+                        <\img>\ </h3>
+                    <img src="images/twitter.svg" alt="" style="" class="twitter" />
+                </p>
 
 
-            <p>
-                <h3> twitter  </h3>
-                <object oa-reusable-svg
-                        data="images/twitter.svg"
-                        type="image/svg+xml"
-                        class="svg-class2"
-                        height="30"
-                        width="30">
+                <p>
+                    <h3> twitter </h3>
+                    <object oa-reusable-svg data="images/twitter.svg" type="image/svg+xml" class="svg-class2" height="30" width="30">
                 </object>
-            </p>
+                </p>
 
-            <p>
-                <h3> twitter </h3>
-                <object data="images/twitter.svg" width="50"  height="50" type="image/svg+xml">
+                <p>
+                    <h3> twitter </h3>
+                    <object data="images/twitter.svg" width="50" height="50" type="image/svg+xml">
                     <embed src="images/twitter.svg" width="50"  height="50" type="image/svg+xml" />
                 </object>
-            </p>
+                </p>
 
-            <p>
+                <p>
 
-            <h3> svg in background </h3>
-            <div class="box twitter">
-                .....
-            </div>
+                    <h3> svg in background </h3>
+                    <div class="box twitter">
+                        .....
+                    </div>
 
-            </p>
-            
-        </article>
-    </section>
+                </p>
 
-    <section id="t00013">
-        <h2> test des before after sur les input:submit</h2>
-        <article>
-            <style>
+            </article>
+        </section>
 
-                #t00013 { }
+        <section id="t00013">
+            <h2> test des before after sur les input:submit</h2>
+            <article>
+                <style>
+                    #t00013 {}
+                    
+                    #t00013 input[type='submit'],
+                    #t00013 button {
+                        -moz-appearance: none;
+                        appearance: none;
+                        padding: 15px;
+                        border: none;
+                        background-color: #005580;
+                    }
+                    
+                    #t00013 button:before,
+                    #t00013 input[type='submit']::before {
+                        content: "";
+                        width: 20px;
+                        height: 20px;
+                        background-color: #aaffaa;
+                        display: inline-block;
+                    }
+                </style>
+                <p></p>
+                <input type="submit" value="test "> </input>
+                <button type="submit"> test 2 </button>
+            </article>
+        </section>
 
-                #t00013 input[type='submit'],
-                #t00013 button
-                {
-                    -moz-appearance: none;
-                    appearance: none;
-                    padding: 15px;
-                    border: none;
-                    background-color: #005580;
-                }
-
-                #t00013 button:before,
-                #t00013 input[type='submit']::before
-                {
-                    content: "";
-                    width: 20px;
-                    height: 20px;
-                    background-color: #aaffaa;
-                    display: inline-block;
-                }
-
-
-            </style>
-            <p></p>
-            <input type="submit" value="test ">  </input>
-            <button type="submit"> test 2 </button>
-        </article>
-    </section>
-
-    <section id="t00015">
-        <h2> formation : html5 - css3 </h2>
-        <article>
-            <style></style>
+        <section id="t00015">
+            <h2> formation : html5 - css3 </h2>
+            <article>
+                <style></style>
 
 
 
-            <form action="">
+                <form action="">
 
-            </form>
-        </article>
-    </section>
+                </form>
+            </article>
+        </section>
 
-    <section id="t00014">
-        <h2> test flex img en responsive </h2>
-        <article>
-            <style>
-                #t00014 {
-                    display: flex;
-                    margin: 2em;
-                    padding: 2em;
-                    border: 2px dotted gray;
-                }
+        <section id="t00014">
+            <h2> test flex img en responsive </h2>
+            <article>
+                <style>
+                    #t00014 {
+                        display: flex;
+                        margin: 2em;
+                        padding: 2em;
+                        border: 2px dotted gray;
+                    }
+                    
+                    #t00014 .box {
+                        border: 2px dotted orange;
+                        min-width: 0;
+                        min-height: 0;
+                        /* 1 */
+                        width: 40%;
+                    }
+                    
+                    #t00014 .box img {
+                        max-width: 100%;
+                        /* 2 */
+                        height: auto;
+                    }
+                </style>
+                <p></p>
+                <div class="box">
+                    <img src="images/Desert.jpg" alt="" />
+                </div>
+            </article>
+        </section>
 
-                #t00014 .box {
 
-                    border: 2px dotted orange;
-                    min-width: 0; min-height: 0; /* 1 */
-                    width: 40%;
-                }
+        <section id="t00015">
+            <h2> iframe sur google </h2>
+            <article>
+                <style></style>
 
-                #t00014 .box img {
-                    max-width: 100%; /* 2 */
-                    height: auto;
-                }
-
-            </style>
-            <p></p>
-            <div class="box">
-                <img src="images/Desert.jpg" alt=""/>
-            </div>
-        </article>
-    </section> 
-
-
-    <section id="t00015">
-        <h2> iframe sur google </h2>
-        <article>
-            <style></style>
-
-            <!-- http://www.google.com  | avito.ma-->
-<!--            <iframe src="http://www.google.com" width="80%" style="visibility: visible">
+                <!-- http://www.google.com  | avito.ma-->
+                <!--            <iframe src="http://www.google.com" width="80%" style="visibility: visible">
                 <p>Your browser does not support iframes.</p>
             </iframe>-->
-        </article>
-    </section>
+            </article>
+        </section>
 
-    <!-- section#t00016>h2+article>(style+p+.box*3)-->
+        <!-- section#t00016>h2+article>(style+p+.box*3)-->
 
-    <section id="t00016">
-        <h2> <a href="http://rocha.la/jQuery-slimScroll" target="_blank"> http://rocha.la/jQuery-slimScroll</a> : test blug jq pour faire un scroll simpa !!! </h2>
-        <article>
-            <style></style>
-            <script src="../bower_components/slimScroll/jquery.slimscroll.min.js"></script> <!-- @@ deplacer en bas : optimiser le chargement -->
+        <section id="t00016">
+            <h2> <a href="http://rocha.la/jQuery-slimScroll" target="_blank"> http://rocha.la/jQuery-slimScroll</a> : test blug jq pour faire un scroll simpa !!! </h2>
+            <article>
+                <style></style>
+                <script src="../bower_components/slimScroll/jquery.slimscroll.min.js"></script>
+                <!-- @@ deplacer en bas : optimiser le chargement -->
 
-            <script>
-                $(function(){
-                    $(function(){
-                        $('.scrollslim').slimScroll({
-                            position: 'right',
-                            height: '150px',
-                            railVisible: true,
-                            alwaysVisible: true
+                <script>
+                    $(function() {
+                        $(function() {
+                            $('.scrollslim').slimScroll({
+                                position: 'right',
+                                height: '150px',
+                                railVisible: true,
+                                alwaysVisible: true
+                            });
                         });
-                    });
-                })
-            </script>
-            <div class="scrollslim">
-                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, beatae commodi dignissimos dolorem
-                    facilis illo ipsa magni mollitia perferendis ratione recusandae reiciendis rem sapiente temporibus
-                    velit vitae, voluptatibus voluptatum. Pariatur!
+                    })
+                </script>
+                <div class="scrollslim">
+                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, beatae commodi dignissimos dolorem facilis illo ipsa magni mollitia perferendis ratione recusandae reiciendis rem sapiente temporibus velit vitae, voluptatibus voluptatum.
+                        Pariatur!
+                    </div>
+                    <div>Amet aperiam at blanditiis ea eius explicabo, illo illum incidunt magnam maxime natus necessitatibus optio placeat praesentium quo rerum similique sit sunt. Adipisci animi doloremque doloribus impedit, maxime quas quis.
+                    </div>
+                    <div>Architecto culpa debitis dolorem doloremque eius itaque iure, laboriosam laudantium nisi nostrum obcaecati, officia praesentium quis, rem voluptatem. Aspernatur consectetur culpa, molestias nemo tempora totam! Eveniet fugit sit voluptas.
+                        Modi!
+                    </div>
+                    <div>Amet asperiores deleniti eius eum fugit in quas quisquam repellendus vel? Animi atque consectetur dolor eveniet neque, repellat repellendus totam velit voluptatem. Animi facilis illum modi, nemo neque ullam. Sunt.
+                    </div>
+                    <div>Alias aliquid autem blanditiis est inventore, ipsa minus nam obcaecati pariatur, qui saepe suscipit totam, ullam. A accusamus consequuntur, corporis eos expedita incidunt inventore labore maiores natus non rem reprehenderit?
+                    </div>
+                    <div>Aperiam at dicta excepturi expedita ipsa ipsam iusto modi molestias necessitatibus nostrum numquam placeat porro quasi quidem quos ratione reprehenderit, saepe soluta. Doloribus error fugiat iure maiores nostrum rem rerum.
+                    </div>
+                    <div>Animi deleniti dolores ducimus est illo officia ratione recusandae sapiente vel voluptate. Adipisci, eos iure magnam magni minus nemo nobis possimus recusandae reiciendis reprehenderit temporibus voluptas! Autem deserunt ex laboriosam.
+                    </div>
+                    <div>Laboriosam odio repudiandae velit! Accusamus amet, dignissimos distinctio eaque enim error ipsa iste iure iusto molestias mollitia necessitatibus neque nihil nisi nostrum optio placeat, praesentium provident quia quis velit voluptates!
+                    </div>
+                    <div>Accusantium adipisci blanditiis cumque dicta earum, esse explicabo, fugiat non nostrum nulla optio quasi sit veritatis. Cupiditate delectus dignissimos distinctio incidunt nesciunt, nihil nostrum odit quae rerum sapiente unde voluptatem.
+                    </div>
+                    <div>Autem dolore eius fuga illo in ipsum iure molestiae, necessitatibus omnis pariatur recusandae sapiente sequi tempora, temporibus, vero. Amet aspernatur eaque est in natus nemo perspiciatis possimus provident sed totam?
+                    </div>
                 </div>
-                <div>Amet aperiam at blanditiis ea eius explicabo, illo illum incidunt magnam maxime natus
-                    necessitatibus optio placeat praesentium quo rerum similique sit sunt. Adipisci animi doloremque
-                    doloribus impedit, maxime quas quis.
+            </article>
+        </section>
+
+        <section id="t00017">
+            <h2> Background-? : { origine - attachement } </h2>
+            <article>
+                <h3> origine </h3>
+                <style>
+                    #t00017 .box {
+                        width: 200px;
+                        height: 200px;
+                        background-image: url("images/Jellyfish.jpg");
+                        background-repeat: no-repeat;
+                        background-size: 150px auto;
+                        color: #fff;
+                        padding: 15px;
+                        border: 25px solid #ccc;
+                        background-color: #006600;
+                    }
+                    
+                    #t00017 .box1 {
+                        background-origin: border-box;
+                    }
+                    /* origine */
+                    
+                    #t00017 .box2 {
+                        background-origin: content-box;
+                    }
+                    
+                    #t00017 .box3 {
+                        background-origin: padding-box;
+                    }
+                    
+                    #t00017 .box4 {
+                        background-attachment: fixed;
+                    }
+                    /* attachement */
+                    
+                    #t00017 .box5 {
+                        background-attachment: local;
+                    }
+                    
+                    #t00017 .box6 {
+                        background-attachment: scroll;
+                    }
+                </style>
+                <p></p>
+
+                <div class="box box1"> background-origin: border-box; </div>
+                <div class="box box2"> background-origin: content-box; </div>
+                <div class="box box3"> background-origin: padding-box; </div>
+            </article>
+            <article>
+
+                <h3> attachement </h3>
+                <div class="box box4"> background-attachment: fixed; </div>
+                <div class="box box5"> background-attachment: local; </div>
+                <div class="box box6"> background-origin: padding-box; </div>
+            </article>
+        </section>
+
+
+        <section id="t00018">
+            <h2> https://icomoon.io : creation et gestion des ico-font , icone sous forme de fonts</h2>
+            <article>
+
+
+                <h3> les etape pour crer les ico-font </h3>
+
+                <ol>
+                    <li> Enregistrer l’icone en *.EPS depuis la PSD </li>
+                    <li> Importer l’eps en AI puis l’enregistrer en SVG </li>
+                    <li> Si l’icône ne s’affiche pas en entier -> utiliser pathfinder </li>
+                    <li> Icomon : Créer un nouveau projet </li>
+                    <li> Icomoon : importer le SVG dans le nouveau projet </li>
+                    <li> Icomoon : générer les font (zip) </li>
+                    <li> CSS : déclarer la font </li>
+                    <li> CSS : utiliser la font </li>
+                </ol>
+                <style>
+                    /*  DECLARATION DE LA NOUVELLE FONT ICONE (tw_fonts) */
+                    
+                    @font-face {
+                        font-family: "tw_fonts";
+                        src: url("fonts/tw_fonts/tests-web.eot?2");
+                        src: url("fonts/tw_fonts/tests-web.eot?#iefix?2") format("embedded-opentype"), url('fonts/tw_fonts/tests-web.woff?2') format('woff'), url("fonts/tw_fonts/tests-web.ttf") format("truetype"), url("fonts/tw_fonts/tests-web.svg#icomon?2") format("svg");
+                        font-weight: normal;
+                        font-style: normal;
+                    }
+                    
+                    #t00018 i {
+                        font-family: "tw_fonts";
+                        /* l'appelle de la font ds les balise et class qui auront des icones ... */
+                        font-style: normal;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        speak: none;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                        text-align: center;
+                        display: inline-block;
+                        pointer-events: none;
+                    }
+                    
+                    #t00018 .icon-home:before {
+                        /* ce code est recupérer de la platforme icomoon ( au clic du "get code" ) */
+                        content: "\e900";
+                    }
+                    
+                    #t00018 .icon-etoile:before {
+                        content: "\e901";
+                    }
+                    
+                    #t00018 .icon-avion:before {
+                        content: "\e902";
+                    }
+                    
+                    #t00018 .box i {
+                        font-size: 40px;
+                        color: greenyellow;
+                    }
+                    
+                    #t00018 .box2 i {
+                        font-size: 100px;
+                        color: orange;
+                    }
+                </style>
+
+                <div class="box">
+                    <i class="icon-home"></i>
+                    <i class="icon-etoile"></i>
+                    <i class="icon-avion"></i>
+
                 </div>
-                <div>Architecto culpa debitis dolorem doloremque eius itaque iure, laboriosam laudantium nisi nostrum
-                    obcaecati, officia praesentium quis, rem voluptatem. Aspernatur consectetur culpa, molestias nemo
-                    tempora totam! Eveniet fugit sit voluptas. Modi!
+                <div class="box box2">
+                    <i class="icon-avion"></i>
                 </div>
-                <div>Amet asperiores deleniti eius eum fugit in quas quisquam repellendus vel? Animi atque consectetur
-                    dolor eveniet neque, repellat repellendus totam velit voluptatem. Animi facilis illum modi, nemo
-                    neque ullam. Sunt.
+                <div class="box"></div>
+            </article>
+        </section>
+
+        <section id="t00019">
+            <h2> font-ico : généric libs more then 1200 icones </h2>
+            <article>
+                <style>
+                    #t00019 p {
+                        font-size: 30px;
+                    }
+                </style>
+                <p>
+
+                    <i class="icon-angry"></i>
+                    <i class="icon-angry2"></i>
+                    <i class="icon-coins"></i>
+                </p>
+
+            </article>
+        </section>
+
+        <section id="t00020">
+            <h2> test </h2>
+            <article>
+                <style>
+                    #t00020 {}
+                    
+                    #t00020 .box:not( a) {
+                        background-color: #008000;
+                    }
+                </style>
+                <p></p>
+
+                <div class="box"></div>
+                <div class="box exclute">
+                    <a href=""></a>
                 </div>
-                <div>Alias aliquid autem blanditiis est inventore, ipsa minus nam obcaecati pariatur, qui saepe suscipit
-                    totam, ullam. A accusamus consequuntur, corporis eos expedita incidunt inventore labore maiores
-                    natus non rem reprehenderit?
+                <a class="box">
+                    <a href=""></a>
+                </a>
+            </article>
+        </section>
+
+        <section id="t00021">
+            <h2> CSS3 animation : </h2>
+            <article>
+                <style>
+                    #t00021 {}
+                    
+                    #t00021 .box {}
+                    
+                    #t00021 .box.b1 {
+                        background-color: darkblue;
+                        position: relative;
+                        width: 300px;
+                        height: 300px;
+                    }
+                    
+                    #t00021 .box.b2 {
+                        background-color: orange;
+                        position: relative;
+                        top: 45px;
+                        left: 0;
+                        width: 212px;
+                        height: 212px;
+                        transform: rotate(45deg);
+                        animation: animBoxRetat 10s infinite;
+                    }
+                    
+                    @keyframes animBoxRetat {
+                        0% {
+                            transform: rotate(45deg);
+                        }
+                        33% {
+                            transform: rotate(450deg);
+                            width: 50px;
+                            height: 50px;
+                        }
+                        66% {
+                            transform: rotate(-90deg);
+                            width: 200px;
+                            height: 200px;
+                        }
+                        100% {
+                            transform: rotate(45deg);
+                        }
+                    }
+                </style>
+                <p></p>
+
+                <div class="box b1">
+                    <div class="box b2"></div>
                 </div>
-                <div>Aperiam at dicta excepturi expedita ipsa ipsam iusto modi molestias necessitatibus nostrum numquam
-                    placeat porro quasi quidem quos ratione reprehenderit, saepe soluta. Doloribus error fugiat iure
-                    maiores nostrum rem rerum.
-                </div>
-                <div>Animi deleniti dolores ducimus est illo officia ratione recusandae sapiente vel voluptate.
-                    Adipisci, eos iure magnam magni minus nemo nobis possimus recusandae reiciendis reprehenderit
-                    temporibus voluptas! Autem deserunt ex laboriosam.
-                </div>
-                <div>Laboriosam odio repudiandae velit! Accusamus amet, dignissimos distinctio eaque enim error ipsa
-                    iste iure iusto molestias mollitia necessitatibus neque nihil nisi nostrum optio placeat,
-                    praesentium provident quia quis velit voluptates!
-                </div>
-                <div>Accusantium adipisci blanditiis cumque dicta earum, esse explicabo, fugiat non nostrum nulla optio
-                    quasi sit veritatis. Cupiditate delectus dignissimos distinctio incidunt nesciunt, nihil nostrum
-                    odit quae rerum sapiente unde voluptatem.
-                </div>
-                <div>Autem dolore eius fuga illo in ipsum iure molestiae, necessitatibus omnis pariatur recusandae
-                    sapiente sequi tempora, temporibus, vero. Amet aspernatur eaque est in natus nemo perspiciatis
-                    possimus provident sed totam?
-                </div>
-            </div>
-        </article>
-    </section>
-
-    <section id="t00017">
-        <h2> Background-? : { origine - attachement } </h2>
-        <article>
-            <h3> origine </h3>
-            <style>
-                #t00017 .box  {  width: 200px; height: 200px; background-image: url("images/Jellyfish.jpg"); background-repeat: no-repeat;
-                                background-size: 150px auto ; color:#fff; padding: 15px; border: 25px solid #ccc; background-color: #006600;  }
-                #t00017 .box1 { background-origin: border-box; } /* origine */
-                #t00017 .box2 { background-origin: content-box; }
-                #t00017 .box3 { background-origin: padding-box; }
-
-                #t00017 .box4 { background-attachment: fixed; } /* attachement */
-                #t00017 .box5 { background-attachment: local; }
-                #t00017 .box6 { background-attachment: scroll;  }
 
 
-            </style>
-            <p></p>
+            </article>
+        </section>
+        <section id="t00023">
+            <h2>test fonts </h2>
+            <article>
+                <style>
+                    @font-face {
+                        font-family: 'helvetica-neue-light';
+                        src: url('fonts/helvetica-neue/helvetica-neue-light.ttf');
+                        font-weight: normal;
+                        font-style: normal;
+                    }
+                    
+                    @font-face {
+                        font-family: 'helvetica-neue-meduim';
+                        src: url('fonts/helvetica-neue/helvetica-neue-meduim.ttf');
+                        font-weight: normal;
+                        font-style: normal;
+                    }
+                    
+                    @font-face {
+                        font-family: 'helvetica-neue-back';
+                        src: url('fonts/helvetica-neue/helvetica-neue-back.ttf');
+                        font-weight: normal;
+                        font-style: normal;
+                    }
+                    
+                    #t00023 .box1 {
+                        font-family: 'helvetica-neue-light';
+                        font-size: 20px;
+                    }
+                    
+                    #t00023 .box2 {
+                        font-family: 'helvetica-neue-meduim';
+                        font-size: 17px;
+                    }
+                    
+                    #t00023 .box3 {
+                        font-family: 'helvetica-neue-back';
+                        font-size: 20px;
+                    }
+                </style>
+                <p></p>
 
-            <div class="box box1">  background-origin: border-box; </div>
-            <div class="box box2"> background-origin: content-box; </div>
-            <div class="box box3"> background-origin: padding-box;  </div>
-        </article>
-        <article>
+                <div class="box1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dolores eos ex </div>
+                <div class="box2"> impedit libero provident quibusdam quos sed tempora.</div>
+                <div class="box3"> Animi esse facilis id nihil quia quidem quis rerum sed tempore. </div>
+            </article>
+        </section>
 
-            <h3> attachement </h3>
-            <div class="box box4">  background-attachment: fixed;  </div>
-            <div class="box box5"> background-attachment: local; </div>
-            <div class="box box6"> background-origin: padding-box;  </div>
-        </article>
-    </section>
-
-
-    <section id="t00018">
-        <h2> https://icomoon.io : creation et gestion des ico-font , icone sous forme de fonts</h2>
-        <article>
-
-
-            <h3> les etape pour crer les ico-font </h3>
-
-            <ol>
-                <li> Enregistrer l’icone en *.EPS  depuis la PSD </li>
-                <li> Importer l’eps en AI puis l’enregistrer en SVG </li>
-                <li> Si l’icône ne s’affiche pas en entier -> utiliser pathfinder </li>
-                <li> Icomon : Créer un nouveau projet </li>
-                <li> Icomoon : importer le SVG dans le nouveau projet </li>
-                <li> Icomoon : générer les font (zip) </li>
-                <li> CSS : déclarer la font </li>
-                <li> CSS : utiliser la font </li>
-            </ol>
-            <style>
-
-                /*  DECLARATION DE LA NOUVELLE FONT ICONE (tw_fonts) */
-
-                @font-face {
-                    font-family: "tw_fonts";
-                    src:url("fonts/tw_fonts/tests-web.eot?2");
-                    src:url("fonts/tw_fonts/tests-web.eot?#iefix?2") format("embedded-opentype"),
-                    url('fonts/tw_fonts/tests-web.woff?2') format('woff'),
-                    url("fonts/tw_fonts/tests-web.ttf") format("truetype"),
-                    url("fonts/tw_fonts/tests-web.svg#icomon?2") format("svg");
-
-                    font-weight: normal;
-                    font-style: normal;
-                }
-
-               #t00018 i{
-                    font-family: "tw_fonts";  /* l'appelle de la font ds les balise et class qui auront des icones ... */
-                    font-style: normal;
-                    font-weight: normal;
-                    font-variant: normal;
-                    text-transform: none;
-                    speak: none;
-                    -webkit-font-smoothing: antialiased;
-                    -moz-osx-font-smoothing: grayscale;
-                    text-align: center;
-                    display: inline-block;
-                    pointer-events: none;
-                }
-
-                #t00018  .icon-home:before {  /* ce code est recupérer de la platforme icomoon ( au clic du "get code" ) */
-                    content: "\e900";
-                }
-
-                #t00018  .icon-etoile:before {
-                    content: "\e901";
-                }
-
-                #t00018  .icon-avion:before {
-                    content: "\e902";
-                }
-
-
-                #t00018  .box i {
-                    font-size: 40px;
-                    color: greenyellow;
-                }
-
-                #t00018  .box2 i {
-
-                    font-size: 100px;
-                    color: orange;
-                }
-
-            </style>
-
-            <div class="box">
-                <i class="icon-home"></i>
-                <i class="icon-etoile"></i>
-                <i class="icon-avion"></i>
-
-            </div>
-            <div class="box box2">
-                <i class="icon-avion"></i>
-            </div>
-            <div class="box"></div>
-        </article>
-    </section>
-
-    <section id="t00019">
-        <h2> font-ico : généric libs more then 1200 icones </h2>
-        <article>
-            <style>
-
-                #t00019 p {
-                    font-size: 30px;
-                }
-            </style>
-            <p>
-                
-                <i class="icon-angry"></i>
-                <i class="icon-angry2"></i>
-                <i class="icon-coins"></i>
-            </p>
-            
-        </article>
-    </section>
-
-    <section id="t00020">
-        <h2> test </h2>
-        <article>
-            <style>
-                #t00020 {
-
-                }
-
-                #t00020 .box:not( a) {
-                    background-color: #008000;
-                }
-
-            </style>
-            <p></p>
-
-            <div class="box"></div>
-            <div class="box exclute"><a href=""></a></div>
-            <a class="box"><a href=""></a></a>
-        </article>
-    </section>
-
-    <section id="t00021">
-        <h2> CSS3 animation : </h2>
-        <article>
-            <style>
-                #t00021 { }
-                #t00021 .box {
-                }
-
-                #t00021 .box.b1 {
-                    background-color: darkblue;
-                    position: relative;
-                    width: 300px;
-                    height: 300px;
-                }
-
-                #t00021 .box.b2 {
-                    background-color: orange;
-                    position: relative;
-                    top: 45px;
-                    left: 0;
-                    width: 212px;
-                    height: 212px;
-                    transform: rotate(45deg);
-                    animation: animBoxRetat 10s infinite ;
-                }
-                @keyframes animBoxRetat {
-                    0%   {transform: rotate(45deg); }
-                    33%  {transform: rotate(450deg);   width: 50px;  height: 50px;}
-                    66%  {transform: rotate(-90deg);   width: 200px;  height: 200px;}
-                    100% {transform: rotate(45deg); }
-                }
-
-
-            </style>
-            <p></p>
-
-            <div class="box b1">
-                <div class="box b2"></div>
-            </div>
-
-
-        </article>
-    </section>
-<section id="t00023">
-    <h2>test fonts </h2>
-    <article>
-        <style>
-            @font-face {
-                font-family: 'helvetica-neue-light';
-                src: url('fonts/helvetica-neue/helvetica-neue-light.ttf');
-                font-weight: normal;
-                font-style: normal;
-            }
-
-            @font-face {
-                font-family: 'helvetica-neue-meduim';
-                src: url('fonts/helvetica-neue/helvetica-neue-meduim.ttf');
-                font-weight: normal;
-                font-style: normal;
-            }
-
-            @font-face {
-                font-family: 'helvetica-neue-back';
-                src: url('fonts/helvetica-neue/helvetica-neue-back.ttf');
-                font-weight: normal;
-                font-style: normal;
-            }
-
-            #t00023 .box1 {
-                font-family: 'helvetica-neue-light' ;
-                font-size: 20px;
-            }
-
-            #t00023 .box2 {
-                font-family: 'helvetica-neue-meduim' ;
-                font-size: 17px;
-            }
-
-            #t00023 .box3 {
-                font-family: 'helvetica-neue-back' ;
-                font-size: 20px;
-            }
-        </style>
-        <p></p>
-
-        <div class="box1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dolores eos ex  </div>
-        <div class="box2"> impedit libero provident quibusdam quos sed tempora.</div>
-        <div class="box3">  Animi esse facilis id nihil quia quidem quis rerum sed tempore. </div>
-    </article>
-</section>
-
-<section id="t00024">
-    <h2> styler un select combobox css</h2>
-    <article>
-        <style>
-            #t00024 .select {
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                border: none;
-                border-bottom: solid 5px #1D38FC;
-                background: url("images/down_arrow.png") no-repeat   right top;
-                height: 100px;
-                width: 300px;
-            }
-
-        </style>
-        <p></p>
-        <select class="select">
+        <section id="t00024">
+            <h2> styler un select combobox css</h2>
+            <article>
+                <style>
+                    #t00024 .select {
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        border: none;
+                        border-bottom: solid 5px #1D38FC;
+                        background: url("images/down_arrow.png") no-repeat right top;
+                        height: 100px;
+                        width: 300px;
+                    }
+                </style>
+                <p></p>
+                <select class="select">
             <option value=""> test du text text </option>
             <option value=""> test du text text 2 </option>
             <option value=""> test du text text 3 </option>
         </select>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-    </article>
-</section>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </article>
+        </section>
 
-    <section id="t00025">
-        <h2> les :nth-of-type(X) >  tr:nth-of-type(1) td:nth-of-type(3) </h2>
-        <article>
-            <style>
-             #t00025 table td {
-                border: 1px solid #000;
-                 padding: 10px;
-             }
+        <section id="t00025">
+            <h2> les :nth-of-type(X) > tr:nth-of-type(1) td:nth-of-type(3) </h2>
+            <article>
+                <style>
+                    #t00025 table td {
+                        border: 1px solid #000;
+                        padding: 10px;
+                    }
+                    
+                    table tr:nth-of-type(2) td:nth-of-type(3) {
+                        background: red;
+                    }
+                    
+                    table tr:nth-of-type(3) td:nth-of-type(2) {
+                        background: green;
+                    }
+                </style>
+                <p></p>
 
-             table tr:nth-of-type(2) td:nth-of-type(3) {
-                 background: red;
-             }
-             table tr:nth-of-type(3) td:nth-of-type(2) {
-                 background: green;
-             }
-            </style>
-            <p></p>
+                <table>
+                    <tr>
+                        <td> col 1</td>
+                        <td> col 2</td>
+                        <td> col 3 </td>
+                    </tr>
 
-            <table>
-                <tr>
-                    <td> col 1</td>
-                    <td> col 2</td>
-                    <td> col 3 </td>
-                </tr>
+                    <tr>
+                        <td> val 1.1</td>
+                        <td> val 1.2 </td>
+                        <td> val 1.3 </td>
+                    </tr>
 
-                <tr>
-                    <td> val 1.1</td>
-                    <td> val 1.2 </td>
-                    <td> val 1.3 </td>
-                </tr>
+                    <tr>
+                        <td> val 2.1</td>
+                        <td> val 2.2 </td>
+                        <td> val 2.3 </td>
+                    </tr>
+                </table>
+            </article>
+        </section>
 
-                <tr>
-                    <td> val 2.1</td>
-                    <td> val 2.2 </td>
-                    <td> val 2.3 </td>
-                </tr>
-            </table>
-        </article>
-    </section>
-
-    <section id="t00026">
-        <h2></h2>
-        <article>
-            <style>
-                 #t00026 button { background-color: gray; padding: 20px; border: none;}
-                 #t00026 .box { display: block; height: 150px;
-                       transform: translateX(-50);
-                     position: relative;
-                }
-                 #t00026 .box { display: none; }
-                 #t00026 .slide {
-                    display: block;
-                    animation:  animatSlideDown 1s;
-                }
-
-                  #t00026 .slideUp {
-                   display: none;
-                    animation:  animatSlideUp 1s;
-                }
-
-                @keyframes animatSlideDown {
-                    0%    { opacity: 0; top : -300px;}
-                    50%   { opacity: 0.2; top : 100px;}
-                    75%   { opacity: 1; top : -50px;}
-                    87%   { opacity: 1; top : 20px;}
-                    100%  { opacity: 1; top : 0px;}
-                }
-
-               @keyframes animatSlideUp {
-                   0%     { opacity: 1; top : 0px; display: block;}
-                   50%    { opacity: 0.5; top : -100px;}
-                   100%   { opacity: 0; top : -200px;}
-                }
-
-
-            </style>
-            <button> show </button>
-            <div class="box slideUp"></div>
-            <script>
-               $(function() {
-                    $("#t00026 button").on("click", function(e){
-                        $("#t00026 .box").toggleClass("slide");
-                        $("#t00026 .box").toggleClass("slideUp");
-                   });
-               });
-            </script>
-        </article>
-    </section>
-    <section id="t00027">
-        <h2> slide down slide up par css3 transistion  </h2>
-        <article>
-            <style>
-                #t00027  button { }
-                #t00027 .ctn {
-                    display: block;
-                    height:200px;
-                    background-color: darkgrey;
-                    overflow-y: hidden;
-                    padding: 10px;
-                    transition-property: height; /* type de proprité type pour le changement d'etat ( transistion ) */
-                    transition-duration: .4s; /* la vitesse */
-                    transition-timing-function: ease-in-out;  /*   cubic-bezier(0, 1, 0.5, 1); |  ease-in-out; |  la courble d'nimation en vitesse */
-                }
-                #t00027 .ctn.closed { 	height: 0px !important; padding-top: 0; padding-bottom: 0;}
-            </style>
-            <button> show </button>
-            <div class="ctn closed">
-                <div class="item">
-                    <br> test ....
-                    <br> test ....
-                    <br> test ....
-                    <br> test ....
-                    <br> test ....
-                    <br> test ....
+        <section id="t00026">
+            <h2></h2>
+            <article>
+                <style>
+                    #t00026 button {
+                        background-color: gray;
+                        padding: 20px;
+                        border: none;
+                    }
+                    
+                    #t00026 .box {
+                        display: block;
+                        height: 150px;
+                        transform: translateX(-50);
+                        position: relative;
+                    }
+                    
+                    #t00026 .box {
+                        display: none;
+                    }
+                    
+                    #t00026 .slide {
+                        display: block;
+                        animation: animatSlideDown 1s;
+                    }
+                    
+                    #t00026 .slideUp {
+                        display: none;
+                        animation: animatSlideUp 1s;
+                    }
+                    
+                    @keyframes animatSlideDown {
+                        0% {
+                            opacity: 0;
+                            top: -300px;
+                        }
+                        50% {
+                            opacity: 0.2;
+                            top: 100px;
+                        }
+                        75% {
+                            opacity: 1;
+                            top: -50px;
+                        }
+                        87% {
+                            opacity: 1;
+                            top: 20px;
+                        }
+                        100% {
+                            opacity: 1;
+                            top: 0px;
+                        }
+                    }
+                    
+                    @keyframes animatSlideUp {
+                        0% {
+                            opacity: 1;
+                            top: 0px;
+                            display: block;
+                        }
+                        50% {
+                            opacity: 0.5;
+                            top: -100px;
+                        }
+                        100% {
+                            opacity: 0;
+                            top: -200px;
+                        }
+                    }
+                </style>
+                <button> show </button>
+                <div class="box slideUp"></div>
+                <script>
+                    $(function() {
+                        $("#t00026 button").on("click", function(e) {
+                            $("#t00026 .box").toggleClass("slide");
+                            $("#t00026 .box").toggleClass("slideUp");
+                        });
+                    });
+                </script>
+            </article>
+        </section>
+        <section id="t00027">
+            <h2> slide down slide up par css3 transistion </h2>
+            <article>
+                <style>
+                    #t00027 button {}
+                    
+                    #t00027 .ctn {
+                        display: block;
+                        height: 200px;
+                        background-color: darkgrey;
+                        overflow-y: hidden;
+                        padding: 10px;
+                        transition-property: height;
+                        /* type de proprité type pour le changement d'etat ( transistion ) */
+                        transition-duration: .4s;
+                        /* la vitesse */
+                        transition-timing-function: ease-in-out;
+                        /*   cubic-bezier(0, 1, 0.5, 1); |  ease-in-out; |  la courble d'nimation en vitesse */
+                    }
+                    
+                    #t00027 .ctn.closed {
+                        height: 0px !important;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                    }
+                </style>
+                <button> show </button>
+                <div class="ctn closed">
+                    <div class="item">
+                        <br> test ....
+                        <br> test ....
+                        <br> test ....
+                        <br> test ....
+                        <br> test ....
+                        <br> test ....
+                    </div>
                 </div>
-            </div>
 
-              <script>
-               $(function() {
-                  //  alert ( $("#t00027 .ctn .item").height());
-                   var H_item =  $("#t00027 .ctn .item").height();
-                   $("#t00027 .ctn").height(H_item);
-                    $("#t00027 button").on("click", function(e){
+                <script>
+                    $(function() {
+                        //  alert ( $("#t00027 .ctn .item").height());
+                        var H_item = $("#t00027 .ctn .item").height();
+                        $("#t00027 .ctn").height(H_item);
+                        $("#t00027 button").on("click", function(e) {
 
-                        $("#t00027 .ctn").toggleClass("closed");
-                   });
-               });
-            </script>
-        </article>
-    </section>
-
-
-    <section id="t00028">
-        <h2></h2>
-        <article>
-            <style>
-
-                .slideDown { }
-                .slideDown .sd-item { }
-                .slideDown .sd-item .sd-nav,  .slideDown .sd-item.closed .sd-nav:hover {
-
-                    background-color: #ff692e;
-                    display: block;
-                    padding: 10px;
-                    color: #fff;
-                    cursor: pointer;
-                    transition: all .5s;
-                }
-
-                .slideDown .sd-item.closed  .sd-nav {
-                    background-color: #aaa;
-                }
-                .slideDown .sd-over-ctn {
-                    display: block;
-                    height:200px;
-                    background-color: #e1e1e1;
-                    overflow-y: hidden;
-                    padding: 10px;
-                    transition-property: height; /* type de proprité type pour le changement d'etat ( transistion ) */
-                    transition-duration: .3s; /* la vitesse */
-                    transition-timing-function:ease-out;  /* cubic-bezier(0, 1, 0.5, 1); |  ease-in-out; |  ease |  linear |  ease-in |  ease-out | ease-in-out */
-                }
-
-
-                 .slideDown .sd-item.closed .sd-over-ctn { /*@@-@@*/
-                     height: 0px !important;
-                     padding-top: 0;
-                     padding-bottom: 0;
-                }
-
-
-
-                .slideDown .sd-over-ctn .sdo-ctn {
-
-                }
-            </style>
-
-            <script>
-               $(function() {
-                  //  alert ( $("#t00027 .ctn .item").height());
-
-                   /*
-                    function SlidDown : permer de slaydu des element comme du accordeon
-                       - @param > paramSlideOneByOne : true|false , si true il parmer de slider chaque element indépendament des autre si false , a chaque fois qu'ouvre un element les autres se ferme ( plus qu'un seule est ouvre a la fois)
-                       - @param >  paramSlideDefaultOpned : un int > 0 , si >0 c'est le rond de l'.sd-item a ouvr
-                   */
-                   function SlidDown ( paramSlideOneByOne = false, paramSlideDefaultOpned = 1 ) {
-                   var H_item =  $(".slideDown .sd-over-ctn .sdo-ctn ").height();
-                   $(".slideDown .sd-over-ctn").height(H_item);
-                   if (paramSlideOneByOne) {
-                        $(".slideDown .sd-nav").on("click", function(e) {
-                            $(this).parents(".sd-item").toggleClass("closed");
+                            $("#t00027 .ctn").toggleClass("closed");
                         });
-                   } else {
-                        $(".slideDown .sd-item").addClass("closed");
-                        if (paramSlideDefaultOpned > 0 ) {
-                           $(".slideDown .sd-item:nth-of-type(" + paramSlideDefaultOpned + ")").removeClass("closed");
+                    });
+                </script>
+            </article>
+        </section>
+
+
+        <section id="t00028">
+            <h2></h2>
+            <article>
+                <style>
+                    .slideDown {}
+                    
+                    .slideDown .sd-item {}
+                    
+                    .slideDown .sd-item .sd-nav,
+                    .slideDown .sd-item.closed .sd-nav:hover {
+                        background-color: #ff692e;
+                        display: block;
+                        padding: 10px;
+                        color: #fff;
+                        cursor: pointer;
+                        transition: all .5s;
+                    }
+                    
+                    .slideDown .sd-item.closed .sd-nav {
+                        background-color: #aaa;
+                    }
+                    
+                    .slideDown .sd-over-ctn {
+                        display: block;
+                        height: 200px;
+                        background-color: #e1e1e1;
+                        overflow-y: hidden;
+                        padding: 10px;
+                        transition-property: height;
+                        /* type de proprité type pour le changement d'etat ( transistion ) */
+                        transition-duration: .3s;
+                        /* la vitesse */
+                        transition-timing-function: ease-out;
+                        /* cubic-bezier(0, 1, 0.5, 1); |  ease-in-out; |  ease |  linear |  ease-in |  ease-out | ease-in-out */
+                    }
+                    
+                    .slideDown .sd-item.closed .sd-over-ctn {
+                        /*@@-@@*/
+                        height: 0px !important;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                    }
+                    
+                    .slideDown .sd-over-ctn .sdo-ctn {}
+                </style>
+
+                <script>
+                    $(function() {
+                        //  alert ( $("#t00027 .ctn .item").height());
+
+                        /*
+                         function SlidDown : permer de slaydu des element comme du accordeon
+                            - @param > paramSlideOneByOne : true|false , si true il parmer de slider chaque element indépendament des autre si false , a chaque fois qu'ouvre un element les autres se ferme ( plus qu'un seule est ouvre a la fois)
+                            - @param >  paramSlideDefaultOpned : un int > 0 , si >0 c'est le rond de l'.sd-item a ouvr
+                        */
+                        function SlidDown(paramSlideOneByOne = false, paramSlideDefaultOpned = 1) {
+                            var H_item = $(".slideDown .sd-over-ctn .sdo-ctn ").height();
+                            $(".slideDown .sd-over-ctn").height(H_item);
+                            if (paramSlideOneByOne) {
+                                $(".slideDown .sd-nav").on("click", function(e) {
+                                    $(this).parents(".sd-item").toggleClass("closed");
+                                });
+                            } else {
+                                $(".slideDown .sd-item").addClass("closed");
+                                if (paramSlideDefaultOpned > 0) {
+                                    $(".slideDown .sd-item:nth-of-type(" + paramSlideDefaultOpned + ")").removeClass("closed");
+                                }
+                                $(".slideDown .sd-nav").on("click", function(e) {
+                                    $(".slideDown .sd-item").addClass("closed");
+                                    $(this).parents(".sd-item").removeClass("closed");
+                                });
+                            }
                         }
-                        $(".slideDown .sd-nav").on("click", function(e) {
-                            $(".slideDown .sd-item").addClass("closed");
-                            $(this).parents(".sd-item").removeClass("closed");
-                        });
+
+                        SlidDown(0, 6); // appelle
+
+                    });
+                </script>
+
+                <div class="slideDown">
+                    <div class="sd-item">
+                        <a class="sd-nav"> open 1 </a>
+                        <div class="sd-over-ctn">
+                            <div class="sdo-ctn">
+                                <p> 11 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis 111 nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia
+                                    aperiam est.</p>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam
+                                    est.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sd-item">
+                        <a class="sd-nav"> open 2 </a>
+                        <div class="sd-over-ctn">
+                            <div class="sdo-ctn">
+                                <p> 2222 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis 2222 nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia
+                                    aperiam est.</p>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam
+                                    est.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sd-item">
+                        <a class="sd-nav"> open 33 </a>
+                        <div class="sd-over-ctn">
+                            <div class="sdo-ctn">
+                                <p> Lorem ipsum 3333 33333 dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia
+                                    aperiam est.</p>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam
+                                    est.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sd-item">
+                        <a class="sd-nav"> open 33 </a>
+                        <div class="sd-over-ctn">
+                            <div class="sdo-ctn">
+                                <p> Lorem ipsum 3333 33333 dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia
+                                    aperiam est.</p>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam
+                                    est.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sd-item">
+                        <a class="sd-nav"> open 33 </a>
+                        <div class="sd-over-ctn">
+                            <div class="sdo-ctn">
+                                <p> Lorem ipsum 3333 33333 dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia
+                                    aperiam est.</p>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam
+                                    est.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- .slideDown -->
+
+            </article>
+        </section>
+
+
+        <section id="t00029">
+            <h2> test des icone svg responsive , bg ... </h2>
+            <article>
+                <style>
+                    #t00029 .icone-search {
+                        /* background-image: url(images/Jellyfish.jpg); */
+                        background-image: url(images/svg/search.svg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        display: inline-block;
+                        width: 25px;
+                        height: 25px;
+                    }
+                </style>
+                <p></p>
+                <div class="icone-search"></div>
+                <div class="icone-search"></div>
+                <div class="box"></div>
+            </article>
+        </section>
+        <section id="t00030">
+            <h2> test animation css3 </h2>
+            <article>
+                <style>
+                    #t00030 {}
+                    
+                    @keyframes animationBox1 {
+                        0% {
+                            opacity: 0;
+                            top: -300px;
                         }
-                   }
+                        30% {
+                            opacity: 0.1;
+                            top: 200px;
+                        }
+                        50% {
+                            opacity: 0.2;
+                            top: -150px;
+                        }
+                        50% {
+                            opacity: 0.5;
+                            top: 100px;
+                        }
+                        75% {
+                            opacity: 1;
+                            top: -50px;
+                        }
+                        87% {
+                            opacity: 1;
+                            top: 20px;
+                        }
+                        100% {
+                            opacity: 1;
+                            top: 0px;
+                        }
+                    }
+                    
+                    .box1 {
+                        position: relative;
+                        top: 0;
+                        animation: animationBox1 3s/*alternate*/
+                        ;
+                        /* infinite */
+                    }
+                </style>
+                <p></p>
+                <div class="box box1"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </article>
+        </section>
 
-                   SlidDown(0, 6); // appelle
-
-               });
-            </script>
-
-            <div class="slideDown">
-               <div class="sd-item">
-                     <a class="sd-nav"> open 1 </a>
-                    <div class="sd-over-ctn">
-                        <div class="sdo-ctn">
-                            <p> 11 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis 111  nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam est.</p>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam est.</p>
-                        </div>
-                    </div>
-               </div>
-
-                 <div class="sd-item">
-                     <a class="sd-nav"> open 2 </a>
-                    <div class="sd-over-ctn">
-                        <div class="sdo-ctn">
-                            <p> 2222 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis 2222 nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam est.</p>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam est.</p>
-                        </div>
-                    </div>
-               </div>
-
-                 <div class="sd-item">
-                     <a class="sd-nav"> open 33 </a>
-                    <div class="sd-over-ctn">
-                        <div class="sdo-ctn">
-                            <p> Lorem ipsum 3333 33333  dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam est.</p>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam est.</p>
-                        </div>
-                    </div>
-               </div>
-
-               <div class="sd-item">
-                     <a class="sd-nav"> open 33 </a>
-                    <div class="sd-over-ctn">
-                        <div class="sdo-ctn">
-                            <p> Lorem ipsum 3333 33333  dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam est.</p>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam est.</p>
-                        </div>
-                    </div>
-               </div>
-
-               <div class="sd-item">
-                     <a class="sd-nav"> open 33 </a>
-                    <div class="sd-over-ctn">
-                        <div class="sdo-ctn">
-                            <p> Lorem ipsum 3333 33333  dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam est.</p>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis libero veritatis nemo dolore nam animi, earum saepe minus aspernatur quidem excepturi dicta fugit mollitia voluptatum. Possimus illum, mollitia aperiam est.</p>
-                        </div>
-                    </div>
-               </div>
-            </div> <!-- .slideDown -->
-
-        </article>
-    </section>
+        <section id="t00031">
+            <h2> test sticky </h2>
+            <article>
+                <style>
+                    .box1 {
+                        position: sticky;
+                        top: 50px;
+                    }
+                </style>
+                <p></p>
+                <div class="box box1"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </article>
+        </section>
+        <!-- section#t00031>h2+article>(style+p+.box*3)-->
+    </div>
 
 
-    <section id="t00029">
-        <h2> test des icone svg responsive , bg ... </h2>
-        <article>
-            <style>
-                #t00029 .icone-search {
-                    /* background-image: url(images/Jellyfish.jpg); */
-                    background-image: url(images/svg/search.svg);
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    display: inline-block;
-                    width: 25px;
-                    height: 25px;
-                }
-            </style>
-            <p></p>
-            <div class="icone-search"></div>
-            <div class="icone-search"></div>
-            <div class="box"></div>
-        </article>
-    </section>
-     <section id="t00030">
-         <h2> test animation css3 </h2>
-         <article>
-             <style>
-              #t00030 {
+    <a href="#page" class="arrow-target" id="at_up">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </a>
 
-              }
-              
-              
-                @keyframes animationBox1 {
-                    0%    { opacity: 0; top : -300px;}
-                    30%   { opacity: 0.1; top : 200px;}
-                    50%   { opacity: 0.2; top : -150px;}
-                    50%   { opacity: 0.5; top : 100px;}
-                    75%   { opacity: 1; top : -50px;}
-                    87%   { opacity: 1; top : 20px;}
-                    100%  { opacity: 1; top : 0px;}
-                }
+    <a href="#pageBottom" class="arrow-target" id="at_down">
+        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+    </a>
 
-              .box1 {
-                   position: relative; top: 0;
-                   animation: animationBox1 3s /*alternate*/;  /* infinite */ 
-              }
-            </style>
-             <p></p>
-             <div class="box box1"></div>
-             <div class="box"></div>
-             <div class="box"></div>
-         </article>
-     </section>
+    <script>
+        $(function() {
 
-     <section id="t00031">
-         <h2> test sticky </h2>
-         <article>
-             <style>
-                 .box1 {
-                     position: sticky;
-                     top : 50px;
-                 }
-            </style>
-             <p></p>
-             <div class="box box1"></div>
-             <div class="box"></div>
-             <div class="box"></div>
-         </article>
-     </section>
-    <!-- section#t00031>h2+article>(style+p+.box*3)-->
-</div>
+            function juizScrollTo(element) {
+                $(element).click(function() {
+                    var goscroll = false;
+                    var the_hash = $(this).attr("href");
+                    var regex = new RegExp("\#(.*)", "gi");
+                    var the_element = '';
 
+                    if (the_hash.match("\#(.+)")) {
+                        the_hash = the_hash.replace(regex, "$1");
 
-<a href="#page" class="arrow-target" id="at_up">
-    <i class="fa fa-arrow-up" aria-hidden="true"></i>
-</a>
+                        if ($("#" + the_hash).length > 0) {
+                            the_element = "#" + the_hash;
+                            goscroll = true;
+                        } else if ($("a[name=" + the_hash + "]").length > 0) {
+                            the_element = "a[name=" + the_hash + "]";
+                            goscroll = true;
+                        }
 
-<a href="#pageBottom" class="arrow-target" id="at_down">
-    <i class="fa fa-arrow-down" aria-hidden="true"></i>
-</a>
+                        if (goscroll) {
+                            $('html, body').animate({
+                                scrollTop: $(the_element).offset().top
+                            }, 'slow');
+                            return false;
+                        }
+                    }
+                });
+            };
 
-<script>
-$(function () {
+            juizScrollTo('a[href^="#"]');
+        })
+    </script>
 
-    function juizScrollTo(element){
-        $(element).click(function(){
-            var goscroll = false;
-            var the_hash = $(this).attr("href");
-            var regex = new RegExp("\#(.*)","gi");
-            var the_element = '';
-
-            if(the_hash.match("\#(.+)")) {
-                the_hash = the_hash.replace(regex,"$1");
-
-                if($("#"+the_hash).length>0) {
-                    the_element = "#" + the_hash;
-                    goscroll = true;
-                }
-                else if($("a[name=" + the_hash + "]").length>0) {
-                    the_element = "a[name=" + the_hash + "]";
-                    goscroll = true;
-                }
-
-                if(goscroll) {
-                    $('html, body').animate({
-                        scrollTop:$(the_element).offset().top
-                    }, 'slow');
-                    return false;
-                }
-            }
-        });
-    };
-
-    juizScrollTo('a[href^="#"]');
-})
-</script>
-
-<div id="pageBottom"></div>
+    <div id="pageBottom"></div>
 
 
 
 </body>
+
 </html>
