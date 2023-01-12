@@ -27,7 +27,7 @@
     "babel-preset-latest": "^6",
     "bourbon": "^5.0.0",
     "bourbon-neat": "^2.1.0",
-    "brunch": "2.10.12",
+    "brunch": "2.10.17",
     "brunch-static": "^1.2.1",
     "coffee-script": "^1.12.7",
     "coffee-script-brunch": "^2.10.2",
